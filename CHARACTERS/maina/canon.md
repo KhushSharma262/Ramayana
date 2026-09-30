@@ -1,0 +1,4 @@
+﻿# canon
+
+<!-- PURPOSE: Character research -->
+

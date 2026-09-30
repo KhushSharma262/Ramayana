@@ -1,0 +1,102 @@
+﻿# ================================
+# OS / IDE
+# ================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+
+# ================================
+# Secrets
+# ================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ================================
+# Temporary files
+# ================================
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+~*
+
+# ================================
+# AI / Generation Cache
+# ================================
+AI_OUTPUT/
+AI_CACHE/
+GENERATION_CACHE/
+CACHE/
+TEMP/
+TMP/
+
+# ================================
+# Rendering / DCC Cache
+# ================================
+BLENDER_CACHE/
+*.blend1
+*.blend2
+*.bphys
+*.abc
+*.usd
+*.usda
+*.usdc
+*.vdb
+
+# ================================
+# Large Generated Media
+# Keep production source/metadata in Git,
+# keep generated media outside normal Git.
+# ================================
+RENDERS/
+GENERATED/
+GENERATED_MEDIA/
+OUTPUT/
+EXPORTS/
+
+# ================================
+# Video / Audio / Image outputs
+# ================================
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.flac
+*.aiff
+*.aac
+
+# Generated image sequences
+*.exr
+*.dpx
+*.tif
+*.tiff
+
+# ================================
+# Node
+# ================================
+node_modules/
+dist/
+build/
+.npm/

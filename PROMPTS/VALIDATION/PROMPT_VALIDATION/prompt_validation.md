@@ -1,0 +1,17 @@
+﻿# PROMPT VALIDATION
+
+Before sending a prompt to a model:
+
+CHECK SOURCE
+CHECK IDENTITY
+CHECK CANON
+CHECK CURRENT STATE
+CHECK CONTINUITY
+CHECK MODEL FORMAT
+CHECK LOCKED COMPONENTS
+CHECK VARIABLES
+CHECK NEGATIVE CONSTRAINTS
+CHECK OUTPUT REQUIREMENTS
+
+If a required source decision is missing, flag the prompt instead
+of inventing the information.
