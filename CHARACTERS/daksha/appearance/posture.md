@@ -919,3 +919,20 @@ production_notes:
   - "During the yajna destruction, posture must transition progressively rather than jump from composed to collapsed."
   - "The physical attack sequence must follow the canonical narrative: Daksha is attacked, Vīrabhadra sits on his chest, attempts to sever his head, and ultimately beheads him."
   - "After the head replacement, the body posture remains continuous; only head identity changes."
+
+  - ## Approval
+
+research_status: "researched"
+canon_status: "No fixed Daksha posture identified in reviewed primary sources"
+design_status: "Provisional visual/performance reconstruction"
+performance_status: "Ready for actor blocking and animation reference"
+continuity_status: "Master posture established"
+approval_status: "Provisional"
+approved_version: "DAKSHA_POSTURE_v1.0"
+approval_date: "2026-10-03"
+approved_by: "Production Bible — provisional"
+change_history:
+  - "v1.0 — Established grounded upright patriarchal signature stance."
+  - "v1.0 — Distinguished textual behavioral evidence from invented anatomical pose."
+  - "v1.0 — Added ritual, authority, emotional and destruction-state posture rules."
+  - "v1.0 — Added explicit physical continuity for Daksha's beheading and subsequent transformation."
