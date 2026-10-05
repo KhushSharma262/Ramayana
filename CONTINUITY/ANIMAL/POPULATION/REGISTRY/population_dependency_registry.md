@@ -1,0 +1,17 @@
+﻿# POPULATION DEPENDENCY REGISTRY
+
+References:
+
+species_id
+group_ids
+principal_animal_ids
+ecology_state
+environment_state
+location_state
+spatial_state
+event_ids
+timeline_state
+human_interaction_state
+disease_state
+migration_state
+ai_generation_state

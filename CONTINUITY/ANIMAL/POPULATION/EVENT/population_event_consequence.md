@@ -1,0 +1,12 @@
+﻿# POPULATION EVENT CONSEQUENCE
+
+Track:
+
+before_state
+event
+immediate_change
+delayed_change
+individual_consequence
+group_consequence
+ecological_consequence
+next_population_state

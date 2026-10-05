@@ -1,0 +1,21 @@
+﻿# INDIVIDUAL AUTHORITY
+
+Authority hierarchy:
+
+DIRECT_CANON
+DERIVED_CANON
+TRADITIONAL_INTERPRETATION
+APPROVED_RESEARCH
+BIOLOGICAL_RECONSTRUCTION
+HISTORICAL_RECONSTRUCTION
+DOMAIN_RECONSTRUCTION
+DIRECTORIAL_CHOICE
+PRODUCTION_CHOICE
+UNKNOWN
+UNCERTAIN
+
+Canon defines what happened.
+
+Research and reconstruction explain what is not explicitly defined.
+
+No reconstructed fact may silently become canon.

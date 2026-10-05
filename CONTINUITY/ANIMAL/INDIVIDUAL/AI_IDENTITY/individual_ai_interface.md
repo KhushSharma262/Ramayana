@@ -1,0 +1,21 @@
+﻿# INDIVIDUAL AI INTERFACE
+
+Provides AI_GENERATION with authoritative individual constraints.
+
+Required inputs may include:
+
+animal_id
+species_id
+identity_anchors
+appearance_state
+anatomy_reference
+age_state
+health_state
+injury_state
+group_membership
+relationship_state
+equipment
+current_location
+movement_signature
+transformation_state
+natural_variation_limits

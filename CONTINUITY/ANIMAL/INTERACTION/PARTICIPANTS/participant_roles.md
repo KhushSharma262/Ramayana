@@ -1,0 +1,21 @@
+﻿# PARTICIPANT ROLES
+
+Contextual roles include:
+
+INITIATOR
+RECIPIENT
+OBSERVER
+THREAT
+PREDATOR
+PREY
+COMPETITOR
+COOPERATIVE_PARTNER
+MATE
+PARENT
+OFFSPRING
+GROUP_MEMBER
+RESOURCE
+OBJECT
+UNKNOWN
+
+Roles are contextual and must not overwrite permanent identity.

@@ -1,0 +1,14 @@
+﻿# APPROVAL
+
+Statuses:
+
+DRAFT
+UNDER_REVIEW
+APPROVED
+CONDITIONALLY_APPROVED
+CHANGES_REQUESTED
+REJECTED
+LOCKED
+REOPENED
+
+Only approved performance may propagate as continuity truth.

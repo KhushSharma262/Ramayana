@@ -1,0 +1,29 @@
+﻿# CROSS-DOMAIN EVENT PROPAGATION
+
+Events may propagate to:
+
+- CHARACTER
+- ANIMAL
+- COSTUME
+- PROP
+- WEAPON
+- EQUIPMENT
+- LOCATION
+- ENVIRONMENT
+- SPATIAL
+- PERFORMANCE
+- PHYSIOLOGY
+- COGNITION
+- BEHAVIOR
+- ECOLOGY
+- TRANSFORMATION
+- TIMELINE
+- AUDIO
+- LIGHTING
+- CAMERA
+- VFX
+- AI_GENERATION
+
+Propagation is dependency-based.
+
+Unrelated domains remain untouched.

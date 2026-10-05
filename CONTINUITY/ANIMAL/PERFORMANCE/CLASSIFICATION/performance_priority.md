@@ -1,0 +1,16 @@
+﻿# PERFORMANCE PRIORITY
+
+When multiple states exist, distinguish:
+
+PRIMARY PERFORMANCE STATE
+SECONDARY STATE
+BACKGROUND STATE
+TEMPORARY REACTION
+
+Example:
+
+PRIMARY = WALKING
+SECONDARY = INJURED
+TEMPORARY = ALERT
+
+Do not collapse simultaneous states into one label.

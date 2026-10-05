@@ -1,0 +1,19 @@
+﻿# EVENT AUTHORITY
+
+## Authority Hierarchy
+
+1. DIRECT_CANON
+2. DERIVED_CANON
+3. TRADITIONAL_INTERPRETATION
+4. APPROVED_RESEARCH
+5. HISTORICAL_RECONSTRUCTION
+6. BIOLOGICAL_RECONSTRUCTION
+7. EVENT_RECONSTRUCTION
+8. DIRECTORIAL_CHOICE
+9. PRODUCTION_CHOICE
+10. UNKNOWN
+11. UNCERTAIN
+
+Higher authority overrides lower authority.
+
+An AI-generated Event is not canonical merely because it appears in a frame.

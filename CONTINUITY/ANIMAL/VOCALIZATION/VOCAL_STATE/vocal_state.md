@@ -1,0 +1,17 @@
+﻿# VOCAL STATE
+
+Possible states:
+
+SILENT
+LISTENING
+PREPARING
+VOCALIZING
+CALLING
+RESPONDING
+OVERLAPPING
+FATIGUED
+UNABLE_TO_VOCALIZE
+RECOVERING
+UNKNOWN
+
+Multiple states may interact with physiological state.

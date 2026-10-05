@@ -1,0 +1,12 @@
+﻿# EQUIPMENT APPROVAL
+
+Statuses:
+
+APPROVED
+CONDITIONALLY_APPROVED
+CHANGES_REQUESTED
+REJECTED
+LOCKED
+REOPENED
+
+AI generation alone does not constitute approval.

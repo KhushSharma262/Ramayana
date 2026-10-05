@@ -1,0 +1,20 @@
+﻿# INTERACTION LIFECYCLE
+
+PLANNED
+→ APPROACHING
+→ DETECTED
+→ INITIATED
+→ IN_PROGRESS
+→ INTERRUPTED
+→ RESUMED
+→ COMPLETED
+
+Alternative outcomes:
+
+FAILED
+ABORTED
+CANCELLED
+SUPERSEDED
+UNKNOWN
+
+An interruption does not automatically create a new interaction.

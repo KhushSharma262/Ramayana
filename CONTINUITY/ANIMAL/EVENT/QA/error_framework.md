@@ -1,0 +1,30 @@
+# EVENT ERROR FRAMEWORK
+
+Errors include:
+
+wrong_event_identity
+wrong_participant
+wrong_species
+wrong_role
+wrong_cause
+wrong_trigger
+wrong_sequence
+wrong_timing
+wrong_perception
+wrong_cognition
+wrong_behavior
+wrong_physiology
+wrong_movement
+wrong_interaction
+wrong_injury
+wrong_equipment
+wrong_environment
+wrong_ecology
+wrong_audio
+wrong_transformation
+wrong_canon
+wrong_generation
+wrong_persistence
+anthropomorphism
+AI_artifact
+continuity_reset

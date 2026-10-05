@@ -1,0 +1,11 @@
+﻿# scene_language_consistency.md
+
+Purpose:
+Authority:
+Scope:
+Source of Truth:
+Dependencies:
+Continuity Rules:
+Validation:
+Unknowns:
+Notes:

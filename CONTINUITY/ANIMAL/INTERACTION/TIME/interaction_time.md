@@ -1,0 +1,14 @@
+﻿# INTERACTION TIME
+
+Track:
+
+start_time
+end_time
+duration
+detection_time
+recognition_time
+response_time
+contact_time
+completion_time
+time_since_previous_interaction
+interaction_frequency

@@ -1,0 +1,21 @@
+# EVENT CAUSE
+
+Possible causes:
+
+EXTERNAL
+INTERNAL
+SOCIAL
+PHYSIOLOGICAL
+COGNITIVE
+ENVIRONMENTAL
+ECOLOGICAL
+EQUIPMENT
+HUMAN
+ANIMAL
+SUPERNATURAL
+DIVINE
+UNKNOWN
+
+Multiple causes are permitted.
+
+Primary and secondary causes should be distinguished.

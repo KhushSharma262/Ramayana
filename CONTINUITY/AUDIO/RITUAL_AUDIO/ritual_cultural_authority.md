@@ -1,0 +1,12 @@
+﻿# ritual_cultural_authority.md
+
+Purpose:
+Authority:
+Scope:
+Dependencies:
+Source of Truth:
+Continuity Rules:
+Validation:
+Change Control:
+Unknowns:
+Notes:

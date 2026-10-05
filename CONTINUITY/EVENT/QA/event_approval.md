@@ -1,0 +1,12 @@
+﻿# EVENT APPROVAL
+
+Statuses:
+
+APPROVED
+CONDITIONALLY_APPROVED
+CHANGES_REQUESTED
+REJECTED
+LOCKED
+REOPENED
+
+Only approved Events propagate as authoritative continuity.

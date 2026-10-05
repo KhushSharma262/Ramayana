@@ -1,0 +1,28 @@
+# LIGHTING ERROR FRAMEWORK
+
+Errors include:
+
+wrong_light_source
+wrong_light_direction
+wrong_intensity
+wrong_color
+wrong_shadow
+wrong_contact_shadow
+wrong_material_response
+wrong_fur_response
+wrong_feather_response
+wrong_scale_response
+wrong_skin_response
+wrong_eye_response
+wrong_catchlight
+wrong_wetness
+wrong_residue
+wrong_weather
+wrong_time_of_day
+wrong_spatial_relationship
+wrong_perception
+wrong_transformation
+wrong_divine_effect
+AI_artifact
+identity_drift
+lighting_reset

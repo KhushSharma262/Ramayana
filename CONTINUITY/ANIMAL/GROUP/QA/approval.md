@@ -1,0 +1,16 @@
+# GROUP APPROVAL
+
+Statuses:
+
+DRAFT
+UNDER_REVIEW
+APPROVED
+CONDITIONALLY_APPROVED
+CHANGES_REQUESTED
+REJECTED
+LOCKED
+REOPENED
+SUPERSEDED
+
+Only approved group state should propagate into locked production
+states.

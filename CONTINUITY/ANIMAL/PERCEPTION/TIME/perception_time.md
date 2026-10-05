@@ -1,0 +1,11 @@
+﻿# PERCEPTUAL TIME
+
+Track:
+
+stimulus_time
+signal_arrival
+detection_time
+attention_time
+recognition_interface_time
+duration
+time_since_previous_exposure

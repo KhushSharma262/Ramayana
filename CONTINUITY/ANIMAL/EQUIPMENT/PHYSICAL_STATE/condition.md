@@ -1,0 +1,14 @@
+﻿# EQUIPMENT PHYSICAL CONDITION
+
+State continuum:
+
+INTACT
+→ WORN
+→ DAMAGED
+→ SEVERELY_DAMAGED
+→ BROKEN
+→ REPAIRED
+→ RETIRED
+→ DESTROYED
+
+Transitions require causes/events.

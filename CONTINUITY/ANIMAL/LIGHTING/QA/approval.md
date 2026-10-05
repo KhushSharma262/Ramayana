@@ -1,0 +1,16 @@
+# LIGHTING APPROVAL
+
+Statuses:
+
+DRAFT
+UNDER_REVIEW
+APPROVED
+CONDITIONALLY_APPROVED
+CHANGES_REQUESTED
+REJECTED
+LOCKED
+REOPENED
+SUPERSEDED
+
+Lighting state must be approved before it becomes a locked
+generation constraint.

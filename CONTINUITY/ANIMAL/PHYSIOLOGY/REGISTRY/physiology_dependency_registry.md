@@ -1,0 +1,25 @@
+﻿# PHYSIOLOGY DEPENDENCY REGISTRY
+
+References:
+
+animal_id
+species_id
+anatomy_state
+perception_state
+cognition_state
+behavior_state
+locomotion_state
+interaction_id
+group_id
+human_interaction_id
+equipment_id
+environment_id
+ecology_state
+spatial_state
+physics_state
+audio_state
+lighting_state
+event_id
+timeline_state
+performance_state
+ai_generation_state

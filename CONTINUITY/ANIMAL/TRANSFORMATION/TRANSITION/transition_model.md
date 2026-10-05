@@ -1,0 +1,14 @@
+﻿# TRANSFORMATION TRANSITION MODEL
+
+PRE-FORM
+→ TRIGGER
+→ INITIATION
+→ EARLY CHANGE
+→ INTERMEDIATE CHANGE
+→ FORMATION
+→ COMPLETED FORM
+→ STABILIZATION
+
+Not every transformation requires every stage.
+
+Only supported stages are used.

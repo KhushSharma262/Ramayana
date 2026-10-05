@@ -1,0 +1,11 @@
+﻿# PREDATOR-PREY DYNAMICS
+
+Conceptual chain:
+
+PREDATOR CHANGE
+→ PREY MORTALITY
+→ PREY POPULATION CHANGE
+→ RESOURCE CHANGE
+→ PREDATOR CONSEQUENCE
+
+Do not automatically assume equilibrium.

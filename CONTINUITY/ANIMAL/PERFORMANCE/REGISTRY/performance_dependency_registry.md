@@ -1,0 +1,23 @@
+﻿# PERFORMANCE DEPENDENCY REGISTRY
+
+References:
+
+animal_id
+perception_state
+cognition_state
+behavior_state
+physiology_state
+locomotion_state
+interaction_id
+group_id
+human_interaction_id
+equipment_id
+environment_id
+spatial_state
+physics_state
+lighting_state
+audio_state
+camera_state
+event_id
+timeline_state
+ai_generation_state

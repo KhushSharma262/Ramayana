@@ -1,0 +1,15 @@
+﻿# TRANSFORMATION IDENTITY
+
+Track:
+
+transformation_id
+entity_id
+previous_form_id
+new_form_id
+identity_continuity
+identity_status
+lineage
+parent_transformation
+child_transformation
+authority
+confidence

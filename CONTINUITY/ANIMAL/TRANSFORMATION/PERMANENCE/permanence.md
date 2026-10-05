@@ -1,0 +1,11 @@
+﻿# TRANSFORMATION PERMANENCE
+
+Possible states:
+
+TEMPORARY
+REVERSIBLE
+CONDITIONALLY_REVERSIBLE
+PERMANENT
+UNKNOWN
+
+Do not infer permanence solely from visual duration.

@@ -1,0 +1,12 @@
+﻿# PHYSIOLOGICAL CAUSAL MODEL
+
+EXTERNAL / INTERNAL STIMULUS
+→ SENSING
+→ PHYSIOLOGICAL RESPONSE
+→ INTERNAL STATE CHANGE
+→ COMPENSATION
+→ CONSEQUENCE
+→ RECOVERY / PERSISTENCE
+→ NEXT STATE
+
+Do not create physiological changes without a causal basis unless canonically established.

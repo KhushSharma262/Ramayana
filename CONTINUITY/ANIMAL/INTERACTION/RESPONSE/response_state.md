@@ -1,0 +1,25 @@
+﻿# RESPONSE STATE
+
+Possible responses:
+
+APPROACH
+AVOID
+FREEZE
+FLEE
+ATTACK
+DEFEND
+COOPERATE
+FOLLOW
+IGNORE
+INVESTIGATE
+VOCALIZE
+GROOM
+FEED
+DRINK
+MATE
+CARE
+REST
+NO_RESPONSE
+UNKNOWN
+
+Response must remain individual- and species-specific.

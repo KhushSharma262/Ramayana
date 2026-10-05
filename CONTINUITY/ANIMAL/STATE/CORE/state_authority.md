@@ -1,0 +1,21 @@
+﻿# STATE AUTHORITY
+
+State is derived from authoritative domain records and the global
+CONTINUITY/state_ledger.
+
+Authority order:
+
+DIRECT_CANON
+→ DERIVED_CANON
+→ TRADITIONAL_INTERPRETATION
+→ APPROVED_RESEARCH
+→ BIOLOGICAL_RECONSTRUCTION
+→ HISTORICAL_RECONSTRUCTION
+→ ECOLOGICAL_RECONSTRUCTION
+→ DOMAIN_RECONSTRUCTION
+→ DIRECTORIAL_CHOICE
+→ PRODUCTION_CHOICE
+→ UNKNOWN
+→ UNCERTAIN
+
+A lower authority cannot silently override a higher authority.

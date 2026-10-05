@@ -1,0 +1,15 @@
+# GROUP COHESION
+
+Possible cohesion states:
+
+TIGHT
+STABLE
+LOOSE
+FRAGMENTED
+DISPERSED
+PANICKED
+REASSEMBLING
+MIGRATING
+DISTURBED
+
+Cohesion is species- and context-dependent.
