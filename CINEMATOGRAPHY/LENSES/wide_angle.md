@@ -1569,3 +1569,40 @@ No AI-generated lens behaviour.
 The final image must look as though a real cinematographer physically placed a real camera with a real wide-angle lens and photographed the scene under real optical and environmental conditions.
 
 It must never look AI-generated.
+==================================================
+FOCAL-LENGTH CLASSIFICATION
+==================================================
+
+Focal-length categories are descriptive defaults, not absolute optical laws.
+
+For the project's full-frame reference:
+
+ULTRA_WIDE:
+14–24mm
+
+WIDE:
+24–35mm
+
+MODERATE_WIDE:
+35–40mm
+
+NORMAL:
+40–60mm
+
+SHORT_TELEPHOTO:
+70–100mm
+
+TELEPHOTO:
+100–200mm
+
+TELEPHOTO_LONG:
+200–400mm
+
+SUPER_TELEPHOTO:
+400mm+
+
+Boundary values must be resolved using the actual required FOV and shot purpose rather than category naming.
+
+If a focal length lies on a boundary, do NOT change focal length merely to satisfy the category label.
+
+The physically appropriate FOV and camera configuration have priority over categorical naming.
