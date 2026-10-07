@@ -1,4 +1,0 @@
-﻿# swan
-
-<!-- PURPOSE: Animal research -->
-

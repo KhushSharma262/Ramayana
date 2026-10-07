@@ -1,0 +1,16 @@
+﻿# REVERSE AUDIT FIREWALL
+
+Every final output must be traceable backward:
+
+FINAL OUTPUT
+→ ASSET
+→ GENERATION / SOURCE
+→ SHOT HANDOFF
+→ SCENE HANDOFF
+→ CONTINUITY SNAPSHOT
+→ DOMAIN SNAPSHOTS
+→ CLAIMS
+→ EVIDENCE
+→ SOURCES
+
+Any broken link causes audit failure.

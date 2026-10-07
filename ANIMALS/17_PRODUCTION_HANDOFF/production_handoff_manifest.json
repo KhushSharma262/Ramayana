@@ -1,0 +1,11 @@
+﻿{
+  "system": "17_PRODUCTION_HANDOFF",
+  "version": "1.0",
+  "state": "FROZEN_AFTER_VALIDATION",
+  "source_of_truth": false,
+  "purpose": "Controlled transfer of approved project state into downstream production.",
+  "research_required": true,
+  "production_gate": "APPROVED_HANDOFF_ONLY",
+  "audit": ["FORWARD","REVERSE"],
+  "fail_closed": true
+}

@@ -1,4 +1,0 @@
-﻿# horse
-
-<!-- PURPOSE: Animal research -->
-

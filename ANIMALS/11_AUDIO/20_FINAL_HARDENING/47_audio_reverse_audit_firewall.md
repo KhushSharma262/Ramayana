@@ -1,0 +1,20 @@
+﻿# AUDIO REVERSE AUDIT FIREWALL
+
+Every final audible element must be traceable backward:
+
+FINAL MIX
+→ ASSET
+→ GENERATION/RECORDING
+→ PROMPT
+→ REFERENCE
+→ SHOT
+→ SCENE
+→ CONTINUITY
+→ DOMAIN SNAPSHOTS
+→ DECISION
+→ CLAIM
+→ EVIDENCE
+→ SOURCE
+
+If any critical link is missing:
+BLOCK.

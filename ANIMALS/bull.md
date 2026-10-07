@@ -1,4 +1,0 @@
-﻿# bull
-
-<!-- PURPOSE: Animal research -->
-

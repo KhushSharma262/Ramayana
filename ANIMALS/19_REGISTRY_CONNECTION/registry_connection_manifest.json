@@ -1,0 +1,19 @@
+﻿{
+  "system": "19_REGISTRY_CONNECTION",
+  "version": "1.0",
+  "state": "FROZEN",
+  "architecture": "COMPLETE",
+  "hardening": "COMPLETE",
+  "source_of_truth": false,
+  "purpose": "CONTROLLED_INDEXING_REFERENCE_RESOLUTION_AND_CONNECTION",
+  "truth_creation": false,
+  "identity_guessing": false,
+  "conflict_resolution_authority": false,
+  "qa_authority": false,
+  "production_authority": false,
+  "forward_resolution": true,
+  "reverse_resolution": true,
+  "fail_closed": true,
+  "research": "UPSTREAM_RESEARCH_REQUIRED",
+  "production": "REQUIRES_VALID_HANDOFF_AND_QA"
+}

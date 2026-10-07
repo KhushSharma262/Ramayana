@@ -1,0 +1,3 @@
+﻿# UNKNOWN CONFLICT FIREWALL
+
+UNKNOWN, EVIDENCE GAP, CONFLICT, AMBIGUITY, and UNCERTAINTY cannot silently become resolved truth.

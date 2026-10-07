@@ -1,4 +1,0 @@
-﻿# lion
-
-<!-- PURPOSE: Animal research -->
-

@@ -1,4 +1,0 @@
-﻿# cow
-
-<!-- PURPOSE: Animal research -->
-

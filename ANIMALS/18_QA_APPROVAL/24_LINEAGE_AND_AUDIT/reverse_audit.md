@@ -1,0 +1,21 @@
+﻿# REVERSE AUDIT
+
+FINAL OUTPUT
+-> APPROVAL
+-> QA RECORD
+-> ASSET
+-> GENERATION
+-> MODEL
+-> REFERENCE SET
+-> PROMPT
+-> SHOT
+-> SCENE
+-> PRODUCTION HANDOFF
+-> CONTINUITY SNAPSHOT
+-> DOMAIN SNAPSHOT
+-> DECISION
+-> CLAIM
+-> EVIDENCE
+-> SOURCE
+
+Every material final output must be reversible through its lineage.

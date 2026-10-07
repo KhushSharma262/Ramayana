@@ -1,0 +1,25 @@
+﻿# CINEMATIC STATE VECTOR
+
+Every shot must have a defined state across:
+
+SUBJECT
+ENVIRONMENT
+BEHAVIOR
+MOVEMENT
+INTERACTION
+VISUAL IDENTITY
+AUDIO
+CAMERA
+LENS
+LIGHT
+COMPOSITION
+EDITING
+COLOR
+CONTINUITY
+HISTORICAL/CANONICAL
+SUPERNATURAL
+AI IMPLEMENTATION
+
+Undefined critical state = BLOCKED.
+
+A cinematic state is an implementation state derived from approved upstream states.

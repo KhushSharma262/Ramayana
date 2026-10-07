@@ -1,0 +1,4 @@
+﻿# STATUS SEPARATION
+REGISTERED does not mean APPROVED.
+ACTIVE does not mean TRUE.
+CONNECTED does not mean VALIDATED.

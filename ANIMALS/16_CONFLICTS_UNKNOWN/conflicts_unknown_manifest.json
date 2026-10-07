@@ -1,0 +1,22 @@
+﻿{
+  "system": "16_CONFLICTS_UNKNOWN",
+  "version": "1.0",
+  "architecture": "COMPLETE",
+  "hardening": "COMPLETE",
+  "state": "FROZEN",
+  "unknowns_are_valid_state": true,
+  "conflicts_are_valid_state": true,
+  "unknown_is_not_absent": true,
+  "conflict_is_not_error": true,
+  "variability_is_not_conflict": true,
+  "guessing_disabled": true,
+  "ai_as_evidence": false,
+  "domain_override": false,
+  "fail_closed": true,
+  "snapshot_immutability": true,
+  "forward_audit": true,
+  "reverse_audit": true,
+  "production": "BLOCKED_WHEN_MATERIAL_UNCERTAINTY_REMAINS",
+  "traceability": "SOURCE -> EVIDENCE -> CLAIM -> CONFLICT_OR_UNKNOWN -> RESOLUTION -> SNAPSHOT -> HANDOFF -> DOMAIN",
+  "validator": "29_FINAL_HARDENING/validate_conflicts_unknown.ps1"
+}

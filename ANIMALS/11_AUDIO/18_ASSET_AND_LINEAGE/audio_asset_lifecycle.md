@@ -1,0 +1,15 @@
+﻿# AUDIO ASSET LIFECYCLE
+
+REGISTERED
+→ REFERENCED
+→ GENERATED/RECORDED
+→ VALIDATING
+→ APPROVED
+→ USED
+→ DERIVED
+→ REVALIDATED
+→ ARCHIVED/REVOKED
+
+Every asset has lineage.
+
+Replacement does not erase history.

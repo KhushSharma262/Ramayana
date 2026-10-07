@@ -1,0 +1,20 @@
+﻿{
+  "system": "15_RESEARCH",
+  "version": "1.0",
+  "architecture": "COMPLETE",
+  "hardening": "COMPLETE",
+  "research_state": "PARTIALLY_POPULATED",
+  "production_state": "BLOCKED_UNTIL_APPROVED_SNAPSHOTS",
+  "source_of_truth": "RESEARCH_EVIDENCE_ONLY",
+  "ai_output_as_evidence": false,
+  "taxonomy_fail_closed": true,
+  "geography_fail_closed": true,
+  "temporal_fail_closed": true,
+  "canonical_scientific_boundary": true,
+  "snapshot_immutability": true,
+  "forward_audit": true,
+  "reverse_audit": true,
+  "fail_closed": true,
+  "traceability": "SOURCE -> EVIDENCE -> CLAIM -> INTERPRETATION -> APPROVAL -> RESEARCH_SNAPSHOT -> DOMAIN_HANDOFF -> DOMAIN_SNAPSHOT -> SCENE -> SHOT",
+  "validator": "26_FINAL_HARDENING/validate_research.ps1"
+}

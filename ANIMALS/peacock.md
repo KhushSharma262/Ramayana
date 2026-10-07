@@ -1,4 +1,0 @@
-﻿# peacock
-
-<!-- PURPOSE: Animal research -->
-

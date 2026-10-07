@@ -1,4 +1,0 @@
-﻿# birds
-
-<!-- PURPOSE: Animal research -->
-

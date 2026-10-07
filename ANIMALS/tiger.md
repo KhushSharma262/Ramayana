@@ -1,4 +1,0 @@
-﻿# tiger
-
-<!-- PURPOSE: Animal research -->
-

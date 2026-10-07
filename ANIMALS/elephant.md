@@ -1,4 +1,0 @@
-﻿# elephant
-
-<!-- PURPOSE: Animal research -->
-

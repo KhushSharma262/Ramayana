@@ -1,0 +1,8 @@
+﻿"LegacyArea","Authority","Rule"
+"audio","11_AUDIO","Audio truth must be biologically appropriate and evidence-backed."
+"ecology","05_ECOLOGY","Ecology owns habitat, environment, resources and ecological relationships."
+"population","05_ECOLOGY","Population state remains distinct from individual identity."
+"scene_behavior","03_BEHAVIOR + 20_EPISODE_INTEGRATION","Scene context cannot silently redefine behavioral truth."
+"species","01_BIOLOGY + 15_RESEARCH","Taxonomy and species identity require explicit evidence."
+"references","15_RESEARCH","References are evidence inputs, not automatic canonical truth."
+"groups","03_BEHAVIOR + 05_ECOLOGY","Group terminology cannot silently resolve unresolved taxonomy."

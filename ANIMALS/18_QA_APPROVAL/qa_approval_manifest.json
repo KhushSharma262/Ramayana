@@ -1,0 +1,19 @@
+﻿{
+  "system": "18_QA_APPROVAL",
+  "version": "1.0",
+  "state": "FROZEN",
+  "architecture": "COMPLETE",
+  "hardening": "COMPLETE",
+  "authority": "INDEPENDENT_VERIFICATION_AND_ACCEPTANCE",
+  "source_of_truth": false,
+  "ai_as_evidence": false,
+  "fail_closed": true,
+  "approval_requires_traceability": true,
+  "approval_requires_valid_snapshots": true,
+  "approval_requires_complete_dependencies": true,
+  "approval_scope_is_version_specific": true,
+  "reverse_audit": true,
+  "forward_audit": true,
+  "research": "UPSTREAM_RESEARCH_REQUIRED",
+  "production": "BLOCKED_UNTIL_QA_APPROVED"
+}

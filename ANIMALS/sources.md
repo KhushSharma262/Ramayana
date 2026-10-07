@@ -1,4 +1,0 @@
-﻿# sources
-
-<!-- PURPOSE: Animal sources -->
-

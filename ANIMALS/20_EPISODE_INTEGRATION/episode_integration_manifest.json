@@ -1,0 +1,18 @@
+﻿{
+  "system": "20_EPISODE_INTEGRATION",
+  "version": "1.0",
+  "state": "FROZEN",
+  "architecture": "COMPLETE",
+  "hardening": "COMPLETE",
+  "source_of_truth": false,
+  "purpose": "EPISODE_LEVEL_ASSEMBLY_OF_APPROVED_ANIMAL_WORLD_STATE",
+  "continuity_authority": "UPSTREAM_CONTINUITY",
+  "qa_authority": "UPSTREAM_QA",
+  "production_handoff_authority": "UPSTREAM_PRODUCTION_HANDOFF",
+  "ai_as_source_of_truth": false,
+  "fail_closed": true,
+  "forward_audit": true,
+  "reverse_audit": true,
+  "research": "UPSTREAM_RESEARCH_REQUIRED",
+  "production": "REQUIRES_VALID_HANDOFF_AND_QA_APPROVAL"
+}

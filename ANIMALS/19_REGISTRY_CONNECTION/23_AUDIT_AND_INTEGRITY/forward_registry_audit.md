@@ -1,0 +1,15 @@
+﻿# FORWARD REGISTRY AUDIT
+
+SOURCE
+-> DOMAIN
+-> DOMAIN RECORD
+-> SNAPSHOT
+-> REGISTRY ID
+-> SCENE
+-> SHOT
+-> ASSET
+-> QA
+-> APPROVAL
+-> FINAL OUTPUT
+
+Every connection must remain traversable.

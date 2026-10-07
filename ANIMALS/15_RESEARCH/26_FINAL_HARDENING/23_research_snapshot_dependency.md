@@ -1,0 +1,14 @@
+﻿# RESEARCH SNAPSHOT DEPENDENCY
+
+A research snapshot must preserve:
+
+SOURCE_IDS
+EVIDENCE_IDS
+CLAIM_IDS
+INTERPRETATIONS
+CONFLICTS
+UNKNOWNS
+APPROVAL
+VERSION
+
+Missing dependency -> invalid snapshot.

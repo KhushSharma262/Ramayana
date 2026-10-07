@@ -1,4 +1,0 @@
-﻿# snakes
-
-<!-- PURPOSE: Animal research -->
-
