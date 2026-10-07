@@ -1,3 +1,5 @@
+LENS SELECTION HAS PRIORITY OVER LENS EFFECTS:
+First determine whether the shot requires anamorphic or spherical optics. Only after selecting anamorphic should anamorphic optical behaviour be applied.
 ### ANAMORPHIC LENS BEHAVIOUR
 
 Use anamorphic optical behaviour only when it is cinematographically justified by the shot. Do not treat anamorphic as the default visual style.
