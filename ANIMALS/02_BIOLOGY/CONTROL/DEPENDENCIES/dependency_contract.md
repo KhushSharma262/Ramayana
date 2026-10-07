@@ -1,0 +1,41 @@
+﻿# BIOLOGICAL DEPENDENCY GRAPH
+
+Potential downstream systems:
+
+BEHAVIOR
+MOVEMENT
+ECOLOGY
+DOMESTIC_TRAINED
+INTERACTION
+VISUAL_IDENTITY
+CONTINUITY
+AI_PRODUCTION
+AUDIO
+CINEMATIC_INTEGRATION
+
+Biology may affect:
+
+AGE
+SEX
+ANATOMY
+PHYSIOLOGY
+HEALTH
+NUTRITION
+REST
+SENSES
+REPRODUCTION
+VARIATION
+
+## RULE
+
+A changed biological fact requires identification of all affected downstream
+records.
+
+Each affected downstream record must be:
+
+ACKNOWLEDGED
+REVALIDATED
+or
+BLOCKED
+
+Unknown impact = BLOCKED.

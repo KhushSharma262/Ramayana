@@ -1,0 +1,17 @@
+﻿{
+  "registry": "DOMESTIC_TRAINED_ENTITY_REGISTRY",
+  "version": "1.0",
+  "classes": [
+    "SPECIES",
+    "DOMESTIC_POPULATION",
+    "INDIVIDUAL_ANIMAL",
+    "HUMAN_HANDLER",
+    "EQUIPMENT",
+    "TRAINING_PROGRAM",
+    "WORK_ROLE",
+    "HUSBANDRY_SYSTEM",
+    "HISTORICAL_PRACTICE",
+    "CONTINUITY_STATE"
+  ],
+  "unresolved_identity_blocks_production": true
+}

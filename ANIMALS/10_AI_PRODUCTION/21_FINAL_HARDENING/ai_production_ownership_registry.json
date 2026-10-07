@@ -1,0 +1,11 @@
+﻿{
+    "Biology":  "Physical and physiological truth",
+    "Behavior":  "Motivation, instinct, behavioral state and response",
+    "Movement":  "Physical execution and biomechanics",
+    "Ecology":  "Habitat, resources, environmental context and populations",
+    "DomesticTrained":  "Domestication, training, work, equipment and human-animal context",
+    "Interaction":  "Interaction event identity, participants, outcome and consequences",
+    "VisualIdentity":  "Canonical visual representation",
+    "Continuity":  "Persistence, snapshots and timeline",
+    "AIProduction":  "Implementation, generation, asset construction and validation"
+}

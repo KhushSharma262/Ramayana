@@ -1,0 +1,93 @@
+﻿{
+  "system": "ANIMALS/05_ECOLOGY",
+  "architecture_version": "1.2",
+  "architecture_status": "FROZEN",
+  "production_data_status": "BLOCKED",
+  "research_status": "NOT_STARTED",
+  "validation_required": true,
+
+  "master_rule": "EVERY_ECOLOGICAL_ELEMENT_VISIBLE_IN_A_SCENE_MUST_HAVE_A_REASON_FOR_BEING_THERE",
+
+  "authority_chain": [
+    "BIOLOGY",
+    "ECOLOGY",
+    "BEHAVIOR",
+    "MOVEMENT",
+    "DIRECTING",
+    "AI_PRODUCTION"
+  ],
+
+  "evidence_firewall": true,
+  "ai_feedback_to_truth_forbidden": true,
+  "claim_level_provenance": true,
+  "source_independence_required": true,
+  "dependency_invalidation": true,
+  "immutable_snapshots": true,
+  "scene_overrides_separate_from_truth": true,
+  "canonical_version_control": true,
+  "literary_interpretation_control": true,
+  "cross_scene_causality": true,
+  "version_history": true,
+
+  "temporal_domains": [
+    "MODERN",
+    "HISTORICAL",
+    "CANONICAL",
+    "INFERRED",
+    "PRODUCTION"
+  ],
+
+  "presence_states": [
+    "PRESENT",
+    "ABSENT",
+    "UNKNOWN",
+    "CONDITIONALLY_PRESENT",
+    "HISTORICALLY_PRESENT",
+    "SEASONALLY_PRESENT"
+  ],
+
+  "visibility_states": [
+    "PRESENT_AND_VISIBLE",
+    "PRESENT_NOT_VISIBLE",
+    "PRESENT_BUT_OCCURRENCE_UNCERTAIN",
+    "ABSENT",
+    "UNKNOWN"
+  ],
+
+  "scene_ecology_states": [
+    "NATURAL",
+    "CINEMATICALLY_COMPOSED",
+    "SUPERNATURAL"
+  ],
+
+  "hard_fail_conditions": [
+    "UNRESOLVED_LOCATION",
+    "UNSUPPORTED_HABITAT",
+    "UNSUPPORTED_SPECIES_PRESENCE",
+    "UNKNOWN_REQUIRED_TEMPORAL_SCOPE",
+    "MODERN_TO_HISTORICAL_PROJECTION",
+    "SUPERNATURAL_CONTAMINATION",
+    "UNSUPPORTED_HUMAN_LANDSCAPE",
+    "UNSUPPORTED_ANIMAL_DENSITY",
+    "UNSUPPORTED_VEGETATION",
+    "UNSUPPORTED_WATER_SYSTEM",
+    "MISSING_CRITICAL_EVIDENCE",
+    "UNRESOLVED_CONFLICT",
+    "MISSING_APPROVAL",
+    "MISSING_SNAPSHOT",
+    "SCOPE_LEAKAGE",
+    "UNSUPPORTED_ABSENCE",
+    "CINEMATIC_OUTPUT_USED_AS_EVIDENCE",
+    "SOURCE_DUPLICATION_USED_AS_INDEPENDENT_CONFIRMATION",
+    "CARRYING_CAPACITY_CONFLICT",
+    "CONTINUITY_BREAK",
+    "STALE_DEPENDENCY",
+    "INVALID_CANONICAL_VERSION",
+    "UNSUPPORTED_LIFE_STAGE",
+    "UNSUPPORTED_REPRODUCTIVE_STATE",
+    "UNSUPPORTED_RESOURCE_COMPETITION",
+    "UNVERSIONED_PRODUCTION_STATE"
+  ],
+
+  "legacy_material_policy": "QUARANTINE_NOT_DELETE"
+}

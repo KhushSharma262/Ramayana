@@ -1,0 +1,21 @@
+﻿{
+  "schema": "DOMESTIC_TRAINED_PRODUCTION_TRACE",
+  "version": "1.0",
+  "required_chain": [
+    "source_id",
+    "evidence_id",
+    "claim_id",
+    "domestic_state_id",
+    "training_state_id",
+    "individual_or_population_id",
+    "equipment_state_id",
+    "handler_state_id",
+    "snapshot_id",
+    "scene_id",
+    "prompt_id",
+    "asset_id",
+    "final_shot_id",
+    "audit_id"
+  ],
+  "ai_output_is_evidence": false
+}

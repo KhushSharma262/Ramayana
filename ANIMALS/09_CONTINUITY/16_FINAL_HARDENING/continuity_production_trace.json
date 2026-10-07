@@ -1,0 +1,28 @@
+﻿{
+    "mandatory_forward_chain":  [
+                                    "SOURCE",
+                                    "CLAIM",
+                                    "DECISION",
+                                    "DOMAIN_STATE",
+                                    "DOMAIN_SNAPSHOT",
+                                    "CONTINUITY_SNAPSHOT",
+                                    "TIMELINE",
+                                    "EVENT",
+                                    "SCENE",
+                                    "PROMPT",
+                                    "ASSET",
+                                    "SHOT"
+                                ],
+    "mandatory_reverse_chain":  [
+                                    "SHOT",
+                                    "ASSET",
+                                    "PROMPT",
+                                    "SCENE",
+                                    "CONTINUITY_SNAPSHOT",
+                                    "DOMAIN_SNAPSHOT",
+                                    "DECISION",
+                                    "CLAIM",
+                                    "SOURCE"
+                                ],
+    "failure_state":  "BLOCKED"
+}

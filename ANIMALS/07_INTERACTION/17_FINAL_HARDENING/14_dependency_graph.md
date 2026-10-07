@@ -1,0 +1,21 @@
+﻿# DEPENDENCY GRAPH
+
+BIOLOGY
+↓
+BEHAVIOR / MOVEMENT / ECOLOGY / DOMESTIC_TRAINED
+↓
+INTERACTION
+↓
+RELATIONSHIP / CONSEQUENCE
+↓
+CONTINUITY
+↓
+SCENE
+↓
+PROMPT
+↓
+ASSET
+↓
+SHOT
+
+Upstream changes invalidate dependent downstream claims where relevant.

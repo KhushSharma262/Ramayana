@@ -1,0 +1,9 @@
+﻿{
+  "registry": "ECOLOGY_ENTITY_REGISTRY",
+  "version": "1.0",
+  "status": "FROZEN",
+  "identity_required": true,
+  "taxonomy_version_required": true,
+  "duplicate_detection_required": true,
+  "unresolved_taxon_blocks_species_specific_production": true
+}

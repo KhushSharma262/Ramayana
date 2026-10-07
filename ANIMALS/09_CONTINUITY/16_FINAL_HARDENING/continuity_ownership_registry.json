@@ -1,0 +1,29 @@
+﻿{
+    "system":  "09_CONTINUITY",
+    "authoritative_domains":  [
+                                  "BIOLOGY",
+                                  "BEHAVIOR",
+                                  "MOVEMENT",
+                                  "ECOLOGY",
+                                  "DOMESTIC_TRAINED",
+                                  "INTERACTION",
+                                  "VISUAL_IDENTITY"
+                              ],
+    "continuity_authority":  [
+                                 "PERSISTENCE",
+                                 "TIMELINE",
+                                 "SNAPSHOTS",
+                                 "EVENT_TRANSITIONS",
+                                 "RECONCILIATION",
+                                 "ROLLBACK",
+                                 "VERSIONING",
+                                 "AUDIT"
+                             ],
+    "forbidden_truth_sources":  [
+                                    "AI_GENERATED_ASSET",
+                                    "PROMPT",
+                                    "CAMERA_EFFECT",
+                                    "UNAPPROVED_SCENE_DESCRIPTION",
+                                    "UNAPPROVED_PRODUCTION_DECISION"
+                                ]
+}

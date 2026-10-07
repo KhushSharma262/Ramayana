@@ -1,0 +1,53 @@
+﻿{
+  "Biology": [
+    "anatomy",
+    "physiology",
+    "health",
+    "physical_limits",
+    "injury"
+  ],
+  "Behavior": [
+    "motivation",
+    "behavioral_state",
+    "response",
+    "communication",
+    "fear",
+    "aggression",
+    "affiliation"
+  ],
+  "Movement": [
+    "physical_execution",
+    "biomechanics",
+    "gait",
+    "balance",
+    "contact_mechanics"
+  ],
+  "Ecology": [
+    "habitat",
+    "resources",
+    "population",
+    "season",
+    "environmental_relationships"
+  ],
+  "Domestic_Trained": [
+    "domestication",
+    "training",
+    "handler",
+    "work_role",
+    "equipment",
+    "husbandry"
+  ],
+  "Interaction": [
+    "interaction_event",
+    "participants",
+    "interaction_type",
+    "interaction_lifecycle",
+    "event_outcome",
+    "relationship_consequence"
+  ],
+  "AI_Production": [
+    "generation",
+    "rendering",
+    "asset_implementation"
+  ]
+}

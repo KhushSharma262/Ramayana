@@ -1,0 +1,18 @@
+﻿# PRODUCTION TRACEABILITY FIREWALL
+
+Mandatory chain:
+
+SOURCE
+→ CLAIM
+→ DECISION
+→ DOMAIN_STATE
+→ DOMAIN_SNAPSHOT
+→ CONTINUITY_SNAPSHOT
+→ TIMELINE
+→ EVENT
+→ SCENE
+→ PROMPT
+→ ASSET
+→ SHOT
+
+Every production artifact must be reversible through this chain.

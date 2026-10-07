@@ -1,0 +1,46 @@
+﻿# INTERACTION EVENT SCHEMA
+
+Every persistent interaction record should contain:
+
+interaction_id
+interaction_version
+interaction_state
+interaction_type
+interaction_subtype
+participants
+participant_roles
+initiator
+recipient
+observer_entities
+individual_or_population
+start_condition
+start_time
+end_condition
+end_time
+location_id
+habitat_context
+season
+weather_context
+resource_context
+social_context
+domestic_training_context
+equipment_context
+behavior_context_reference
+movement_context_reference
+biology_context_reference
+ecology_context_reference
+historical_context
+canonical_context
+evidence_records
+interpretation
+decision
+approval
+snapshot_id
+outcome
+consequences
+relationship_effect
+continuity_effect
+scene_references
+production_references
+
+Missing required information blocks progression where that field is applicable.

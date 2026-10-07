@@ -1,0 +1,17 @@
+﻿{
+  "schema": "ECOLOGY_PRODUCTION_TRACE",
+  "version": "1.0",
+  "required_chain": [
+    "ecology_snapshot_id",
+    "scene_id",
+    "scene_ecological_state_id",
+    "directorial_decision_id",
+    "prompt_id",
+    "asset_id",
+    "generation_version",
+    "final_shot_id",
+    "audit_id"
+  ],
+  "ai_output_is_evidence": false,
+  "ai_output_can_modify_ecological_truth": false
+}

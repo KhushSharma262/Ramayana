@@ -1,0 +1,20 @@
+﻿{
+    "system":  "RAMAYAN_ANIMALS_BEHAVIOR",
+    "architecture_version":  "3.0",
+    "control_mode":  "FAIL_CLOSED",
+    "database_mode":  "GROUP_DATABASES",
+    "production_status":  "BLOCKED",
+    "generated_at":  "2026-10-07T00:22:58.8683912+05:30",
+    "databases":  {
+                      "mammals_behavior.md":  "MAM",
+                      "amphibians_behavior.md":  "AMP",
+                      "birds_behavior.md":  "BRD",
+                      "fish_behavior.md":  "FSH",
+                      "reptiles_behavior.md":  "REP",
+                      "invertebrates_behavior.md":  "INV"
+                  },
+    "entity_count":  0,
+    "claim_count":  0,
+    "validation_error_count":  1,
+    "validation_warning_count":  1
+}

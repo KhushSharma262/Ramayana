@@ -1,0 +1,27 @@
+﻿# CANONICAL INTERACTION STATE VECTOR
+
+interaction_id
+interaction_version
+interaction_state
+interaction_type
+participants
+initiator
+recipient
+context
+temporal_layer
+geographic_scope
+behavior_reference
+movement_reference
+biology_reference
+ecology_reference
+domestic_trained_reference
+relationship_state
+outcome
+consequences
+evidence_state
+approval_state
+snapshot_id
+continuity_state
+production_state
+
+One canonical state at a given approved snapshot.

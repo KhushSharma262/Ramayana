@@ -1,0 +1,18 @@
+﻿# ASSET LIFECYCLE
+
+DRAFT
+-> GENERATED
+-> TECHNICAL_QA
+-> BIOLOGICAL_QA
+-> BEHAVIORAL_QA
+-> MOVEMENT_QA
+-> VISUAL_QA
+-> CONTINUITY_QA
+-> SCENE_QA
+-> APPROVED
+-> SHOT_READY
+
+Failure at any required gate:
+REJECTED or BLOCKED.
+
+Rejected assets remain auditable.

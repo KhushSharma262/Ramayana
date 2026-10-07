@@ -1,0 +1,15 @@
+﻿# PRODUCTION TRACEABILITY FIREWALL
+
+Required chain:
+
+SOURCE
+→ CLAIM
+→ DECISION
+→ VISUAL_IDENTITY_ID
+→ SNAPSHOT_ID
+→ SCENE_ID
+→ PROMPT_ID
+→ ASSET_ID
+→ SHOT_ID
+
+Missing traceability blocks production.

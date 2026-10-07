@@ -1,0 +1,58 @@
+﻿{
+  "registry": "DOMESTIC_TRAINED_OWNERSHIP",
+  "version": "1.0",
+  "domestic_trained": [
+    "domestication_status",
+    "taming",
+    "habituation_to_humans",
+    "training_history",
+    "learned_cues",
+    "handler_relationships",
+    "work_roles",
+    "husbandry",
+    "equipment_context",
+    "workload_history",
+    "conditioning_history",
+    "individual_working_identity",
+    "human_animal_continuity",
+    "historical_animal_use",
+    "training_progression",
+    "training_failure",
+    "retraining",
+    "domestic_population_management"
+  ],
+  "biology": [
+    "anatomy",
+    "morphology",
+    "physiology",
+    "physical_limits"
+  ],
+  "behavior": [
+    "behavioral_state",
+    "behavioral_response",
+    "social_behavior",
+    "fear_response"
+  ],
+  "movement": [
+    "biomechanics",
+    "gait",
+    "physical_execution",
+    "load_mechanics"
+  ],
+  "ecology": [
+    "habitat",
+    "water",
+    "wild_resources",
+    "wild_population_ecology"
+  ],
+  "directing": [
+    "framing",
+    "composition",
+    "dramatic_emphasis"
+  ],
+  "ai_production": [
+    "generation",
+    "rendering"
+  ],
+  "silent_overwrite": false
+}

@@ -1,0 +1,6 @@
+﻿{
+  "traceability": "SOURCE -> CLAIM -> DECISION -> INTERACTION_ID -> SNAPSHOT_ID -> SCENE_ID -> PROMPT_ID -> ASSET_ID -> SHOT_ID",
+  "missing_traceability": "BLOCKED",
+  "ai_output_as_truth": false,
+  "asset_conflict_action": "REJECT_ASSET"
+}

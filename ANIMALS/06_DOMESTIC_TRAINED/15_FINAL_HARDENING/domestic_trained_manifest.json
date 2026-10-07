@@ -1,0 +1,17 @@
+﻿{
+  "system": "RAMAYAN_DOMESTIC_TRAINED",
+  "architecture_version": "1.0",
+  "status": "FROZEN",
+  "research_status": "NOT_STARTED",
+  "production_status": "BLOCKED_UNTIL_APPROVED_SNAPSHOT",
+  "ai_output_is_evidence": false,
+  "ai_output_can_modify_truth": false,
+  "individual_identity_required": true,
+  "training_state_required": true,
+  "equipment_continuity_required": true,
+  "handler_continuity_required": true,
+  "historical_reconstruction_firewall": true,
+  "cross_system_dependency_control": true,
+  "regeneration_drift_control": true,
+  "rollback_control": true
+}

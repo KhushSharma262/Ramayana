@@ -1,0 +1,66 @@
+﻿{
+  "system": "ANIMALS/04_MOVEMENT",
+  "architecture_version": "1.0",
+  "architecture_status": "FROZEN",
+  "production_data_status": "BLOCKED",
+  "research_status": "NOT_STARTED",
+  "validation_required": true,
+
+  "authority_chain": [
+    "BIOLOGY",
+    "BEHAVIOR",
+    "MOVEMENT",
+    "DIRECTING",
+    "AI_PRODUCTION"
+  ],
+
+  "database_groups": [
+    "mammals",
+    "birds",
+    "reptiles",
+    "amphibians",
+    "fish",
+    "invertebrates"
+  ],
+
+  "species_resolution_required": true,
+
+  "contexts": [
+    "NORMAL",
+    "ALERT",
+    "STRESSED",
+    "PANICKED",
+    "TRAINED",
+    "RIDDEN",
+    "LOADED",
+    "WORKING",
+    "FATIGUED",
+    "INJURED",
+    "JUVENILE",
+    "PREGNANT",
+    "HIGH_SPEED",
+    "EXTREME_TERRAIN"
+  ],
+
+  "exception_domains": [
+    "CINEMATICALLY_EMPHASIZED",
+    "SUPERNATURAL",
+    "HISTORICAL_RECONSTRUCTION"
+  ],
+
+  "hard_fail_conditions": [
+    "UNRESOLVED_SPECIES",
+    "MISSING_CRITICAL_EVIDENCE",
+    "IMPOSSIBLE_BIOMECHANICS",
+    "INVALID_CONTEXT",
+    "UNAPPROVED_EXCEPTION",
+    "UNRESOLVED_CONFLICT",
+    "MISSING_APPROVAL",
+    "MISSING_SNAPSHOT",
+    "UNSUPPORTED_CINEMATIC_EXAGGERATION",
+    "SUPERNATURAL_CONTAMINATION",
+    "UNSUPPORTED_HISTORICAL_EQUIPMENT"
+  ],
+
+  "legacy_material_policy": "QUARANTINE_NOT_DELETE"
+}

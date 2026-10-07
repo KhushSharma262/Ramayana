@@ -1,0 +1,49 @@
+﻿{
+  "registry": "ECOLOGY_CROSS_SYSTEM_GOVERNANCE",
+  "version": "1.0",
+  "ownership": {
+    "biology": [
+      "anatomy",
+      "morphology",
+      "physiological_limits"
+    ],
+    "behavior": [
+      "behavioral_states",
+      "behavioral_triggers",
+      "social_behavior"
+    ],
+    "movement": [
+      "locomotion",
+      "biomechanics",
+      "physical_movement_execution"
+    ],
+    "ecology": [
+      "habitat",
+      "landscape",
+      "vegetation",
+      "water",
+      "climate_ecology",
+      "species_distribution",
+      "population_ecology",
+      "resources",
+      "ecological_interactions",
+      "human_ecology",
+      "disturbance"
+    ],
+    "geography": [
+      "geographic_identity",
+      "spatial_reference"
+    ],
+    "directing": [
+      "shot_selection",
+      "framing",
+      "composition"
+    ],
+    "ai_production": [
+      "generation_implementation",
+      "rendering"
+    ]
+  },
+  "silent_overwrite": false,
+  "ownership_conflict_blocks_production": true
+}

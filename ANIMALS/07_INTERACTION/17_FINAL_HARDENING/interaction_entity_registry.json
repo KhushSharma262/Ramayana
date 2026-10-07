@@ -1,0 +1,9 @@
+﻿{
+  "system": "07_INTERACTION",
+  "canonical_entity": "interaction_id",
+  "participant_identity_source": "UPSTREAM_CANONICAL_IDENTITY_SYSTEM",
+  "relationship_entity": "relationship_id",
+  "snapshot_entity": "snapshot_id",
+  "scene_entity": "scene_id",
+  "production_entity": "shot_id"
+}

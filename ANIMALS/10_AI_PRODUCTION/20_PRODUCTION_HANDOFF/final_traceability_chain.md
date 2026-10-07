@@ -1,0 +1,20 @@
+﻿# FINAL TRACEABILITY CHAIN
+
+SOURCE
+-> CLAIM
+-> DECISION
+-> DOMAIN_STATE
+-> DOMAIN_SNAPSHOT
+-> CONTINUITY_SNAPSHOT
+-> SCENE
+-> SHOT
+-> PROMPT
+-> MODEL
+-> REFERENCE_SET
+-> GENERATION
+-> ASSET
+-> VALIDATION
+-> APPROVAL
+-> FINAL_SHOT
+
+Every production-ready animal shot must be auditable through this chain.

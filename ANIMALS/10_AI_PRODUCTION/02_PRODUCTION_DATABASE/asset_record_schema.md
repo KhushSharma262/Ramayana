@@ -1,0 +1,26 @@
+﻿# ASSET RECORD SCHEMA
+
+Required fields:
+
+asset_id
+asset_type
+animal_id_or_population_id
+species_id
+visual_identity_id
+continuity_snapshot_id
+scene_id
+shot_id
+prompt_id
+model_id
+model_version
+reference_set_id
+generation_timestamp
+generation_version
+source_assets
+validation_status
+approval_status
+rejection_reason
+replacement_of
+checksum_or_fingerprint
+
+An asset without provenance cannot become production-approved.
