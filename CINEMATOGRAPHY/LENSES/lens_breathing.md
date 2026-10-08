@@ -1,4 +1,4 @@
-# LENS BREATHING BEHAVIOUR
+﻿# LENS BREATHING BEHAVIOUR
 
 ## PURPOSE
 
@@ -55,6 +55,395 @@ When uncertain, use less noticeable breathing.
 PHYSICAL OPTICAL REALISM ALWAYS TAKES PRIORITY OVER VISUAL EFFECT.
 
 ==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Lens breathing must be derived from the selected physical lens and its
+focus-dependent optical behaviour.
+
+UNKNOWN does not mean:
+
+- visible breathing
+- strong breathing
+- weak breathing
+- magnification change
+- FOV change
+- zoom-like movement
+- perspective change
+
+If the lens breathing behaviour is unknown, do not invent a visible framing
+change.
+
+Use the least noticeable physically plausible behaviour.
+
+NO FOCUS CHANGE
+→ NO FOCUS-INDUCED BREATHING
+
+FOCUS CHANGE + NO SUPPORTED BREATHING
+→ STABLE FRAMING
+
+FOCUS CHANGE + SUPPORTED BREATHING
+→ LENS-DEPENDENT OPTICAL FRAMING CHANGE
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+The selected lens and lens profile must be established before determining
+breathing behaviour.
+
+Order:
+
+LENS SYSTEM
+→ LENS TYPE
+→ LENS PROFILE
+→ SENSOR FORMAT / ACTIVE AREA
+→ FOCAL LENGTH
+→ FOCUS DISTANCE
+→ APERTURE
+→ LENS INTERNAL OPTICAL MOVEMENT
+→ BREATHING CHARACTER
+→ RESULTING APPARENT FRAMING
+
+Do not choose a desired breathing effect and then invent a lens profile to
+produce it.
+
+Lens breathing must remain subordinate to the selected lens design.
+
+==================================================
+BREATHING AUTHORIZATION
+==================================================
+
+Breathing may occur only when supported by the selected optical system.
+
+FORCED:
+Explicitly specified by a physically valid lens profile.
+
+DERIVED:
+Naturally produced by the selected lens as focus changes.
+
+ALLOWED:
+Physically plausible but not necessarily visible.
+
+DISABLED:
+The selected lens profile is effectively breathing-compensated or no
+visible breathing is supported.
+
+Narrative intent can determine whether an available breathing characteristic
+is acceptable, but narrative intent cannot manufacture breathing.
+
+==================================================
+PHYSICAL FRAMING RULE
+==================================================
+
+Lens breathing affects the complete optical image.
+
+If apparent magnification changes:
+
+- foreground participates
+- subject participates
+- background participates
+- architectural geometry remains coherent
+- relative spatial relationships remain physically stable
+
+Never resize individual objects independently.
+
+Never preserve one object at a fixed scale while selectively changing
+another.
+
+The result must emerge from one coherent optical image.
+
+==================================================
+BREATHING / PERSPECTIVE FIREWALL
+==================================================
+
+Lens breathing may alter apparent framing or effective field of view.
+
+It does NOT physically move the camera.
+
+Therefore it must NOT independently create:
+
+- dolly perspective
+- changed camera position
+- altered relative depth caused by camera movement
+- background movement through space
+- subject-to-camera distance changes
+- parallax associated with physical camera movement
+
+If perspective changes, identify the separate camera-position change that
+caused it.
+
+If only focus changes, preserve camera position and physical scene geometry.
+
+==================================================
+BREATHING / FOV FIREWALL
+==================================================
+
+Breathing may produce an apparent FOV change as a consequence of the lens
+changing optical configuration during focus.
+
+Do not model this as an independent digital FOV parameter.
+
+The correct chain is:
+
+FOCUS CHANGE
+→ INTERNAL LENS MOVEMENT
+→ EFFECTIVE OPTICAL CHANGE
+→ APPARENT FRAMING / FOV CHANGE
+
+Never:
+
+FOCUS CHANGE
+→ DIGITAL FOV CHANGE
+→ IMAGE SCALING
+
+==================================================
+BREATHING MAGNITUDE VALIDATION
+==================================================
+
+Before allowing visible breathing, evaluate:
+
+1. Selected lens profile.
+2. Lens optical design.
+3. Starting focus distance.
+4. Ending focus distance.
+5. Focal length.
+6. Focus mechanism.
+7. Internal optical movement.
+8. Sensor format / active area.
+9. Camera position.
+10. Subject distance.
+11. Background distance.
+12. Focus transition speed.
+13. Whether breathing compensation is present.
+
+If these dependencies do not support visible breathing, suppress it.
+
+Do not increase breathing merely because the focus-distance change is large.
+
+Focus-distance range is a contributor, not a standalone authorization.
+
+==================================================
+BREATHING DIRECTION VALIDATION
+==================================================
+
+Do not assume all lenses breathe in the same direction.
+
+The apparent image may:
+
+- magnify slightly
+- reduce in magnification
+- remain nearly stable
+
+The direction must follow the selected lens profile.
+
+Never reverse breathing direction during a single continuous focus
+transition without a physically supported optical reason.
+
+==================================================
+CONTINUITY RULE
+==================================================
+
+Breathing must remain continuous with the focus transition.
+
+The physical relationship is:
+
+FOCUS POSITION
+→ LENS OPTICAL STATE
+→ APPARENT FRAMING
+
+Therefore:
+
+- no sudden zoom step
+- no FOV jump
+- no discontinuous magnification
+- no framing snap
+- no arbitrary breathing onset
+- no arbitrary breathing termination
+
+Every intermediate frame must represent a plausible intermediate optical
+state.
+
+==================================================
+FOCUS-SPEED COUPLING
+==================================================
+
+Breathing progression must follow the physical progression of the focus
+mechanism.
+
+A faster focus transition compresses the breathing change into less time.
+
+A slower focus transition distributes the breathing change over more time.
+
+Do not create a separate animation curve for breathing.
+
+Focus curve and breathing response must remain causally coupled.
+
+==================================================
+CAMERA-MOVEMENT SEPARATION
+==================================================
+
+When camera movement and focus change occur simultaneously, model them as
+independent physical processes.
+
+CAMERA MOVEMENT:
+changes camera position and perspective.
+
+LENS BREATHING:
+changes apparent optical framing during focus.
+
+Both may affect the final image simultaneously.
+
+Never use breathing to replace missing camera movement.
+
+Never use camera movement to manufacture lens breathing.
+
+==================================================
+BREATHING COMPENSATION RULE
+==================================================
+
+If the selected lens or camera system is designed to minimize or compensate
+for focus breathing:
+
+VISIBLE BREATHING
+→ NONE or MINIMAL
+
+Do not reintroduce breathing because a rack focus is present.
+
+A breathing-compensated lens must remain visually stable according to its
+actual optical profile.
+
+==================================================
+CHARACTER / GEOMETRY FIREWALL
+==================================================
+
+Lens breathing must never become subject morphing.
+
+Faces must maintain:
+
+- identity
+- facial proportions
+- eye spacing
+- nose geometry
+- jaw geometry
+- hairline
+- skin texture
+
+Architecture must maintain:
+
+- straight lines
+- stable windows
+- stable columns
+- stable structural proportions
+- coherent perspective
+
+Objects must not stretch, bend, or morph as apparent magnification changes.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+The physical chain must always be:
+
+FOCUS CHANGE
+→ INTERNAL LENS MOVEMENT
+→ EFFECTIVE OPTICAL GEOMETRY
+→ APPARENT FRAMING CHANGE
+→ FINAL IMAGE
+
+Never:
+
+DESIRED CINEMATIC ZOOM
+→ DIGITAL SCALING
+→ BACKGROUND RESIZING
+→ SUBJECT RESIZING
+→ FINAL IMAGE
+
+Never simulate breathing using:
+
+- digital zoom
+- image scaling
+- cropping
+- perspective warping
+- depth-map scaling
+- subject-specific magnification
+- background resizing
+- compositing
+- AI interpolation
+
+The system must not infer lens breathing from the desired visual appearance.
+
+==================================================
+TEMPORAL VALIDATION
+==================================================
+
+Every change in apparent framing must have a physical cause.
+
+Reject:
+
+- frame pumping
+- breathing flicker
+- random zooming
+- sudden FOV jumps
+- magnification oscillation
+- background resizing
+- foreground resizing
+- geometry morphing
+- face distortion
+- breathing reversal without cause
+- unstable edge behaviour
+
+The entire image must remain temporally coherent.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid outcomes are possible, select the least
+conspicuous breathing behaviour.
+
+Do not maximize:
+
+- magnification change
+- FOV change
+- framing movement
+- breathing visibility
+- lens character
+
+unless the selected lens naturally produces it.
+
+A focus pull with effectively invisible breathing is a valid and often
+preferred result.
+
+==================================================
+FINAL BREATHING REALISM RULE
+==================================================
+
+Lens breathing is successful only when it appears to be a natural
+consequence of the selected physical lens changing focus.
+
+The viewer should perceive:
+
+"the lens is changing focus"
+
+not:
+
+"the camera is digitally zooming."
+
+REAL OPTICAL CAUSALITY
+>
+OPTICAL CONSISTENCY
+>
+TEMPORAL CONSISTENCY
+>
+CINEMATIC COMPOSITION
+>
+VISIBLE BREATHING
+
+The final result must remain indistinguishable from real optical capture.
+
+
+==================================================
 WHAT LENS BREATHING IS
 ==================================================
 
@@ -63,9 +452,9 @@ Lens breathing is the apparent change in framing or field of view that occurs as
 During a focus pull:
 
 FOCUS DISTANCE CHANGES
-→ INTERNAL OPTICAL ELEMENTS MOVE
-→ EFFECTIVE OPTICAL GEOMETRY CHANGES
-→ APPARENT MAGNIFICATION / FIELD OF VIEW MAY CHANGE
+â†’ INTERNAL OPTICAL ELEMENTS MOVE
+â†’ EFFECTIVE OPTICAL GEOMETRY CHANGES
+â†’ APPARENT MAGNIFICATION / FIELD OF VIEW MAY CHANGE
 
 The image can therefore appear to:
 
@@ -168,15 +557,15 @@ Lens breathing should occur only when focus changes enough to produce it.
 
 No focus movement:
 
-→ no focus-induced breathing.
+â†’ no focus-induced breathing.
 
 Small focus movement:
 
-→ generally small breathing.
+â†’ generally small breathing.
 
 Large focus-distance change:
 
-→ potentially more noticeable breathing.
+â†’ potentially more noticeable breathing.
 
 The magnitude depends on the lens.
 
@@ -217,9 +606,9 @@ Avoid dramatic framing changes unless the selected lens is specifically known fo
 Default hierarchy:
 
 MINIMAL
-→ LOW
-→ MODERATE
-→ STRONG
+â†’ LOW
+â†’ MODERATE
+â†’ STRONG
 
 Use STRONG only when justified by:
 
@@ -239,12 +628,12 @@ Breathing may become more noticeable across large changes in focus distance.
 For example:
 
 very close subject
-→ distant subject
+â†’ distant subject
 
 may produce a larger apparent framing change than:
 
 near subject
-→ slightly farther subject.
+â†’ slightly farther subject.
 
 However, the lens design remains the dominant factor.
 
@@ -276,8 +665,8 @@ stable new framing
 Never:
 
 START
-→ sudden zoom
-→ END
+â†’ sudden zoom
+â†’ END
 
 The change must be optically continuous.
 
@@ -289,11 +678,11 @@ Breathing speed follows the focus transition.
 
 Fast focus pull:
 
-→ breathing occurs more quickly.
+â†’ breathing occurs more quickly.
 
 Slow focus pull:
 
-→ breathing occurs more gradually.
+â†’ breathing occurs more gradually.
 
 Do not alter breathing speed independently from the focus movement.
 
@@ -369,7 +758,7 @@ RACK FOCUS BETWEEN DEPTH PLANES
 For:
 
 foreground subject
-→ background subject
+â†’ background subject
 
 the system must determine:
 
@@ -731,12 +1120,12 @@ Never begin with:
 Instead determine:
 
 IS FOCUS CHANGING?
-→ WHAT LENS IS BEING USED?
-→ HOW DOES THAT LENS RESPOND TO FOCUS?
-→ HOW MUCH DOES ITS APPARENT FRAMING CHANGE?
-→ HOW DOES THAT CHANGE PROGRESS THROUGH THE FOCUS PULL?
-→ HOW DOES CAMERA MOVEMENT INTERACT WITH IT?
-→ DOES THE RESULT REMAIN PHYSICALLY PLAUSIBLE?
+â†’ WHAT LENS IS BEING USED?
+â†’ HOW DOES THAT LENS RESPOND TO FOCUS?
+â†’ HOW MUCH DOES ITS APPARENT FRAMING CHANGE?
+â†’ HOW DOES THAT CHANGE PROGRESS THROUGH THE FOCUS PULL?
+â†’ HOW DOES CAMERA MOVEMENT INTERACT WITH IT?
+â†’ DOES THE RESULT REMAIN PHYSICALLY PLAUSIBLE?
 
 Lens breathing must be a consequence of real optical lens design.
 
@@ -745,3 +1134,4 @@ It must never be a digital zoom disguised as focus behaviour.
 The final result must look like a real physical lens changing focus during real cinematography.
 
 It must never look AI-generated.
+

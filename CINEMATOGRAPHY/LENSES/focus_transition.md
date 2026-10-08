@@ -1,4 +1,4 @@
-# FOCUS TRANSITION BEHAVIOUR
+﻿# FOCUS TRANSITION BEHAVIOUR
 
 ## PURPOSE
 
@@ -70,14 +70,14 @@ A focus transition is a controlled movement of the lens's focal plane from one d
 Example:
 
 FOCUS A
-→ intermediate focal distances
-→ FOCUS B
+â†’ intermediate focal distances
+â†’ FOCUS B
 
 It is NOT:
 
 FOCUS A
-→ instant digital sharpness switch
-→ FOCUS B
+â†’ instant digital sharpness switch
+â†’ FOCUS B
 
 During a real focus pull:
 
@@ -88,6 +88,239 @@ During a real focus pull:
 - bokeh changes continuously
 - focus breathing may occur according to the lens
 - the entire image remains optically coherent
+
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Focus transition behaviour must be derived from physically available camera,
+lens, subject, and scene information.
+
+UNKNOWN does not mean:
+
+- shallow depth of field
+- strong bokeh
+- visible focus breathing
+- fast focus movement
+- slow focus movement
+- autofocus behaviour
+- cinematic focus pulling
+- lens character
+- optical artifacts
+
+If a required parameter is unknown, do not invent an optical effect to fill
+the missing information.
+
+Use the least visually intrusive physically plausible behaviour.
+
+Focus transition must never be used to compensate for missing:
+
+- subject distance
+- camera position
+- focal length
+- aperture
+- sensor format
+- depth of field
+- lens profile
+- focus mechanism
+- subject movement
+- camera movement
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+The selected lens and lens profile must be established before determining
+focus-transition characteristics.
+
+Order:
+
+LENS SYSTEM
+→ LENS TYPE
+→ LENS PROFILE
+→ FOCAL LENGTH
+→ SENSOR FORMAT / ACTIVE AREA
+→ CAMERA POSITION
+→ SUBJECT GEOMETRY
+→ APERTURE
+→ FOCUS DISTANCE
+→ DEPTH OF FIELD
+→ FOCUS TRANSITION
+→ RESULTING OPTICAL BEHAVIOUR
+
+A focus transition must inherit the physical characteristics of the selected
+lens.
+
+Do not select a focus-transition behaviour first and then invent a lens
+character to support it.
+
+Focus breathing, bokeh behaviour, distortion, aberration, close-focus
+character, and other optical responses must remain subordinate to the
+selected lens profile.
+
+==================================================
+PHYSICAL FOCUS-PLANE RULE
+==================================================
+
+The active focal plane must remain a physically coherent geometric plane
+throughout the transition.
+
+At every intermediate state:
+
+- the focal plane has one physically valid position
+- objects at different distances respond according to their distance from it
+- depth of field remains consistent with the current optical state
+- foreground, subject, and background cannot be independently blurred
+- important faces cannot receive isolated digital sharpness
+- no object may become sharp without the focal plane physically reaching
+  an appropriate distance
+
+The system must never construct focus behaviour as a collection of
+independent subject sharpness values.
+
+==================================================
+FOCUS TRANSITION AUTHORIZATION
+==================================================
+
+A focus transition may occur only when supported by at least one of:
+
+FORCED:
+Explicitly required by the script, shot design, or camera direction.
+
+DERIVED:
+Required by changing camera-to-subject or subject-to-camera geometry.
+
+ALLOWED:
+Physically plausible and useful to the shot, but not required.
+
+DISABLED:
+No focus transition is justified; maintain the established focal behaviour.
+
+Narrative importance alone does not authorize an optical transition if the
+required physical configuration does not support it.
+
+==================================================
+FOCUS SPEED PHYSICS
+==================================================
+
+Narrative urgency may influence the desired focus-pull timing, but it does
+not override the physical response of the selected focus system.
+
+Focus speed must remain consistent with:
+
+- lens focus throw
+- lens gearing
+- focus mechanism
+- starting focus distance
+- ending focus distance
+- operator intent
+- available transition time
+- subject movement
+- camera movement
+- depth of field
+
+Do not treat "slow", "moderate", or "fast" as arbitrary animation speeds.
+
+They describe the resulting cinematographic behaviour, not a digital
+interpolation parameter.
+
+==================================================
+FOCUS CURVE RULE
+==================================================
+
+Transition curves must represent plausible physical focus operation.
+
+Smooth ease-in/ease-out is the default only when compatible with the intended
+physical focus operation.
+
+Do not introduce:
+
+- mathematically perfect easing solely for visual smoothness
+- robotic interpolation
+- digital animation curves
+- sudden acceleration without motivation
+- sudden deceleration without motivation
+- oscillation
+- overshoot
+- corrective snapping
+
+Any variation in focus speed must have a plausible operational or
+cinematographic cause.
+
+==================================================
+FOCUS VALIDATION
+==================================================
+
+Before finalizing a focus transition, validate:
+
+1. Starting focal plane is physically valid.
+2. Ending focal plane is physically valid.
+3. Camera-to-subject geometry is valid.
+4. Subject movement is accounted for.
+5. Camera movement is accounted for.
+6. Focal length is valid.
+7. Aperture is valid.
+8. Sensor format is compatible.
+9. Depth of field is consistent.
+10. Lens profile is consistent.
+11. Focus breathing is consistent with the lens.
+12. Bokeh response is consistent with the lens and aperture.
+13. Intermediate focus states are continuous.
+14. No artificial sharpening or blur is required.
+15. No temporal instability is introduced.
+
+If validation fails:
+
+- identify the earliest invalid physical dependency
+- correct that dependency
+- recalculate all dependent behaviour
+- do not patch the image digitally
+- do not hide the failure with blur, sharpening, masking, or compositing
+
+==================================================
+FOCUS TRANSITION / AI ARTIFACT FIREWALL
+==================================================
+
+The physical chain must always be:
+
+SCENE GEOMETRY
+→ CAMERA / SUBJECT RELATIONSHIP
+→ LENS / SENSOR
+→ FOCUS DISTANCE
+→ DEPTH OF FIELD
+→ FOCAL-PLANE MOVEMENT
+→ OPTICAL IMAGE
+
+Never:
+
+DESIRED CINEMATIC EFFECT
+→ DIGITAL BLUR
+→ SUBJECT MASK
+→ ARTIFICIAL SHARPNESS
+→ SIMULATED OPTICS
+
+The system must not infer scene geometry from the desired focus appearance.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid focus behaviours satisfy the shot purpose,
+select the least conspicuous one.
+
+Do not maximize:
+
+- focus breathing
+- bokeh size
+- blur intensity
+- rack-focus speed
+- optical character
+- lens movement visibility
+
+unless the selected physical configuration naturally produces it.
+
+The best focus transition is the one that communicates the intended story
+while remaining indistinguishable from real optical capture.
 
 ==================================================
 FOCUS TRANSITION CAUSE
@@ -295,12 +528,12 @@ A rack focus is an intentional focus transition between subjects or depth planes
 Example:
 
 Foreground character
-→ background character
+â†’ background character
 
 or:
 
 Background character
-→ foreground object
+â†’ foreground object
 
 During the rack:
 
@@ -324,15 +557,15 @@ prioritize the relevant facial/eye plane.
 Example:
 
 Character A in foreground
-→ Character B in background
+â†’ Character B in background
 
 The transition should cause:
 
 Character A:
-sharp → progressively softer
+sharp â†’ progressively softer
 
 Character B:
-soft → progressively sharper
+soft â†’ progressively sharper
 
 Intermediate objects:
 change according to their physical distance from the moving focal plane
@@ -361,7 +594,7 @@ Focus transition must always be interpreted together with depth of field.
 
 The transition is not merely:
 
-sharp → blur → sharp.
+sharp â†’ blur â†’ sharp.
 
 Instead:
 
@@ -550,8 +783,8 @@ Foreground objects may naturally pass through focus during a rack.
 Example:
 
 foreground foliage
-→ character
-→ distant temple
+â†’ character
+â†’ distant temple
 
 Each depth layer should behave according to its actual distance.
 
@@ -566,8 +799,8 @@ Background elements should progressively sharpen or soften according to their re
 When moving focus:
 
 foreground
-→ subject
-→ background
+â†’ subject
+â†’ background
 
 the background must not remain uniformly blurred.
 
@@ -836,12 +1069,12 @@ Never begin with:
 Instead determine:
 
 WHY DOES ATTENTION MOVE?
-→ WHAT IS CURRENTLY SHARP?
-→ WHAT SHOULD BECOME SHARP?
-→ WHERE ARE BOTH SUBJECTS PHYSICALLY LOCATED?
-→ HOW DOES THE FOCAL PLANE MOVE BETWEEN THEM?
-→ HOW DOES THE SELECTED LENS RESPOND?
-→ WHAT NATURAL OPTICAL RESULT OCCURS?
+â†’ WHAT IS CURRENTLY SHARP?
+â†’ WHAT SHOULD BECOME SHARP?
+â†’ WHERE ARE BOTH SUBJECTS PHYSICALLY LOCATED?
+â†’ HOW DOES THE FOCAL PLANE MOVE BETWEEN THEM?
+â†’ HOW DOES THE SELECTED LENS RESPOND?
+â†’ WHAT NATURAL OPTICAL RESULT OCCURS?
 
 The final result must look like a real cinematographer physically changed focus during a continuous live-action shot.
 
@@ -854,3 +1087,4 @@ No impossible sharpness.
 The focus transition must be physically plausible, narratively motivated, temporally stable, and invisible as an artificial effect.
 
 It must never look AI-generated.
+

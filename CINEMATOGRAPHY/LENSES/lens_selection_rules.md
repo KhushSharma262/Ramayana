@@ -1,4 +1,4 @@
-# LENS SELECTION RULES
+﻿# LENS SELECTION RULES
 
 ## PURPOSE
 
@@ -111,7 +111,7 @@ Always evaluate lens selection in this order:
 Never reverse this order.
 
 ==================================================
-RULE 1 — STORY BEFORE LENS
+RULE 1 â€” STORY BEFORE LENS
 ==================================================
 
 The story determines the visual requirement.
@@ -130,7 +130,7 @@ Ask:
 Only then select the lens.
 
 ==================================================
-RULE 2 — SHOT PURPOSE
+RULE 2 â€” SHOT PURPOSE
 ==================================================
 
 Identify the shot before selecting the lens.
@@ -162,7 +162,7 @@ Shot size alone does NOT determine focal length.
 Camera distance and focal length must be considered together.
 
 ==================================================
-RULE 3 — SUBJECT PRIORITY
+RULE 3 â€” SUBJECT PRIORITY
 ==================================================
 
 Determine what must receive visual priority.
@@ -185,19 +185,19 @@ The selected lens must support that priority.
 For example:
 
 FACE PRIORITY
-→ avoid unnecessary extreme wide-angle proximity.
+â†’ avoid unnecessary extreme wide-angle proximity.
 
 ENVIRONMENT PRIORITY
-→ consider wider focal lengths when spatial context is important.
+â†’ consider wider focal lengths when spatial context is important.
 
 DISTANT OBSERVATION
-→ consider longer focal lengths.
+â†’ consider longer focal lengths.
 
 MULTIPLE CHARACTERS
-→ select a lens and camera position that preserve natural relationships.
+â†’ select a lens and camera position that preserve natural relationships.
 
 ==================================================
-RULE 4 — ENVIRONMENT MATTERS
+RULE 4 â€” ENVIRONMENT MATTERS
 ==================================================
 
 Evaluate the physical environment before choosing focal length.
@@ -223,7 +223,7 @@ A lens must be physically appropriate for the available camera position.
 Do not select a focal length that requires an impossible camera position.
 
 ==================================================
-RULE 5 — FIELD OF VIEW
+RULE 5 â€” FIELD OF VIEW
 ==================================================
 
 Select focal length according to the required FOV.
@@ -231,7 +231,7 @@ Select focal length according to the required FOV.
 General full-frame reference:
 
 ### ULTRA-WIDE
-Approximately 14–24mm
+Approximately 14â€“24mm
 
 Use when:
 
@@ -241,7 +241,7 @@ Use when:
 - architecture or landscape scale matters
 
 ### WIDE
-Approximately 24–35mm
+Approximately 24â€“35mm
 
 Use when:
 
@@ -250,7 +250,7 @@ Use when:
 - spatial depth should remain visible
 
 ### MODERATE-WIDE
-Approximately 35–40mm
+Approximately 35â€“40mm
 
 Use when:
 
@@ -259,7 +259,7 @@ Use when:
 - subject and environment should remain balanced
 
 ### NORMAL
-Approximately 40–60mm
+Approximately 40â€“60mm
 
 Use when:
 
@@ -268,7 +268,7 @@ Use when:
 - character and environment need balanced rendering
 
 ### SHORT TELEPHOTO
-Approximately 70–100mm
+Approximately 70â€“100mm
 
 Use when:
 
@@ -277,7 +277,7 @@ Use when:
 - background relationships should tighten somewhat
 
 ### TELEPHOTO
-Approximately 100–200mm
+Approximately 100â€“200mm
 
 Use when:
 
@@ -302,7 +302,374 @@ These ranges are descriptive, not rigid.
 The actual lens must be selected according to the complete shot.
 
 ==================================================
-RULE 6 — FOCAL LENGTH IS NOT CAMERA POSITION
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Lens selection must begin from physically known shot requirements.
+
+UNKNOWN does not mean CINEMATIC.
+UNKNOWN does not mean ANAMORPHIC.
+UNKNOWN does not mean SHALLOW DOF.
+UNKNOWN does not mean WIDE ANGLE.
+UNKNOWN does not mean VINTAGE CHARACTER.
+
+If a required physical parameter is unspecified:
+
+- do not invent an optical effect
+- do not assume an extreme lens
+- do not assume shallow depth of field
+- do not assume anamorphic behaviour
+- do not assume visible flare
+- do not assume visible distortion
+- do not assume strong bokeh
+- do not assume lens breathing
+- do not assume chromatic aberration
+
+Select the least visually interventionist physically valid configuration
+until the missing requirement is resolved.
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+Lens selection must occur BEFORE optical effects are determined.
+
+The system must first determine:
+
+1. story purpose
+2. shot purpose
+3. subject priority
+4. environmental requirement
+5. required spatial relationship
+6. required composition
+7. required FOV
+8. physically possible camera position
+9. perspective requirement
+10. focal length
+11. spherical or anamorphic system
+12. focus requirements
+13. aperture / DOF requirements
+14. camera movement
+15. optical character
+
+Only after these are established may the system derive:
+
+- distortion
+- bokeh
+- flare
+- ghosting
+- chromatic aberration
+- breathing
+- anamorphic optical behaviour
+- other lens-specific characteristics
+
+Never reverse this order.
+
+==================================================
+OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Every visible optical characteristic requires physical authorization.
+
+Authorization states:
+
+FORCED:
+The selected physical lens/configuration necessarily produces the characteristic
+under the stated conditions.
+
+DERIVED:
+The characteristic emerges naturally from the selected lens, camera,
+lighting, geometry, focus, aperture, and exposure.
+
+ALLOWED:
+The characteristic is physically possible but not required to be visually
+prominent.
+
+DISABLED:
+The characteristic must not be intentionally emphasized or simulated.
+
+No optical characteristic may be introduced solely because it is considered
+cinematic.
+
+==================================================
+PHYSICAL LENS VALIDATION
+==================================================
+
+Before committing to a selected lens, validate:
+
+- sensor format
+- image-circle coverage
+- focal length
+- required FOV
+- camera position
+- subject distance
+- focus distance
+- minimum focus distance
+- aperture
+- required DOF
+- camera movement
+- subject movement
+- available physical space
+- focus-tracking requirements
+- optical character
+- sequence continuity
+
+If any required physical constraint cannot be satisfied:
+
+REJECT THE CONFIGURATION.
+
+Do not repair an invalid physical configuration with:
+
+- digital zoom
+- artificial perspective
+- depth-map manipulation
+- screen-space blur
+- digital lens distortion
+- artificial anamorphic effects
+- composited flare
+- synthetic bokeh
+
+Reselect the earliest invalid physical parameter.
+
+==================================================
+PERSPECTIVE / FOCAL LENGTH FIREWALL
+==================================================
+
+Focal length and camera position must never be treated as interchangeable.
+
+Focal length primarily determines:
+
+- FOV
+- framing
+- magnification
+
+Camera position primarily determines:
+
+- perspective
+- relative subject size
+- foreground/background relationships
+- spatial compression
+- facial perspective
+
+When perspective is specified:
+
+CAMERA POSITION FIRST.
+
+Then select the focal length required to achieve the framing.
+
+Never move the camera merely to compensate for an incorrectly selected
+focal length without recalculating the resulting perspective.
+
+==================================================
+EFFECT-FIRST SELECTION FIREWALL
+==================================================
+
+The following reasoning is prohibited:
+
+"Need cinematic bokeh -> choose anamorphic."
+
+"Need flare -> choose a flare-prone lens."
+
+"Need compression -> choose telephoto."
+
+"Need distortion -> choose ultra-wide."
+
+"Need shallow DOF -> choose the longest lens."
+
+"Need cinematic character -> choose vintage."
+
+Instead:
+
+SHOT REQUIREMENT
+→ PHYSICAL CAMERA GEOMETRY
+→ LENS SELECTION
+→ CAMERA SETTINGS
+→ NATURAL OPTICAL CONSEQUENCES
+
+An optical effect is an output of the physical configuration,
+not the starting selection criterion.
+
+==================================================
+FACE / CHARACTER GEOMETRY FIREWALL
+==================================================
+
+Important character faces receive priority over visible lens character.
+
+The selected configuration must preserve:
+
+- natural facial proportions
+- natural nose projection
+- stable eye spacing
+- realistic jaw geometry
+- realistic head proportions
+- stable facial identity
+- consistent body proportions
+
+Avoid unnecessary extreme wide-angle proximity.
+
+If a wide lens is required by the story, maintain a physically appropriate
+camera distance whenever possible.
+
+Never use lens character as justification for distorted or unstable faces.
+
+==================================================
+ARCHITECTURAL / GEOMETRIC FIREWALL
+==================================================
+
+When architectural or geometric accuracy matters:
+
+prioritize:
+
+- appropriate rectilinear behaviour
+- controlled distortion
+- appropriate camera height
+- appropriate camera position
+- required FOV
+- sensor/lens compatibility
+
+Do not select heavily distorted optics merely to make architecture appear
+more cinematic.
+
+Any visible geometric distortion must be a consequence of the selected
+physical lens.
+
+==================================================
+OPTICAL CHARACTER MINIMUM-INTERVENTION RULE
+==================================================
+
+If two physically valid lenses satisfy the same shot requirement:
+
+prefer the lens that introduces fewer unnecessary optical complications.
+
+Do not prefer:
+
+- stronger flare
+- stronger ghosting
+- stronger CA
+- stronger distortion
+- stronger breathing
+- stronger softness
+- stronger anamorphic artifacts
+
+unless the difference is narratively or physically justified.
+
+Natural optical behaviour is preferred over conspicuous optical behaviour.
+
+==================================================
+TEMPORAL LENS-SELECTION RULE
+==================================================
+
+For moving shots and continuous video:
+
+the selected lens must remain optically coherent throughout the shot.
+
+Lens behaviour must remain consistent with:
+
+- camera movement
+- subject movement
+- focus movement
+- zoom movement
+- exposure changes
+- changing light-source position
+- changing subject position within the image
+
+No optical characteristic may spontaneously appear, disappear, or change
+strength without a physical cause.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+Lens selection must never cause the system to invent AI-generated optical
+patterns.
+
+PROHIBITED:
+
+- arbitrary oval bokeh
+- repeated artificial flare shapes
+- uniform RGB edge outlines
+- floating ghost images
+- unstable distortion
+- changing facial proportions
+- inconsistent perspective
+- artificial background compression
+- depth-map blur
+- screen-space optical effects
+- changing lens character between frames
+- texture crawling caused by synthetic optics
+- optical effects that ignore the selected lens
+
+The causal direction is:
+
+PHYSICAL SCENE
+→ CAMERA POSITION
+→ SENSOR
+→ SELECTED LENS
+→ CAMERA SETTINGS
+→ PHYSICAL OPTICAL RESPONSE
+→ IMAGE
+
+Never:
+
+DESIRED CINEMATIC EFFECT
+→ SYNTHETIC OPTICAL EFFECT
+→ IMAGE
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If lens selection produces an invalid physical configuration:
+
+1. identify the failed physical dependency
+2. identify the earliest incorrect decision
+3. change that decision
+4. recalculate dependent parameters
+5. revalidate the complete configuration
+
+Never patch the final image to conceal a physically incorrect lens choice.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid lens configurations satisfy the shot:
+
+prefer the configuration with the smallest unnecessary optical intervention.
+
+This does not mean "always choose the cleanest lens."
+
+It means:
+
+use only the optical character that is physically justified by the
+selected lens and the shot.
+
+==================================================
+FINAL LENS-SELECTION REALISM RULE
+==================================================
+
+The final selection must be explainable as a real-world cinematography
+decision.
+
+A valid selection must answer:
+
+- Why is the camera here?
+- Why is this FOV required?
+- Why is this focal length appropriate?
+- Why is this lens system spherical or anamorphic?
+- Why is this focus configuration achievable?
+- Why is this DOF physically produced?
+- Why do these optical characteristics appear?
+- Why do they remain consistent through the shot?
+
+If the answer is only:
+
+"because it looks cinematic,"
+
+the lens selection is invalid.
+
+====================================================================================================
+RULE 6 â€” FOCAL LENGTH IS NOT CAMERA POSITION
 ==================================================
 
 Never treat focal length as an independent perspective control.
@@ -327,7 +694,7 @@ select camera position first,
 then choose focal length that achieves the required framing.
 
 ==================================================
-RULE 7 — SAME FRAMING TEST
+RULE 7 â€” SAME FRAMING TEST
 ==================================================
 
 When comparing lenses:
@@ -357,7 +724,7 @@ That changes:
 Never confuse these two situations.
 
 ==================================================
-RULE 8 — FACE PROTECTION
+RULE 8 â€” FACE PROTECTION
 ==================================================
 
 For important character faces:
@@ -381,7 +748,7 @@ A wide lens may be used for a face if:
 But do not create exaggerated facial distortion merely because the lens is wide.
 
 ==================================================
-RULE 9 — ARCHITECTURE PROTECTION
+RULE 9 â€” ARCHITECTURE PROTECTION
 ==================================================
 
 For architecture:
@@ -399,7 +766,7 @@ Consider:
 Do not select a heavily distorted lens for precise architectural representation unless intentionally motivated.
 
 ==================================================
-RULE 10 — ENVIRONMENTAL SCALE
+RULE 10 â€” ENVIRONMENTAL SCALE
 ==================================================
 
 For monumental environments:
@@ -416,7 +783,7 @@ Use wider lenses to communicate:
 Do not create scale merely by digitally widening the image.
 
 ==================================================
-RULE 11 — SPATIAL DEPTH
+RULE 11 â€” SPATIAL DEPTH
 ==================================================
 
 If foreground, midground, and background relationships are important:
@@ -434,7 +801,7 @@ may create denser spatial layering.
 Choose based on the desired physical relationship.
 
 ==================================================
-RULE 12 — COMPRESSION
+RULE 12 â€” COMPRESSION
 ==================================================
 
 If the shot requires tighter spatial layering:
@@ -456,7 +823,7 @@ Remember:
 compression is primarily produced by camera position relative to scene depth.
 
 ==================================================
-RULE 13 — DEPTH OF FIELD
+RULE 13 â€” DEPTH OF FIELD
 ==================================================
 
 Do not choose a lens solely because it can produce shallow depth of field.
@@ -477,7 +844,7 @@ A wider lens does not automatically mean deep DOF.
 DOF must be derived from the entire camera configuration.
 
 ==================================================
-RULE 14 — MULTIPLE SUBJECTS
+RULE 14 â€” MULTIPLE SUBJECTS
 ==================================================
 
 When several characters matter:
@@ -498,7 +865,7 @@ If multiple characters occupy different depths:
 choose a configuration that can physically support the intended readability.
 
 ==================================================
-RULE 15 — ANAMORPHIC VS SPHERICAL
+RULE 15 â€” ANAMORPHIC VS SPHERICAL
 ==================================================
 
 This decision must occur BEFORE applying lens effects.
@@ -532,7 +899,7 @@ Anamorphic is NOT the default.
 Do not choose anamorphic simply because the shot should look cinematic.
 
 ==================================================
-RULE 16 — ANAMORPHIC IS A LENS CHOICE
+RULE 16 â€” ANAMORPHIC IS A LENS CHOICE
 ==================================================
 
 Once anamorphic is selected:
@@ -551,7 +918,7 @@ Do not create:
 unless supported by the selected physical lens.
 
 ==================================================
-RULE 17 — NATURAL OPTICAL CHARACTER
+RULE 17 â€” NATURAL OPTICAL CHARACTER
 ==================================================
 
 Select lenses according to the optical character required by the shot.
@@ -574,7 +941,7 @@ Do not choose "character" merely to create visible imperfections.
 Optical character should support the story.
 
 ==================================================
-RULE 18 — MODERN VS VINTAGE
+RULE 18 â€” MODERN VS VINTAGE
 ==================================================
 
 ### MODERN CORRECTED
@@ -607,7 +974,7 @@ Do not assume vintage means:
 Evaluate each property independently.
 
 ==================================================
-RULE 19 — LIGHTING INTERACTION
+RULE 19 â€” LIGHTING INTERACTION
 ==================================================
 
 Consider the scene's light sources before finalizing lens choice.
@@ -632,7 +999,7 @@ choose an appropriate lens profile.
 Do not choose a flare-prone lens simply because flares look cinematic.
 
 ==================================================
-RULE 20 — FOCUS REQUIREMENTS
+RULE 20 â€” FOCUS REQUIREMENTS
 ==================================================
 
 Before selecting a lens, determine:
@@ -655,7 +1022,7 @@ If composition must remain extremely stable during focus:
 prefer a low-breathing lens.
 
 ==================================================
-RULE 21 — LENS BREATHING
+RULE 21 â€” LENS BREATHING
 ==================================================
 
 If the shot contains a major focus pull:
@@ -675,7 +1042,7 @@ Strong breathing should only be selected when intentionally useful.
 Do not add digital zoom to compensate for lens breathing.
 
 ==================================================
-RULE 22 — DISTORTION
+RULE 22 â€” DISTORTION
 ==================================================
 
 Choose lens distortion characteristics according to the shot.
@@ -705,7 +1072,7 @@ with
 strong distortion.
 
 ==================================================
-RULE 23 — BOKEH
+RULE 23 â€” BOKEH
 ==================================================
 
 Bokeh should be a consequence of the selected lens and aperture.
@@ -726,7 +1093,7 @@ Do not choose a lens solely because it produces attractive bokeh.
 The background still needs to serve the story.
 
 ==================================================
-RULE 24 — FLARE
+RULE 24 â€” FLARE
 ==================================================
 
 Lens flare must be considered only when the lighting makes it relevant.
@@ -742,7 +1109,7 @@ Choose a more flare-prone lens only when its optical behaviour is intentionally 
 Do not select a lens based on a desired flare effect alone.
 
 ==================================================
-RULE 25 — GHOSTING
+RULE 25 â€” GHOSTING
 ==================================================
 
 Evaluate internal reflection behaviour when the shot contains strong light sources.
@@ -757,7 +1124,7 @@ Ghosting must remain:
 Do not select a lens merely because it produces recognizable ghost patterns.
 
 ==================================================
-RULE 26 — CHROMATIC ABERRATION
+RULE 26 â€” CHROMATIC ABERRATION
 ==================================================
 
 For high-contrast imagery:
@@ -777,7 +1144,7 @@ prefer controlled CA unless a character lens is intentionally required.
 Never use visible RGB fringing as a default cinematic characteristic.
 
 ==================================================
-RULE 27 — FOCAL LENGTH STABILITY
+RULE 27 â€” FOCAL LENGTH STABILITY
 ==================================================
 
 For a fixed-lens shot:
@@ -791,7 +1158,7 @@ focal length changes continuously.
 Do not create spontaneous focal-length changes.
 
 ==================================================
-RULE 28 — ZOOM VS DOLLY
+RULE 28 â€” ZOOM VS DOLLY
 ==================================================
 
 If the shot requires:
@@ -813,7 +1180,7 @@ Never replace a physical dolly with a digital zoom.
 Never replace a physical zoom with artificial camera movement.
 
 ==================================================
-RULE 29 — CAMERA ACCESS
+RULE 29 â€” CAMERA ACCESS
 ==================================================
 
 Lens selection must respect the physical space available to the camera.
@@ -829,7 +1196,7 @@ a wider focal length may be required.
 Do not assume unlimited camera movement.
 
 ==================================================
-RULE 30 — SUBJECT DISTANCE
+RULE 30 â€” SUBJECT DISTANCE
 ==================================================
 
 Always evaluate subject distance together with focal length.
@@ -848,7 +1215,7 @@ Subject distance affects:
 - background scale
 
 ==================================================
-RULE 31 — MOVEMENT
+RULE 31 â€” MOVEMENT
 ==================================================
 
 For moving shots, choose a lens that supports:
@@ -867,7 +1234,7 @@ Long lenses may require more precise framing and focus.
 Do not choose solely from static composition.
 
 ==================================================
-RULE 32 — ACTION
+RULE 32 â€” ACTION
 ==================================================
 
 For action sequences:
@@ -889,7 +1256,7 @@ A longer lens may be appropriate for distant observation.
 Do not use long lenses simply to make action look cinematic.
 
 ==================================================
-RULE 33 — ESTABLISHING SHOTS
+RULE 33 â€” ESTABLISHING SHOTS
 ==================================================
 
 For establishing shots:
@@ -910,7 +1277,7 @@ A wide establishing shot is not automatically superior.
 A telephoto establishing shot may be appropriate when distant layers or monumental compression are important.
 
 ==================================================
-RULE 34 — INTIMATE CHARACTER SHOTS
+RULE 34 â€” INTIMATE CHARACTER SHOTS
 ==================================================
 
 For intimate close-ups:
@@ -919,7 +1286,7 @@ prefer lenses that preserve natural facial proportions and allow appropriate cam
 
 Common useful region:
 
-approximately 70–100mm full-frame equivalent.
+approximately 70â€“100mm full-frame equivalent.
 
 But this is not mandatory.
 
@@ -932,7 +1299,7 @@ The correct lens depends on:
 - desired perspective
 
 ==================================================
-RULE 35 — EXTREME CLOSE-UPS
+RULE 35 â€” EXTREME CLOSE-UPS
 ==================================================
 
 For eyes, jewelry, hands, weapons, textures, or other small details:
@@ -950,7 +1317,7 @@ consider:
 Do not select a lens that cannot physically achieve the required focus.
 
 ==================================================
-RULE 36 — ENVIRONMENTAL PORTRAIT
+RULE 36 â€” ENVIRONMENTAL PORTRAIT
 ==================================================
 
 When both character and environment matter:
@@ -967,7 +1334,7 @@ Avoid excessive telephoto isolation when the environment is narratively importan
 Avoid extreme wide-angle proximity when facial naturalism is critical.
 
 ==================================================
-RULE 37 — GROUP SHOTS
+RULE 37 â€” GROUP SHOTS
 ==================================================
 
 For groups:
@@ -984,7 +1351,7 @@ consider:
 Avoid placing important faces at extreme wide-angle edges if that creates unwanted distortion.
 
 ==================================================
-RULE 38 — SUBJECTIVE / POV SHOTS
+RULE 38 â€” SUBJECTIVE / POV SHOTS
 ==================================================
 
 POV lens selection should reflect the intended human or subjective perspective.
@@ -1002,7 +1369,7 @@ Consider:
 The lens should feel physically plausible for the camera position.
 
 ==================================================
-RULE 39 — SACRED / DIVINE MOMENTS
+RULE 39 â€” SACRED / DIVINE MOMENTS
 ==================================================
 
 For spiritually significant scenes:
@@ -1028,7 +1395,7 @@ Divine atmosphere should primarily emerge from:
 not artificial lens artifacts.
 
 ==================================================
-RULE 40 — CONTINUITY
+RULE 40 â€” CONTINUITY
 ==================================================
 
 When multiple shots belong to the same sequence:
@@ -1056,7 +1423,7 @@ continuity must never force an inappropriate lens.
 Story and shot requirements remain higher priority.
 
 ==================================================
-RULE 41 — LENS CHANGES MUST BE INTENTIONAL
+RULE 41 â€” LENS CHANGES MUST BE INTENTIONAL
 ==================================================
 
 A lens change should occur because of a meaningful change in:
@@ -1073,7 +1440,7 @@ A lens change should occur because of a meaningful change in:
 Do not change lenses merely to create visual variation.
 
 ==================================================
-RULE 42 — NO EFFECT-FIRST SELECTION
+RULE 42 â€” NO EFFECT-FIRST SELECTION
 ==================================================
 
 NEVER reason:
@@ -1095,7 +1462,7 @@ Only afterward:
 This rule is mandatory.
 
 ==================================================
-RULE 43 — NO ONE-LENS-FITS-ALL
+RULE 43 â€” NO ONE-LENS-FITS-ALL
 ==================================================
 
 Do not use one default focal length for every shot.
@@ -1111,7 +1478,7 @@ Do not use:
 Lens selection must be shot-specific.
 
 ==================================================
-RULE 44 — NO EXTREME DEFAULTS
+RULE 44 â€” NO EXTREME DEFAULTS
 ==================================================
 
 Avoid automatically selecting:
@@ -1127,7 +1494,7 @@ Avoid automatically selecting:
 Use extremes only when the story or physical environment requires them.
 
 ==================================================
-RULE 45 — PHYSICAL PLAUSIBILITY
+RULE 45 â€” PHYSICAL PLAUSIBILITY
 ==================================================
 
 Every selected lens must be physically plausible for:
@@ -1263,39 +1630,39 @@ FINAL DECISION TREE
 ==================================================
 
 STORY
-↓
+â†“
 SHOT PURPOSE
-↓
+â†“
 SUBJECT PRIORITY
-↓
+â†“
 ENVIRONMENT
-↓
+â†“
 REQUIRED SPATIAL RELATIONSHIP
-↓
+â†“
 REQUIRED COMPOSITION
-↓
+â†“
 REQUIRED FOV
-↓
+â†“
 CAMERA POSITION
-↓
+â†“
 PERSPECTIVE REQUIREMENT
-↓
+â†“
 FOCAL LENGTH
-↓
+â†“
 SPHERICAL OR ANAMORPHIC
-↓
+â†“
 FOCUS REQUIREMENT
-↓
+â†“
 DEPTH OF FIELD
-↓
+â†“
 MOVEMENT
-↓
+â†“
 OPTICAL CHARACTER
-↓
+â†“
 CONTINUITY
-↓
+â†“
 PHYSICAL VALIDATION
-↓
+â†“
 FINAL LENS SELECTION
 
 ==================================================
@@ -1336,3 +1703,4 @@ No artificial perspective.
 No AI-generated optical behaviour.
 
 It must never look AI-generated.
+

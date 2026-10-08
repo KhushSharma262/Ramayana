@@ -1,4 +1,4 @@
-# ULTRA-WIDE LENS BEHAVIOUR
+﻿# ULTRA-WIDE LENS BEHAVIOUR
 
 ## PURPOSE
 
@@ -33,6 +33,476 @@ An ultra-wide lens is NOT:
 - an automatic deep-focus lens
 - an automatic fisheye lens
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Ultra-wide behaviour must always emerge from a physically valid camera, lens, sensor, projection, subject distance, and scene geometry.
+
+ULTRA-WIDE is primarily a field-of-view classification.
+
+It is NOT:
+
+- a generic distortion effect
+- a synthetic perspective effect
+- a fake immersive effect
+- a digital widening filter
+- a mandatory fisheye appearance.
+
+Required causal order:
+
+STORY / SHOT PURPOSE
+→ ENVIRONMENTAL COVERAGE
+→ CAMERA POSITION
+→ SUBJECT DISTANCE
+→ SENSOR FORMAT
+→ FOCAL LENGTH
+→ PROJECTION TYPE
+→ FIELD OF VIEW
+→ FRAMING
+→ PERSPECTIVE
+→ DISTORTION
+→ DEPTH / PARALLAX
+→ FOCUS / APERTURE
+→ OPTICAL CHARACTER
+→ CAMERA MOVEMENT
+→ TEMPORAL CONSISTENCY.
+
+If a required physical parameter is unknown:
+
+DO NOT INVENT:
+
+- perspective exaggeration
+- edge stretching
+- distortion
+- fisheye behaviour
+- synthetic parallax
+- artificial depth
+- digital widening.
+
+Choose the physically plausible and least noticeable result.
+
+==================================================
+ULTRA-WIDE VALIDATION PRECEDENCE
+==================================================
+
+Validate in this order:
+
+1. PHYSICAL CAMERA POSSIBILITY
+2. SENSOR / LENS COMPATIBILITY
+3. PROJECTION TYPE
+4. CAMERA POSITION
+5. SUBJECT DISTANCE
+6. FOREGROUND DEPTH
+7. BACKGROUND DISTANCE
+8. FOCAL LENGTH
+9. FIELD OF VIEW
+10. FRAMING
+11. PERSPECTIVE
+12. DISTORTION
+13. EDGE BEHAVIOUR
+14. FOCUS DISTANCE
+15. MINIMUM FOCUS DISTANCE
+16. APERTURE
+17. DEPTH OF FIELD
+18. BOKEH
+19. PARALLAX
+20. FLARE / GHOSTING
+21. CAMERA MOVEMENT
+22. TEMPORAL CONSISTENCY.
+
+No downstream optical characteristic may contradict upstream camera geometry.
+
+==================================================
+ULTRA-WIDE / PROJECTION FIREWALL
+==================================================
+
+Ultra-wide does not automatically mean fisheye.
+
+Determine the actual projection type first:
+
+- rectilinear
+- fisheye
+- specialized projection
+- anamorphic projection where applicable.
+
+A rectilinear ultra-wide must not inherit fisheye curvature.
+
+A fisheye must not be treated as a normal rectilinear ultra-wide.
+
+Do not use projection changes merely to increase visual drama.
+
+==================================================
+ULTRA-WIDE / CAMERA-POSITION FIREWALL
+==================================================
+
+Perspective is determined by camera position and scene geometry.
+
+A wide field of view does not independently create exaggerated perspective.
+
+Strong foreground/background scale differences require appropriate camera proximity.
+
+If the camera is moved closer:
+
+relative scale differences may increase.
+
+If the camera remains fixed and focal length changes:
+
+FOV and framing change, while perspective geometry remains fundamentally unchanged.
+
+Never manufacture perspective through digital warping.
+
+==================================================
+ULTRA-WIDE / DISTORTION FIREWALL
+==================================================
+
+Lens distortion is independent from perspective.
+
+Do not use barrel, moustache, or other distortion to manufacture:
+
+- depth
+- immersion
+- scale
+- perspective
+- spatial expansion.
+
+Distortion must follow the selected lens profile and image position.
+
+Highly corrected modern ultra-wide lenses must not be given exaggerated vintage distortion without explicit lens justification.
+
+==================================================
+ULTRA-WIDE / EDGE FIREWALL
+==================================================
+
+Edge behaviour must remain physically dependent on:
+
+- lens design
+- projection
+- focal length
+- frame position
+- sensor format
+- image circle.
+
+Do not automatically stretch objects near the edges.
+
+Critical faces, limbs, architecture, and objects must retain stable geometry unless their physical position relative to the lens justifies the observed perspective.
+
+==================================================
+ULTRA-WIDE / FACE FIREWALL
+==================================================
+
+Close faces can exhibit strong perspective changes when positioned near an ultra-wide lens.
+
+This must arise from actual camera distance.
+
+Never use ultra-wide optics to justify:
+
+- changing facial proportions between frames
+- enlarged eyes
+- stretched noses
+- widened jaws
+- unstable ears
+- changing head shape
+- artificial facial distortion.
+
+If facial geometry becomes implausible:
+
+recalculate camera distance, focal length, framing, or lens choice.
+
+==================================================
+ULTRA-WIDE / SENSOR FIREWALL
+==================================================
+
+The lens must physically cover the active sensor.
+
+If:
+
+IMAGE_CIRCLE < ACTIVE_SENSOR_AREA
+
+then the configuration is invalid unless the actual camera/lens mode explicitly permits that coverage.
+
+Do not conceal incompatible coverage through:
+
+- digital cropping
+- generated image extension
+- corner repair
+- artificial vignette removal
+- synthetic edge reconstruction.
+
+==================================================
+ULTRA-WIDE / ANAMORPHIC FIREWALL
+==================================================
+
+Ultra-wide does not imply spherical or anamorphic.
+
+Determine optical format first.
+
+If spherical:
+
+do not add:
+
+- anamorphic squeeze
+- oval bokeh
+- anamorphic horizontal streaks
+- anamorphic edge behaviour.
+
+If anamorphic:
+
+apply only the selected lens profile's actual behaviour.
+
+Never use generic "cinematic anamorphic" characteristics.
+
+==================================================
+ULTRA-WIDE / FOCUS FIREWALL
+==================================================
+
+Focus must remain physically valid.
+
+Respect:
+
+- minimum focus distance
+- focus distance
+- aperture
+- depth of field
+- focus transition
+- breathing
+- subject/background distance.
+
+Never compensate for an impossible focus configuration with:
+
+- digital blur
+- depth masks
+- AI focus
+- sharpening
+- synthetic macro.
+
+==================================================
+ULTRA-WIDE / PARALLAX FIREWALL
+==================================================
+
+Parallax must emerge from real camera translation through a real three-dimensional scene.
+
+During:
+
+- dolly
+- tracking
+- orbit
+- crane
+- jib
+
+near objects must exhibit greater relative motion than distant objects.
+
+Occlusion must change continuously.
+
+Never construct parallax using:
+
+- 2D image layers
+- independent object translation
+- depth-map warping
+- background sliding.
+
+==================================================
+ULTRA-WIDE / MOVEMENT FIREWALL
+==================================================
+
+Camera movement must remain physically coherent.
+
+A dolly changes:
+
+- camera position
+- perspective
+- parallax
+- spatial relationships.
+
+A zoom changes:
+
+- focal length
+- FOV
+- framing
+- magnification.
+
+A dolly zoom requires both.
+
+Never replace either physical operation with digital scaling.
+
+==================================================
+ULTRA-WIDE / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Every visible optical characteristic must have a physical cause.
+
+Possible causes:
+
+- lens design
+- projection type
+- aperture
+- focus
+- frame position
+- source position
+- sensor format
+- filter
+- camera movement.
+
+This applies to:
+
+- distortion
+- CA
+- flare
+- ghosting
+- field curvature
+- vignetting
+- bokeh
+- breathing
+- edge softness.
+
+No effect may exist solely because it looks cinematic.
+
+==================================================
+ULTRA-WIDE / AI ARTIFACT FIREWALL
+==================================================
+
+Reject any result containing:
+
+- face geometry drift
+- unstable eyes
+- changing limb proportions
+- edge stretching that changes without camera movement
+- architecture morphing
+- unstable straight lines
+- texture crawling
+- duplicated foliage
+- duplicated people
+- synthetic parallax
+- background sliding
+- bokeh flicker
+- flare popping
+- ghosting popping
+- FOV flicker
+- distortion flicker
+- vignetting flicker
+- focus hunting without cause
+- object-scale jumps.
+
+The scene must remain one coherent three-dimensional environment.
+
+==================================================
+TEMPORAL ULTRA-WIDE VALIDATION
+==================================================
+
+Across consecutive frames:
+
+- focal length remains stable unless zooming
+- FOV changes only when focal length changes
+- camera position changes continuously
+- perspective changes only with camera movement
+- distortion remains consistent with lens position
+- edge behaviour remains stable
+- parallax remains continuous
+- occlusion remains coherent
+- focus transitions remain continuous
+- optical artifacts remain physically motivated
+- architecture remains geometrically stable
+- faces remain stable.
+
+No unexplained optical change is permitted.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the requested ultra-wide appearance conflicts with physical optics:
+
+1. Preserve physical camera possibility.
+2. Preserve sensor/lens compatibility.
+3. Recalculate projection type.
+4. Recalculate camera position.
+5. Recalculate subject distance.
+6. Recalculate focal length.
+7. Recalculate FOV.
+8. Recalculate framing.
+9. Recalculate perspective.
+10. Recalculate distortion.
+11. Recalculate focus and aperture.
+12. Revalidate parallax and movement.
+13. Revalidate temporal continuity.
+14. Reject any remaining artificial optical behaviour.
+
+Never solve a physical contradiction with digital manipulation.
+
+==================================================
+MINIMUM ULTRA-WIDE INTERVENTION
+==================================================
+
+Apply only the optical characteristics physically supported by the selected lens.
+
+Do not exaggerate:
+
+- perspective
+- distortion
+- edge stretching
+- CA
+- flare
+- ghosting
+- bokeh
+- vignetting
+- field curvature.
+
+If the real optical effect would be subtle, keep it subtle.
+
+==================================================
+FINAL ULTRA-WIDE REALISM RULE
+==================================================
+
+AN ULTRA-WIDE LENS PROVIDES A LARGE FIELD OF VIEW.
+
+IT DOES NOT AUTOMATICALLY DISTORT SPACE.
+
+Its final appearance must emerge from:
+
+REAL CAMERA POSITION
++
+REAL SUBJECT DISTANCE
++
+REAL SENSOR
++
+REAL FOCAL LENGTH
++
+REAL PROJECTION
++
+REAL LENS DESIGN
++
+REAL SCENE GEOMETRY
++
+REAL CAMERA MOVEMENT.
+
+PERSPECTIVE MUST COME FROM CAMERA POSITION.
+
+DISTORTION MUST COME FROM THE ACTUAL LENS.
+
+PARALLAX MUST COME FROM ACTUAL CAMERA TRANSLATION.
+
+DEPTH MUST COME FROM ACTUAL THREE-DIMENSIONAL RELATIONSHIPS.
+
+FOCUS MUST COME FROM REAL OPTICAL FOCUS.
+
+FLARE MUST COME FROM REAL LIGHT ENTERING THE OPTICAL SYSTEM.
+
+NO FAKE WIDE-ANGLE EFFECT.
+NO DIGITAL WIDENING.
+NO ARTIFICIAL PERSPECTIVE.
+NO SYNTHETIC PARALLAX.
+NO FAKE FISHEYE.
+NO ARBITRARY DISTORTION.
+NO UNSTABLE GEOMETRY.
+NO AI-GENERATED LENS BEHAVIOUR.
+
+When uncertain, choose the physically plausible and less noticeable result.
+
+THE FINAL IMAGE MUST LOOK LIKE A REAL CINEMATOGRAPHER PHYSICALLY PLACED A REAL CAMERA WITH A REAL ULTRA-WIDE LENS AND PHOTOGRAPHED THE SCENE.
+
+IT MUST NEVER LOOK AI-GENERATED.
+
+==================================================
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
 ==================================================
@@ -77,7 +547,7 @@ ULTRA-WIDE DEFINITION
 For a full-frame reference system:
 
 ULTRA-WIDE:
-approximately 14–24mm
+approximately 14â€“24mm
 
 This is a descriptive range, not a rigid definition.
 
@@ -111,7 +581,7 @@ CRITICAL PHYSICAL RULE
 ==================================================
 
 ULTRA-WIDE
-≠
+â‰ 
 AUTOMATIC PERSPECTIVE DISTORTION.
 
 Perspective is primarily determined by:
@@ -129,15 +599,15 @@ An ultra-wide lens placed very close to a subject can produce strong perspective
 Therefore:
 
 FOCAL LENGTH
-→
+â†’
 FOV
 
 CAMERA POSITION
-→
+â†’
 PERSPECTIVE
 
 FOCAL LENGTH + CAMERA POSITION
-→
+â†’
 FRAMING + SPATIAL APPEARANCE.
 
 ==================================================
@@ -1240,7 +1710,7 @@ PARAMETER DEPENDENCIES
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 CAMERA_POSITION
@@ -1248,13 +1718,13 @@ CAMERA_POSITION
 SUBJECT_DISTANCE
 +
 SUBJECT_DEPTH
-→
+â†’
 PERSPECTIVE
 
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING / SPATIAL_APPEARANCE
 
 FOCUS_DISTANCE
@@ -1264,7 +1734,7 @@ FOCAL_LENGTH
 APERTURE
 +
 SENSOR
-→
+â†’
 DEPTH_OF_FIELD
 
 LENS_DESIGN
@@ -1274,13 +1744,13 @@ APERTURE
 FOCUS
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 BOKEH
 
 LENS_DESIGN
 +
 FRAME_POSITION
-→
+â†’
 DISTORTION / EDGE_BEHAVIOUR
 
 LENS_DESIGN
@@ -1288,31 +1758,31 @@ LENS_DESIGN
 SOURCE_POSITION
 +
 APERTURE
-→
+â†’
 FLARE / GHOSTING
 
 LENS_DESIGN
 +
 FOCUS_CHANGE
-→
+â†’
 FOCUS_BREATHING
 
 CAMERA_TRANSLATION
 +
 FOREGROUND/MIDGROUND/BACKGROUND DISTANCES
-→
+â†’
 PARALLAX
 
 CAMERA_POSITION
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 SPATIAL_DEPTH
 
 ACTIVE_SENSOR_AREA
 +
 IMAGE_CIRCLE
-→
+â†’
 COVERAGE / VIGNETTING
 
 Do not collapse these relationships into a generic "ultra-wide look."
@@ -1366,7 +1836,7 @@ SENSOR_REFERENCE:
 full-frame
 
 FOCAL_LENGTH:
-approximately 14–24mm reference range
+approximately 14â€“24mm reference range
 
 FOV:
 physically calculated
@@ -1567,3 +2037,4 @@ No AI-generated lens behaviour.
 The final image must look as though a real cinematographer physically placed a real camera with a real ultra-wide lens and photographed the scene under real optical and environmental conditions.
 
 It must never look AI-generated.
+

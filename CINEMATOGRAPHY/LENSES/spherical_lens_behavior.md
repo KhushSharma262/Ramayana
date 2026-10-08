@@ -1,4 +1,4 @@
-# SPHERICAL LENS BEHAVIOUR
+﻿# SPHERICAL LENS BEHAVIOUR
 
 ## PURPOSE
 
@@ -34,6 +34,438 @@ A spherical lens is NOT:
 - an automatic wide-angle lens
 - a substitute for anamorphic optics
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Spherical-lens behaviour must always be derived from a physically valid camera, lens, sensor, lighting, and scene configuration.
+
+SPHERICAL
+is an optical format.
+
+It is NOT:
+
+- a visual filter
+- a generic cinematic look
+- an automatic distortion profile
+- an automatic bokeh profile
+- an automatic flare profile
+- an automatic compression effect.
+
+The system must determine physical causes before applying visible optical consequences.
+
+Required causal order:
+
+STORY / SHOT PURPOSE
+→ CAMERA POSITION
+→ SENSOR FORMAT
+→ LENS COVERAGE
+→ SPHERICAL LENS SELECTION
+→ FOCAL LENGTH
+→ FOV / FRAMING
+→ FOCUS DISTANCE
+→ APERTURE
+→ DEPTH OF FIELD
+→ OPTICAL CHARACTER
+→ MOVEMENT
+→ TEMPORAL CONSISTENCY.
+
+If a required physical parameter is unknown:
+
+DO NOT INVENT AN OPTICAL EFFECT.
+
+Choose the physically plausible result with the least noticeable intervention.
+
+==================================================
+SPHERICAL-LENS VALIDATION PRECEDENCE
+==================================================
+
+Before generating a spherical-lens shot, validate in this order:
+
+1. PHYSICAL CAMERA POSSIBILITY
+2. SENSOR / IMAGE-CIRCLE COMPATIBILITY
+3. SPHERICAL LENS CLASSIFICATION
+4. CAMERA POSITION
+5. FOCAL LENGTH
+6. FIELD OF VIEW
+7. FRAMING
+8. FOCUS DISTANCE
+9. MINIMUM FOCUS DISTANCE
+10. APERTURE
+11. DEPTH OF FIELD
+12. BOKEH
+13. DISTORTION
+14. ABERRATIONS
+15. FLARE / GHOSTING
+16. VIGNETTING
+17. PERSPECTIVE
+18. SPATIAL COMPRESSION
+19. CAMERA MOVEMENT
+20. TEMPORAL CONSISTENCY.
+
+No downstream optical characteristic may contradict an upstream physical constraint.
+
+==================================================
+SPHERICAL / ANAMORPHIC FIREWALL
+==================================================
+
+Spherical and anamorphic systems must remain explicitly distinct.
+
+A spherical lens must NOT inherit anamorphic characteristics merely because they are considered cinematic.
+
+Unless the selected spherical lens profile physically supports the behaviour, do not introduce:
+
+- horizontal anamorphic streaks
+- anamorphic oval bokeh
+- anamorphic squeeze
+- anamorphic edge behaviour
+- anamorphic distortion
+- anamorphic flare geometry.
+
+SPHERICAL ≠ ANAMORPHIC.
+
+==================================================
+SPHERICAL / CAMERA-POSITION FIREWALL
+==================================================
+
+Perspective and spatial relationships must emerge from actual camera position.
+
+Focal length alone must never be used to manufacture perspective.
+
+If focal length changes while camera position remains constant:
+
+- perspective geometry remains fundamentally unchanged
+- FOV changes
+- framing changes
+- magnification changes.
+
+If equivalent framing requires the camera to move:
+
+the resulting perspective change must come from the camera movement.
+
+==================================================
+SPHERICAL / SENSOR FIREWALL
+==================================================
+
+The selected spherical lens must physically cover the active sensor area.
+
+If:
+
+LENS_IMAGE_CIRCLE < SENSOR_ACTIVE_AREA
+
+then:
+
+THE CONFIGURATION IS INVALID.
+
+Do not conceal invalid coverage through:
+
+- cropping
+- digital scaling
+- artificial corner correction
+- synthetic vignette removal
+- generated image extension.
+
+Sensor format also determines which portions of the lens character are visible.
+
+==================================================
+SPHERICAL / OPTICAL-CHARACTER AUTHORIZATION
+==================================================
+
+Every visible optical characteristic must have a physical authorization source.
+
+Possible sources include:
+
+- lens design
+- aperture
+- focus distance
+- frame position
+- source position
+- source intensity
+- sensor format
+- filter
+- camera movement
+- lens movement
+- zoom state.
+
+No optical effect may exist solely because it makes the image appear more cinematic.
+
+This applies to:
+
+- distortion
+- CA
+- flare
+- ghosting
+- spherical aberration
+- coma
+- astigmatism
+- field curvature
+- vignetting
+- bokeh
+- breathing.
+
+==================================================
+SPHERICAL / FOCUS FIREWALL
+==================================================
+
+Focus behaviour must remain physically valid.
+
+Respect:
+
+- minimum focus distance
+- focus distance
+- aperture
+- depth of field
+- focus transition
+- focus breathing.
+
+Never compensate for an impossible focus configuration with:
+
+- AI focus
+- digital sharpening
+- synthetic blur
+- depth-map manipulation
+- generated macro detail.
+
+==================================================
+SPHERICAL / BOKEH FIREWALL
+==================================================
+
+Bokeh must emerge from:
+
+- aperture geometry
+- lens design
+- focus distance
+- subject/background distance
+- optical pupil geometry
+- frame position.
+
+Do not create arbitrary bokeh shapes.
+
+Edge cat-eye behaviour must remain dependent on optical vignetting and pupil geometry.
+
+Do not apply uniform cat-eye or oval bokeh across the entire frame.
+
+==================================================
+SPHERICAL / FLARE AND GHOSTING FIREWALL
+==================================================
+
+Flare and ghosting require an actual optical stimulus.
+
+A visible flare or ghost must be supported by:
+
+- an appropriate light source
+- source position
+- lens construction
+- coatings
+- aperture
+- filter state.
+
+Do not add generic "cinematic flare."
+
+Do not generate identical flare or ghost patterns across unrelated shots.
+
+==================================================
+SPHERICAL / ABERRATION FIREWALL
+==================================================
+
+Chromatic aberration, coma, astigmatism, spherical aberration, and field curvature must remain:
+
+- lens-dependent
+- aperture-dependent where applicable
+- spatially coherent
+- restrained.
+
+Never generate:
+
+- obvious RGB outlines
+- universal edge fringing
+- identical aberration patterns
+- exaggerated point-light comets
+- arbitrary edge softness.
+
+==================================================
+SPHERICAL / DISTORTION FIREWALL
+==================================================
+
+Lens distortion must remain independent from perspective.
+
+Do not use barrel, pincushion, moustache, or other distortion to manufacture:
+
+- wide-angle perspective
+- compression
+- depth
+- cinematic character.
+
+Distortion must follow the selected lens profile and frame position.
+
+==================================================
+SPHERICAL / MOVEMENT VALIDATION
+==================================================
+
+Camera movement must preserve the physical optical configuration.
+
+During:
+
+- dolly
+- tracking
+- orbit
+- crane
+- jib
+- pan
+- tilt
+- handheld
+- zoom
+- dolly zoom
+
+the system must preserve coherent:
+
+- perspective
+- parallax
+- FOV
+- framing
+- focus
+- distortion
+- optical character.
+
+A dolly changes camera position.
+
+A zoom changes focal length.
+
+A dolly zoom requires both.
+
+Never simulate these through digital cropping or spatial warping.
+
+==================================================
+SPHERICAL / AI ARTIFACT FIREWALL
+==================================================
+
+The spherical-lens system must reject any generated result containing:
+
+- face geometry drift
+- unstable eyes
+- plastic or wax-like skin
+- texture crawling
+- geometry morphing
+- unstable hair
+- unstable jewelry
+- changing lens distortion
+- flickering bokeh
+- flare popping
+- random ghosting
+- changing vignetting
+- focus hunting without cause
+- FOV flicker
+- impossible reflections
+- impossible shadows
+- duplicated optical structures
+- synthetic depth layers
+- temporal perspective instability.
+
+The lens must behave as one stable physical optical system across the shot.
+
+==================================================
+TEMPORAL SPHERICAL-OPTICS VALIDATION
+==================================================
+
+Across consecutive frames:
+
+- lens identity must remain stable
+- spherical classification must remain stable
+- focal length must remain stable unless zooming
+- FOV must remain stable unless focal length changes
+- distortion must evolve only when physically justified
+- bokeh must remain coherent
+- flare must respond to actual source movement
+- ghosting must remain physically coherent
+- CA must remain spatially consistent
+- vignetting must remain stable
+- focus breathing must correspond to focus movement
+- perspective must correspond to camera movement
+- geometry must remain stable.
+
+No unexplained optical change is permitted.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the requested spherical-lens appearance conflicts with physical optics:
+
+1. Preserve physical possibility.
+2. Preserve sensor/lens compatibility.
+3. Recalculate camera position.
+4. Recalculate focal length.
+5. Recalculate FOV.
+6. Recalculate framing.
+7. Recalculate focus and aperture.
+8. Recalculate optical character.
+9. Revalidate movement and temporal continuity.
+10. Reject any remaining artificial optical behaviour.
+
+Never repair an impossible optical configuration with a visual effect.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+Apply only the optical behaviour required by the selected real spherical-lens configuration.
+
+Do not exaggerate:
+
+- distortion
+- CA
+- flare
+- ghosting
+- bokeh
+- vignetting
+- aberrations
+- breathing
+- compression.
+
+If an optical characteristic would normally be below conscious perception for the selected lens and conditions, keep it below conscious perception.
+
+==================================================
+FINAL SPHERICAL-LENS REALISM RULE
+==================================================
+
+SPHERICAL IS AN OPTICAL FORMAT, NOT A VISUAL EFFECT.
+
+Every visible spherical-lens characteristic must emerge from:
+
+REAL LENS DESIGN
++
+REAL SENSOR
++
+REAL CAMERA POSITION
++
+REAL FOCAL LENGTH
++
+REAL APERTURE
++
+REAL FOCUS
++
+REAL LIGHT
++
+REAL SCENE GEOMETRY
++
+REAL CAMERA MOVEMENT.
+
+NO FAKE ANAMORPHIC CHARACTER.
+NO DIGITAL PERSPECTIVE.
+NO SYNTHETIC BOKEH.
+NO ARTIFICIAL COMPRESSION.
+NO GENERIC CINEMATIC FLARE.
+NO ARBITRARY ABERRATIONS.
+NO OPTICAL FLICKER.
+NO TEMPORAL GEOMETRY INSTABILITY.
+
+When uncertain, choose the physically plausible and less noticeable result.
+
+THE FINAL IMAGE MUST LOOK LIKE A REAL CAMERA WITH A REAL SPHERICAL LENS PHOTOGRAPHED THE SCENE.
+
+IT MUST NEVER LOOK AI-GENERATED.
+
+==================================================
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
 ==================================================
@@ -108,15 +540,15 @@ Do NOT apply anamorphic characteristics to spherical lenses.
 Specifically:
 
 SPHERICAL LENS
-≠
+â‰ 
 OVAL ANAMORPHIC BOKEH
 
 SPHERICAL LENS
-≠
+â‰ 
 HORIZONTAL ANAMORPHIC FLARE
 
 SPHERICAL LENS
-≠
+â‰ 
 ANAMORPHIC SQUEEZE
 
 ==================================================
@@ -169,11 +601,11 @@ Two spherical lenses can differ substantially in:
 Therefore:
 
 SPHERICAL
-→
+â†’
 OPTICAL FORMAT
 
 LENS PROFILE
-→
+â†’
 SPECIFIC OPTICAL CHARACTER.
 
 Do not use a generic spherical look for every lens.
@@ -247,7 +679,7 @@ SPATIAL COMPRESSION
 Do not implement:
 
 SPHERICAL TELEPHOTO
-→
+â†’
 AUTOMATIC COMPRESSION.
 
 Compression results primarily from camera position.
@@ -1198,19 +1630,19 @@ PARAMETER DEPENDENCIES
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 CAMERA_POSITION
 +
 SUBJECT_DISTANCE
-→
+â†’
 PERSPECTIVE
 
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING / SPATIAL_APPEARANCE
 
 FOCUS_DISTANCE
@@ -1220,7 +1652,7 @@ FOCAL_LENGTH
 APERTURE
 +
 SENSOR
-→
+â†’
 DEPTH_OF_FIELD
 
 LENS_DESIGN
@@ -1230,13 +1662,13 @@ APERTURE
 FOCUS_DISTANCE
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 BOKEH
 
 LENS_DESIGN
 +
 FRAME_POSITION
-→
+â†’
 DISTORTION
 
 LENS_DESIGN
@@ -1244,13 +1676,13 @@ LENS_DESIGN
 SOURCE_POSITION
 +
 APERTURE
-→
+â†’
 FLARE / GHOSTING
 
 LENS_DESIGN
 +
 FOCUS_CHANGE
-→
+â†’
 FOCUS_BREATHING
 
 LENS_DESIGN
@@ -1258,19 +1690,19 @@ LENS_DESIGN
 APERTURE
 +
 FOCUS
-→
+â†’
 ABERRATION_BEHAVIOUR
 
 ACTIVE_SENSOR_AREA
 +
 IMAGE_CIRCLE
-→
+â†’
 COVERAGE / VIGNETTING
 
 CAMERA_POSITION
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 SPATIAL_COMPRESSION
 
 Do not collapse these variables into a generic "spherical look."
@@ -1475,19 +1907,19 @@ Do not tell the system:
 Instead determine:
 
 WHAT REAL SPHERICAL LENS WOULD A CINEMATOGRAPHER USE?
-→
+â†’
 WHAT SENSOR WOULD IT COVER?
-→
+â†’
 WHAT FOCAL LENGTH IS REQUIRED?
-→
+â†’
 WHERE MUST THE CAMERA BE?
-→
+â†’
 WHAT FOV RESULTS?
-→
+â†’
 WHAT PERSPECTIVE RESULTS?
-→
+â†’
 WHAT FOCUS AND APERTURE ARE REQUIRED?
-→
+â†’
 WHAT OPTICAL CHARACTER NATURALLY RESULTS?
 
 A spherical lens should produce the image through real optical behaviour.
@@ -1506,3 +1938,4 @@ No AI-generated lens behaviour.
 The final image must look as though a real cinematographer placed a real spherical lens on a real camera and photographed the scene under real physical conditions.
 
 It must never look AI-generated.
+

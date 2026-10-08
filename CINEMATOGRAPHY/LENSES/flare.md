@@ -1,614 +1,588 @@
-### LENS FLARE BEHAVIOUR
+﻿### LENS FLARE BEHAVIOUR
 
-Treat lens flare as a natural optical response to strong light entering the camera lens.
+Treat lens flare as a physical optical consequence of light entering the selected lens under the actual scene, camera, and exposure configuration.
 
-Do NOT treat flare as a generic cinematic effect.
+Lens flare MUST NOT be treated as an independently selectable cinematic effect.
 
-Do NOT add flare simply because a shot is dramatic, epic, beautiful, mythological, or cinematic.
+The final video must look like real professionally photographed live-action footage captured with a real physical camera and lens.
 
-The final video must look like professionally captured live-action footage using a real physical camera and lens.
+It must NEVER look AI-generated, digitally composited, screen-space manipulated, or artificially decorated with flare.
 
-It must NEVER look AI-generated, digitally filtered, artificially stylized, or as though lens flare has been composited afterward.
+AI_ARTIFACT_TOLERANCE:
+none
 
 ==================================================
-PHOTOREALISM — NON-NEGOTIABLE
+PHOTOREALISM - NON-NEGOTIABLE
 ==================================================
-
-All flare behaviour must remain physically plausible and temporally consistent.
 
 Maintain:
 
-- realistic light sources
-- physically plausible reflections
-- realistic exposure
-- realistic highlight intensity
-- realistic contrast
-- realistic lens behaviour
-- stable optical characteristics
-- stable geometry
-- stable lighting
-- realistic atmospheric conditions
-- realistic motion
-- realistic motion blur
+- physically plausible flare
+- realistic light-source interaction
+- realistic optical response
+- stable lens character
+- realistic exposure behaviour
+- realistic contrast reduction
+- physically coherent ghosting when present
+- physically coherent veiling flare when present
+- realistic aperture-dependent behaviour
+- realistic temporal behaviour
 
-Avoid AI-generated or artificial-looking characteristics such as:
+Do NOT create:
 
-- perfectly symmetrical flare patterns
-- repeated flare artifacts
-- identical flare shapes on every light
-- artificial rainbow rings
-- excessive glowing
+- decorative cinematic flare
+- arbitrary blue horizontal streaks
+- random anamorphic streaks
+- artificial rainbow overlays
 - floating flare elements
-- flare disconnected from the light source
-- random streaks
-- static overlays
-- flickering flare
-- changing flare geometry without cause
-- excessive bloom
-- artificial color gradients
-- obvious post-production lens effects
+- screen-space flare
+- flare unrelated to visible or physically relevant light sources
+- identical flare patterns across unrelated shots
+- flare that ignores lens orientation
+- flare that ignores lens construction
+- flare that appears when the light source cannot physically enter the lens
+- flare that remains fixed to the frame while camera/light geometry changes incorrectly
+- flare that changes randomly between frames
+- flare used to hide AI artifacts
 
-When uncertain, use less flare.
+When uncertain:
 
-A physically subtle flare is preferable to an obvious effect.
+produce less flare.
 
 ==================================================
-WHAT LENS FLARE IS
+CORE PRINCIPLE
 ==================================================
 
-Lens flare occurs when strong light enters the lens and interacts with internal optical surfaces, causing unwanted or characteristic reflections and scattering.
+Lens flare occurs when strong light reaches the lens and interacts with the optical system.
 
-Possible manifestations include:
+Potential contributing conditions include:
 
-- veiling flare
-- ghost images
-- streaks
-- rings
-- halos
-- glare
-- reduced contrast
-- highlight wash
-- localized internal reflections
-
-These characteristics depend on:
-
-- lens design
-- optical element arrangement
-- coatings
-- aperture
-- light-source position
 - light-source intensity
-- lens orientation
-- lens condition
+- light-source angular position
+- light-source size
+- source position relative to the optical axis
+- lens element arrangement
+- lens coatings
+- internal reflections
+- aperture
 - filtration
-- focal length
-- sensor/camera system
+- lens cleanliness / surface condition
+- camera orientation
+- exposure
+- selected lens type
+- selected optical character
 
-Do not assume every lens produces the same flare.
+Flare MUST be derived from these conditions.
+
+No physical trigger:
+
+NO FLARE.
+
+Weak physical trigger:
+
+SUBTLE FLARE.
+
+Strong physical trigger:
+
+PHYSICALLY APPROPRIATE FLARE.
 
 ==================================================
-LIGHT-SOURCE DEPENDENCY
+LIGHT SOURCE
 ==================================================
 
-Flare should only appear when there is a physically plausible strong light source capable of entering the lens.
+Flare requires a sufficiently strong source or high-contrast illumination entering or interacting with the lens.
 
 Potential sources include:
 
 - sun
-- bright sky
-- torches
+- bright lamps
 - fire
-- lamps
-- diyas
-- candles
-- strong practical lights
-- bright reflections
-- headlights
-- explosions
-- intense artificial lighting
+- intense practical lights
+- strong reflections
+- bright windows
+- other sufficiently intense sources
 
-Weak or diffuse light sources should generally produce little or no visible flare.
+A bright-looking object does not automatically produce visible flare.
 
-Do not add flare to ordinary ambient lighting.
+The source must have an appropriate:
 
-==================================================
-LIGHT POSITION
-==================================================
+- intensity
+- angular position
+- size
+- spectral character
+- relationship to the lens axis
 
-Flare depends strongly on the position of the light relative to the lens.
-
-Strong flare may occur when:
-
-- the light source is directly in frame
-- the light source is near the edge of the frame
-- the light source is just outside the frame
-- strong light enters the lens at an appropriate angle
-
-As the light source moves relative to the lens:
-
-flare should change naturally.
-
-Do not maintain an identical flare regardless of light position.
+Do not create flare merely because a light source exists in the scene.
 
 ==================================================
-DIRECT SUNLIGHT
+LIGHT SOURCE POSITION
 ==================================================
 
-When filming toward the sun:
+Flare behaviour depends strongly on the position of the light relative to the lens optical axis and image field.
 
-allow physically plausible flare when the optical configuration supports it.
+When the source is:
 
-Depending on the lens, this may include:
+- directly within the frame
+- near the frame edge
+- just outside the frame
+- near the optical axis
 
-- reduced contrast
-- veiling flare
-- localized glare
-- subtle ghosts
-- subtle streaking
-- highlight wash
+the resulting flare may differ.
 
-Do not automatically create:
+Do not assume that every source position produces the same optical response.
 
-- huge rainbow circles
-- giant blue streaks
-- multiple perfectly spaced rings
-- exaggerated glow
-
-The sun should remain an extremely bright physical source, not a decorative flare generator.
-
-==================================================
-PRACTICAL LIGHTS
-==================================================
-
-For:
-
-- diyas
-- candles
-- lamps
-- torches
-- fire
-- palace lighting
-- temple lighting
-
-flare should generally be much more restrained than with direct sunlight unless the light is extremely bright relative to the lens.
-
-A small warm practical light does not automatically produce a large cinematic flare.
-
-Maintain realistic relative brightness.
+As camera orientation changes, flare must respond to the changing source/lens geometry.
 
 ==================================================
 VEILING FLARE
 ==================================================
 
-Veiling flare reduces overall contrast when strong light scatters within the optical system.
+Strong off-axis or directly entering light may reduce image contrast through veiling flare.
 
-When appropriate, allow:
+When physically supported:
 
-- slightly lifted blacks
-- reduced contrast
-- subtle highlight wash
-- lower microcontrast
-- atmospheric light contamination
+- local contrast may decrease
+- blacks may lift
+- highlights may spread subtly
+- atmospheric-looking wash may appear
 
-Keep it gradual and physically coherent.
+Do not apply a uniform low-contrast filter merely because flare is requested.
 
-Do not apply a uniform hazy filter to the entire image.
+Veiling flare must arise from the actual light/lens relationship.
 
 ==================================================
 GHOSTING
 ==================================================
 
-Strong point sources may produce secondary reflections caused by internal lens surfaces.
+Internal reflections may create secondary flare structures or ghost images.
 
-Ghosts can appear as:
+Ghosting depends on:
 
-- faint shapes
-- circles
-- polygons
-- colored reflections
-- displaced copies of bright sources
+- lens element geometry
+- coatings
+- source position
+- source intensity
+- aperture
+- optical construction
 
-Their appearance depends heavily on the lens design.
+Ghosts must follow the geometry of the selected lens.
 
-Do not generate perfectly identical ghost patterns for every light source.
+Do NOT:
 
-Do not create multiple obvious geometric shapes unless the selected lens profile supports them.
+- invent arbitrary ghost shapes
+- duplicate bright objects independently
+- place ghosts at fixed screen coordinates
+- create identical ghosts for every lens
+- use ghosting as a decorative overlay
+
+Ghosting must remain optically coherent during camera movement.
 
 ==================================================
-STREAK FLARES
+ANAMORPHIC INTERACTION
 ==================================================
-
-Horizontal or directional streaks may occur with certain lens designs, especially anamorphic systems.
 
 If an anamorphic lens is selected:
 
-- streaking may be possible
-- intensity should remain lens-dependent
-- direction should be optically plausible
-- colour should not automatically be blue
+anamorphic flare characteristics may occur only when physically supported by:
 
-IMPORTANT:
+- the selected anamorphic design
+- light-source intensity
+- source position
+- coatings
+- optical construction
+- aperture
+- filtration
 
-A blue horizontal streak is NOT a universal property of anamorphic lenses.
+Do NOT automatically create:
 
-Do not add blue streaks simply because the lens is anamorphic.
+- blue horizontal streaks
+- elongated flare
+- strong colored streaks
+- cinematic light trails
 
-==================================================
-ANAMORPHIC FLARE
-==================================================
+Anamorphic selection does NOT guarantee visible flare.
 
-When using anamorphic optics, preserve the selected anamorphic profile.
+No physical trigger:
 
-Possible characteristics:
-
-- horizontal streaking
-- elongated flare structures
-- distinctive ghosting
-- altered flare geometry
-- reduced contrast
-
-But apply them only when strong light interacts with the lens.
-
-If no strong light is present:
-
-do not invent anamorphic flare.
+NO ANAMORPHIC FLARE.
 
 ==================================================
-SPHERICAL FLARE
+SPHERICAL LENS INTERACTION
 ==================================================
 
-For spherical lenses, flare behaviour should correspond to the optical design.
+If a spherical lens is selected:
 
-Possible characteristics:
+flare behaviour must follow the selected spherical lens's physical optical construction.
 
-- subtle ghosts
-- circular or polygonal reflections
-- veiling flare
-- localized glare
-- contrast reduction
+Do not import anamorphic flare characteristics into spherical imagery.
 
-Do not impose anamorphic-style horizontal streaks on spherical lenses.
-
-==================================================
-LENS COATINGS
-==================================================
-
-Lens coatings strongly influence flare.
-
-Modern multi-coated lenses generally:
-
-- control flare
-- preserve contrast
-- reduce ghosting
-- maintain cleaner highlights
-
-Older or character lenses may:
-
-- flare more readily
-- lose contrast more strongly
-- produce more visible ghosting
-- create distinctive colour behaviour
-
-Do not automatically make vintage lenses heavily flared.
-
-The selected lens profile determines the behaviour.
+Do not create horizontal streaks simply because the shot is intended to feel cinematic.
 
 ==================================================
 APERTURE INTERACTION
 ==================================================
 
-Flare behaviour can vary with aperture.
+Aperture may influence flare behaviour and aperture-related optical structures.
 
-Depending on the lens:
+The resulting behaviour must remain consistent with the selected lens and aperture.
 
-- stopping down may alter ghost shape
-- aperture blades may influence flare geometry
-- wide apertures may alter internal reflections
-- highlight rendering may change
+Do not use aperture as an independent flare-strength slider.
 
-Allow these changes only when physically plausible.
-
-Do not assume flare intensity always increases or decreases in a simple linear relationship with aperture.
+Aperture cannot create flare without an appropriate optical light-source trigger.
 
 ==================================================
-FILTER INTERACTION
+FILTERS AND ACCESSORIES
 ==================================================
 
-Filters can alter flare behaviour.
+If filters or optical accessories are specified, account for their potential contribution to flare.
 
-If filtration is specified:
+Possible contributors include:
 
-account for possible changes in:
+- diffusion filters
+- protective filters
+- stacked filters
+- optical adapters
+- other elements in the optical path
 
-- reflections
-- ghosting
-- contrast
-- glare
-- highlight bloom
-
-Do not add filter-specific flare unless a filter is actually part of the shot configuration.
+Do not invent filter-induced flare when no filter or optical cause exists.
 
 ==================================================
-LIGHT SOURCE INTENSITY
+LENS COATINGS
 ==================================================
 
-Flare intensity must respond to relative light intensity.
+Coatings influence transmission and internal reflection behaviour.
 
-A very bright source against a dark environment may produce visible flare.
+Consider:
 
-A weak source should generally produce little or none.
+- coating characteristics
+- number of optical surfaces
+- internal reflections
+- lens construction
+- optical generation / design
 
-Do not make every practical light equally bright in optical response.
+Do not assign a universal flare signature to all lenses.
 
-==================================================
-FRAME POSITION
-==================================================
-
-Flare should remain spatially connected to its originating light source.
-
-As the source moves:
-
-- flare moves
-- ghosts move
-- streaks change
-- veiling changes
-- contrast changes
-
-Do not allow flare to remain fixed in screen space while the light source moves.
+Flare character must remain lens-system dependent.
 
 ==================================================
-CAMERA MOVEMENT
+LENS CLEANLINESS / SURFACE CONDITIONS
 ==================================================
+
+Physical surface conditions may influence flare.
+
+Examples include:
+
+- fingerprints
+- dust
+- moisture
+- condensation
+- contamination
+
+Only introduce such effects when explicitly supported by the scene or lens condition.
+
+Do not use dirt or contamination to manufacture cinematic flare.
+
+==================================================
+CAMERA ORIENTATION
+==================================================
+
+Flare must respond to the actual camera orientation relative to strong light sources.
 
 During:
 
 - pan
 - tilt
-- dolly
-- tracking
-- crane
 - orbit
-- handheld movement
+- tracking
+- crane movement
+- camera rotation
 
-flare must respond naturally to the changing relationship between the light source and lens.
+the relationship between the light source and lens must update continuously.
 
-For example:
-
-A light entering the frame during a pan may gradually introduce flare.
-
-As it exits the frame, flare may gradually reduce.
-
-Do not make flare appear instantly or disappear instantly unless the physical geometry supports it.
+Do not lock flare elements to the screen independently of physical camera orientation.
 
 ==================================================
-FOCUS AND RACK FOCUS
+CAMERA MOVEMENT
 ==================================================
 
-Flare behaviour may change subtly during focus changes because the optical configuration changes.
+During camera movement:
 
-However:
+flare must change only when the underlying optical geometry changes.
 
-do not use flare to artificially emphasize a rack focus.
+If the camera moves relative to a strong light source:
 
-The primary focus transition should remain optical focus.
+- flare may increase
+- flare may decrease
+- flare may move
+- flare may disappear
+- flare may change character
 
-Flare may change naturally if the light source, focus state, or lens configuration causes it.
+according to the physical relationship.
+
+Do not animate flare independently of camera/light geometry.
+
+==================================================
+LIGHT SOURCE MOVEMENT
+==================================================
+
+If the light source moves:
+
+the resulting flare must respond to its changing position relative to the lens.
+
+Do not keep a flare fixed when its source has physically moved away from the relevant optical position.
 
 ==================================================
 EXPOSURE INTERACTION
 ==================================================
 
-Do not confuse:
+Exposure may affect the visibility of flare.
 
-LENS FLARE
-with
-OVEREXPOSURE.
+Consider:
 
-A bright source can be overexposed without producing strong visible flare.
+- exposure level
+- source intensity
+- source contrast
+- aperture
+- sensor response
 
-Likewise, flare can reduce contrast without causing the entire light source to clip.
+Do not use exposure manipulation solely to manufacture flare.
 
-Keep exposure and flare as separate physical phenomena.
-
-==================================================
-BLOOM VS FLARE
-==================================================
-
-Do not confuse:
-
-BLOOM:
-light spreading around extremely bright highlights.
-
-FLARE:
-light interacting with the lens and producing internal reflections/scattering.
-
-A shot may contain one, both, or neither.
-
-Do not automatically add both.
+Flare visibility must remain consistent with the recorded exposure.
 
 ==================================================
-HALATION VS FLARE
+COLOR
 ==================================================
 
-Do not confuse lens flare with halation.
+Flare coloration must be physically plausible for the selected optical system.
 
-Halation is primarily associated with light interacting with the recording medium or imaging pipeline and can produce a characteristic glow around bright areas.
+Possible colour behaviour may depend on:
 
-Lens flare originates within the optical system.
+- coatings
+- internal reflections
+- source spectrum
+- optical construction
+- sensor response
 
-Keep these phenomena separate.
+Do NOT add arbitrary:
 
-==================================================
-NATURAL FLARE INTENSITY
-==================================================
+- rainbow bands
+- neon colours
+- saturated blue streaks
+- RGB overlays
 
-DEFAULT:
-
-FLARE:
-subtle / condition-dependent
-
-VEILING:
-minimal
-
-GHOSTING:
-minimal
-
-STREAKING:
-minimal and lens-dependent
-
-BLOOM:
-natural and highlight-dependent
-
-CONTRAST LOSS:
-subtle
-
-COLOR:
-lens-dependent
-
-Do not exaggerate flare for visual impact.
+unless physically supported by the optical configuration.
 
 ==================================================
-VIDEO TEMPORAL CONSISTENCY
+FLARE AND BOKEH
 ==================================================
 
-This is an AI-generated VIDEO system.
+Do not confuse flare with bokeh.
 
-Flare must remain temporally stable and physically connected to the light source.
+Bokeh is caused by out-of-focus rendering.
+
+Flare is caused by strong light interacting with the optical system.
+
+They must be calculated independently.
+
+The presence of bokeh does not authorize flare.
+
+The presence of flare does not authorize bokeh.
+
+==================================================
+FLARE AND DISTORTION
+==================================================
+
+Do not confuse flare with lens distortion.
+
+Lens distortion changes geometric projection.
+
+Flare changes light transmission / contrast through optical interaction.
+
+Do not use flare to hide:
+
+- geometric distortion
+- facial distortion
+- unstable architecture
+- temporal inconsistencies
+- AI artifacts
+
+==================================================
+FLARE AND EXPOSURE
+==================================================
+
+Do not confuse highlight clipping with lens flare.
+
+An overexposed light source may clip without producing significant flare.
+
+A source may produce subtle flare without severe clipping.
+
+Treat these as separate physical phenomena.
+
+==================================================
+TEMPORAL CONSISTENCY
+==================================================
+
+This is a VIDEO generation system.
+
+Flare must remain temporally coherent.
 
 Do NOT allow:
 
-- flickering flare
-- random flare generation
-- flare popping in and out
-- changing flare colour between frames
-- changing streak direction without cause
-- floating ghosts
-- flare elements detached from the light
-- unstable glare
-- inconsistent contrast loss
-- flare geometry changing randomly
+- flare flicker
+- random flare appearance
+- random flare disappearance
+- ghosting to jump between frames
+- streaks to change shape without optical cause
+- flare to remain screen-locked when camera geometry changes
+- flare to appear before the source enters the relevant optical position
+- flare to persist after the physical trigger disappears
+- RGB artifacts to crawl independently across frames
 
-Any flare change must have a physical cause such as:
+All flare changes must correspond to changes in:
 
-- camera movement
-- light movement
-- subject movement
-- change in light intensity
-- change in lens orientation
-- focus change
-- aperture change
-- lens/filter change
+- source position
+- source intensity
+- camera orientation
+- camera position
+- lens configuration
+- aperture
+- optical path
+- exposure
 
 ==================================================
-AI VIDEO REALISM
+AI ARTIFACT FIREWALL
 ==================================================
 
-Never simulate lens flare as:
+Never generate flare using:
 
-- a screen-space overlay
-- a generic "cinematic flare"
-- a fixed streak
-- a glowing gradient
-- a rainbow filter
-- a post-production effect
-- a decorative light effect
+- screen-space overlays
+- fixed flare sprites
+- arbitrary compositing
+- semantic light masks
+- object-following effects
+- decorative streak layers
+- frame-independent flare textures
+- random optical artifacts
 
-The flare must appear to originate from the physical interaction between the selected lens and the actual light source.
+Correct causal direction:
 
-The viewer should believe the camera genuinely captured it.
+PHYSICAL SCENE
+->
+LIGHT SOURCE
+->
+LIGHT-SOURCE GEOMETRY
+->
+CAMERA ORIENTATION / POSITION
+->
+LENS
+->
+OPTICAL CONSTRUCTION
+->
+COATINGS / FILTRATION
+->
+APERTURE
+->
+OPTICAL INTERACTION
+->
+RESULTING FLARE
+->
+RECORDED IMAGE
+
+Never reverse this relationship.
+
+==================================================
+NATURALISM RULE
+==================================================
+
+Optical flare must be proportional to its physical cause.
+
+NO PHYSICAL TRIGGER -> NONE
+
+WEAK TRIGGER -> SUBTLE
+
+STRONG TRIGGER -> PHYSICALLY APPROPRIATE
+
+Never exaggerate flare because the scene is:
+
+- epic
+- dramatic
+- emotional
+- beautiful
+- cinematic
+- immersive
+- mythological
+
+Story intent may determine whether a physically available flare condition is desirable.
+
+It may NOT manufacture unsupported flare.
+
+==================================================
+FLARE INTENSITY
+==================================================
+
+Default flare intensity:
+
+NONE unless physically justified.
+
+When justified:
+
+- prefer subtle optical behaviour
+- preserve scene visibility
+- preserve subject detail
+- preserve realistic contrast
+- avoid overpowering the image
+
+Strong flare should require strong physical justification.
+
+==================================================
+SHOT-TO-SHOT CONSISTENCY
+==================================================
+
+Maintain consistency with the selected lens system.
+
+If the same lens, camera, aperture, and lighting geometry are maintained:
+
+flare behaviour should remain broadly consistent.
+
+If the lens changes:
+
+flare character may change.
+
+If the camera/light geometry changes:
+
+flare response may change.
+
+Do not randomly vary flare between otherwise equivalent shots.
 
 ==================================================
 STORY-FIRST RULE
 ==================================================
 
-Lens flare must never be introduced simply because the scene is:
+Determine whether flare supports the shot's purpose only AFTER establishing whether the physical configuration permits it.
 
-- epic
-- emotional
-- divine
-- dramatic
-- mythological
-- beautiful
-- cinematic
+The correct reasoning is:
 
-Use flare only when the physical lighting and lens configuration naturally produce it.
+STORY PURPOSE
+->
+SCENE LIGHTING
+->
+PHYSICAL LIGHT SOURCE
+->
+SOURCE GEOMETRY
+->
+CAMERA / LENS CONFIGURATION
+->
+POSSIBLE OPTICAL RESPONSE
+->
+FINAL FLARE
 
-The story determines the shot.
+Never:
 
-The shot determines the camera and lighting.
-
-The camera, lens, and light determine the flare.
-
-==================================================
-RAMAYANA APPLICATION
-==================================================
-
-For this production, natural optical behaviour takes priority over recognizable "cinematic" flare.
-
-Examples:
-
-SUNRISE / SUNSET:
-Possible subtle flare when shooting toward the sun.
-
-FOREST WITH SUNLIGHT:
-Possible small localized flare or veiling when direct rays enter the lens.
-
-TEMPLE WITH DIYAS:
-Usually minimal flare unless a bright source is optically intense.
-
-BATTLE WITH FIRE:
-Possible flare from intense flames or bright reflections, but never automatically.
-
-DIVINE LIGHT:
-Do NOT represent divine radiance as lens flare by default.
-
-If divine light is narratively present, its appearance must first be established through the scene's actual lighting design. Lens flare is only an optical consequence if the physical light reaches the lens.
-
-==================================================
-DEFAULT RAMAYANA PROFILE
-==================================================
-
-FLARE:
-condition-dependent
-
-FLARE_INTENSITY:
-subtle
-
-VEILING_FLARE:
-minimal
-
-GHOSTING:
-minimal
-
-STREAKING:
-lens-dependent
-
-ANAMORPHIC_STREAK:
-only when anamorphic + strong light justify it
-
-BLUE_FLARE:
-never automatic
-
-RAINBOW_FLARE:
-never automatic
-
-CONTRAST_LOSS:
-subtle
-
-LIGHT_SOURCE_CONNECTION:
-mandatory
-
-TEMPORAL_CONSISTENCY:
-extremely high
-
-OPTICAL_REALISM:
-extremely high
-
-ARTIFICIAL_FLARE:
-none
-
-AI_ARTIFACT_TOLERANCE:
-none
+STORY PURPOSE
+->
+CINEMATIC FLARE
+->
+FABRICATED OPTICAL EXPLANATION
 
 ==================================================
 FINAL DECISION ORDER
@@ -642,3 +616,4 @@ The final result must look like real professionally photographed live-action foo
 Lens flare must be an optical consequence, never an added visual effect.
 
 It must never look AI-generated.
+

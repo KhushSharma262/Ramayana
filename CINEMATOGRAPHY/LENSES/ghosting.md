@@ -1,4 +1,4 @@
-# GHOSTING BEHAVIOUR
+﻿# GHOSTING BEHAVIOUR
 
 ## PURPOSE
 
@@ -80,6 +80,394 @@ Ghosting is different from:
 - anamorphic streak flare
 
 Do not merge these phenomena into one generic "lens effect."
+
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Ghosting must be derived only from physically supported optical conditions.
+
+UNKNOWN does not mean:
+
+- ghosting present
+- strong ghosting
+- multiple ghosts
+- colored ghosts
+- circular ghosts
+- polygonal ghosts
+- anamorphic ghosts
+- visible internal reflections
+
+If a required parameter is unknown, do not invent ghosting to complete the
+cinematic appearance.
+
+Use the least visually intrusive physically plausible result.
+
+NO SUFFICIENT OPTICAL TRIGGER
+→ NO VISIBLE GHOSTING
+
+WEAK OPTICAL TRIGGER
+→ SUBTLE GHOSTING
+
+STRONG OPTICAL TRIGGER
+→ PHYSICALLY APPROPRIATE GHOSTING
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+The lens system and lens profile must be established before ghost behaviour
+is determined.
+
+Order:
+
+LENS SYSTEM
+→ LENS TYPE
+→ LENS PROFILE
+→ SENSOR FORMAT / ACTIVE AREA
+→ FOCAL LENGTH
+→ APERTURE
+→ OPTICAL CONSTRUCTION
+→ COATINGS
+→ FILTERS
+→ LIGHT SOURCE
+→ CAMERA / SOURCE GEOMETRY
+→ EXPOSURE
+→ RESULTING INTERNAL REFLECTIONS
+→ GHOSTING
+
+Do not select a desired ghost pattern first and then invent a lens
+character to produce it.
+
+Ghost shape, count, brightness, colour, position, and movement must remain
+subordinate to the selected physical optical system.
+
+==================================================
+GHOSTING AUTHORIZATION
+==================================================
+
+Ghosting may occur only when supported by the physical scene and selected
+camera system.
+
+FORCED:
+Explicitly required by a physically valid light-source/lens configuration.
+
+DERIVED:
+Produced naturally by the interaction between source geometry and the
+selected optical system.
+
+ALLOWED:
+Physically plausible but not necessarily visible.
+
+DISABLED:
+No sufficient optical condition exists; no visible ghosting is produced.
+
+Narrative intent may determine whether an optically available effect is
+permitted, but narrative intent cannot create unsupported ghosting.
+
+==================================================
+SOURCE / OPTICAL-AXIS VALIDATION
+==================================================
+
+Before generating visible ghosting, validate:
+
+1. A sufficiently strong or high-contrast light source exists.
+2. The source is actually capable of entering the optical system.
+3. Source position relative to the optical axis is valid.
+4. Camera orientation is valid.
+5. Lens type and optical construction are known or appropriately constrained.
+6. Coatings are consistent with the selected lens profile.
+7. Filters are present only when specified.
+8. Aperture is valid.
+9. Focal length is valid.
+10. Exposure conditions are compatible.
+11. Camera movement is accounted for.
+12. Source movement is accounted for.
+13. Resulting ghost geometry is optically coherent.
+14. Ghost intensity remains subordinate to the originating source.
+15. Temporal behaviour remains stable.
+
+If validation fails:
+
+- identify the earliest invalid physical dependency
+- correct that dependency
+- recalculate all dependent optical behaviour
+- do not add a digital ghost
+- do not reposition the ghost manually
+- do not compensate with saturation, brightness, blur, or compositing
+
+==================================================
+GHOST GEOMETRY RULE
+==================================================
+
+Ghosts are secondary optical images, not independent scene objects.
+
+Their:
+
+- position
+- scale
+- orientation
+- shape
+- brightness
+- colour
+- movement
+
+must be derived from the originating source and optical system.
+
+Never specify a ghost using fixed screen coordinates.
+
+Never attach ghosting to:
+
+- a character
+- a building
+- the sky
+- the frame edge
+- a fixed camera-space location
+
+unless the physical optical geometry produces that relationship.
+
+==================================================
+GHOST COUNT RULE
+==================================================
+
+The number of visible ghost structures must be determined by the selected
+optical system and source conditions.
+
+Do not use a fixed cinematic ghost count.
+
+Do not assume:
+
+ONE SOURCE = ONE GHOST
+
+or:
+
+ONE SOURCE = MANY GHOSTS
+
+The resulting number must remain physically plausible for the selected
+lens construction and optical path.
+
+When uncertain, prefer fewer and weaker visible structures.
+
+==================================================
+GHOST INTENSITY RULE
+==================================================
+
+Ghost intensity must remain subordinate to the originating source.
+
+Default relationship:
+
+PRIMARY LIGHT SOURCE
+>
+SECONDARY GHOST IMAGE
+
+Ghosting must not become the dominant visual subject unless an unusual
+physical optical configuration genuinely produces that result.
+
+Do not increase ghost brightness merely to make it visible to the audience.
+
+If the effect is physically weak, allow it to remain barely perceptible or
+absent.
+
+==================================================
+GHOST COLOUR RULE
+==================================================
+
+Colour variation must be physically subordinate to the optical system.
+
+Do not introduce:
+
+- rainbow gradients
+- neon RGB rings
+- saturated blue ghosts
+- saturated red ghosts
+- artificial green ghosts
+- uniform chromatic outlines
+
+Subtle wavelength-dependent colour differences may occur when physically
+supported by the selected optical surfaces and coatings.
+
+Colour must never be used as a generic indicator of "cinematic ghosting."
+
+==================================================
+GHOST MOTION RULE
+==================================================
+
+Ghost movement must be derived from the changing relationship between:
+
+- light source
+- camera
+- optical axis
+- lens
+- lens orientation
+- camera position
+- source position
+
+If the source moves, the ghost response must change accordingly.
+
+If the camera moves, the ghost response must change accordingly.
+
+If neither physical relationship changes, ghosting should not randomly
+wander, pulse, or morph.
+
+==================================================
+FOCUS INDEPENDENCE RULE
+==================================================
+
+Focus transition does not automatically generate or intensify ghosting.
+
+Ghosting is primarily controlled by:
+
+LIGHT SOURCE
++
+OPTICAL SYSTEM
++
+SOURCE / CAMERA GEOMETRY
+
+not by:
+
+FOCUS DISTANCE alone.
+
+Focus may alter the appearance of some optical structures, but any such
+change must be physically supported by the selected lens.
+
+Never use a focus pull as a reason to introduce a new ghost pattern.
+
+==================================================
+MOVEMENT CONSISTENCY RULE
+==================================================
+
+During pan, tilt, dolly, tracking, orbit, crane, handheld movement, zoom,
+or moving-source shots:
+
+ghost behaviour must be recalculated from the changing optical geometry.
+
+Do not:
+
+- translate a ghost overlay with the frame
+- scale a ghost independently
+- lock ghosts to screen coordinates
+- interpolate ghost movement independently of camera movement
+- allow ghost geometry to lag behind its source without physical cause
+
+==================================================
+OPTICAL PHENOMENA SEPARATION
+==================================================
+
+Ghosting must remain separate from:
+
+- veiling flare
+- halation
+- bloom
+- bokeh
+- chromatic aberration
+- sensor glare
+- clipping
+- anamorphic streak flare
+
+One optical phenomenon must not be generated merely because another is
+present.
+
+Each effect requires its own physical trigger.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+The physical chain must always be:
+
+LIGHT SOURCE
+→ SOURCE / CAMERA GEOMETRY
+→ OPTICAL AXIS RELATIONSHIP
+→ LENS / OPTICAL CONSTRUCTION
+→ COATINGS / FILTERS
+→ INTERNAL REFLECTIONS
+→ GHOST IMAGE
+→ FINAL IMAGE
+
+Never:
+
+DESIRED CINEMATIC EFFECT
+→ GHOST OVERLAY
+→ SCREEN-SPACE SHAPE
+→ COLOR EFFECT
+→ FINAL IMAGE
+
+Ghosting must never be generated as a texture, sticker, mask, particle,
+or composited screen-space element.
+
+The system must not infer physical ghosting from the desired appearance.
+
+==================================================
+TEMPORAL VALIDATION
+==================================================
+
+Every visible change in ghosting must have a physical cause.
+
+Reject:
+
+- frame-to-frame ghost flicker
+- random ghost appearance
+- random disappearance
+- shape morphing
+- colour cycling
+- position jumping
+- independent intensity pulsing
+- duplicated ghost structures
+- ghost trails without optical justification
+- screen-space locking
+
+The ghost image must remain temporally coherent with the originating light
+source and camera movement.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid outcomes are possible, select the least
+conspicuous result.
+
+Do not maximize:
+
+- ghost count
+- ghost size
+- ghost brightness
+- ghost saturation
+- geometric regularity
+- anamorphic character
+- visibility
+
+unless the selected physical configuration naturally produces them.
+
+The absence of visible ghosting is a valid result.
+
+A physically correct shot may contain:
+
+- strong source with no obvious ghosts
+- faint ghosts
+- subtle internal reflections
+- stronger ghosting
+- ghosting plus veiling flare
+
+depending on the actual optical conditions.
+
+==================================================
+FINAL GHOSTING REALISM RULE
+==================================================
+
+Ghosting is successful only when the viewer can reasonably interpret it as
+a natural consequence of photographing a bright source through the selected
+physical lens.
+
+If the ghost becomes more noticeable as an "effect" than as an optical
+consequence, reduce its intensity, visibility, or complexity.
+
+REAL OPTICAL CAUSALITY
+>
+VISIBLE EFFECT
+>
+CINEMATIC EMPHASIS
+
+The final image must remain indistinguishable from real optical capture.
 
 ==================================================
 SOURCE REQUIREMENT
@@ -764,16 +1152,17 @@ Never begin with:
 Instead determine:
 
 IS THERE A STRONG LIGHT SOURCE?
-→ IS IT ENTERING THE LENS UNDER SUITABLE CONDITIONS?
-→ WHAT LENS IS BEING USED?
-→ HOW WELL IS IT COATED?
-→ WHAT OPTICAL CHARACTER DOES THAT LENS HAVE?
-→ WHERE WOULD INTERNAL REFLECTIONS PHYSICALLY APPEAR?
-→ HOW STRONG WOULD THEY ACTUALLY BE?
-→ HOW WOULD THEY MOVE WITH THE CAMERA AND SOURCE?
+â†’ IS IT ENTERING THE LENS UNDER SUITABLE CONDITIONS?
+â†’ WHAT LENS IS BEING USED?
+â†’ HOW WELL IS IT COATED?
+â†’ WHAT OPTICAL CHARACTER DOES THAT LENS HAVE?
+â†’ WHERE WOULD INTERNAL REFLECTIONS PHYSICALLY APPEAR?
+â†’ HOW STRONG WOULD THEY ACTUALLY BE?
+â†’ HOW WOULD THEY MOVE WITH THE CAMERA AND SOURCE?
 
 Ghosting must be a consequence of the camera system, not a visual effect applied to the image.
 
 The final result must look as though a real physical lens produced the ghosting during real photography.
 
 It must never look AI-generated.
+

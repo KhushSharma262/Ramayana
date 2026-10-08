@@ -1,4 +1,4 @@
-# LENS PHYSICS BEHAVIOUR
+﻿# LENS PHYSICS BEHAVIOUR
 
 ## PURPOSE
 
@@ -29,20 +29,20 @@ The system must treat the lens as a real optical system rather than a collection
 The final image must emerge from:
 
 CAMERA
-→ SENSOR
-→ LENS
-→ LIGHT
-→ SUBJECT
-→ DISTANCES
-→ FOCUS
-→ APERTURE
-→ MOVEMENT
-→ RESULTING OPTICAL IMAGE
+â†’ SENSOR
+â†’ LENS
+â†’ LIGHT
+â†’ SUBJECT
+â†’ DISTANCES
+â†’ FOCUS
+â†’ APERTURE
+â†’ MOVEMENT
+â†’ RESULTING OPTICAL IMAGE
 
 Never reverse this into:
 
 DESIRED CINEMATIC LOOK
-→ ADD OPTICAL EFFECTS.
+â†’ ADD OPTICAL EFFECTS.
 
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
@@ -134,14 +134,14 @@ PRIMARY OPTICAL CHAIN
 Use this conceptual chain:
 
 SCENE
-→ LIGHT RAYS
-→ SUBJECT
-→ LENS ENTRANCE
-→ OPTICAL ELEMENTS
-→ APERTURE
-→ IMAGE FORMATION
-→ SENSOR
-→ RECORDED IMAGE
+â†’ LIGHT RAYS
+â†’ SUBJECT
+â†’ LENS ENTRANCE
+â†’ OPTICAL ELEMENTS
+â†’ APERTURE
+â†’ IMAGE FORMATION
+â†’ SENSOR
+â†’ RECORDED IMAGE
 
 Every visible optical characteristic should be explainable somewhere in this chain.
 
@@ -210,13 +210,13 @@ That repositioning changes perspective.
 Therefore:
 
 CAMERA POSITION
-→ PERSPECTIVE
+â†’ PERSPECTIVE
 
 FOCAL LENGTH + SENSOR
-→ FOV
+â†’ FOV
 
 FOCAL LENGTH + CAMERA POSITION
-→ FINAL SPATIAL APPEARANCE
+â†’ FINAL SPATIAL APPEARANCE
 
 Never incorrectly attribute all perspective behaviour to the lens's focal length.
 
@@ -225,6 +225,404 @@ IMAGE FORMATION
 ==================================================
 
 The lens projects the three-dimensional scene onto the sensor plane.
+
+
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Lens physics must be derived from established physical parameters.
+
+UNKNOWN does NOT mean:
+
+- cinematic optical character
+- shallow depth of field
+- strong bokeh
+- flare
+- ghosting
+- chromatic aberration
+- distortion
+- breathing
+- compression
+- softness
+- vignetting
+- anamorphic behaviour
+
+If a physical parameter is unknown:
+
+do not invent an optical consequence.
+
+UNKNOWN != CINEMATIC EFFECT.
+
+Every optical characteristic must be explicitly established, physically derived, or remain inactive until sufficient parameters are known.
+
+==================================================
+PHYSICAL DEPENDENCY RULE
+==================================================
+
+Every visible optical characteristic must have a traceable physical dependency.
+
+Examples:
+
+FOCAL LENGTH + SENSOR
+→ FIELD OF VIEW
+
+CAMERA POSITION + SCENE GEOMETRY
+→ PERSPECTIVE
+
+FOCAL LENGTH + APERTURE + FOCUS DISTANCE + SENSOR
+→ DEPTH OF FIELD
+
+LENS DESIGN + APERTURE + FOCUS
+→ BOKEH / ABERRATION BEHAVIOUR
+
+LENS DESIGN + LIGHT SOURCE + CAMERA ORIENTATION
+→ FLARE / GHOSTING
+
+FOCUS MOVEMENT + LENS DESIGN
+→ FOCUS BREATHING
+
+LENS DESIGN + IMAGE POSITION
+→ GEOMETRIC DISTORTION
+
+If no physical dependency exists:
+
+the effect must not be generated.
+
+==================================================
+OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Each optical characteristic must have an authorization state:
+
+FORCED:
+required by the established physical configuration.
+
+DERIVED:
+automatically resulting from established physical parameters.
+
+ALLOWED:
+physically possible but not necessarily visible.
+
+DISABLED:
+not supported by the current configuration.
+
+Do not activate an optical characteristic merely because it is considered cinematic.
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+Lens physics must begin with the physical lens configuration.
+
+Determine:
+
+STORY
+→ SHOT PURPOSE
+→ SUBJECT / ENVIRONMENT
+→ COMPOSITION
+→ CAMERA SYSTEM
+→ SENSOR
+→ LENS TYPE
+→ SPHERICAL / ANAMORPHIC STATE
+→ FOCAL LENGTH
+→ CAMERA POSITION
+→ FOCUS DISTANCE
+→ APERTURE
+→ OPTICAL RESPONSE
+→ MOVEMENT
+→ TEMPORAL VALIDATION
+
+Do not choose optical effects first and construct a fictional lens around them.
+
+==================================================
+OPTICAL PHENOMENA SEPARATION
+==================================================
+
+The system must keep physically different phenomena separate.
+
+PERSPECTIVE
+≠
+LENS DISTORTION
+
+FOV
+≠
+PERSPECTIVE
+
+COMPRESSION
+≠
+DISTORTION
+
+BOKEH
+≠
+DEPTH OF FIELD
+
+FLARE
+≠
+GHOSTING
+
+CHROMATIC ABERRATION
+≠
+GEOMETRIC DISTORTION
+
+FOCUS BREATHING
+≠
+DIGITAL ZOOM
+
+ANAMORPHIC SQUEEZE
+≠
+RADIAL DISTORTION
+
+Never simulate one phenomenon by artificially generating another.
+
+==================================================
+PHYSICAL PARAMETER LOCK
+==================================================
+
+Once a shot begins, physical camera parameters remain locked unless the shot explicitly changes them.
+
+Track:
+
+- camera system
+- sensor format
+- active sensor area
+- lens identity
+- lens type
+- focal length
+- aperture
+- focus distance
+- camera position
+- camera orientation
+- filters
+- zoom state
+- optical accessories.
+
+An optical characteristic may change only when one or more of its physical dependencies changes.
+
+==================================================
+TEMPORAL OPTICAL VALIDATION
+==================================================
+
+Within a continuous shot:
+
+NO PHYSICAL PARAMETER CHANGE
+→ NO UNEXPLAINED OPTICAL CHANGE.
+
+Never allow:
+
+- focal-length flicker
+- FOV oscillation
+- distortion flicker
+- bokeh popping
+- flare popping
+- ghosting popping
+- CA flickering
+- breathing oscillation
+- changing lens softness
+- unstable focus rendering
+- geometry morphing
+- inconsistent vignetting
+- changing optical character.
+
+Every temporal optical change must have a physical cause.
+
+==================================================
+CAMERA / SUBJECT GEOMETRY FIREWALL
+==================================================
+
+Optical behaviour must remain attached to the physical camera system.
+
+Do not allow individual optical effects to move independently of:
+
+- camera position
+- camera orientation
+- lens
+- sensor
+- scene geometry.
+
+Subjects may change optical appearance because their position within the optical field changes.
+
+They must not become independently warped, blurred, sharpened, or distorted.
+
+==================================================
+FACE PROTECTION
+==================================================
+
+Lens physics must preserve stable character identity.
+
+Never allow optical processing to create:
+
+- changing eye spacing
+- changing nose geometry
+- changing jawline
+- unstable facial proportions
+- melting skin
+- changing facial width
+- unstable hair geometry.
+
+Perspective and genuine lens distortion may alter appearance only within physically plausible limits.
+
+==================================================
+ARCHITECTURAL GEOMETRY FIREWALL
+==================================================
+
+Architecture provides a strong physical validation reference.
+
+Maintain stable:
+
+- walls
+- columns
+- roofs
+- windows
+- doorways
+- horizons
+- temple structures
+- repeated architectural patterns.
+
+Any geometric change must be explainable by:
+
+- camera movement
+- perspective
+- lens distortion
+- focal length
+- framing
+- subject/environment movement.
+
+Never permit AI-generated structural deformation.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+The rendering chain must remain:
+
+PHYSICAL SCENE
+→ CAMERA
+→ SENSOR
+→ LENS
+→ OPTICAL PROJECTION
+→ SENSOR IMAGE
+→ FINAL IMAGE.
+
+Never:
+
+DESIRED CINEMATIC LOOK
+→ SYNTHETIC OPTICAL EFFECT
+→ IMAGE.
+
+Reject:
+
+- screen-space bokeh
+- artificial lens flare
+- digital ghost overlays
+- RGB edge effects
+- arbitrary blur
+- depth-map lens simulation
+- digital perspective warping
+- synthetic distortion
+- optical character morphing
+- unstable geometry
+- frame-to-frame lens changes
+- impossible reflections
+- optical effects without physical triggers.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When several physically valid configurations can produce the shot:
+
+choose the configuration requiring the least unsupported optical behaviour.
+
+Prefer:
+
+PHYSICAL PARAMETER
+→ PHYSICAL OPTICAL RESULT
+
+over:
+
+DESIRED LOOK
+→ ARTIFICIAL EFFECT.
+
+If an optical characteristic is unnecessary and unsupported:
+
+omit it.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If an optical configuration becomes physically inconsistent:
+
+1. identify the failed dependency
+2. identify the earliest incorrect physical parameter
+3. correct that physical parameter
+4. recalculate dependent optical characteristics
+5. re-run physical validation.
+
+Never repair an invalid physical configuration through image-space manipulation.
+
+==================================================
+OPTICAL CONSERVATION RULE
+==================================================
+
+Do not create more optical character than the selected lens can physically support.
+
+A modern corrected lens may produce:
+
+- low distortion
+- low CA
+- restrained flare
+- high contrast
+- stable geometry.
+
+A character lens may produce more visible imperfections.
+
+However:
+
+one character trait does not automatically activate all others.
+
+Vintage does not mean:
+
+- heavy distortion
+- heavy flare
+- strong CA
+- extreme softness
+- strong vignetting
+- strong breathing
+
+simultaneously.
+
+Evaluate each characteristic independently.
+
+==================================================
+FINAL PHYSICAL REALISM RULE
+==================================================
+
+Lens physics is the underlying cause of optical appearance.
+
+Optical characteristics are consequences of the physical system, not independent visual effects.
+
+When uncertain:
+
+choose the physically plausible result with the least visible optical intervention.
+
+PHYSICAL REALISM
+>
+OPTICAL VALIDITY
+>
+TEMPORAL CONSISTENCY
+>
+GEOMETRIC STABILITY
+>
+CINEMATIC CHARACTER
+>
+VISIBLE OPTICAL EFFECT.
+
+The final image must behave as though it was produced by a real camera, real sensor, real lens, real focusing mechanism, real aperture, real light, and real optical path.
+
+It must never look AI-generated.
+
 
 Maintain coherent relationships between:
 
@@ -288,7 +686,7 @@ Equivalent focal length may be used for FOV comparison:
 
 EQUIVALENT FOCAL LENGTH
 =
-ACTUAL FOCAL LENGTH × CROP FACTOR
+ACTUAL FOCAL LENGTH Ã— CROP FACTOR
 
 This is a comparison tool, not a physical change to the lens.
 
@@ -543,7 +941,7 @@ Possible forms:
 Distortion should generally be:
 
 minimal near centre
-→ potentially stronger toward edges.
+â†’ potentially stronger toward edges.
 
 Do not apply universal wide-angle warping.
 
@@ -896,7 +1294,7 @@ Character may arise from:
 
 However:
 
-OPTICAL CHARACTER ≠ EXAGGERATED IMPERFECTION.
+OPTICAL CHARACTER â‰  EXAGGERATED IMPERFECTION.
 
 Natural optical character should usually remain below conscious attention unless the lens profile intentionally calls for a distinctive rendering.
 
@@ -1029,19 +1427,19 @@ Do NOT choose effects first and then attempt to construct a lens around them.
 Correct order:
 
 STORY
-→ SHOT PURPOSE
-→ SUBJECT / ENVIRONMENT
-→ COMPOSITION
-→ SENSOR
-→ LENS TYPE
-→ ANAMORPHIC / SPHERICAL
-→ FOCAL LENGTH
-→ CAMERA POSITION
-→ FOCUS DISTANCE
-→ APERTURE
-→ OPTICAL BEHAVIOUR
-→ MOVEMENT
-→ FINAL IMAGE
+â†’ SHOT PURPOSE
+â†’ SUBJECT / ENVIRONMENT
+â†’ COMPOSITION
+â†’ SENSOR
+â†’ LENS TYPE
+â†’ ANAMORPHIC / SPHERICAL
+â†’ FOCAL LENGTH
+â†’ CAMERA POSITION
+â†’ FOCUS DISTANCE
+â†’ APERTURE
+â†’ OPTICAL BEHAVIOUR
+â†’ MOVEMENT
+â†’ FINAL IMAGE
 
 ==================================================
 LENS PHYSICS PRIORITY
@@ -1216,16 +1614,16 @@ Never begin with:
 Instead determine:
 
 WHAT IS THE SHOT TRYING TO COMMUNICATE?
-→ WHAT CAMERA SYSTEM IS BEING USED?
-→ WHAT SENSOR IS CAPTURING THE IMAGE?
-→ WHAT PHYSICAL LENS IS APPROPRIATE?
-→ WHAT ARE ITS OPTICAL PROPERTIES?
-→ WHERE IS THE CAMERA?
-→ WHERE IS THE FOCAL PLANE?
-→ WHAT APERTURE IS REQUIRED?
-→ HOW DOES LIGHT PASS THROUGH THE LENS?
-→ WHAT OPTICAL RESULT SHOULD PHYSICALLY EMERGE?
-→ IS THAT RESULT STABLE THROUGH TIME?
+â†’ WHAT CAMERA SYSTEM IS BEING USED?
+â†’ WHAT SENSOR IS CAPTURING THE IMAGE?
+â†’ WHAT PHYSICAL LENS IS APPROPRIATE?
+â†’ WHAT ARE ITS OPTICAL PROPERTIES?
+â†’ WHERE IS THE CAMERA?
+â†’ WHERE IS THE FOCAL PLANE?
+â†’ WHAT APERTURE IS REQUIRED?
+â†’ HOW DOES LIGHT PASS THROUGH THE LENS?
+â†’ WHAT OPTICAL RESULT SHOULD PHYSICALLY EMERGE?
+â†’ IS THAT RESULT STABLE THROUGH TIME?
 
 The lens must behave as a coherent physical optical system.
 
@@ -1240,3 +1638,4 @@ No optical inconsistency.
 No temporal instability.
 
 It must never look AI-generated.
+

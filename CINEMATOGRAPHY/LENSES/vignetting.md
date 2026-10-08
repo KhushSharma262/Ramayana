@@ -1,4 +1,4 @@
-# VIGNETTING BEHAVIOUR
+﻿# VIGNETTING BEHAVIOUR
 
 ## PURPOSE
 
@@ -235,13 +235,13 @@ Mechanical limitations and image-circle constraints may remain.
 Therefore:
 
 APERTURE
-→
+â†’
 RECALCULATE VIGNETTING
 
 rather than:
 
 APERTURE
-→
+â†’
 AUTOMATICALLY REMOVE VIGNETTING.
 
 ==================================================
@@ -336,7 +336,7 @@ Crop factor does NOT itself create vignetting.
 Do not apply:
 
 CROP FACTOR
-→
+â†’
 AUTOMATIC VIGNETTE.
 
 Instead:
@@ -346,7 +346,7 @@ SENSOR ACTIVE AREA
 IMAGE CIRCLE
 +
 LENS ILLUMINATION PROFILE
-→
+â†’
 VISIBLE VIGNETTING.
 
 ==================================================
@@ -359,7 +359,7 @@ SENSOR:
 full-frame reference
 
 CROP_FACTOR:
-1.0×
+1.0Ã—
 
 ASPECT_RATIO:
 16:9
@@ -438,7 +438,7 @@ Ultra-wide lenses can be more sensitive to:
 
 However:
 
-ULTRA-WIDE ≠ AUTOMATIC HEAVY VIGNETTING.
+ULTRA-WIDE â‰  AUTOMATIC HEAVY VIGNETTING.
 
 Modern ultra-wide lenses may be highly corrected.
 
@@ -474,6 +474,512 @@ recalculate any focus-dependent illumination behaviour supported by the lens pro
 Do not assume that the infinity-focus vignette remains identical at extreme close focus.
 
 ==================================================
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Vignetting must never be inferred from the word "vignette" alone.
+
+Every illumination-falloff result must be derived from the physical optical configuration.
+
+If a required parameter is unknown:
+
+- do not invent a vignette strength
+- do not invent a vignette shape
+- do not assume symmetrical falloff
+- do not assume corner darkness
+- do not substitute a cinematic vignette effect
+
+Instead:
+
+1. identify the missing physical parameter
+2. preserve known optical constraints
+3. choose the least-assumptive physically plausible configuration
+4. recalculate dependent illumination behaviour
+
+UNKNOWN PARAMETERS MUST NOT AUTHORIZE VIGNETTING.
+
+
+==================================================
+VIGNETTING VALIDATION PRECEDENCE
+==================================================
+
+Resolve vignetting in this order:
+
+1. PHYSICAL POSSIBILITY
+2. SENSOR / IMAGE-CIRCLE COMPATIBILITY
+3. LENS DESIGN
+4. ACTIVE SENSOR AREA
+5. FOCAL LENGTH
+6. APERTURE
+7. OPTICAL AXIS
+8. FILTER / MATTE BOX / HOOD CONFIGURATION
+9. MECHANICAL OBSTRUCTION
+10. NATURAL OPTICAL FALLOFF
+11. FOCUS / ZOOM DEPENDENCE
+12. CAMERA MOVEMENT
+13. TEMPORAL CONSISTENCY
+14. STORY / SHOT PURPOSE
+15. STYLISTIC PREFERENCE
+
+Never reverse this order to create a desired visual effect.
+
+
+==================================================
+VIGNETTING / IMAGE-CIRCLE FIREWALL
+==================================================
+
+The selected lens must physically cover the active sensor.
+
+If:
+
+IMAGE_CIRCLE < ACTIVE_SENSOR_AREA
+
+the configuration is invalid unless the selected camera mode explicitly accommodates the coverage.
+
+Do not conceal insufficient coverage through:
+
+- digital cropping
+- artificial exposure
+- synthetic edge darkening
+- post-process masks.
+
+Coverage failure is a camera/lens configuration problem, not a stylistic vignette.
+
+
+==================================================
+VIGNETTING / SENSOR FIREWALL
+==================================================
+
+Vignetting must be evaluated against the actual active sensor area.
+
+Do not assume that the same lens produces the same visible falloff on every sensor format.
+
+Sensor changes may alter:
+
+- visible edge coverage
+- illumination falloff
+- image-circle margin
+- apparent vignette severity.
+
+Any sensor change requires recalculation.
+
+
+==================================================
+VIGNETTING / APERTURE FIREWALL
+==================================================
+
+Aperture may influence vignetting depending on lens design.
+
+Do not assume:
+
+WIDE APERTURE = HEAVY VIGNETTE
+
+or:
+
+STOPPED DOWN = ZERO VIGNETTE
+
+Use the actual lens behaviour.
+
+If aperture-dependent falloff exists, it must change continuously and remain lens-specific.
+
+
+==================================================
+VIGNETTING / FOCAL-LENGTH FIREWALL
+==================================================
+
+Focal length may affect illumination coverage and mechanical obstruction.
+
+Do not assume:
+
+WIDE LENS = STRONG VIGNETTE
+
+A wide-angle lens may have highly controlled illumination.
+
+Conversely, a specific wide-angle configuration may exhibit meaningful falloff.
+
+Use the selected lens profile and physical coverage.
+
+
+==================================================
+VIGNETTING / ACCESSORY FIREWALL
+==================================================
+
+Filters, filter holders, matte boxes, and hoods may cause mechanical vignetting.
+
+Accessory-induced vignetting requires:
+
+- physical obstruction
+- compatible geometry
+- correct focal length
+- correct sensor coverage
+- correct accessory position.
+
+Never generate mechanical vignetting merely because an accessory exists.
+
+
+==================================================
+VIGNETTING / OPTICAL-AXIS FIREWALL
+==================================================
+
+Natural vignetting is referenced to the optical system.
+
+For an aligned system:
+
+the illumination profile should remain centered approximately around the optical axis.
+
+If asymmetry exists:
+
+it must have a physical cause such as:
+
+- decentering
+- obstruction
+- alignment error
+- asymmetric optical configuration.
+
+Never move the vignette independently around the image.
+
+
+==================================================
+VIGNETTING / LIGHTING SEPARATION FIREWALL
+==================================================
+
+Lighting falloff and optical vignetting must remain separate.
+
+Do not classify:
+
+- shadows
+- inverse-square falloff
+- blocked illumination
+- environmental darkness
+- exposure variation
+
+as lens vignetting.
+
+Likewise, do not use optical vignetting to manufacture lighting direction.
+
+The scene lighting system and lens illumination system must remain independent variables.
+
+
+==================================================
+VIGNETTING / EXPOSURE FIREWALL
+==================================================
+
+Global exposure changes affect the image as a whole.
+
+Vignetting affects spatial illumination.
+
+Do not simulate incorrect exposure by darkening image corners.
+
+Do not compensate for incorrect exposure with a vignette.
+
+
+==================================================
+VIGNETTING / DISTORTION FIREWALL
+==================================================
+
+Vignetting changes illumination.
+
+Lens distortion changes geometry.
+
+Therefore:
+
+VIGNETTING != DISTORTION
+
+Do not strengthen geometric distortion because a vignette is present.
+
+Do not strengthen vignetting because barrel or pincushion distortion is present.
+
+
+==================================================
+VIGNETTING / FLARE FIREWALL
+==================================================
+
+Flare may alter perceived contrast and illumination, but flare does not authorize a vignette.
+
+Keep:
+
+- vignetting
+- flare
+- ghosting
+
+as separate optical phenomena.
+
+Their interaction may occur only when supported by the physical optical configuration.
+
+
+==================================================
+VIGNETTING / BOKEH FIREWALL
+==================================================
+
+Vignetting and bokeh are separate phenomena.
+
+Edge bokeh may be affected by pupil geometry, but this does not mean the vignette itself should be rendered as blur.
+
+Do not convert:
+
+CORNER FALLOFF
+
+into:
+
+ARTIFICIAL BOKEH.
+
+
+==================================================
+VIGNETTING / SPHERICAL-ANAMORPHIC FIREWALL
+==================================================
+
+Optical format does not independently determine vignette strength.
+
+Do not assume:
+
+ANAMORPHIC = STRONG VIGNETTING
+
+or:
+
+SPHERICAL = WEAK VIGNETTING
+
+Vignetting must be derived from the actual lens, sensor, image circle, aperture, and accessory configuration.
+
+
+==================================================
+VIGNETTING / MOVEMENT FIREWALL
+==================================================
+
+Camera movement does not cause the vignette to follow scene objects.
+
+During:
+
+- dolly
+- tracking
+- orbit
+- crane
+- handheld
+- pan
+- tilt
+
+the illumination profile remains attached to the optical system.
+
+Never generate:
+
+- subject-following darkness
+- independently drifting corners
+- screen-space vignette movement.
+
+
+==================================================
+VIGNETTING / ZOOM FIREWALL
+==================================================
+
+For a zoom lens, vignette behaviour may change with focal length.
+
+Any change must be:
+
+- continuous
+- lens-specific
+- physically plausible.
+
+Never allow:
+
+ZOOM
+→
+SUDDEN VIGNETTE JUMP.
+
+
+==================================================
+VIGNETTING / FOCUS FIREWALL
+==================================================
+
+Focus-dependent illumination changes are allowed only when supported by the lens profile.
+
+Do not animate vignetting simply because focus changes.
+
+Any supported change must be:
+
+- gradual
+- lens-specific
+- temporally continuous.
+
+
+==================================================
+VIGNETTING / OPTICAL-CHARACTER AUTHORIZATION
+==================================================
+
+Vignetting is an optical characteristic, not a generic cinematic style.
+
+It may be authorized by:
+
+- lens design
+- sensor coverage
+- aperture
+- image circle
+- accessory obstruction
+- optical alignment
+- focal length
+- focus state
+- zoom state.
+
+It must not be authorized merely by:
+
+- emotional tone
+- sacred scene
+- epic scene
+- night scene
+- portrait scene
+- "cinematic" styling.
+
+
+==================================================
+VIGNETTING / AI ARTIFACT FIREWALL
+==================================================
+
+The generated image must never contain:
+
+- hard digital corner masks
+- perfectly circular dark borders
+- radial-gradient appearance
+- random asymmetric corner changes
+- subject-following darkness
+- corner brightness popping
+- vignette flicker
+- unstable optical-axis position
+- artificial black corners
+- vignette hiding malformed geometry
+- vignette hiding unstable faces
+- vignette hiding background errors.
+
+Vignetting must never function as an error-concealment mechanism.
+
+
+==================================================
+TEMPORAL VIGNETTING VALIDATION
+==================================================
+
+Across consecutive frames verify:
+
+- vignette centre continuity
+- falloff continuity
+- asymmetry continuity
+- edge illumination continuity
+- corner illumination continuity
+- aperture-dependent continuity
+- zoom-dependent continuity
+- focus-dependent continuity
+- accessory continuity.
+
+Every change must have a physical cause.
+
+No vignette parameter may silently drift between frames.
+
+
+==================================================
+VIGNETTING CONTINUITY LOCK
+==================================================
+
+For a fixed lens and fixed camera configuration, preserve:
+
+- lens identity
+- sensor format
+- active sensor area
+- image circle
+- focal length
+- aperture
+- accessory configuration
+- optical axis
+- illumination profile
+- vignette severity
+- asymmetry.
+
+If any of these changes intentionally:
+
+recalculate the complete illumination configuration.
+
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If a vignette configuration violates a physical constraint:
+
+DO NOT GENERATE THE SHOT AS SPECIFIED.
+
+Instead:
+
+1. identify the violated constraint
+2. identify the smallest physical correction
+3. recalculate dependent parameters
+4. revalidate the configuration
+5. generate only after validation passes
+
+Never conceal an invalid camera/lens configuration with a digital vignette.
+
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid configurations are possible:
+
+choose the configuration requiring the least visible optical intervention.
+
+Prefer:
+
+- natural illumination
+- restrained falloff
+- smooth gradients
+- stable optical behaviour
+- real lens characteristics.
+
+If no physical vignette is required:
+
+use none.
+
+
+==================================================
+FINAL VIGNETTING REALISM RULE
+==================================================
+
+Vignetting is an illumination consequence of a physical camera and optical system.
+
+It is not:
+
+- a cinematic filter
+- an emotional effect
+- a framing effect
+- a correction for AI artifacts
+- a decorative dark border.
+
+The system must determine:
+
+REAL LENS
++
+REAL SENSOR
++
+IMAGE CIRCLE
++
+APERTURE
++
+FOCAL LENGTH
++
+ACCESSORY CONFIGURATION
++
+OPTICAL AXIS
++
+PHYSICAL OBSTRUCTION
++
+NATURAL ILLUMINATION FALLOFF
+
+before determining visible vignetting.
+
+If the physical configuration does not support visible vignetting:
+
+DO NOT ADD IT.
+
+The final result must look like genuine optical illumination captured by a real camera and real lens.
+
+It must never look AI-generated.
+
+
 FOCUS DEPENDENCE
 ==================================================
 
@@ -1056,7 +1562,7 @@ The change must be:
 Never allow:
 
 ZOOM
-→
+â†’
 SUDDEN VIGNETTE JUMP.
 
 ==================================================
@@ -1247,7 +1753,7 @@ LENS_DESIGN
 FOCAL_LENGTH
 +
 APERTURE
-→
+â†’
 OPTICAL_VIGNETTING
 
 SENSOR_FORMAT
@@ -1255,7 +1761,7 @@ SENSOR_FORMAT
 ACTIVE_SENSOR_AREA
 +
 IMAGE_CIRCLE
-→
+â†’
 VISIBLE_EDGE_COVERAGE
 
 FILTER_CONFIGURATION
@@ -1265,39 +1771,39 @@ MATTE_BOX
 LENS_HOOD
 +
 FOCAL_LENGTH
-→
+â†’
 MECHANICAL_VIGNETTING
 
 ZOOM_POSITION
 +
 LENS_DESIGN
-→
+â†’
 ZOOM_DEPENDENT_VIGNETTING
 
 APERTURE
 +
 LENS_DESIGN
-→
+â†’
 APERTURE_DEPENDENT_VIGNETTING
 
 FOCUS_DISTANCE
 +
 LENS_DESIGN
-→
+â†’
 POSSIBLE_FOCUS_DEPENDENT_VIGNETTING
 
 OPTICAL_AXIS
 +
 ILLUMINATION_PROFILE
-→
+â†’
 SPATIAL_VIGNETTING_PATTERN
 
 CAMERA_MOVEMENT
-→
+â†’
 NO_INDEPENDENT_VIGNETTE_MOVEMENT
 
 LIGHTING
-→
+â†’
 SEPARATE_FROM_LENS_VIGNETTING
 
 Do not collapse all of these variables into:
@@ -1352,7 +1858,7 @@ SENSOR_REFERENCE:
 full-frame
 
 CROP_FACTOR:
-1.0× reference
+1.0Ã— reference
 
 ASPECT_RATIO:
 16:9
@@ -1483,17 +1989,17 @@ Do not tell the system:
 Instead determine:
 
 WHAT REAL LENS IS BEING USED?
-→
+â†’
 WHAT SENSOR IS BEING EXPOSED?
-→
+â†’
 DOES THE LENS COVER THE SENSOR?
-→
+â†’
 WHAT IS THE IMAGE-CIRCLE MARGIN?
-→
+â†’
 WHAT APERTURE IS SELECTED?
-→
+â†’
 ARE FILTERS OR ACCESSORIES OBSTRUCTING THE LIGHT PATH?
-→
+â†’
 WHAT NATURAL ILLUMINATION FALLOFF RESULTS?
 
 The final image must show only the vignetting that a real camera and physical optical configuration would produce.
@@ -1510,3 +2016,4 @@ No AI-generated optical artefacts.
 The final result must look like real optical illumination captured by a real camera.
 
 It must never look AI-generated.
+

@@ -1,4 +1,4 @@
-# WIDE-ANGLE LENS BEHAVIOUR
+﻿# WIDE-ANGLE LENS BEHAVIOUR
 
 ## PURPOSE
 
@@ -76,10 +76,10 @@ WIDE-ANGLE DEFINITION
 For a full-frame reference system:
 
 WIDE:
-approximately 24–35mm
+approximately 24â€“35mm
 
 MODERATE-WIDE:
-approximately 35–40mm
+approximately 35â€“40mm
 
 These ranges are descriptive rather than rigid.
 
@@ -114,7 +114,7 @@ CORE PHYSICAL RULE
 ==================================================
 
 WIDE-ANGLE
-≠
+â‰ 
 AUTOMATIC PERSPECTIVE DISTORTION.
 
 Perspective is primarily determined by:
@@ -132,15 +132,15 @@ A wide-angle lens placed close to a subject can produce strong perspective.
 Therefore:
 
 FOCAL_LENGTH
-→
+â†’
 FIELD_OF_VIEW
 
 CAMERA_POSITION
-→
+â†’
 PERSPECTIVE
 
 FOCAL_LENGTH + CAMERA_POSITION
-→
+â†’
 FRAMING + SPATIAL_APPEARANCE.
 
 ==================================================
@@ -537,7 +537,7 @@ Wide-angle lenses often allow substantial depth of field, particularly at:
 
 However:
 
-WIDE-ANGLE ≠ AUTOMATIC DEEP FOCUS.
+WIDE-ANGLE â‰  AUTOMATIC DEEP FOCUS.
 
 DOF depends on:
 
@@ -567,6 +567,588 @@ Do not automatically stop down wide-angle lenses.
 Do not automatically shoot wide open.
 
 ==================================================
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Wide-angle behaviour must never be inferred from the label "wide-angle" alone.
+
+Every optical result must be derived from the parameters that physically cause it.
+
+If a required parameter is unknown:
+
+- do not invent a value
+- do not infer an optical effect
+- do not substitute a generic cinematic effect
+- do not exaggerate the visible result
+
+Instead:
+
+1. identify the missing physical parameter
+2. preserve the known constraints
+3. choose the least-assumptive physically plausible configuration
+4. recalculate all dependent optical behaviour
+
+UNKNOWN PARAMETERS MUST NOT AUTHORIZE OPTICAL EFFECTS.
+
+
+==================================================
+WIDE-ANGLE VALIDATION PRECEDENCE
+==================================================
+
+Resolve wide-angle behaviour in this order:
+
+1. PHYSICAL POSSIBILITY
+2. CAMERA / SENSOR / LENS COMPATIBILITY
+3. CAMERA POSITION
+4. SUBJECT DISTANCE
+5. FOCAL LENGTH
+6. SENSOR FORMAT
+7. PROJECTION TYPE
+8. FOV
+9. SUBJECT / ENVIRONMENT GEOMETRY
+10. FOCUS CONFIGURATION
+11. OPTICAL CHARACTER
+12. CAMERA MOVEMENT
+13. TEMPORAL CONSISTENCY
+14. STORY / SHOT PURPOSE
+15. COMPOSITION
+16. STYLISTIC CHARACTER
+
+Never reverse this order to obtain a desired visual effect.
+
+
+==================================================
+WIDE-ANGLE / ULTRA-WIDE CLASSIFICATION FIREWALL
+==================================================
+
+"WIDE-ANGLE" is a shot/lens classification, not permission to use ultra-wide behaviour.
+
+Do not automatically introduce:
+
+- extreme edge stretching
+- exaggerated foreground enlargement
+- extreme perspective
+- severe face deformation
+- extreme parallax
+- fisheye-like geometry
+
+Those behaviours require the actual focal length, projection, camera position, subject distance, and lens profile to support them.
+
+A wide-angle lens must remain distinct from an ultra-wide lens.
+
+Category boundaries must never override physical configuration.
+
+
+==================================================
+WIDE-ANGLE / CAMERA-POSITION FIREWALL
+==================================================
+
+Perspective must be derived from camera position and scene geometry.
+
+Changing focal length alone must not be treated as creating perspective.
+
+If the framing changes:
+
+first evaluate:
+
+- camera position
+- subject distance
+- background distance
+- required FOV
+- focal length
+
+Do not obtain a wider-looking composition through artificial perspective manipulation.
+
+
+==================================================
+WIDE-ANGLE / FOCAL-LENGTH FIREWALL
+==================================================
+
+Focal length determines FOV together with sensor format.
+
+Do not:
+
+- change focal length merely to obtain stronger distortion
+- change focal length merely to enlarge foreground objects
+- treat focal length as a perspective control
+- assume shorter focal length automatically means more distortion
+
+If a required framing is physically achievable with multiple focal lengths:
+
+select the configuration that best satisfies:
+
+- camera position
+- subject distance
+- spatial relationships
+- story purpose
+- optical continuity.
+
+
+==================================================
+WIDE-ANGLE / SENSOR FIREWALL
+==================================================
+
+FOV must always be evaluated from:
+
+FOCAL_LENGTH
++
+ACTIVE_SENSOR_AREA
+
+Do not use crop factor as a visual effect.
+
+Do not allow a sensor change to silently alter:
+
+- FOV
+- framing
+- DOF
+- vignetting
+- image coverage
+- optical continuity
+
+Any sensor change requires recalculation of dependent parameters.
+
+
+==================================================
+WIDE-ANGLE / PROJECTION FIREWALL
+==================================================
+
+Rectilinear projection is the default unless another projection is explicitly selected.
+
+Do not introduce fisheye or other non-rectilinear projection merely because the lens is wide.
+
+Projection determines geometric representation.
+
+Lens distortion must remain separate from projection type.
+
+A rectilinear wide-angle image must not acquire fisheye geometry without an explicit physical reason.
+
+
+==================================================
+WIDE-ANGLE / FACE FIREWALL
+==================================================
+
+Faces near the frame edges are highly sensitive to camera position and lens geometry.
+
+Do not allow:
+
+- stretched facial features
+- enlarged noses
+- widened heads
+- compressed faces
+- unstable facial proportions
+- frame-edge identity changes
+
+If a face approaches an optically problematic region:
+
+preferably adjust:
+
+- camera position
+- subject position
+- framing
+- focal length
+
+rather than digitally correcting the face.
+
+Facial geometry must remain temporally stable.
+
+
+==================================================
+WIDE-ANGLE / ARCHITECTURE FIREWALL
+==================================================
+
+Architecture must remain geometrically coherent.
+
+Maintain:
+
+- stable verticals
+- coherent horizontal lines
+- consistent vanishing points
+- continuous walls
+- stable columns
+- physically plausible ceilings
+- correct spatial scale
+
+Do not use digital correction to conceal physically impossible camera/lens geometry.
+
+If architectural distortion is required, it must arise from the actual camera/lens configuration.
+
+
+==================================================
+WIDE-ANGLE / DISTORTION FIREWALL
+==================================================
+
+Distortion must be lens-specific.
+
+Never assume:
+
+WIDE ANGLE = HEAVY DISTORTION
+
+Distortion must depend on:
+
+- lens design
+- projection
+- focal length
+- frame position
+- sensor coverage
+- optical correction
+
+Distortion must remain spatially coherent across the frame.
+
+Never introduce:
+
+- arbitrary barrel distortion
+- arbitrary pincushion distortion
+- digital stretching
+- unstable edge warping
+- frame-wide geometry wobble.
+
+
+==================================================
+WIDE-ANGLE / EDGE FIREWALL
+==================================================
+
+Edge behaviour must remain physically connected to the selected lens.
+
+Possible edge characteristics include:
+
+- geometric distortion
+- reduced sharpness
+- lateral CA
+- vignetting
+- field-curvature effects
+
+Only apply characteristics supported by the lens profile.
+
+Do not independently animate edge behaviour.
+
+Edge appearance must remain stable unless a physical cause changes it.
+
+
+==================================================
+WIDE-ANGLE / FOCUS FIREWALL
+==================================================
+
+Wide-angle focus behaviour must remain physically derived.
+
+DOF depends on:
+
+- focal length
+- aperture
+- focus distance
+- sensor format
+- circle of confusion
+- subject depth
+
+Do not use wide-angle classification to justify unlimited depth of field.
+
+Do not artificially sharpen distant regions to simulate deep focus.
+
+Do not artificially blur regions to simulate shallow focus.
+
+
+==================================================
+WIDE-ANGLE / MFD FIREWALL
+==================================================
+
+Subject distance must remain greater than or equal to the selected lens's actual MFD unless a physically valid macro-capable configuration is explicitly selected.
+
+If:
+
+SUBJECT_DISTANCE < MFD
+
+the configuration is invalid.
+
+Reconfigure:
+
+- camera position
+- focal length
+- lens
+- framing
+- macro capability
+
+Never fake close focus through digital processing.
+
+
+==================================================
+WIDE-ANGLE / ANAMORPHIC FIREWALL
+==================================================
+
+Wide-angle classification does not imply anamorphic optics.
+
+Spherical and anamorphic behaviour must remain separate.
+
+If anamorphic is selected, all anamorphic-dependent behaviour must be derived from the selected anamorphic configuration.
+
+Do not introduce:
+
+- anamorphic streaks
+- oval bokeh
+- characteristic flare
+- squeeze-related geometry
+
+into a spherical wide-angle configuration without physical justification.
+
+
+==================================================
+WIDE-ANGLE / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Optical character may include:
+
+- distortion
+- CA
+- flare
+- ghosting
+- vignetting
+- field curvature
+- edge softness
+- contrast response
+- bokeh characteristics
+
+But optical character is authorized only when supported by:
+
+- lens profile
+- optical construction
+- aperture
+- source position
+- focus state
+- frame position
+- environmental conditions
+
+Never add optical effects simply to make the shot appear more cinematic.
+
+
+==================================================
+WIDE-ANGLE / MOVEMENT VALIDATION
+==================================================
+
+Camera movement must preserve the physical relationship between:
+
+- camera
+- foreground
+- subject
+- midground
+- background
+
+During translation:
+
+- parallax must change continuously
+- perspective must change continuously
+- object scale must change according to camera distance
+- occlusion must update coherently
+
+During orbit:
+
+- relative depth must remain stable
+- foreground movement must exceed distant movement
+- occlusion must change continuously
+
+During handheld operation:
+
+movement must remain operator-plausible and temporally coherent.
+
+Never generate random frame-to-frame spatial movement.
+
+
+==================================================
+WIDE-ANGLE / ZOOM-DOLLY FIREWALL
+==================================================
+
+DOLLY:
+
+changes camera position.
+
+ZOOM:
+
+changes focal length.
+
+DOLLY ZOOM:
+
+requires both camera translation and focal-length change.
+
+Never substitute:
+
+- digital scaling
+- digital reframing
+- synthetic perspective
+- artificial background scaling
+
+for physical camera behaviour.
+
+
+==================================================
+WIDE-ANGLE / AI ARTIFACT FIREWALL
+==================================================
+
+The generated image must not contain:
+
+- unstable facial geometry
+- changing body proportions
+- texture crawling
+- architecture morphing
+- unstable straight lines
+- floating objects
+- duplicated objects
+- disappearing objects
+- inconsistent reflections
+- inconsistent shadows
+- synthetic parallax
+- screen-space lens artifacts
+- artificial blur boundaries
+- RGB edge outlines
+- unstable flare
+- unstable ghosting
+- unstable vignetting
+- FOV flicker
+- distortion flicker
+- object-scale jumps
+
+Optical behaviour must remain attached to the physical scene and camera.
+
+If an optical effect competes with realism:
+
+REDUCE OR REMOVE THE EFFECT.
+
+
+==================================================
+TEMPORAL WIDE-ANGLE VALIDATION
+==================================================
+
+Across consecutive frames verify:
+
+- focal length continuity
+- FOV continuity
+- perspective continuity
+- distortion continuity
+- edge behaviour continuity
+- face geometry continuity
+- architecture continuity
+- focus continuity
+- bokeh continuity
+- flare continuity
+- ghosting continuity
+- vignetting continuity
+- parallax continuity
+- object-scale continuity
+
+Every visible change must have a physical cause.
+
+No parameter may silently drift between frames.
+
+
+==================================================
+WIDE-ANGLE CONTINUITY LOCK
+==================================================
+
+For a continuous shot, preserve unless intentionally changed:
+
+- lens identity
+- focal length
+- sensor format
+- projection
+- optical character
+- distortion profile
+- FOV
+- focus behaviour
+- bokeh behaviour
+- flare behaviour
+- ghosting behaviour
+- vignetting
+- camera movement model
+
+If any of these changes intentionally:
+
+the transition must be physically and temporally continuous.
+
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If any wide-angle configuration fails a physical constraint:
+
+DO NOT GENERATE THE SHOT AS SPECIFIED.
+
+Instead:
+
+1. identify the violated constraint
+2. identify the smallest physical correction
+3. recalculate dependent parameters
+4. revalidate the complete configuration
+5. generate only after validation passes
+
+Never conceal a failed optical configuration through post-processing.
+
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid configurations can achieve the same shot purpose:
+
+choose the configuration requiring the least artificial optical intervention.
+
+Prefer:
+
+- natural lens behaviour
+- restrained distortion
+- restrained CA
+- restrained flare
+- stable focus
+- physically derived DOF
+- physically derived parallax
+- stable geometry
+
+Avoid unnecessary visible optical effects.
+
+
+==================================================
+FINAL WIDE-ANGLE REALISM RULE
+==================================================
+
+A wide-angle lens is not a visual effect.
+
+It is a physical optical system.
+
+Every visible wide-angle characteristic must emerge from:
+
+FOCAL_LENGTH
++
+SENSOR
++
+PROJECTION
++
+CAMERA_POSITION
++
+SUBJECT_DISTANCE
++
+SCENE_DEPTH
++
+LENS_DESIGN
++
+FOCUS
++
+APERTURE
++
+LIGHT
++
+CAMERA_MOVEMENT
+
+Never reverse this relationship.
+
+Do not decide the desired "wide-angle look" first and manufacture the parameters afterward.
+
+The physical camera configuration must generate the appearance.
+
+If the appearance cannot be physically explained:
+
+REMOVE OR REDUCE IT.
+
+The final footage must appear to have been photographed by a real cinematographer using a real wide-angle lens on a real camera under real physical conditions.
+
+It must never look AI-generated.
+
 FOCUS
 ==================================================
 
@@ -788,7 +1370,7 @@ Wide-angle lenses may exhibit illumination falloff depending on:
 
 However:
 
-WIDE-ANGLE ≠ AUTOMATIC HEAVY VIGNETTING.
+WIDE-ANGLE â‰  AUTOMATIC HEAVY VIGNETTING.
 
 Use the actual lens profile.
 
@@ -839,7 +1421,7 @@ Therefore:
 WIDE LENS
 +
 CLOSE CAMERA POSITION
-→
+â†’
 STRONGER PERSPECTIVE / SPATIAL DEPTH.
 
 Do not model this as an independent digital effect.
@@ -1242,7 +1824,7 @@ PARAMETER DEPENDENCIES
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 CAMERA_POSITION
@@ -1250,13 +1832,13 @@ CAMERA_POSITION
 SUBJECT_DISTANCE
 +
 SUBJECT_DEPTH
-→
+â†’
 PERSPECTIVE
 
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING / SPATIAL_APPEARANCE
 
 FOCUS_DISTANCE
@@ -1266,7 +1848,7 @@ FOCAL_LENGTH
 APERTURE
 +
 SENSOR
-→
+â†’
 DEPTH_OF_FIELD
 
 LENS_DESIGN
@@ -1276,13 +1858,13 @@ APERTURE
 FOCUS
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 BOKEH
 
 LENS_DESIGN
 +
 FRAME_POSITION
-→
+â†’
 DISTORTION / EDGE_BEHAVIOUR
 
 LENS_DESIGN
@@ -1290,31 +1872,31 @@ LENS_DESIGN
 SOURCE_POSITION
 +
 APERTURE
-→
+â†’
 FLARE / GHOSTING
 
 LENS_DESIGN
 +
 FOCUS_CHANGE
-→
+â†’
 FOCUS_BREATHING
 
 CAMERA_TRANSLATION
 +
 FOREGROUND/MIDGROUND/BACKGROUND DISTANCES
-→
+â†’
 PARALLAX
 
 CAMERA_POSITION
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 SPATIAL_DEPTH
 
 ACTIVE_SENSOR_AREA
 +
 IMAGE_CIRCLE
-→
+â†’
 COVERAGE / VIGNETTING
 
 Do not collapse these relationships into a generic "wide-angle look."
@@ -1368,7 +1950,7 @@ SENSOR_REFERENCE:
 full-frame
 
 FOCAL_LENGTH:
-approximately 24–35mm reference range
+approximately 24â€“35mm reference range
 
 FOV:
 physically calculated
@@ -1578,25 +2160,25 @@ Focal-length categories are descriptive defaults, not absolute optical laws.
 For the project's full-frame reference:
 
 ULTRA_WIDE:
-14–24mm
+14â€“24mm
 
 WIDE:
-24–35mm
+24â€“35mm
 
 MODERATE_WIDE:
-35–40mm
+35â€“40mm
 
 NORMAL:
-40–60mm
+40â€“60mm
 
 SHORT_TELEPHOTO:
-70–100mm
+70â€“100mm
 
 TELEPHOTO:
-100–200mm
+100â€“200mm
 
 TELEPHOTO_LONG:
-200–400mm
+200â€“400mm
 
 SUPER_TELEPHOTO:
 400mm+
@@ -1606,3 +2188,4 @@ Boundary values must be resolved using the actual required FOV and shot purpose 
 If a focal length lies on a boundary, do NOT change focal length merely to satisfy the category label.
 
 The physically appropriate FOV and camera configuration have priority over categorical naming.
+

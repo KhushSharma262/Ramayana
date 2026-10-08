@@ -1,463 +1,355 @@
-### FOCUS DISTANCE BEHAVIOUR
+﻿### FOCUS DISTANCE
 
-Treat focus distance as a physical camera-and-lens parameter defining the distance from the lens's optical system to the plane of critical focus.
+Treat focus distance as a physical optical parameter defining the distance at which the selected lens is focused.
 
-Do NOT treat focus distance as an artificial blur control.
+Focus distance MUST NOT be treated as an instruction to blur or sharpen selected objects.
 
-The final video must look as though it was captured by a real professional camera and real physical lens.
+The final video must look like real professionally photographed live-action footage captured through a real physical camera and lens.
 
-It must NEVER look AI-generated, digitally blurred, artificially segmented, or computationally focused.
+It must NEVER look AI-generated, digitally masked, computationally blurred, artificially sharpened, or segmented by object identity.
+
+AI_ARTIFACT_TOLERANCE:
+none
 
 ==================================================
-PHOTOREALISM — NON-NEGOTIABLE
+PHOTOREALISM - NON-NEGOTIABLE
 ==================================================
-
-Focus behaviour must remain physically plausible, temporally consistent, and optically coherent.
 
 Maintain:
 
-- realistic focal plane
-- realistic depth-of-field falloff
-- realistic near/far focus limits
+- physically plausible focus distance
+- coherent focal plane
+- realistic focus falloff
+- realistic depth of field
 - realistic subject sharpness
-- realistic background defocus
-- realistic foreground defocus
+- realistic foreground/background sharpness
+- realistic lens behaviour
 - realistic focus transitions
-- realistic focus breathing according to lens profile
-- realistic bokeh according to lens profile
-- stable facial detail
-- stable hair and clothing
-- stable environmental geometry
-- stable focus behaviour throughout the shot
+- realistic facial detail
+- realistic hair detail
+- realistic environmental detail
+- temporal focus stability
 
 Do NOT create:
 
-- artificial portrait-mode blur
-- subject cutout effects
-- blur halos
-- arbitrary blur masks
-- uniformly blurred backgrounds
-- impossible sharpness at multiple unrelated distances
-- random focus changes
-- autofocus hunting
-- focus snapping
-- unstable facial sharpness
-- shimmering focus boundaries
-- background blur that ignores physical distance
-- AI-generated depth maps masquerading as optical focus
+- artificial background blur
+- object-specific blur masks
+- face-aware sharpening
+- impossible focal planes
+- multiple unrelated focal planes without physical justification
+- instant focus changes
+- random focus drift
+- focus that ignores subject distance
+- blur that follows object identity rather than depth
+- sharp subjects pasted onto blurred environments
+- AI-looking focus boundaries
+- frame-to-frame focus flicker
+- focus changes without physical cause
 
 When uncertain, choose the physically plausible and less noticeable result.
 
-PHYSICAL OPTICAL REALISM ALWAYS TAKES PRIORITY OVER VISUAL IMPACT.
-
 ==================================================
-WHAT FOCUS DISTANCE MEANS
+CORE PRINCIPLE
 ==================================================
 
-Focus distance is the physical distance from the camera's optical system to the subject plane that the lens is focused upon.
+Focus distance is the physical object distance at which the lens is focused.
 
-It determines the location of the focal plane.
+It establishes the focal plane.
 
-It does NOT mean:
+Depth of field extends around that focal plane according to the complete optical configuration.
 
-- how much background blur to add
-- how isolated a subject should look
-- how "cinematic" the shot should appear
+Focus distance must therefore be evaluated together with:
 
-Depth of field must emerge from the complete camera configuration.
+- focal length
+- aperture
+- sensor format
+- active sensor area
+- subject distance
+- foreground distance
+- background distance
+- circle of confusion
+- camera position
+- framing
+- lens design
 
-FOCUS DISTANCE
-+
-FOCAL LENGTH
-+
-APERTURE
-+
-SENSOR FORMAT
-+
-SUBJECT / BACKGROUND DISTANCES
-=
-RESULTING DEPTH OF FIELD
+Focus distance is NOT:
+
+- blur strength
+- background blur amount
+- subject isolation
+- a semantic object-selection control
+- a digital depth-map value
 
 ==================================================
 FOCAL PLANE
 ==================================================
 
-The focal plane is the region of the scene positioned at the selected focus distance.
+The focal plane must correspond to a physically meaningful distance in the scene.
 
-Objects exactly at or near this plane should appear sharp according to the lens's resolving ability.
+When focus is placed on a subject:
 
-Objects progressively farther in front of or behind the focal plane should gradually become less sharp according to the resulting depth of field.
+that subject's relevant surface should lie near the focal plane.
 
-Do not create arbitrary sharp/blur boundaries.
+Objects progressively nearer to or farther from the focal plane must transition naturally according to the resulting depth of field.
 
-The transition must be continuous.
+Do not assign separate arbitrary focus values to individual objects occupying the same physical depth.
 
-==================================================
-FOCUS DISTANCE SELECTION
-==================================================
-
-Choose focus distance based on the actual subject the shot intends to prioritize.
-
-Examples:
-
-CHARACTER CLOSE-UP:
-focus primarily on the relevant eye plane.
-
-CHARACTER MEDIUM SHOT:
-focus on the character's primary facial/body plane depending on composition.
-
-TWO-SHOT:
-select a focus distance and aperture that keeps the required subjects acceptably sharp, or use a deliberate rack focus.
-
-LANDSCAPE:
-focus according to the required depth and spatial information.
-
-ARCHITECTURE:
-focus according to the important architectural plane.
-
-OBJECT DETAIL:
-focus precisely on the intended detail.
-
-Do not automatically focus on the closest object.
-
-Do not automatically focus on the centre of the frame.
-
-Focus should follow the cinematographic intention.
+Focus is determined by optical distance.
 
 ==================================================
-HUMAN SUBJECTS
+SUBJECT DISTANCE
 ==================================================
 
-For character shots, prioritize natural facial focus.
+Focus distance must remain physically related to the selected primary subject.
 
-For a single-character close-up:
+For a subject at distance D:
 
-- focus primarily around the eyes
-- maintain natural eye sharpness
-- allow ears, hair, nose, or other features to soften naturally if they fall outside the depth of field
-- maintain realistic focus falloff
+FOCUS_DISTANCE ≈ DISTANCE TO THE INTENDED FOCAL SURFACE
 
-For a profile:
+For human subjects, the intended focal surface may commonly be the eyes.
 
-- determine the focal plane according to the eye/face orientation
-- do not force both eyes to identical sharpness when physical geometry would prevent it
+For objects:
 
-For a moving character:
+focus may be placed on the surface or feature that carries the shot's visual priority.
 
-focus may track the intended subject when cinematographically appropriate.
+Do not focus on an arbitrary bounding-box centre.
 
-Do not allow focus to jump randomly between:
+Do not use semantic object identity as a substitute for physical distance.
 
-- eyes
-- nose
-- lips
-- hair
-- background objects
+==================================================
+HUMAN FACES
+==================================================
+
+For character close-ups and portraits:
+
+prioritize the intended eye plane when appropriate.
+
+Maintain:
+
+- natural eye sharpness
+- realistic eyelashes
+- realistic skin texture
+- realistic facial contours
+- natural hair detail
+
+With shallow depth of field:
+
+- the nearer eye may be sharper
+- the farther eye may soften
+- ears may soften
+- nose or hair may gradually leave the focal plane
+
+Do not make an entire face uniformly sharp when the physical configuration would not permit it.
+
+Do not blur facial regions independently.
+
+Character identity, anatomy, skin, hair, jewelry, and costume must remain stable regardless of focus.
 
 ==================================================
 MULTIPLE SUBJECTS
 ==================================================
 
-For two or more important characters:
+When multiple subjects are important:
 
-Determine whether the shot requires:
+determine whether they can physically occupy the required depth-of-field range.
 
-1. shared focus
-2. selective focus
-3. rack focus
-4. deeper depth of field
+If necessary:
 
-If both characters must remain readable, do not force an unrealistically shallow focus plane.
+- use a smaller aperture
+- change focal length
+- alter camera position
+- alter subject blocking
+- alter focus distance
+- use a physically plausible rack focus
 
-Use a physically appropriate combination of:
+Do not artificially sharpen secondary subjects.
 
-- focal length
-- aperture
-- camera distance
-- subject spacing
-- focus distance
+Do not artificially blur subjects merely because they are less narratively important.
 
-Do not digitally keep multiple depth planes equally sharp when the physical lens configuration would not allow it.
+Story importance may influence focus selection.
 
-==================================================
-FOCUS DISTANCE AND DEPTH OF FIELD
-==================================================
-
-Closer focus distances generally produce shallower depth of field.
-
-Farther focus distances generally provide greater depth of field under comparable conditions.
-
-However, do not evaluate focus distance independently.
-
-Always consider:
-
-- focal length
-- aperture
-- sensor format
-- camera position
-- subject size
-- background distance
-- final framing
-
-Do not assume:
-
-CLOSE FOCUS = ALWAYS EXTREME BLUR
-
-or:
-
-FAR FOCUS = EVERYTHING SHARP.
+It must not override physical optics.
 
 ==================================================
-FOCUS DISTANCE AND BACKGROUND
+FOREGROUND AND BACKGROUND
 ==================================================
 
-Background blur depends on both:
+Evaluate focus distance relative to:
 
-FOCUS DISTANCE
+- foreground elements
+- primary subject
+- secondary subjects
+- background elements
 
-and
+Objects closer to the camera than the focal plane may become progressively softer.
 
-BACKGROUND DISTANCE.
-
-A distant background can become strongly defocused when the subject is relatively close and the aperture is wide.
-
-A nearby background may remain relatively recognizable even with shallow depth of field.
-
-Do not create the same background blur regardless of physical distance.
-
-==================================================
-FOCUS DISTANCE AND FOREGROUND
-==================================================
-
-The same optical principles apply to foreground elements.
-
-Objects closer to the camera than the focal plane may become progressively defocused.
-
-This can be used naturally for:
-
-- foliage
-- pillars
-- curtains
-- branches
-- people
-- objects
-- environmental framing
+Objects farther from the camera than the focal plane may also become progressively softer.
 
 Do not blur only the background.
 
-Maintain realistic near-focus behaviour.
+Do not keep every foreground element artificially sharp.
 
 ==================================================
-MINIMUM FOCUS DISTANCE
+FOCUS DISTANCE AND APERTURE
 ==================================================
 
-Respect the selected lens's minimum focusing capability.
+Focus distance and aperture interact through depth of field.
 
-If a subject is closer than the lens can physically focus:
+A wide aperture generally produces a narrower acceptable focus range.
 
-do not produce perfect optical focus.
+A narrow aperture generally produces a wider acceptable focus range.
 
-Instead:
+Do not use aperture as a substitute for selecting the correct focus distance.
 
-- move the camera appropriately
-- change the lens
-- change focal length
-- use an appropriate close-focus configuration
-- or allow the subject to remain outside the lens's focus capability
+Do not use focus distance as a substitute for aperture.
 
-Do not magically focus a lens beyond its physical capability.
-
-==================================================
-CLOSE-FOCUS SHOTS
-==================================================
-
-For macro or near-macro imagery:
-
-expect extremely shallow depth of field.
-
-Small changes in:
-
-- subject distance
-- camera movement
-- focus position
-
-may significantly change what is sharp.
-
-Maintain precise and stable focus behaviour.
-
-Do not create an unnaturally large sharp region around a macro subject.
-
-==================================================
-HYPERFOCAL / DEEP FOCUS
-==================================================
-
-When a scene requires broad depth of field:
-
-select an appropriate focus distance and camera configuration.
-
-The system may use a focus distance near the hyperfocal range when appropriate.
-
-Maintain sufficient sharpness from the required foreground region through the background.
-
-Do not simulate deep focus using global sharpening.
-
-==================================================
-RACK FOCUS
-==================================================
-
-A rack focus is a deliberate change in focus distance during a shot.
-
-When specified:
-
-- transition continuously
-- maintain realistic optical focus
-- gradually soften the previous focal plane
-- gradually sharpen the new focal plane
-- preserve realistic depth-of-field behaviour
-- preserve lens-specific focus breathing
-- maintain stable image geometry
-
-Do not:
-
-- instantly switch sharpness
-- digitally blur one subject
-- digitally sharpen another subject
-- create a visible artificial focus mask
-
-The entire optical image must behave as though the physical lens is being refocused.
-
-==================================================
-FOCUS PULL SPEED
-==================================================
-
-Focus transition speed should depend on:
-
-- narrative purpose
-- emotional intensity
-- distance between subjects
-- lens characteristics
-- focus-pull mechanism
-- shot duration
-- camera movement
-
-Slow focus pull:
-
-- gradual realization
-- emotional transition
-- revelation
-- contemplation
-
-Fast focus pull:
-
-- sudden discovery
-- danger
-- action
-- rapid attention shift
-
-Regardless of speed, the transition must remain physically smooth.
-
-==================================================
-FOCUS BREATHING
-==================================================
-
-Focus breathing is a change in apparent framing or field of view as the lens changes focus distance.
-
-Apply only according to the selected lens profile.
-
-Modern cinema lenses may have low breathing.
-
-Character lenses may have more visible breathing.
-
-Do not automatically add breathing to every lens.
-
-If breathing is present:
-
-- keep it subtle unless explicitly specified
-- maintain optical consistency
-- ensure it follows the focus movement
-- never make the frame visibly "pump" unless the selected lens genuinely has strong breathing
+Both must be evaluated as parts of the same optical configuration.
 
 ==================================================
 FOCUS DISTANCE AND FOCAL LENGTH
 ==================================================
 
-Focus distance must be interpreted together with focal length.
+Focus distance must be evaluated together with focal length.
 
-For example:
+Focal length affects:
 
-A 24mm lens focused at 3m and an 85mm lens focused at 3m do not produce the same depth-of-field or framing.
-
-Do not treat focus distance as an isolated parameter.
-
-The complete camera configuration determines the result.
-
-==================================================
-FOCUS DISTANCE AND SENSOR FORMAT
-==================================================
-
-Sensor format affects the depth-of-field calculation through:
-
+- FOV
 - framing
-- focal length selection
-- circle of confusion
-- camera distance
+- image magnification
+- depth-of-field behaviour
 
-Do not claim that crop factor simply "changes focus distance."
+Focus distance determines:
 
-The physical distance to the focal plane remains the actual distance.
+- where the focal plane is located
+- how the scene falls relative to that plane
 
-==================================================
-FOCUS DISTANCE AND ANAMORPHIC LENSES
-==================================================
-
-If an anamorphic lens is selected:
-
-focus distance remains a physical distance to the focal plane.
-
-Maintain anamorphic-specific behaviour separately, including:
-
-- oval bokeh
-- horizontal optical compression
-- focus breathing
-- edge behaviour
-- mumps where applicable
-- flare behaviour
-
-Do not use anamorphic characteristics as a substitute for correct focus-distance behaviour.
+Do not assume that changing focal length automatically changes the intended focus distance.
 
 ==================================================
-FOCUS DISTANCE AND BOKEH
+CAMERA POSITION
 ==================================================
 
-Bokeh must emerge from the amount of defocus and the selected lens's optical characteristics.
+Camera position must be known when determining focus distance.
 
-As objects move farther from the focal plane:
+Moving the camera changes:
 
-- blur increases progressively
-- bokeh may become larger
-- highlight shapes follow the lens profile
+- subject distance
+- foreground distance
+- background relationships
+- perspective
+- required focus distance
 
-Do not create identical bokeh size throughout the background.
+If the camera moves physically toward or away from the subject:
 
-Do not make every light source equally blurred.
+focus distance must be recalculated if continuous subject focus is intended.
+
+Do not maintain an impossible fixed focus distance when camera movement changes the actual subject distance.
 
 ==================================================
-ATMOSPHERIC DEPTH
+FOCUS DISTANCE AND FIELD OF VIEW
 ==================================================
 
-Do not confuse focus distance with atmospheric softness.
+Do not confuse focus distance with field of view.
 
-Distant objects may appear less clear because of:
+FOCUS DISTANCE:
+where the lens is focused.
 
-- haze
-- dust
-- humidity
-- smoke
-- atmospheric scattering
+FIELD OF VIEW:
+how much of the scene is captured.
 
-This is separate from optical defocus.
+Changing focal length may change FOV without changing the intended subject's physical distance.
 
-Maintain both independently.
+Changing camera position changes subject distance and may require a new focus distance.
+
+==================================================
+FOCUS DISTANCE AND DEPTH OF FIELD
+==================================================
+
+Focus distance establishes the centre of the acceptable focus region.
+
+Depth of field determines the range around that focal plane that appears acceptably sharp.
+
+Therefore:
+
+FOCUS DISTANCE != DEPTH OF FIELD
+
+Do not use a focus-distance change merely to create more blur.
+
+Do not use depth-of-field changes to conceal an incorrect focal plane.
+
+==================================================
+RACK FOCUS
+==================================================
+
+A rack focus is a physical change in focus distance during a shot.
+
+When a rack focus is specified:
+
+- move the focal plane continuously
+- transition sharpness progressively
+- allow the previously focused subject to soften naturally
+- allow the newly focused subject to sharpen naturally
+- preserve lens-specific focus breathing
+- preserve physically plausible exposure and optical behaviour
+
+Do NOT:
+
+- switch focus instantaneously
+- blur one object independently
+- sharpen another object independently
+- use screen-space masks
+- make the focal plane jump
+- allow unrelated objects to remain artificially sharp
+
+==================================================
+FOCUS PULL SPEED
+==================================================
+
+Focus-pull speed may respond to:
+
+- story purpose
+- emotional intensity
+- subject movement
+- camera movement
+- focus distance change required
+- lens characteristics
+- shot duration
+
+Fast pulls may suit:
+
+- sudden discoveries
+- danger
+- action
+- rapid attention shifts
+
+Slow pulls may suit:
+
+- revelations
+- emotional moments
+- contemplation
+- gradual attention shifts
+
+The selected speed must remain physically achievable by the modeled focus system.
+
+Do not use story intensity to justify impossible focus acceleration.
+
+==================================================
+CONTINUOUS FOCUS
+==================================================
+
+If continuous subject focus is required:
+
+the focus distance must track the subject's changing physical distance continuously.
+
+This may occur through:
+
+- a camera operator pulling focus
+- a physically modeled autofocus system
+- another explicitly defined optical focus mechanism
+
+Do not use semantic segmentation as an invisible substitute for focus mechanics.
+
+The resulting focus behaviour must remain optically coherent.
 
 ==================================================
 CAMERA MOVEMENT
@@ -469,163 +361,273 @@ During:
 - tracking
 - crane
 - orbit
-- pan
-- tilt
-- handheld movement
+- push-in
+- pull-back
 
-focus distance must remain physically coherent.
+subject distance may change.
 
-If the camera moves toward or away from the subject:
+If the camera moves relative to the subject:
 
-the focus distance may need to change.
+recalculate focus distance when continuous subject focus is required.
 
-If the subject moves:
+If no focus correction is specified:
 
-the focus distance may change.
+allow physically plausible focus drift as the subject moves relative to the focal plane.
 
-If the shot specifies focus tracking:
-
-maintain the intended subject within the focal plane.
-
-Do not allow the camera to magically maintain perfect focus on every object unless the shot explicitly requires realistic focus tracking.
+Do not automatically keep the subject perfectly sharp regardless of camera movement.
 
 ==================================================
-FOCUS TRACKING
+SUBJECT MOVEMENT
 ==================================================
 
-If continuous focus tracking is specified:
+When a subject moves:
 
-the selected subject should remain approximately within the focal plane.
+its distance from the camera may change.
 
-However:
+Therefore it may:
 
-- tracking should not be unnaturally perfect
-- focus transitions should remain smooth
-- brief natural focus variation may occur
-- focus should not hunt randomly
+- remain within the depth of field
+- approach the edge of acceptable focus
+- move outside the focal plane
+- naturally become softer
 
-Never allow uncontrolled autofocus behaviour.
+If focus tracking is specified, adjust focus distance continuously according to the subject's actual movement.
+
+Do not independently blur or sharpen the moving subject.
 
 ==================================================
-MANUAL FOCUS
+ENVIRONMENTAL FOCUS
 ==================================================
 
-Default cinematic behaviour:
+For:
 
-MANUAL / CINEMATOGRAPHER-CONTROLLED FOCUS.
+- landscapes
+- architecture
+- temples
+- palaces
+- forests
+- battlefields
+- large environments
 
-Focus should change only because:
+focus distance should be selected according to the spatial information required by the shot.
 
-- the cinematographer intends it
+When deep environmental readability is required:
+
+use an appropriate combination of:
+
+- focus distance
+- focal length
+- aperture
+- camera position
+- sensor format
+
+Do not simulate environmental focus through global sharpening.
+
+==================================================
+HYPERFOCAL / DEEP FOCUS
+==================================================
+
+When a deep-focus configuration is required:
+
+select a physically appropriate focus distance and aperture.
+
+Consider:
+
+- focal length
+- aperture
+- sensor format
+- circle of confusion
+- foreground distance
+- background distance
+- required acceptable sharpness
+
+Do not simply sharpen the entire image.
+
+==================================================
+ANAMORPHIC INTERACTION
+==================================================
+
+If an anamorphic lens is selected:
+
+focus distance must remain a physical parameter of the selected anamorphic system.
+
+Maintain lens-specific:
+
+- focus behaviour
+- focus breathing
+- depth-of-field rendering
+- optical character
+
+Do not use anamorphic selection to justify arbitrary focus effects.
+
+Anamorphic does NOT mean:
+
+- automatic shallow focus
+- maximum background blur
+- artificial subject isolation
+
+==================================================
+LENS CHARACTER
+==================================================
+
+Focus distance may interact with lens-specific characteristics such as:
+
+- focus breathing
+- field curvature
+- spherical aberration
+- optical softness
+- contrast
+- bokeh rendering
+- edge behaviour
+
+These characteristics must arise from the selected lens profile.
+
+Do not use lens character as permission for artificial focus effects.
+
+==================================================
+FOCUS DISTANCE CONTINUITY
+==================================================
+
+Within a continuous shot:
+
+focus distance should remain stable unless:
+
 - the subject moves
 - the camera moves
-- a rack focus is specified
-- focus tracking is explicitly specified
+- a rack focus occurs
+- focus tracking occurs
+- another physically defined focus change occurs
 
-Do not introduce random autofocus hunting.
+Do not allow random focus-distance drift.
+
+Between shots:
+
+focus distance may change according to shot design.
 
 ==================================================
 VIDEO TEMPORAL CONSISTENCY
 ==================================================
 
-This is an AI-generated VIDEO system.
+This is a VIDEO generation system.
 
-Focus distance and the resulting focal plane must remain temporally stable.
+Focus distance must remain temporally stable and physically coherent.
 
 Do NOT allow:
 
 - focus flicker
-- focus pumping
 - random sharpness changes
-- facial sharpness shifting between frames
-- background objects randomly entering focus
-- blur boundaries shimmering
-- hair repeatedly switching between sharp and soft
-- bokeh changing unpredictably
-- focus snapping
-- inconsistent focus distance
+- focal-plane jumps
+- background blur flicker
+- face sharpness drift
+- hair sharpness instability
+- object-specific focus switching
+- bokeh popping
+- frame-to-frame focus masks
+- focus changes without physical cause
 
-Every focus change must have a physical or cinematographic cause.
+If focus changes:
 
-Valid causes include:
-
-- subject movement
-- camera movement
-- deliberate rack focus
-- deliberate focus tracking
-- lens change
-- camera-system change
+the transition must occur continuously.
 
 ==================================================
-AI VIDEO REALISM
+AI ARTIFACT FIREWALL
 ==================================================
 
-Never simulate focus distance using:
+Never implement focus distance using:
 
-- digital blur masks
-- AI portrait segmentation
-- Gaussian background blur
-- artificial subject cutouts
-- sharpening masks
-- depth-map artifacts
-- selective computational blur
+- object masks
+- face masks
+- semantic segmentation
+- screen-space blur
+- depth-map painting
+- artificial sharpening
+- per-object focus controls
+- frame-specific blur
+- background replacement
+- computational portrait blur
 
-Instead, reproduce the optical result of a real lens focused at the specified physical distance.
+Correct causal direction:
 
-The focus transition must affect the entire optical image according to actual depth relationships.
+PHYSICAL SCENE
+->
+CAMERA POSITION
+->
+SUBJECT DISTANCE
+->
+LENS
+->
+FOCAL LENGTH
+->
+APERTURE
+->
+FOCUS DISTANCE
+->
+DEPTH OF FIELD
+->
+DEFOCUS / BOKEH
+->
+RECORDED IMAGE
+
+Never reverse this relationship.
+
+Do not decide:
+
+"Blur the background."
+
+and then fabricate a focus distance afterward.
 
 ==================================================
-STORY-FIRST RULE
+FOCUS VALIDATION
 ==================================================
 
-Focus distance must serve:
+Before accepting a shot, validate:
 
-- story
-- character attention
-- emotional emphasis
-- visual hierarchy
-- spatial understanding
-- composition
-- environment
+- focus distance is physically plausible
+- primary subject lies at the intended focal distance
+- sensor format is compatible
+- focal length is valid
+- aperture is valid
+- subject distance is valid
+- foreground/background distances are valid
+- resulting depth of field is coherent
+- focal plane is coherent
+- focus transition is continuous
+- lens breathing is consistent
+- temporal focus behaviour is stable
 
-Examples:
+If validation fails:
 
-Use close focus when:
-- intimate facial detail is important
-- a small object carries narrative significance
-- emotional connection is required
-
-Use deeper focus when:
-- multiple characters matter
-- geography is important
-- architecture matters
-- environmental storytelling is important
-
-Use rack focus when:
-- attention deliberately shifts between subjects
-- a revelation occurs
-- a new narrative element becomes important
-
-Do not select focus distance merely to create a "cinematic blur."
+1. identify the earliest invalid physical parameter
+2. correct that parameter
+3. recalculate dependent values
+4. regenerate focus behaviour
+5. never digitally patch the resulting image
 
 ==================================================
 NATURALISM RULE
 ==================================================
 
-The audience should perceive real optical focus, not a visible "focus effect."
+Focus behaviour must be proportional to physical cause.
 
-Do NOT create:
+NO PHYSICAL SUPPORT -> NO ARTIFICIAL FOCUS EFFECT
 
-- artificial blur
-- fake sharpness
-- subject cutouts
-- impossible focus planes
-- uniform background blur
-- arbitrary focus transitions
-- exaggerated shallow focus
-- digital portrait effects
+WEAK PHYSICAL SUPPORT -> SUBTLE
 
-The transition between sharp and soft must remain physically plausible.
+STRONG PHYSICAL SUPPORT -> PHYSICALLY APPROPRIATE
+
+Never exaggerate focus separation because the scene is:
+
+- epic
+- dramatic
+- emotional
+- beautiful
+- cinematic
+- immersive
+- mythological
+
+Story purpose determines what should receive attention.
+
+Physical optics determine how that attention is rendered.
 
 ==================================================
 DEFAULT RAMAYANA PROFILE
@@ -633,40 +635,28 @@ DEFAULT RAMAYANA PROFILE
 
 Unless the shot specifies otherwise:
 
-FOCUS_MODE:
-manual / cinematographer-controlled
+FOCUS_DISTANCE:
+shot-dependent
 
 FOCUS_TARGET:
-story-critical subject
+physically selected subject surface / focal plane
 
-CHARACTER_CLOSE_UP:
-eye plane prioritized
+FOCUS_METHOD:
+physically plausible
 
-DEPTH_OF_FIELD:
-physically derived
+FOCUS_TRACKING:
+only when required
 
-FOCUS_FALLOFF:
-natural
+RACK_FOCUS:
+only when narratively and physically justified
 
-BACKGROUND_BLUR:
-distance-dependent
-
-FOREGROUND_BLUR:
-distance-dependent
-
-FOCUS_BREATHING:
-lens-dependent
-
-FOCUS_HUNTING:
+DIGITAL_FOCUS_MASK:
 none
 
-DIGITAL_BLUR:
+ARTIFICIAL_BLUR:
 none
 
-ARTIFICIAL_FOCUS_MASK:
-none
-
-TEMPORAL_CONSISTENCY:
+TEMPORAL_FOCUS_STABILITY:
 extremely high
 
 OPTICAL_REALISM:
@@ -703,15 +693,22 @@ Never begin with:
 Instead determine:
 
 WHAT MUST BE SHARP
-→ WHERE THAT SUBJECT IS
-→ WHERE THE CAMERA IS
-→ WHICH LENS IS USED
-→ WHICH APERTURE IS USED
-→ WHERE THE FOCAL PLANE SHOULD EXIST
-→ WHAT NATURAL DEPTH OF FIELD RESULTS
+->
+WHERE THAT SUBJECT IS
+->
+WHERE THE CAMERA IS
+->
+WHICH LENS IS USED
+->
+WHICH APERTURE IS USED
+->
+WHERE THE FOCAL PLANE SHOULD EXIST
+->
+WHAT NATURAL DEPTH OF FIELD RESULTS
 
 The final video must look like real professionally photographed live-action footage captured through a real physical lens.
 
 Focus distance must behave as a physical optical parameter, never as an AI-generated blur instruction.
 
 It must never look AI-generated.
+

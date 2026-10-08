@@ -1,490 +1,128 @@
-### CHROMATIC ABERRATION BEHAVIOUR
+﻿### CHROMATIC ABERRATION BEHAVIOUR
 
-Treat chromatic aberration as a subtle physical optical imperfection produced by the selected real-world lens, not as a cinematic visual effect.
+Chromatic aberration must be rendered only as a physically plausible optical consequence of the selected lens design and the actual imaging conditions.
 
-The final video must look as though it was captured with a professional live-action camera and a real physical lens.
+Chromatic aberration is NOT a default cinematic effect.
 
-It must NOT look AI-generated at any point.
+It must never be added merely because:
+- the shot is cinematic
+- the lens is vintage
+- the image should look more photographic
+- the scene is dramatic
+- the shot contains bright highlights
+- the image needs additional visual character
 
-==================================================
-PHOTOREALISM — NON-NEGOTIABLE
-==================================================
+Chromatic aberration must depend on the selected lens optical design, optical construction, focal length, aperture, focus distance, sensor format, image height, subject contrast, wavelength-dependent optical behaviour, and position of high-contrast details within the frame.
 
-Prioritize physical realism over visual stylization.
+### TYPES OF CHROMATIC ABERRATION
 
-The image must maintain:
+Longitudinal chromatic aberration:
 
-- realistic skin texture
-- realistic eyes
-- realistic hair
-- realistic fabric
-- realistic materials
-- physically plausible reflections
-- physically plausible highlights
-- physically consistent shadows
-- natural atmospheric depth
-- realistic motion
-- realistic motion blur
-- consistent depth of field
-- consistent lens behaviour
-- consistent lighting
-- stable facial features
-- stable body proportions
-- stable clothing and accessories
-- stable environmental details
+- may appear when different wavelengths focus at different distances along the optical axis
+- may become more visible at wide apertures and in high-contrast out-of-focus regions
+- must remain consistent with the selected lens profile
+- must not be simulated as arbitrary colored blur
 
-Avoid all visual characteristics commonly associated with AI-generated video, including:
+Lateral chromatic aberration:
 
-- plastic or wax-like skin
-- unnaturally smooth faces
-- artificial eyes
-- unstable facial geometry
-- changing facial proportions
-- texture crawling
-- flickering details
-- morphing objects
-- unstable hair
-- unstable clothing
-- duplicated details
-- inconsistent jewelry or accessories
-- physically impossible reflections
-- inconsistent shadows
-- floating objects
-- artificial background blur
-- excessive sharpening
-- artificial glow
-- exaggerated lens effects
-- random RGB separation
-- unstable optical distortion
-- unnatural motion blur
-- frame-to-frame changes in optical characteristics
+- may appear as wavelength-dependent differences in image magnification across the image field
+- is generally more visible toward the image edges
+- may appear as subtle colour fringing around high-contrast edges
+- must remain spatially consistent with the selected lens design
+- must not be introduced uniformly across the entire frame without physical justification
 
-When uncertain, choose the physically plausible and less noticeable result.
+### INTENSITY
 
-REAL-LIFE CAMERA BEHAVIOUR ALWAYS TAKES PRIORITY OVER A VISUALLY IMPRESSIVE EFFECT.
+Default chromatic aberration:
+NONE / SUBTLE.
 
-==================================================
-CHROMATIC ABERRATION
-==================================================
+If the selected lens profile does not support visible chromatic aberration under the current shot conditions:
+    chromatic aberration = NONE.
 
-Chromatic aberration occurs because different wavelengths of light do not focus or magnify identically through a lens.
+If physically supported but weak:
+    chromatic aberration = SUBTLE.
 
-Reproduce this behaviour only when it would realistically occur with the selected lens and shooting conditions.
+If physically strong:
+    render only the degree supported by the selected lens and shot conditions.
 
-Do NOT automatically add chromatic aberration to every shot.
+Never exaggerate chromatic aberration to make the image appear more cinematic, vintage, analog, or photographic.
 
-Do NOT treat chromatic aberration as something that makes footage "cinematic."
+Chromatic aberration must remain below conscious attention unless the physical lens characteristics and shot conditions genuinely make it prominent.
 
-==================================================
-TYPES
-==================================================
+### SPATIAL BEHAVIOUR
 
-Distinguish between:
+Chromatic aberration must follow the optical geometry of the selected lens.
 
-1. LONGITUDINAL / AXIAL CHROMATIC ABERRATION
+It may vary according to:
+- distance from the optical axis
+- image height
+- aperture
+- focal length
+- focus distance
+- subject contrast
+- wavelength-dependent focus behaviour
+- lens construction
+- lens coatings and optical elements
 
-Different wavelengths focus at slightly different distances.
+Do not create:
+- uniform RGB outlines around every object
+- artificial red/blue edge halos
+- screen-space colour separation
+- chromatic aberration on low-contrast surfaces without optical cause
+- identical colour fringing on every frame edge
+- colour separation detached from image geometry
 
-It may produce subtle colour fringing around high-contrast areas that are outside the focal plane.
+High-contrast edges may reveal chromatic aberration more clearly than low-contrast regions, but the effect must remain optically plausible.
 
-It can become more visible with:
+### TEMPORAL CONSISTENCY
 
-- wide apertures
-- strong highlights
-- high-contrast subjects
-- bright light sources
-- shallow depth of field
+Chromatic aberration must remain temporally stable throughout the shot.
 
-Keep this effect subtle and optically plausible.
+During camera movement, subject movement, focus changes, aperture changes, or changes in framing, its appearance may change only when those physical changes would alter the optical conditions.
 
-2. LATERAL / TRANSVERSE CHROMATIC ABERRATION
+Do not allow chromatic aberration to:
+- flicker
+- crawl
+- randomly appear or disappear
+- change colour without physical cause
+- change intensity independently of the lens or shot conditions
+- remain fixed in screen space while the camera moves
+- morph between unrelated colour patterns
 
-Different wavelengths are magnified differently.
+### REALISM FIREWALL
 
-It is generally more noticeable toward the edges of the image and around high-contrast boundaries.
+Chromatic aberration must never alter:
+- skin colour
+- facial identity
+- eye structure
+- anatomy
+- object geometry
+- material identity
+- texture topology
+- lighting direction
+- shadow structure
+- reflections
 
-It may appear as extremely subtle colour separation along edges.
+It is an optical image-plane consequence, not a mechanism for changing the physical scene.
 
-Do not create obvious red/blue outlines around subjects.
+Never use chromatic aberration to hide:
+- geometry errors
+- unstable facial features
+- texture errors
+- object deformation
+- AI-generated artifacts
+- incorrect focus
+- incorrect depth of field
 
-==================================================
-LENS DEPENDENCY
-==================================================
+### NATURALISM RULE
 
-The amount of chromatic aberration must depend on the selected lens profile.
+The final image must remain indistinguishable from footage captured through a real optical system.
 
-Modern, well-corrected professional lenses:
+When chromatic aberration is not physically supported:
+    render NONE.
 
-- very low chromatic aberration
-- minimal visible colour fringing
-- generally clean rendering
+When physically supported:
+    render the minimum visually sufficient amount consistent with the selected lens.
 
-Older or character-oriented lenses:
+Physical optical realism always has priority over recognizable chromatic-aberration effects.
 
-- potentially more visible colour fringing
-- stronger optical imperfections
-- greater variation toward the frame edges
-
-Do not assume every lens has identical chromatic aberration.
-
-The lens profile determines the baseline optical behaviour.
-
-==================================================
-WHEN IT MAY BECOME VISIBLE
-==================================================
-
-Chromatic aberration may become subtly visible when the shot contains:
-
-- strong backlighting
-- bright sunlight
-- bright sky behind dark objects
-- intense practical lights
-- strong specular highlights
-- reflective metal
-- branches against bright sky
-- high-contrast architecture
-- bright objects near dark backgrounds
-- subjects positioned near the extreme frame edges
-- wide apertures
-- demanding high-contrast optical conditions
-
-If these conditions are absent, chromatic aberration should generally be extremely subtle or imperceptible.
-
-==================================================
-SPATIAL BEHAVIOUR
-==================================================
-
-Chromatic aberration must follow the optical geometry of the lens.
-
-Lateral chromatic aberration should generally:
-
-- be minimal near the optical centre
-- become more noticeable toward the frame edges
-- follow high-contrast boundaries
-- remain attached to the physical edge producing it
-- vary naturally across the image
-
-Axial chromatic aberration should behave according to focus and depth.
-
-Do NOT:
-
-- apply colour fringing uniformly across the entire frame
-- outline every object in red and blue
-- create a fixed RGB offset over the whole image
-- use chromatic aberration as a post-processing filter
-
-==================================================
-HUMAN FACES
-==================================================
-
-Facial realism has priority.
-
-Keep chromatic aberration extremely subtle around:
-
-- eyes
-- nose
-- lips
-- skin
-- jawline
-- facial contours
-
-Do not create visible red/blue outlines around a character's face.
-
-Do not allow chromatic aberration to change perceived skin colour.
-
-Do not allow it to alter facial identity or facial proportions.
-
-If a face is near the edge of the frame and strong backlighting creates realistic optical conditions, only then allow subtle edge colour separation.
-
-==================================================
-HAIR AND FINE DETAILS
-==================================================
-
-Fine high-contrast details such as hair against a bright sky may show subtle chromatic aberration.
-
-Keep it physically plausible.
-
-Do not create coloured outlines around individual strands of hair.
-
-Do not exaggerate the effect simply because the background is bright.
-
-==================================================
-ARCHITECTURE AND ENVIRONMENT
-==================================================
-
-For:
-
-- palace structures
-- temples
-- pillars
-- trees
-- mountains
-- rooftops
-- weapons
-- jewelry
-- metal
-- architectural edges
-
-chromatic aberration may become subtly visible around high-contrast edges, particularly toward the frame boundaries.
-
-Maintain geometric realism.
-
-Never allow chromatic aberration to distort the actual shape of the object.
-
-==================================================
-LIGHT SOURCES
-==================================================
-
-Bright point sources may produce subtle colour separation under appropriate optical conditions.
-
-Examples:
-
-- sun
-- lamps
-- diyas
-- torches
-- candles
-- distant practical lights
-- bright reflections
-- fire highlights
-
-Do NOT automatically create coloured fringes around every light source.
-
-Do not confuse chromatic aberration with:
-
-- lens flare
-- bloom
-- halation
-- glare
-- bokeh
-- glow
-
-==================================================
-APERTURE DEPENDENCY
-==================================================
-
-Wide apertures may make longitudinal chromatic aberration more noticeable.
-
-Stopped-down apertures generally reduce the visibility of some optical aberrations.
-
-Therefore chromatic aberration should respond naturally to the selected aperture.
-
-Do not maintain identical aberration intensity across different apertures.
-
-==================================================
-FOCUS DEPENDENCY
-==================================================
-
-During rack focus:
-
-- axial chromatic aberration may change subtly
-- colour fringing may shift naturally as the focal plane changes
-- the transition must remain continuous
-
-Do NOT allow sudden RGB shifts during focus pulls.
-
-Do not use chromatic aberration to emphasize a rack focus.
-
-The focus change itself should remain the primary visual event.
-
-==================================================
-FRAME POSITION
-==================================================
-
-Chromatic aberration should generally become more noticeable toward the extreme edges of the frame when the selected lens exhibits lateral aberration.
-
-Objects near the optical centre should generally remain clean.
-
-As the camera moves or reframes, the aberration must remain associated with the optical position of the subject rather than remaining as a static screen-space effect.
-
-==================================================
-CAMERA MOVEMENT
-==================================================
-
-During:
-
-- pan
-- tilt
-- dolly
-- tracking
-- crane movement
-- orbit
-- handheld movement
-
-chromatic aberration must behave as part of the lens image.
-
-It must:
-
-- remain spatially consistent
-- move naturally with the image
-- maintain consistent optical geometry
-- respond naturally to subjects entering or leaving the frame edges
-
-Do NOT apply a fixed RGB separation layer over the entire video.
-
-==================================================
-VIDEO TEMPORAL CONSISTENCY
-==================================================
-
-This is a VIDEO generation system.
-
-Chromatic aberration must remain temporally stable.
-
-Do NOT allow:
-
-- flickering colour fringes
-- random RGB shifts
-- chromatic aberration appearing and disappearing between frames
-- changing aberration colours
-- changing aberration direction
-- unstable edge fringing
-- optical properties randomly changing during motion
-- chromatic aberration detached from the object producing it
-
-Any change in chromatic aberration must have a physical explanation such as:
-
-- camera movement
-- subject movement
-- focus change
-- aperture change
-- lighting change
-- object entering or leaving the frame
-- change in angle relative to a strong light source
-
-==================================================
-ANAMORPHIC INTERACTION
-==================================================
-
-If the selected lens is anamorphic, chromatic aberration must remain consistent with that lens's optical character.
-
-Do not automatically increase chromatic aberration merely because the lens is anamorphic.
-
-Anamorphic behaviour and chromatic aberration are separate optical characteristics.
-
-Only combine them when the selected lens profile supports both.
-
-==================================================
-VINTAGE / CHARACTER LENSES
-==================================================
-
-If the selected lens profile explicitly specifies stronger optical character, chromatic aberration may become more visible.
-
-Even then:
-
-- maintain physical plausibility
-- keep colour separation optically coherent
-- avoid digital RGB splitting
-- avoid uniformly colouring every edge
-- preserve facial realism
-- preserve temporal consistency
-
-Vintage optical character must never become an excuse for unrealistic imagery.
-
-==================================================
-NATURALISM
-==================================================
-
-The viewer should generally NOT consciously notice chromatic aberration.
-
-The preferred result is:
-
-"real lens with subtle optical imperfections"
-
-not:
-
-"obvious chromatic aberration effect."
-
-If the effect would be invisible in real footage, keep it invisible.
-
-Subtle imperfection is preferable to exaggerated imperfection.
-
-A clean professional lens should often produce almost no visible chromatic aberration.
-
-==================================================
-DO NOT CONFUSE WITH DIGITAL EFFECTS
-==================================================
-
-Never simulate chromatic aberration using:
-
-- RGB channel splitting
-- glitch effects
-- coloured outlines
-- post-processing filters
-- artificial edge colouring
-- digital displacement
-- uniform colour offsets
-
-The result must originate visually from plausible optical behaviour.
-
-==================================================
-STORY-FIRST RULE
-==================================================
-
-Never introduce chromatic aberration because a scene is:
-
-- dramatic
-- epic
-- mythological
-- emotional
-- dark
-- cinematic
-- visually important
-
-The story determines the shot.
-
-The shot determines the lens.
-
-The lens and shooting conditions determine the optical behaviour.
-
-Chromatic aberration is a consequence, not a creative effect.
-
-==================================================
-DEFAULT RAMAYANA PROFILE
-==================================================
-
-Unless the shot or lens profile specifies otherwise:
-
-CHROMATIC_ABERRATION:
-    present: subtle / condition-dependent
-    visibility: very low
-    lateral: minimal
-    axial: minimal
-    edge_dependence: natural
-    center_dependence: minimal
-    colour_separation: extremely subtle
-    facial_interference: none
-    digital_rgb_effect: none
-    temporal_consistency: extremely high
-    optical_realism: extremely high
-
-The default should be clean, realistic professional-camera footage with chromatic aberration generally below conscious perception.
-
-==================================================
-FINAL PRIORITY
-==================================================
-
-Apply decisions in this order:
-
-1. STORY PURPOSE
-2. SHOT DESIGN
-3. CAMERA
-4. LENS TYPE
-5. FOCAL LENGTH
-6. APERTURE
-7. FOCUS DISTANCE
-8. LIGHTING CONDITIONS
-9. SUBJECT POSITION
-10. OPTICAL CHARACTER
-11. RESULTING CHROMATIC ABERRATION
-
-Never reverse this process.
-
-Do not start with "add chromatic aberration."
-
-Start with the physical camera and lens.
-
-Then allow chromatic aberration to occur only if the selected optical system and shooting conditions naturally produce it.
-
-The final footage must look like real professionally photographed live-action footage.
-
-It must never look AI-generated, digitally filtered, artificially stylized, or optically exaggerated.

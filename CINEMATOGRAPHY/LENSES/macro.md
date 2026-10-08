@@ -1,4 +1,4 @@
-# MACRO LENS BEHAVIOUR
+﻿# MACRO LENS BEHAVIOUR
 
 ## PURPOSE
 
@@ -83,6 +83,383 @@ choose the physically plausible and less exaggerated result.
 REAL MACRO OPTICS ALWAYS TAKE PRIORITY OVER VISUAL IMPACT.
 
 ==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Macro behaviour must be derived from physical close-focus optics.
+
+UNKNOWN does not mean:
+
+- maximum magnification
+- extreme close-up
+- extreme shallow DOF
+- maximum aperture
+- maximum sharpness
+- exaggerated bokeh
+- artificial detail
+
+If the shot does not specify a macro requirement:
+
+do not assume macro.
+
+If macro is required but magnification is unspecified:
+
+select the least extreme physically valid magnification that satisfies
+the shot purpose.
+
+Never manufacture macro characteristics for visual impact.
+
+==================================================
+MACRO SELECTION PRECEDENCE
+==================================================
+
+Macro selection must occur in this order:
+
+STORY PURPOSE
+→ SHOT PURPOSE
+→ SUBJECT / DETAIL PRIORITY
+→ REQUIRED MAGNIFICATION
+→ SENSOR FORMAT
+→ LENS TYPE
+→ CLOSE-FOCUS CAPABILITY
+→ WORKING DISTANCE
+→ CAMERA POSITION
+→ SUBJECT DISTANCE
+→ FOCAL LENGTH
+→ FOCUS DISTANCE
+→ APERTURE
+→ DEPTH OF FIELD
+→ CAMERA MOVEMENT
+→ FOCUS MOVEMENT
+→ NATURAL OPTICAL CONSEQUENCES
+
+Lens effects must never determine macro-lens selection.
+
+Do not select a macro lens because it produces attractive bokeh,
+extreme blur, visible breathing, or distinctive optical character.
+
+==================================================
+MACRO MAGNIFICATION VALIDATION
+==================================================
+
+Magnification must remain physically consistent with:
+
+- lens design
+- focal length
+- focus distance
+- sensor format
+- subject distance
+- working distance
+- optical accessories
+- image-circle coverage
+
+Digital cropping does not increase optical magnification.
+
+Digital enlargement must never be represented as true macro capture.
+
+If the requested magnification cannot be achieved:
+
+RESELECT THE OPTICAL CONFIGURATION.
+
+Do not digitally compensate.
+
+==================================================
+WORKING-DISTANCE FIREWALL
+==================================================
+
+Working distance must remain physically compatible with the selected lens.
+
+Do not simultaneously require:
+
+- extreme magnification
+- extremely long working distance
+- extremely wide FOV
+- impossible minimum focus distance
+
+unless a physically valid optical configuration supports all requirements.
+
+For living subjects, delicate subjects, flames, reflective objects,
+or obstructed subjects:
+
+preserve physically plausible clearance between the front of the lens
+and the subject.
+
+==================================================
+MACRO FOCUS-PLANE FIREWALL
+==================================================
+
+At high magnification, the focus plane must remain physically coherent.
+
+Only surfaces within the resulting depth of field may be sharply resolved.
+
+Do not independently sharpen:
+
+- foreground detail
+- subject detail
+- background detail
+
+as separate image regions.
+
+Do not use segmentation to maintain artificial sharpness.
+
+If multiple details lie at different depths:
+
+the system must respect the actual focal plane and resulting DOF.
+
+==================================================
+MACRO DEPTH-OF-FIELD RULE
+==================================================
+
+High magnification may produce extremely shallow DOF, but shallow DOF
+must never be assumed merely because a shot is called "macro."
+
+DOF must be derived from:
+
+- magnification
+- focal length
+- aperture
+- focus distance
+- sensor format
+- subject geometry
+- acceptable circle of confusion
+- viewing conditions
+
+If the required subject cannot remain sufficiently readable at the
+selected configuration:
+
+adjust the physical configuration.
+
+Do not add computational blur or computational sharpness.
+
+==================================================
+MACRO DETAIL REALISM FIREWALL
+==================================================
+
+Macro capture reveals detail but does not create information that the
+optical system could not resolve.
+
+Visible detail must remain consistent with:
+
+- lens resolving power
+- sensor resolution
+- focus accuracy
+- lighting
+- exposure
+- material
+- subject identity
+- motion
+- depth
+- viewing scale
+
+Prohibited:
+
+- invented pores
+- invented fibers
+- invented scratches
+- invented engraving
+- invented insect anatomy
+- invented gemstone facets
+- invented plant veins
+- synthetic micro-texture
+- sharpening halos
+- hallucinated surface detail
+
+REAL CAPTURED DETAIL > GENERATED DETAIL.
+
+==================================================
+MACRO OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Macro mode does not automatically authorize:
+
+- strong flare
+- strong ghosting
+- visible CA
+- strong distortion
+- extreme bokeh
+- anamorphic artifacts
+- strong breathing
+- exaggerated softness
+
+Each characteristic requires its own physical cause.
+
+Authorization states:
+
+FORCED:
+Physically required by the selected configuration.
+
+DERIVED:
+Naturally produced by the optical configuration and scene.
+
+ALLOWED:
+Physically possible but not required to be prominent.
+
+DISABLED:
+Must not be intentionally emphasized or simulated.
+
+==================================================
+MACRO MOVEMENT VALIDATION
+==================================================
+
+At high magnification, small camera or subject movements can create large
+image changes.
+
+Movement must therefore remain consistent with:
+
+- magnification
+- camera distance
+- subject distance
+- focus tolerance
+- lens breathing
+- parallax
+- available stabilization
+- intended cinematographic movement
+
+No movement may be added merely to make macro footage feel cinematic.
+
+==================================================
+MACRO TEMPORAL VALIDATION
+==================================================
+
+Across consecutive frames, maintain:
+
+- magnification
+- subject geometry
+- focus-plane behaviour
+- texture
+- fine detail
+- bokeh
+- lens character
+- distortion
+- reflections
+- refractions
+- focus breathing
+
+A change is valid only when caused by:
+
+- camera movement
+- subject movement
+- focus movement
+- lens movement
+- lighting change
+- exposure change
+- actual environmental change
+
+No spontaneous optical or geometric changes.
+
+==================================================
+MACRO REFLECTION / REFRACTION FIREWALL
+==================================================
+
+For reflective or refractive macro subjects:
+
+reflections and refractions must be determined by:
+
+- material properties
+- surface geometry
+- camera position
+- light-source position
+- environment
+- focus
+- lens optics
+
+Do not generate arbitrary highlights, reflections, gemstone facets,
+water-droplet images, or glass distortions.
+
+==================================================
+MACRO AI ARTIFACT FIREWALL
+==================================================
+
+The causal direction must remain:
+
+SUBJECT
+→ LIGHT
+→ CAMERA POSITION
+→ SENSOR
+→ MACRO OPTICS
+→ FOCUS
+→ APERTURE
+→ OPTICAL RESPONSE
+→ RECORDED IMAGE
+
+Never:
+
+DESIRED MACRO LOOK
+→ DIGITAL MAGNIFICATION
+→ SYNTHETIC DETAIL
+→ SYNTHETIC BLUR
+→ IMAGE
+
+Prohibited:
+
+- digital macro zoom
+- screen-space blur
+- artificial focus stacking
+- hallucinated micro-detail
+- texture crawling
+- geometry morphing
+- unstable magnification
+- synthetic sharpening
+- repeated identical droplets
+- duplicated insect anatomy
+- changing jewelry geometry
+- impossible reflections
+- artificial parallax
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the macro configuration is physically invalid:
+
+1. identify the failed physical constraint
+2. locate the earliest incorrect parameter
+3. correct that parameter
+4. recalculate dependent parameters
+5. revalidate the complete macro configuration
+
+Never conceal an invalid macro setup through post-processing.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When several physically valid macro configurations satisfy the shot:
+
+prefer the configuration with the least unnecessary optical intervention.
+
+This does not mean choosing the least capable lens.
+
+It means avoiding optical extremes that are not required by the shot.
+
+==================================================
+FINAL MACRO REALISM RULE
+==================================================
+
+The macro configuration must be explainable as a real cinematographer's
+physical camera and lens decision.
+
+The system must be able to explain:
+
+- why macro is required
+- why this magnification is required
+- why this lens can achieve it
+- why this working distance is possible
+- why this focus distance is correct
+- why this aperture is appropriate
+- why this DOF results
+- why this movement is possible
+- why the visible optical characteristics occur
+- why the result remains stable through time
+
+If the explanation is only:
+
+"because it looks cinematic,"
+
+the macro configuration is invalid.
+
+==================================================
+==================================================
 WHAT MACRO MEANS
 ==================================================
 
@@ -93,7 +470,7 @@ A traditional macro lens is commonly capable of approximately 1:1 reproduction a
 At 1:1:
 
 OBJECT SIZE AT SUBJECT
-≈
+â‰ˆ
 IMAGE SIZE AT SENSOR
 
 For example:
@@ -279,16 +656,16 @@ The focal plane must be physically coherent.
 If the subject is:
 
 a leaf
-→ focus may lie on a specific surface plane.
+â†’ focus may lie on a specific surface plane.
 
 an insect
-→ eyes may be prioritized.
+â†’ eyes may be prioritized.
 
 a jewel
-→ the intended facet or detail may be prioritized.
+â†’ the intended facet or detail may be prioritized.
 
 an eye
-→ cornea / iris region may be prioritized according to the shot.
+â†’ cornea / iris region may be prioritized according to the shot.
 
 Do not make multiple unrelated depth planes perfectly sharp without a physical explanation.
 
@@ -1089,15 +1466,15 @@ Never begin with:
 Instead determine:
 
 WHAT DETAIL MATTERS?
-→ HOW LARGE MUST IT APPEAR?
-→ WHAT MAGNIFICATION IS REQUIRED?
-→ WHAT REAL LENS CAN ACHIEVE IT?
-→ WHAT WORKING DISTANCE IS REQUIRED?
-→ WHERE IS THE FOCAL PLANE?
-→ WHAT DEPTH OF FIELD RESULTS?
-→ HOW DOES THE SUBJECT MOVE?
-→ HOW DOES THE CAMERA MOVE?
-→ WHAT OPTICAL RESULT PHYSICALLY OCCURS?
+â†’ HOW LARGE MUST IT APPEAR?
+â†’ WHAT MAGNIFICATION IS REQUIRED?
+â†’ WHAT REAL LENS CAN ACHIEVE IT?
+â†’ WHAT WORKING DISTANCE IS REQUIRED?
+â†’ WHERE IS THE FOCAL PLANE?
+â†’ WHAT DEPTH OF FIELD RESULTS?
+â†’ HOW DOES THE SUBJECT MOVE?
+â†’ HOW DOES THE CAMERA MOVE?
+â†’ WHAT OPTICAL RESULT PHYSICALLY OCCURS?
 
 Macro must be produced through real close-focus optical behaviour, not digital enlargement.
 
@@ -1111,3 +1488,4 @@ No unstable textures.
 No digital magnification disguised as optics.
 
 It must never look AI-generated.
+

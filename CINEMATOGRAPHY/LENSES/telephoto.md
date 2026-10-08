@@ -1,4 +1,4 @@
-# TELEPHOTO LENS BEHAVIOUR
+﻿# TELEPHOTO LENS BEHAVIOUR
 
 ## PURPOSE
 
@@ -21,6 +21,469 @@ A telephoto lens is NOT a digital zoom, artificial compression filter, backgroun
 
 The telephoto image must emerge from physically plausible camera and lens geometry.
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Telephoto behaviour must always be derived from a physically valid camera, lens, sensor, subject, background, and environment.
+
+TELEPHOTO is a focal-length / field-of-view classification.
+
+It is NOT an independent visual effect.
+
+The system must determine physical causes before applying visible telephoto consequences.
+
+Required causal order:
+
+STORY / SHOT PURPOSE
+→ CAMERA ACCESS
+→ CAMERA POSITION
+→ SUBJECT DISTANCE
+→ BACKGROUND DISTANCE
+→ SENSOR FORMAT
+→ TELEPHOTO FOCAL LENGTH
+→ FIELD OF VIEW
+→ FRAMING
+→ PERSPECTIVE
+→ SPATIAL COMPRESSION
+→ FOCUS / APERTURE
+→ OPTICAL CHARACTER
+→ MOVEMENT
+→ TEMPORAL CONSISTENCY.
+
+If a required physical parameter is unknown:
+
+DO NOT INVENT:
+
+- compression
+- background enlargement
+- artificial magnification
+- telephoto haze
+- synthetic shallow DOF
+- lens artifacts
+- digital perspective.
+
+Choose the physically plausible and least noticeable result.
+
+==================================================
+TELEPHOTO VALIDATION PRECEDENCE
+==================================================
+
+Validate in this order:
+
+1. PHYSICAL CAMERA POSSIBILITY
+2. SENSOR / LENS COMPATIBILITY
+3. CAMERA POSITION
+4. SUBJECT DISTANCE
+5. BACKGROUND DISTANCE
+6. FOCAL LENGTH
+7. FIELD OF VIEW
+8. FRAMING
+9. PERSPECTIVE
+10. SPATIAL COMPRESSION
+11. FOCUS DISTANCE
+12. MINIMUM FOCUS DISTANCE
+13. APERTURE
+14. DEPTH OF FIELD
+15. BOKEH
+16. DISTORTION
+17. CHROMATIC ABERRATION
+18. FLARE / GHOSTING
+19. ATMOSPHERIC PERSPECTIVE
+20. CAMERA MOVEMENT
+21. STABILIZATION
+22. TEMPORAL CONSISTENCY.
+
+No downstream telephoto characteristic may contradict upstream camera geometry.
+
+==================================================
+TELEPHOTO / CAMERA-POSITION FIREWALL
+==================================================
+
+A telephoto lens does not independently compress physical space.
+
+Spatial appearance must emerge from:
+
+CAMERA POSITION
++
+SUBJECT DISTANCE
++
+BACKGROUND DISTANCE
++
+RELATIVE DEPTH
++
+FRAMING.
+
+If equivalent framing requires moving the camera farther away:
+
+the resulting perspective relationship must come from that camera movement.
+
+Do not generate compression by:
+
+- background scaling
+- depth flattening
+- 2D layer movement
+- digital perspective reduction
+- synthetic object resizing.
+
+==================================================
+TELEPHOTO / FOCAL-LENGTH FIREWALL
+==================================================
+
+Changing focal length at a fixed camera position changes:
+
+- field of view
+- framing
+- magnification.
+
+It does not independently change perspective geometry.
+
+Therefore:
+
+SAME CAMERA POSITION
++
+LONGER FOCAL LENGTH
+≠
+AUTOMATICALLY MORE PHYSICAL COMPRESSION.
+
+Compression must be supported by the actual camera position and scene depth.
+
+==================================================
+TELEPHOTO / SPHERICAL-ANAMORPHIC FIREWALL
+==================================================
+
+Telephoto does not imply anamorphic.
+
+A telephoto system may be:
+
+- spherical
+- anamorphic.
+
+Determine:
+
+SPHERICAL_OR_ANAMORPHIC
+
+before deriving optical character.
+
+Do not automatically add:
+
+- horizontal streaks
+- oval bokeh
+- anamorphic squeeze
+- anamorphic edge distortion
+- anamorphic flare
+- anamorphic breathing.
+
+These require an explicitly selected anamorphic optical system whose profile supports them.
+
+==================================================
+TELEPHOTO / FOCUS FIREWALL
+==================================================
+
+Focus must remain physically valid.
+
+Respect:
+
+- minimum focus distance
+- focus distance
+- aperture
+- depth of field
+- focus transition
+- focus breathing
+- subject movement.
+
+Never repair an impossible focus configuration with:
+
+- AI focus
+- digital blur
+- depth-map manipulation
+- sharpening
+- synthetic macro.
+
+==================================================
+TELEPHOTO / ATMOSPHERIC FIREWALL
+==================================================
+
+Atmospheric perspective must be caused by actual environmental conditions.
+
+Possible causes include:
+
+- distance
+- humidity
+- dust
+- smoke
+- fog
+- sunlight
+- heat
+- atmospheric scattering.
+
+Do not automatically add haze because a telephoto lens is selected.
+
+Atmospheric density must vary coherently with:
+
+- distance
+- environment
+- lighting
+- weather
+- scene conditions.
+
+==================================================
+TELEPHOTO / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Every visible optical characteristic must have a physical source.
+
+Possible sources:
+
+- lens design
+- coatings
+- aperture
+- focus
+- frame position
+- source position
+- sensor format
+- filter
+- camera movement
+- zoom state.
+
+This applies to:
+
+- distortion
+- CA
+- flare
+- ghosting
+- bokeh
+- vignetting
+- breathing
+- aberrations.
+
+Do not add effects merely because they are associated with "cinematic telephoto."
+
+==================================================
+TELEPHOTO / MOVEMENT FIREWALL
+==================================================
+
+Long focal lengths magnify the visual consequence of camera movement.
+
+Therefore camera movement must remain physically coherent.
+
+During:
+
+- pan
+- tilt
+- tracking
+- dolly
+- orbit
+- handheld
+- crane
+- zoom
+
+preserve:
+
+- perspective
+- parallax
+- framing
+- focus
+- motion blur
+- subject scale.
+
+Never create:
+
+- artificial background stretching
+- random camera shake
+- impossible stabilization
+- floating camera motion
+- digital zoom disguised as dolly movement.
+
+==================================================
+TELEPHOTO / ZOOM-DOLLY FIREWALL
+==================================================
+
+A zoom changes:
+
+- focal length
+- FOV
+- framing
+- magnification.
+
+A dolly changes:
+
+- camera position
+- perspective
+- parallax
+- spatial relationships.
+
+A dolly zoom requires both.
+
+Never substitute:
+
+DIGITAL SCALE
+or
+DIGITAL CROP
+
+for either physical operation.
+
+==================================================
+TELEPHOTO / COMPOSITION FIREWALL
+==================================================
+
+Telephoto framing may emphasize:
+
+- layered depth
+- distant subjects
+- repeating structures
+- formations
+- isolated figures
+- environmental details.
+
+But composition must remain physically grounded.
+
+Maintain when appropriate:
+
+- headroom
+- lead room
+- subject placement
+- foreground/midground/background relationships
+- visual balance
+- stable horizon
+- coherent occlusion.
+
+Do not sacrifice physical geometry to achieve a preferred composition.
+
+==================================================
+TELEPHOTO / AI ARTIFACT FIREWALL
+==================================================
+
+Reject any result containing:
+
+- face geometry drift
+- unstable eyes
+- changing body proportions
+- duplicated animals
+- duplicated foliage
+- unstable architecture
+- texture crawling
+- background morphing
+- subject resizing between frames
+- focus shimmer
+- bokeh flicker
+- flare popping
+- ghosting popping
+- haze popping
+- impossible parallax
+- artificial background stretching
+- unstable atmospheric perspective
+- random stabilization jumps.
+
+The entire scene must remain a coherent three-dimensional physical environment.
+
+==================================================
+TEMPORAL TELEPHOTO VALIDATION
+==================================================
+
+Across consecutive frames:
+
+- focal length remains stable unless zooming
+- FOV remains stable unless focal length changes
+- camera position changes continuously
+- perspective changes only with camera movement
+- compression changes only with spatial geometry
+- subject scale remains physically consistent
+- background scale remains physically consistent
+- focus changes remain continuous
+- breathing follows focus movement
+- atmospheric effects remain temporally coherent
+- optical artifacts remain stable unless their physical cause changes.
+
+No unexplained optical change is permitted.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If a requested telephoto appearance conflicts with physical optics:
+
+1. Preserve physical camera possibility.
+2. Preserve sensor/lens compatibility.
+3. Recalculate camera position.
+4. Recalculate subject/background distances.
+5. Recalculate focal length.
+6. Recalculate FOV.
+7. Recalculate framing.
+8. Recalculate perspective.
+9. Recalculate focus and aperture.
+10. Recalculate optical character.
+11. Revalidate movement.
+12. Revalidate temporal continuity.
+13. Reject any remaining artificial effect.
+
+Never solve a physical contradiction with digital manipulation.
+
+==================================================
+MINIMUM TELEPHOTO INTERVENTION
+==================================================
+
+Apply only the telephoto characteristics physically supported by the selected configuration.
+
+Do not exaggerate:
+
+- compression
+- haze
+- shallow DOF
+- bokeh
+- flare
+- CA
+- softness
+- distortion
+- stabilization
+- camera shake.
+
+If the real optical consequence would be subtle, keep it subtle.
+
+==================================================
+FINAL TELEPHOTO REALISM RULE
+==================================================
+
+A TELEPHOTO LENS MUST BE TREATED AS A REAL OPTICAL SYSTEM, NOT AS A "TELEPHOTO LOOK."
+
+Its final appearance must emerge from:
+
+REAL CAMERA POSITION
++
+REAL SUBJECT DISTANCE
++
+REAL BACKGROUND DISTANCE
++
+REAL FOCAL LENGTH
++
+REAL SENSOR
++
+REAL FRAMING
++
+REAL FOCUS
++
+REAL APERTURE
++
+REAL LIGHT
++
+REAL ENVIRONMENT.
+
+NO FAKE COMPRESSION.
+NO DIGITAL BACKGROUND SCALING.
+NO SYNTHETIC TELEPHOTO HAZE.
+NO FAKE PERSPECTIVE.
+NO DIGITAL FOCUS.
+NO ARTIFICIAL ANAMORPHIC CHARACTER.
+NO OPTICAL FLICKER.
+NO TEMPORAL GEOMETRY INSTABILITY.
+
+When uncertain, choose the physically plausible and less noticeable result.
+
+THE FINAL IMAGE MUST LOOK LIKE A REAL CINEMATOGRAPHER PHYSICALLY POSITIONED A REAL CAMERA WITH A REAL TELEPHOTO LENS AND PHOTOGRAPHED THE SCENE.
+
+IT MUST NEVER LOOK AI-GENERATED.
+
+==================================================
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
 ==================================================
@@ -74,13 +537,13 @@ Telephoto behaviour is primarily characterized by:
 For the full-frame reference system:
 
 SHORT TELEPHOTO:
-approximately 70–100mm
+approximately 70â€“100mm
 
 TELEPHOTO:
-approximately 100–200mm
+approximately 100â€“200mm
 
 LONG TELEPHOTO:
-approximately 200–400mm
+approximately 200â€“400mm
 
 SUPER TELEPHOTO:
 400mm+
@@ -94,7 +557,7 @@ CRITICAL PHYSICAL RULE
 ==================================================
 
 TELEPHOTO LENS
-≠
+â‰ 
 AUTOMATIC SPATIAL COMPRESSION.
 
 Perspective is primarily determined by:
@@ -114,15 +577,15 @@ That increased camera distance can produce:
 Therefore:
 
 FOCAL LENGTH
-→
+â†’
 FOV + MAGNIFICATION
 
 CAMERA POSITION
-→
+â†’
 PERSPECTIVE
 
 CAMERA POSITION + SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 SPATIAL COMPRESSION.
 
 Never fake compression independently of the physical camera position.
@@ -137,7 +600,7 @@ These two cases must never be confused.
 
 Changing from:
 
-50mm → 135mm
+50mm â†’ 135mm
 
 while keeping the camera stationary:
 
@@ -151,7 +614,7 @@ Underlying perspective does not fundamentally change.
 
 Changing from:
 
-50mm → 135mm
+50mm â†’ 135mm
 
 while maintaining the same subject framing:
 
@@ -406,27 +869,27 @@ Select focal length according to:
 
 Example tendencies:
 
-70–100mm:
+70â€“100mm:
 - environmental portraits
 - tighter dialogue
 - natural isolation
 - moderate compression
 - restrained perspective
 
-100–135mm:
+100â€“135mm:
 - character isolation
 - medium-distance observation
 - portraiture
 - controlled compression
 
-135–200mm:
+135â€“200mm:
 - distant observation
 - stronger isolation
 - denser backgrounds
 - battlefield layers
 - landscapes
 
-200–400mm:
+200â€“400mm:
 - distant subjects
 - wildlife/animals
 - battlefield observation
@@ -1317,7 +1780,7 @@ PARAMETER DEPENDENCIES
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 FOCAL_LENGTH
@@ -1325,7 +1788,7 @@ FOCAL_LENGTH
 CAMERA_POSITION
 +
 SUBJECT_DISTANCE
-→
+â†’
 FRAMING
 
 CAMERA_POSITION
@@ -1333,13 +1796,13 @@ CAMERA_POSITION
 SUBJECT_DISTANCE
 +
 BACKGROUND_DISTANCE
-→
+â†’
 PERSPECTIVE
 
 CAMERA_POSITION
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 SPATIAL_COMPRESSION
 
 FOCAL_LENGTH
@@ -1349,7 +1812,7 @@ APERTURE
 FOCUS_DISTANCE
 +
 SENSOR
-→
+â†’
 DEPTH_OF_FIELD
 
 LENS_DESIGN
@@ -1359,13 +1822,13 @@ APERTURE
 FOCUS
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 BOKEH
 
 LENS_DESIGN
 +
 FRAME_POSITION
-→
+â†’
 DISTORTION
 
 LENS_DESIGN
@@ -1373,13 +1836,13 @@ LENS_DESIGN
 SOURCE_POSITION
 +
 APERTURE
-→
+â†’
 FLARE / GHOSTING
 
 LENS_DESIGN
 +
 FOCUS_CHANGE
-→
+â†’
 FOCUS_BREATHING
 
 CAMERA_MOVEMENT
@@ -1387,7 +1850,7 @@ CAMERA_MOVEMENT
 SUBJECT_MOVEMENT
 +
 FOCAL_LENGTH
-→
+â†’
 PARALLAX / MOTION_APPEARANCE
 
 DISTANCE
@@ -1395,7 +1858,7 @@ DISTANCE
 ATMOSPHERE
 +
 LIGHT
-→
+â†’
 ATMOSPHERIC_PERSPECTIVE
 
 Do not collapse these dependencies into:
@@ -1627,3 +2090,4 @@ Never manufacture telephoto behaviour digitally.
 The final image must look as though a real cinematographer physically positioned a real camera with a real telephoto lens and photographed the scene under real optical and environmental conditions.
 
 It must never look AI-generated.
+

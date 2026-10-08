@@ -1,4 +1,4 @@
-# PERSPECTIVE
+﻿# PERSPECTIVE
 
 ## PURPOSE
 
@@ -124,7 +124,7 @@ FOCAL LENGTH DOES NOT DIRECTLY CREATE PERSPECTIVE
 
 A critical rule:
 
-FOCAL LENGTH ≠ PERSPECTIVE.
+FOCAL LENGTH â‰  PERSPECTIVE.
 
 At the same camera position:
 
@@ -141,7 +141,7 @@ However:
 if focal length changes and the camera is moved to preserve framing:
 
 camera position changes
-→ perspective changes.
+â†’ perspective changes.
 
 This distinction must always be preserved.
 
@@ -186,17 +186,17 @@ then the camera generally must move.
 For example:
 
 wide lens
-→ camera closer
+â†’ camera closer
 
 longer lens
-→ camera farther away
+â†’ camera farther away
 
 This camera repositioning changes perspective.
 
 Therefore:
 
 SAME_FRAMING + DIFFERENT_FOCAL_LENGTH
-≠
+â‰ 
 SAME_PERSPECTIVE.
 
 ==================================================
@@ -278,7 +278,7 @@ Therefore:
 TELEPHOTO
 +
 FARTHER CAMERA POSITION
-→
+â†’
 REDUCED APPARENT PERSPECTIVE DIFFERENCE.
 
 Do not simulate this by digitally enlarging the background.
@@ -538,6 +538,668 @@ Occlusion changes must follow actual three-dimensional geometry.
 
 Do not maintain an object's visibility through a camera movement if it should physically become hidden.
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Perspective must be treated as a physical three-dimensional camera
+relationship.
+
+UNKNOWN does not mean:
+
+- default perspective
+- default compression
+- default camera distance
+- default focal length
+- default camera height
+- default spatial scale
+
+If a perspective parameter is unknown:
+
+do not invent an exact value.
+
+Use only explicitly established spatial information and physically
+conservative assumptions until the missing parameter is resolved.
+
+Never infer camera position solely from:
+
+- focal length
+- field of view
+- sensor format
+- crop factor
+- desired cinematic appearance
+
+==================================================
+PERSPECTIVE VALIDATION PRECEDENCE
+==================================================
+
+Perspective must be resolved in this order:
+
+STORY PURPOSE
+→ SHOT PURPOSE
+→ REQUIRED SPATIAL RELATIONSHIP
+→ CAMERA HEIGHT
+→ CAMERA POSITION
+→ CAMERA ORIENTATION
+→ SUBJECT DISTANCE
+→ BACKGROUND DISTANCE
+→ SENSOR FORMAT
+→ REQUIRED FIELD OF VIEW
+→ FOCAL LENGTH
+→ RESULTING PERSPECTIVE
+→ PARALLAX
+→ OCCLUSION
+→ VANISHING POINTS
+→ LENS DISTORTION
+→ CAMERA MOVEMENT
+→ TEMPORAL VALIDATION
+→ FINAL SPATIAL REALISM
+
+Perspective must be established before optical effects are derived.
+
+==================================================
+PERSPECTIVE / CAMERA-POSITION FIREWALL
+==================================================
+
+Perspective is fundamentally determined by the spatial relationship
+between:
+
+CAMERA
+→ SUBJECT
+→ ENVIRONMENT
+
+If camera position changes:
+
+recalculate:
+
+- subject distance
+- background distance
+- foreground distance
+- perspective
+- parallax
+- apparent scale
+- occlusion
+- framing
+- spatial relationships
+
+Never preserve the previous perspective through digital manipulation.
+
+==================================================
+PERSPECTIVE / FOCAL-LENGTH FIREWALL
+==================================================
+
+Focal length changes:
+
+- field of view
+- framing
+- image scale
+
+from a fixed camera position.
+
+Focal length does not independently move the camera.
+
+Therefore:
+
+FIXED CAMERA POSITION
++
+FOCAL LENGTH CHANGE
+→
+PERSPECTIVE GEOMETRY REMAINS FUNDAMENTALLY STABLE
+
+If focal length is changed and camera position is also changed to
+preserve framing:
+
+recalculate perspective from the new camera position.
+
+Never describe focal length alone as the cause of perspective
+compression or expansion.
+
+==================================================
+PERSPECTIVE / SENSOR FIREWALL
+==================================================
+
+Sensor format affects:
+
+- image coverage
+- field of view
+- required focal length for equivalent framing
+
+Sensor format does not independently create perspective.
+
+If camera repositioning is required to maintain framing:
+
+that repositioning becomes the physical cause of any resulting
+perspective change.
+
+Never encode:
+
+SMALLER SENSOR = AUTOMATICALLY FLATTER PERSPECTIVE
+
+or:
+
+LARGER SENSOR = AUTOMATICALLY MORE THREE-DIMENSIONAL PERSPECTIVE.
+
+==================================================
+PERSPECTIVE / CROP-FACTOR FIREWALL
+==================================================
+
+Crop factor affects field of view and framing.
+
+It does not directly control perspective.
+
+If equivalent framing causes a camera-position change:
+
+recalculate perspective from that new position.
+
+Never use crop factor as a direct perspective parameter.
+
+==================================================
+PERSPECTIVE / COMPRESSION FIREWALL
+==================================================
+
+Perceived spatial compression must emerge from physical scene geometry.
+
+Relevant variables include:
+
+- camera position
+- subject distance
+- background distance
+- foreground distance
+- focal length used for framing
+- scene depth
+
+Do not create compression using:
+
+- digital background scaling
+- perspective warping
+- artificial depth maps
+- synthetic flattening
+- independent subject/background resizing
+
+A long lens does not magically compress space.
+
+The physical camera position and resulting framing must explain the
+appearance.
+
+==================================================
+PERSPECTIVE / PARALLAX FIREWALL
+==================================================
+
+Parallax must emerge from relative camera/subject/environment motion.
+
+During camera translation:
+
+nearby objects generally exhibit greater apparent displacement than
+distant objects.
+
+The system must preserve:
+
+- depth ordering
+- relative motion
+- occlusion
+- background displacement
+- foreground displacement
+
+Do not simulate parallax by independently moving image layers.
+
+==================================================
+PERSPECTIVE / OCCLUSION FIREWALL
+==================================================
+
+Occlusion must follow actual three-dimensional geometry.
+
+As the camera or subjects move:
+
+objects may:
+
+- reveal hidden surfaces
+- cover other objects
+- uncover background
+- become hidden
+
+Visibility must not be preserved merely because it was visible in the
+previous frame.
+
+Never use image-layer manipulation to maintain impossible visibility.
+
+==================================================
+PERSPECTIVE / VANISHING-POINT FIREWALL
+==================================================
+
+Vanishing points must emerge from the three-dimensional scene and
+camera orientation.
+
+For rigid architectural structures:
+
+parallel lines must maintain coherent convergence.
+
+When the camera rotates or translates:
+
+vanishing-point movement must remain geometrically coherent.
+
+Never allow:
+
+- vanishing-point flicker
+- independent line convergence
+- structural geometry bending
+- random perspective direction changes
+
+==================================================
+PERSPECTIVE / ARCHITECTURE FIREWALL
+==================================================
+
+Architectural geometry must remain physically stable.
+
+Maintain:
+
+- vertical relationships
+- horizontal relationships
+- structural proportions
+- coherent convergence
+- consistent scale
+
+If camera tilt causes convergence:
+
+that convergence is physically valid.
+
+If parallel verticals are required:
+
+use an appropriate physical solution such as:
+
+- camera repositioning
+- camera height adjustment
+- lens selection
+- tilt-shift/perspective-control optics
+
+Do not digitally straighten geometry unless the explicitly selected
+workflow includes physical or optical perspective correction.
+
+==================================================
+PERSPECTIVE / FACE GEOMETRY FIREWALL
+==================================================
+
+Human facial proportions must follow actual camera distance and
+three-dimensional geometry.
+
+When the camera moves closer:
+
+near/far facial depth differences may become more pronounced.
+
+Do not compensate through:
+
+- facial reshaping
+- digital geometry correction
+- synthetic perspective flattening
+- face-specific warping
+
+Facial appearance must remain a consequence of physical camera
+position and lens configuration.
+
+==================================================
+PERSPECTIVE / DOF FIREWALL
+==================================================
+
+Perspective and depth of field are independent systems.
+
+PERSPECTIVE:
+comes from geometry and camera position.
+
+DOF:
+comes from optical configuration.
+
+Do not use:
+
+- blur to create perspective
+- focus changes to create camera movement
+- bokeh to create depth geometry
+- depth maps to simulate spatial separation
+
+A focus pull must not independently alter perspective.
+
+==================================================
+PERSPECTIVE / DISTORTION FIREWALL
+==================================================
+
+Perspective and lens distortion must remain separate.
+
+PERSPECTIVE:
+three-dimensional projection.
+
+DISTORTION:
+lens-dependent deviation from ideal projection.
+
+A wide lens may produce both perspective effects and optical
+distortion, but they must not be treated as the same phenomenon.
+
+If distortion is present:
+
+it must remain attached to the selected lens profile.
+
+Never use distortion as a substitute for perspective.
+
+==================================================
+PERSPECTIVE / ZOOM FIREWALL
+==================================================
+
+ZOOM:
+
+changes focal length and framing.
+
+DOLLY:
+
+changes camera position and therefore perspective.
+
+They are not interchangeable.
+
+A fixed-position zoom must preserve the underlying spatial geometry.
+
+A dolly must update:
+
+- perspective
+- parallax
+- occlusion
+- relative scale
+- background relationship
+
+Never simulate a dolly using digital image scaling.
+
+==================================================
+PERSPECTIVE / DOLLY-ZOOM FIREWALL
+==================================================
+
+A dolly zoom requires:
+
+CAMERA TRANSLATION
++
+FOCAL-LENGTH CHANGE
+
+Both physical changes must be represented.
+
+The characteristic background relationship must emerge from the
+combination of:
+
+- changed camera position
+- changed focal length
+- maintained or intentionally modified framing
+
+Never create a dolly zoom through digital perspective warping.
+
+==================================================
+PERSPECTIVE / ANAMORPHIC FIREWALL
+==================================================
+
+Anamorphic optical characteristics are separate from basic
+perspective geometry.
+
+Anamorphic selection may produce:
+
+- squeeze
+- lens-specific distortion
+- edge rendering
+- bokeh characteristics
+- flare
+- breathing
+
+These must not be interpreted as permission to alter perspective
+artificially.
+
+First establish:
+
+CAMERA POSITION
+→ PERSPECTIVE
+
+Then apply:
+
+LENS SYSTEM
+→ OPTICAL CHARACTER
+
+==================================================
+PERSPECTIVE / MOVEMENT VALIDATION
+==================================================
+
+For continuous camera movement, perspective must evolve continuously.
+
+During translation:
+
+recalculate:
+
+- subject distance
+- background distance
+- parallax
+- occlusion
+- apparent scale
+- framing
+
+During rotation:
+
+recalculate:
+
+- view direction
+- visible surfaces
+- vanishing-point positions
+- composition
+
+During roll:
+
+rotate the image plane without independently deforming the
+three-dimensional scene.
+
+==================================================
+PERSPECTIVE / MOVING-SUBJECT VALIDATION
+==================================================
+
+Moving subjects must remain consistent relative to:
+
+- camera
+- environment
+- other subjects
+
+If a subject approaches the camera:
+
+apparent scale should increase continuously.
+
+If a subject moves laterally:
+
+parallax and occlusion should update naturally.
+
+If a subject moves away:
+
+apparent scale should decrease continuously.
+
+Never resize subjects frame-by-frame to maintain composition.
+
+==================================================
+PERSPECTIVE / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Perspective alone does not authorize:
+
+- distortion
+- flare
+- ghosting
+- chromatic aberration
+- bokeh
+- vignetting
+- halation
+- anamorphic character
+
+Each optical characteristic requires its own physical cause.
+
+AUTHORIZATION STATES:
+
+FORCED:
+required by the selected physical system.
+
+DERIVED:
+naturally produced by the configuration.
+
+ALLOWED:
+physically possible but not necessarily visible.
+
+DISABLED:
+physically unsupported or unjustified.
+
+Never introduce an ALLOWED optical characteristic merely because it
+looks cinematic.
+
+==================================================
+PERSPECTIVE / AI ARTIFACT FIREWALL
+==================================================
+
+The causal direction must remain:
+
+THREE-DIMENSIONAL SCENE
+→ CAMERA POSITION
+→ SUBJECT / ENVIRONMENT RELATIONSHIPS
+→ PROJECTION
+→ LENS CHARACTER
+→ IMAGE
+
+Never:
+
+DESIRED SPATIAL LOOK
+→ DIGITAL WARP
+→ IMAGE
+
+Prohibited:
+
+- digital perspective warping
+- artificial compression
+- digital parallax
+- independent background scaling
+- subject resizing
+- geometry morphing
+- fake vanishing points
+- synthetic occlusion
+- depth-map perspective
+- artificial camera movement
+- frame-to-frame spatial correction
+- facial perspective manipulation
+
+==================================================
+TEMPORAL PERSPECTIVE VALIDATION
+==================================================
+
+Within a continuous shot, perspective must remain temporally coherent.
+
+NEVER allow:
+
+- perspective flicker
+- background-scale jumps
+- vanishing-point jumps
+- object-size jumps
+- unstable parallax
+- inconsistent occlusion
+- spatial-layer sliding
+- facial perspective changes without physical cause
+- geometry morphing
+- artificial depth changes
+
+Every visible perspective change must be explainable by:
+
+- camera movement
+- subject movement
+- environmental movement
+- lens change
+- physical scene change
+
+==================================================
+PERSPECTIVE CONTINUITY LOCK
+==================================================
+
+Within a continuous shot:
+
+CAMERA_POSITION must remain stable unless the camera physically moves.
+
+CAMERA_HEIGHT must remain stable unless the rig physically moves.
+
+CAMERA_ORIENTATION must change only through actual camera rotation.
+
+LENS_IDENTITY must remain stable unless an actual lens change occurs.
+
+Across shots:
+
+maintain coherent:
+
+- spatial geography
+- camera side
+- character orientation
+- eyelines
+- movement direction
+- perspective logic
+
+unless an intentional transition establishes a new spatial configuration.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If perspective validation fails:
+
+1. identify the failed spatial constraint
+2. identify the earliest incorrect camera or scene parameter
+3. correct that parameter
+4. recalculate subject/background relationships
+5. recalculate perspective
+6. recalculate parallax
+7. recalculate occlusion
+8. recalculate framing
+9. recalculate lens behaviour
+10. validate temporal continuity
+11. validate final spatial realism
+
+Never repair a perspective error after image formation.
+
+==================================================
+MINIMUM SPATIAL INTERVENTION
+==================================================
+
+When multiple physically valid configurations can produce the required
+shot:
+
+prefer the configuration that introduces the fewest unnecessary
+changes to:
+
+- camera position
+- camera height
+- focal length
+- lens system
+- scene geometry
+
+Do not reposition the camera merely to create stronger compression,
+expansion, or dramatic perspective unless the story requires it.
+
+==================================================
+FINAL PERSPECTIVE REALISM RULE
+==================================================
+
+Every perspective decision must be explainable as a real camera
+occupying a real position in a real three-dimensional environment.
+
+The system must establish:
+
+- where the camera is
+- how high it is
+- where it is facing
+- where the subject is
+- where the background is
+- what focal length is used
+- what sensor format is used
+- what FOV results
+- what perspective results
+- how parallax behaves
+- how occlusion behaves
+- how vanishing points behave
+- how movement changes spatial relationships
+- whether the geometry remains temporally stable
+
+If the configuration cannot satisfy these constraints:
+
+RECONFIGURE THE CAMERA AND SCENE RELATIONSHIP.
+
+Never fake perspective digitally.
+
+==================================================
 ==================================================
 PERSPECTIVE AND VANISHING POINTS
 ==================================================
@@ -850,7 +1512,7 @@ It does not inherently change camera position or perspective.
 
 Therefore:
 
-ZOOM ≠ DOLLY.
+ZOOM â‰  DOLLY.
 
 If a zoom is performed from a fixed camera position:
 
@@ -891,11 +1553,11 @@ Crop factor does NOT directly alter perspective.
 If framing is changed by moving the camera to compensate:
 
 camera position changes
-→ perspective changes.
+â†’ perspective changes.
 
 Therefore:
 
-CROP FACTOR ≠ PERSPECTIVE CONTROL.
+CROP FACTOR â‰  PERSPECTIVE CONTROL.
 
 ==================================================
 PERSPECTIVE AND SENSOR FORMAT
@@ -973,8 +1635,8 @@ PERSPECTIVE AND SUBJECT/BACKGROUND RELATIONSHIP
 The appearance of depth depends strongly on:
 
 CAMERA
-→ SUBJECT
-→ BACKGROUND
+â†’ SUBJECT
+â†’ BACKGROUND
 
 distances.
 
@@ -1312,7 +1974,7 @@ PARAMETER DEPENDENCIES
 CAMERA_POSITION
 +
 SUBJECT_POSITION
-→
+â†’
 SUBJECT_DISTANCE
 
 CAMERA_POSITION
@@ -1320,7 +1982,7 @@ CAMERA_POSITION
 SUBJECT_DISTANCE
 +
 BACKGROUND_DISTANCE
-→
+â†’
 PERSPECTIVE_RELATIONSHIPS
 
 CAMERA_POSITION
@@ -1328,21 +1990,21 @@ CAMERA_POSITION
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FRAMING / FIELD_OF_VIEW
 
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 CAMERA_TRANSLATION
-→
+â†’
 PERSPECTIVE_CHANGE / PARALLAX
 
 CAMERA_ROTATION
-→
+â†’
 VIEW_DIRECTION / VANISHING_POINT_POSITION
 
 CAMERA_POSITION
@@ -1350,11 +2012,11 @@ CAMERA_POSITION
 FOCAL_LENGTH
 +
 FRAMING_REQUIREMENT
-→
+â†’
 PERSPECTIVE_CONFIGURATION
 
 LENS_DESIGN
-→
+â†’
 DISTORTION
 
 FOCUS_DISTANCE
@@ -1364,7 +2026,7 @@ APERTURE
 FOCAL_LENGTH
 +
 SENSOR
-→
+â†’
 DEPTH_OF_FIELD
 
 DO NOT CONFUSE THESE DEPENDENCIES.
@@ -1419,7 +2081,7 @@ FOCAL_LENGTH CHANGES
 THEN:
 
 CALCULATE REQUIRED CAMERA REPOSITIONING
-→
+â†’
 RECALCULATE PERSPECTIVE.
 
 ==================================================
@@ -1564,3 +2226,4 @@ No spatial flicker.
 No AI-generated depth.
 
 It must never look AI-generated.
+

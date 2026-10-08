@@ -1,343 +1,403 @@
-### FOCAL LENGTH BEHAVIOUR
+﻿### FOCAL LENGTH
 
-Treat focal length as a physical optical property of the selected lens that determines field of view, framing, magnification, and—when combined with camera position—perspective and spatial relationships.
+Treat focal length as a physical property of the selected lens and camera system.
 
-Do NOT treat focal length as a visual effect.
+Focal length MUST NOT be treated as an independent cinematic style control, perspective filter, zoom effect, or AI visual effect.
 
-The final video must look as though it was captured by a real professional camera using a real physical lens.
+The final video must look like professionally photographed live-action footage captured with a real physical camera and lens.
 
-It must NEVER look AI-generated, digitally manipulated, artificially sharpened, artificially blurred, or stylistically exaggerated.
+It must NEVER look AI-generated, digitally warped, computationally reframed, or optically impossible.
+
+AI_ARTIFACT_TOLERANCE:
+none
 
 ==================================================
-PHOTOREALISM — NON-NEGOTIABLE
+PHOTOREALISM - NON-NEGOTIABLE
 ==================================================
-
-All focal-length behaviour must remain physically plausible.
 
 Maintain:
 
-- realistic field of view
+- physically valid focal length
+- physically valid lens behaviour
+- realistic framing
 - realistic perspective
 - realistic subject proportions
-- realistic facial geometry
-- realistic spatial relationships
-- realistic background scale
-- realistic depth
-- realistic lens distortion
+- realistic environmental scale
+- realistic depth relationships
+- realistic distortion
+- realistic depth of field
 - realistic focus behaviour
 - realistic motion
-- realistic motion blur
-- stable geometry
-- stable faces
-- stable architecture
-- stable environmental details
-- consistent optical behaviour across frames
+- temporal consistency
+- stable lens character
 
-Never introduce:
+Do NOT create:
 
-- artificial perspective
-- fake focal-length effects
-- impossible field of view
-- digitally stretched or compressed space
-- unnatural facial proportions
-- exaggerated background enlargement
-- artificial subject isolation
-- fake depth
-- warped architecture
-- unstable perspective
-- changing focal length without a physical reason
-- AI-looking geometry
+- arbitrary cinematic perspective
+- artificial telephoto compression
+- fake wide-angle distortion
+- digital zoom disguised as focal length
+- screen-space perspective manipulation
+- changing focal length without physical cause
+- inconsistent subject proportions
+- unstable facial geometry
+- changing architectural scale
+- artificial background scaling
+- focal-length flicker
+- lens-character flicker
+- AI-generated optical artifacts
 
-When uncertain, choose the more physically plausible and less noticeable result.
+When uncertain, choose the physically plausible and less noticeable result.
 
-PHYSICAL CAMERA REALISM ALWAYS TAKES PRIORITY OVER VISUAL IMPACT.
+PHYSICAL OPTICS ALWAYS TAKES PRIORITY OVER VISUAL IMPACT.
 
 ==================================================
-WHAT FOCAL LENGTH MEANS
+CORE PRINCIPLE
 ==================================================
 
-Focal length is the optical distance associated with the lens's optical system and determines its angular field of view in combination with sensor dimensions.
+Focal length is the distance, under the defined optical system, associated with the lens's optical power and image formation.
 
-It primarily affects:
+In cinematography, focal length primarily determines the relationship between:
 
 - field of view
+- image magnification at a given camera position
 - framing
-- magnification
-- required camera position for a particular framing
+- required camera distance for a desired composition
 
 Focal length does NOT independently determine perspective.
 
-Perspective is primarily determined by camera position relative to the subject and other objects.
+Perspective is primarily determined by:
+
+- camera position
+- subject distance
+- relative scene geometry
 
 Therefore:
 
-FOCAL LENGTH
-+
-SENSOR FORMAT
-→ FIELD OF VIEW
+FOCAL LENGTH -> FOV / FRAMING
 
+CAMERA POSITION -> PERSPECTIVE
+
+Do not collapse these into one parameter.
+
+==================================================
+LENS SELECTION BEFORE EFFECTS
+==================================================
+
+Select the physical focal length before deriving optical consequences.
+
+The correct order is:
+
+STORY
+->
+SHOT PURPOSE
+->
+COMPOSITION
+->
+SENSOR
+->
+REQUIRED FOV
+->
 CAMERA POSITION
-→ PERSPECTIVE
+->
+PHYSICAL FOCAL LENGTH
+->
+APERTURE / FOCUS
+->
+RESULTING OPTICS
 
-FOCAL LENGTH + CAMERA POSITION
-→ FINAL SPATIAL APPEARANCE
-
-Do not claim that a longer focal length automatically "compresses perspective" while ignoring camera position.
+Never select focal length because a lens "looks cinematic."
 
 ==================================================
-FOCAL LENGTH CATEGORIES
+STORY PURPOSE
 ==================================================
 
-Use focal-length categories as practical guidance rather than rigid visual rules.
+Focal length may be selected according to:
 
-For a full-frame reference:
+- story purpose
+- shot type
+- subject priority
+- environmental requirement
+- spatial relationship
+- required composition
+- emotional distance
+- camera movement
+- physical shooting constraints
 
-ULTRA-WIDE:
-approximately 14–24mm
+Story purpose may determine what visual relationship is required.
 
-WIDE:
-approximately 24–35mm
+It does NOT override the physical consequences of the selected lens.
 
-MODERATE WIDE:
-approximately 35–40mm
+==================================================
+SHOT TYPE
+==================================================
 
-NORMAL:
-approximately 40–60mm
+Consider the required shot:
 
-SHORT TELEPHOTO:
-approximately 70–100mm
+- extreme close-up
+- close-up
+- medium close-up
+- medium shot
+- medium-wide
+- wide
+- extreme wide
+- environmental shot
+- landscape
+- architectural shot
+- group shot
+- action shot
 
-TELEPHOTO:
-approximately 100–200mm
-
-SUPER TELEPHOTO:
-200mm+
-
-These ranges are descriptive.
-
-The actual visual result depends on:
+The same focal length can produce very different compositions depending on:
 
 - sensor format
+- camera distance
+- subject size
 - camera position
+
+Do not map shot type directly to one mandatory focal length.
+
+==================================================
+SENSOR FORMAT
+==================================================
+
+Focal length must always be interpreted together with sensor format and active sensor area.
+
+The same physical focal length produces different FOVs on different sensor formats.
+
+Therefore:
+
+PHYSICAL FOCAL LENGTH != FIELD OF VIEW
+
+The lens retains the same physical focal length.
+
+The recorded FOV changes because the sensor records a different portion of the image circle.
+
+Do not change the physical focal length merely because the sensor format changed.
+
+==================================================
+FULL-FRAME EQUIVALENCE
+==================================================
+
+Full-frame equivalent focal length is a framing/FOV comparison.
+
+Approximate relationship:
+
+FULL-FRAME EQUIVALENT FOCAL LENGTH
+=
+ACTUAL FOCAL LENGTH × CROP FACTOR
+
+This does NOT mean the physical lens has changed focal length.
+
+Do not use equivalent focal length as though it were the actual optical parameter.
+
+Whenever possible, retain both:
+
+ACTUAL_PHYSICAL_FOCAL_LENGTH
+
+and:
+
+FOV_EQUIVALENT_FOCAL_LENGTH
+
+==================================================
+FIELD OF VIEW
+==================================================
+
+Focal length is a primary determinant of field of view when sensor dimensions are fixed.
+
+Generally:
+
+SHORTER FOCAL LENGTH
+->
+WIDER FOV
+
+LONGER FOCAL LENGTH
+->
+NARROWER FOV
+
+FOV must still be calculated using:
+
+- physical focal length
+- sensor dimensions
+- active sensor area
+- aspect ratio
+- crop mode
+
+Do not assume a focal-length number has the same framing on every camera.
+
+==================================================
+CAMERA POSITION
+==================================================
+
+Camera position must be evaluated separately from focal length.
+
+Changing focal length while keeping camera position fixed changes:
+
+- FOV
 - framing
-- subject distance
-- background distance
-- lens design
+- image magnification
+- visible environment
 
-Do not force a fixed visual appearance onto every lens within a category.
+It does not inherently change perspective relationships.
+
+Changing camera position changes:
+
+- perspective
+- relative subject size
+- foreground/background relationships
+- spatial geometry
+
+If framing is maintained while focal length changes, camera repositioning may be required.
+
+That repositioning changes perspective.
+
+This distinction is mandatory.
 
 ==================================================
-WIDE-ANGLE BEHAVIOUR
+PERSPECTIVE FIREWALL
 ==================================================
 
-When selecting a shorter focal length:
+Never state:
 
-allow a wider field of view when appropriate.
+"Long focal length creates compression."
 
-If the camera is positioned close to the subject, this may naturally produce:
+Instead:
 
-- stronger foreground-background size differences
-- increased spatial depth
-- stronger perspective
-- greater environmental inclusion
-- more pronounced edge behaviour
+A longer focal length provides a narrower FOV.
 
-Use this deliberately.
+If the camera is repositioned farther away to maintain framing, the resulting change in camera position can alter perspective and make spatial relationships appear more compressed.
+
+Similarly:
+
+A short focal length does not inherently create exaggerated perspective.
+
+Close camera placement combined with a wide FOV can produce stronger perspective exaggeration.
+
+Perspective is therefore a camera-position and geometry consequence.
+
+==================================================
+WIDE FOCAL LENGTHS
+==================================================
+
+Short focal lengths may be appropriate when the shot requires:
+
+- large environmental coverage
+- close subject within a large environment
+- constrained spaces
+- strong spatial context
+- immersive geography
+- architectural coverage
+
+Possible physical consequences include:
+
+- wider FOV
+- increased sensitivity to camera position
+- stronger foreground/background scale differences when close to subjects
+- greater visible environment
 
 Do NOT automatically create:
 
-- extreme facial distortion
+- barrel distortion
+- stretched faces
+- enlarged noses
 - stretched limbs
-- enormous noses
 - warped architecture
-- exaggerated foreground objects
 
-These effects depend on camera position and lens distortion, not merely the focal length label.
+Those characteristics depend on the actual lens design.
+
+==================================================
+ULTRA-WIDE FOCAL LENGTHS
+==================================================
+
+Ultra-wide focal lengths should be used only when the required composition or physical environment supports them.
+
+Maintain:
+
+- realistic facial geometry
+- realistic architecture
+- realistic body proportions
+- realistic foreground scale
+- realistic edge behaviour
+
+Do not use ultra-wide focal lengths merely to make a shot feel:
+
+- epic
+- immersive
+- dramatic
+- cinematic
+
+The physical composition must justify the lens.
 
 ==================================================
 NORMAL FOCAL LENGTH
 ==================================================
 
-Normal focal lengths can provide a balanced relationship between character and environment.
+Normal focal lengths can provide a natural relationship between subjects and environment.
 
-Use them when the shot requires:
+They may be appropriate for:
 
-- natural spatial representation
-- believable human-scale imagery
 - dialogue
 - observational scenes
-- balanced environmental context
-- restrained perspective
+- character interaction
+- naturalistic coverage
+- balanced environmental representation
 
-Do not artificially make normal lenses look "cinematic."
+Do not define "normal" as a universal exact focal length.
 
-Natural rendering is the objective.
+Normal appearance depends on:
 
-==================================================
-TELEPHOTO BEHAVIOUR
-==================================================
-
-Longer focal lengths provide a narrower field of view.
-
-When the camera is moved farther away to maintain framing, the resulting perspective may appear more spatially compressed.
-
-This may produce:
-
-- tighter spatial layering
-- larger-looking distant backgrounds relative to the subject
-- reduced apparent depth
-- denser visual stacking
-- stronger subject isolation
-
-Do not exaggerate these effects.
-
-Do not make distant objects unnaturally large.
-
-Do not flatten the scene into a 2D image.
-
-Maintain atmospheric perspective and depth cues.
+- sensor format
+- viewing conditions
+- image presentation
+- camera distance
+- intended perspective
 
 ==================================================
-FOCAL LENGTH AND CAMERA POSITION
+TELEPHOTO FOCAL LENGTHS
 ==================================================
 
-This is a critical rule.
+Long focal lengths may be appropriate for:
 
-If two lenses are used from the SAME camera position:
+- distant subjects
+- isolated details
+- observational viewpoints
+- battlefield layers
+- landscapes
+- compressed compositions
+- restricted camera positions
 
-- the focal length changes field of view
-- the framing changes
-- perspective remains fundamentally determined by the same camera position
+Do not automatically associate telephoto lenses with artificial background blur or compression.
 
-If two lenses are used to create the SAME FRAMING:
+Telephoto selection primarily narrows FOV.
 
-- the camera position generally changes
-- the perspective therefore changes
-
-Example:
-
-A 35mm lens close to a character and an 85mm lens farther away may produce similar framing but different spatial relationships.
-
-The 35mm setup may show stronger foreground-background separation.
-
-The 85mm setup may produce a more compressed spatial appearance.
-
-Do not attribute all of this difference to focal length alone.
+Any resulting spatial compression depends on camera position and scene geometry.
 
 ==================================================
-FOCAL LENGTH AND FIELD OF VIEW
+FACES AND HUMAN PROPORTIONS
 ==================================================
 
-Shorter focal length:
+Focal length must not be used to manufacture facial aesthetics.
 
-→ wider FOV
-
-Longer focal length:
-
-→ narrower FOV
-
-The actual FOV depends on sensor dimensions.
-
-Do not use focal length without considering the camera's sensor format.
-
-==================================================
-SENSOR FORMAT / CROP FACTOR
-==================================================
-
-The same physical focal length produces different fields of view on different sensor formats.
-
-For example:
-
-50mm on full frame
-and
-50mm on a crop sensor
-
-are physically the same focal length but do not produce the same field of view.
-
-Use crop factor only as a field-of-view comparison.
-
-Do not claim that the lens physically becomes a longer focal length on a crop sensor.
-
-==================================================
-FOCAL LENGTH AND PERSPECTIVE
-==================================================
-
-Never use the following simplified rule:
-
-"Wide lens = distorted perspective."
-
-Instead:
-
-A wide lens used close to a subject can produce strong perspective differences.
-
-A telephoto lens used farther away can produce more compressed spatial relationships.
-
-The underlying cause is the camera's physical position relative to the scene.
-
-Maintain this distinction throughout every shot.
-
-==================================================
-FOCAL LENGTH AND FACES
-==================================================
-
-Human facial geometry must remain realistic.
-
-For close-ups:
-
-avoid using extremely short focal lengths at extremely close distances unless the shot intentionally requires the resulting perspective.
-
-Potential effects of excessive proximity include:
-
-- enlarged nose
-- exaggerated forehead
-- altered jaw proportions
-- increased facial depth
-- stretched peripheral features
-
-For natural portraits:
-
-choose an appropriate combination of:
+For character shots, evaluate:
 
 - focal length
 - camera distance
 - sensor format
 - framing
+- subject orientation
+- perspective
 
-Longer focal lengths can provide natural facial rendering when used from an appropriate distance.
+Very close camera placement with a short focal length may exaggerate facial features.
 
-Do not automatically use long lenses for every portrait.
+A longer focal length combined with greater camera distance may produce a different facial perspective.
 
-==================================================
-FOCAL LENGTH AND ENVIRONMENT
-==================================================
+Do not digitally correct physically resulting facial geometry.
 
-Select focal length according to how much environmental information the shot requires.
+Select a more appropriate physical camera configuration instead.
 
-WIDER FOCAL LENGTHS:
-
-Useful when:
-
-- environment is narratively important
-- scale must be established
-- architecture must be included
-- character and environment must coexist
-- immersive movement is required
-
-LONGER FOCAL LENGTHS:
-
-Useful when:
-
-- environment should be selectively isolated
-- distant geography is important
-- visual layering is required
-- character observation is appropriate
-- battlefield or crowd density needs emphasis
-- mountains or distant architecture need visual prominence
-
-Do not choose focal length merely because the scene is "epic."
+Character identity must remain stable across focal-length changes.
 
 ==================================================
-FOCAL LENGTH AND ARCHITECTURE
+ARCHITECTURE
 ==================================================
 
 For:
@@ -345,133 +405,87 @@ For:
 - palaces
 - temples
 - corridors
-- gateways
 - pillars
+- gateways
 - cities
 - rooms
 
-choose focal length and camera position that preserve believable geometry.
-
-Wide lenses may reveal more architecture but can exaggerate perspective when used close.
-
-Longer lenses may reduce perspective exaggeration but require greater camera distance.
-
-Do not use digital correction to hide an inappropriate lens choice.
-
-Choose the physical camera configuration appropriately.
-
-==================================================
-FOCAL LENGTH AND LANDSCAPES
-==================================================
-
-Wide lenses may emphasize:
-
-- foreground scale
-- environmental breadth
-- spatial depth
-- sky
-- surrounding geography
-
-Long lenses may emphasize:
-
-- distant mountains
-- layered terrain
-- atmospheric depth
-- isolated environmental features
-- dense spatial layers
-
-Do not artificially enlarge distant mountains.
-
-Do not flatten landscapes unnaturally.
-
-Atmospheric perspective must remain physically plausible.
-
-==================================================
-FOCAL LENGTH AND CROWDS
-==================================================
-
-For crowds and armies:
-
-wide focal lengths may emphasize spatial scale and immersion.
-
-Long focal lengths may visually compress people into denser layers.
+select focal length and camera position together.
 
 Maintain:
 
-- correct human scale
-- correct depth ordering
-- natural occlusion
-- consistent motion
-- stable individual anatomy
+- straight architectural geometry where physically appropriate
+- stable scale relationships
+- consistent perspective
+- stable vanishing behaviour
+- consistent geometry across frames
 
-Do not allow people to merge, duplicate, morph, or occupy impossible spatial positions.
+Do not use focal length to justify impossible architectural distortion.
+
+Any distortion must correspond to the actual lens design and camera geometry.
+
+==================================================
+LANDSCAPES
+==================================================
+
+Focal length may determine whether a landscape is represented as:
+
+- expansive
+- contextual
+- layered
+- distant
+- isolated
+
+But do not use focal length to artificially enlarge or shrink geographic features.
+
+Mountains, buildings, trees, and terrain must retain physically coherent scale relationships.
+
+Atmospheric perspective must remain independent from focal length.
 
 ==================================================
 FOCAL LENGTH AND DEPTH OF FIELD
 ==================================================
 
-Do not confuse focal length with depth of field.
+Do not treat focal length as an isolated depth-of-field control.
 
-Focal length contributes to depth-of-field behaviour, but depth of field also depends on:
+Depth of field depends on the combined relationship between:
 
+- focal length
 - aperture
 - focus distance
 - sensor format
-- camera distance
+- circle of confusion
 - subject distance
 - background distance
+- framing / camera position
 
-Never assume:
+Do not assume:
 
-LONG LENS = ALWAYS SHALLOW DOF
+LONG FOCAL LENGTH = AUTOMATICALLY SHALLOW DOF
 
 or:
 
-WIDE LENS = ALWAYS DEEP DOF
+SHORT FOCAL LENGTH = AUTOMATICALLY DEEP DOF
 
-Evaluate the complete camera configuration.
+Evaluate the complete physical camera configuration.
 
 ==================================================
 FOCAL LENGTH AND BOKEH
 ==================================================
 
-Bokeh depends on the selected lens and complete shooting configuration.
+Do not select focal length solely to request bokeh.
 
-Longer focal lengths can produce stronger apparent background separation under appropriate conditions.
+Bokeh depends on:
 
-However, do not automatically add:
-
-- circular bokeh
-- huge glowing orbs
-- excessive background blur
-
-Bokeh must emerge naturally from:
-
-- lens design
-- focal length
+- lens optical design
 - aperture
 - focus distance
-- subject/background distances
+- subject distance
+- background distance
+- focal length
+- sensor / image formation
 
-==================================================
-FOCAL LENGTH AND LENS DISTORTION
-==================================================
-
-Do not assume focal length alone determines distortion.
-
-Distortion depends strongly on lens design.
-
-A modern wide-angle lens may be highly corrected.
-
-A vintage lens may show more barrel distortion.
-
-A long lens may still have measurable distortion depending on its optical design.
-
-Therefore:
-
-FOCAL LENGTH ≠ DISTORTION PROFILE
-
-Use the selected lens profile to determine distortion.
+Focal length alone does not authorize artificial bokeh.
 
 ==================================================
 FOCAL LENGTH AND ANAMORPHIC LENSES
@@ -479,194 +493,261 @@ FOCAL LENGTH AND ANAMORPHIC LENSES
 
 If an anamorphic lens is selected:
 
-maintain the physical focal length separately from:
+focal length must refer to the physical optical system being used.
 
+Do not substitute a generic spherical-lens interpretation for anamorphic optics.
+
+Account for:
+
+- physical focal length
+- anamorphic design
 - squeeze factor
-- horizontal optical compression
-- anamorphic bokeh
-- flare
-- distortion
+- sensor format
+- desqueezed presentation
+- lens-specific optical behaviour
 
-Do not treat anamorphic squeeze as focal length.
+Do not automatically infer:
 
-Do not assume anamorphic lenses automatically require extreme wide-angle imagery.
+- horizontal streaks
+- oval bokeh
+- strong distortion
+- strong flare
+- cinematic artifacts
 
-The selected focal length must still serve the individual shot.
-
-==================================================
-FOCAL LENGTH AND CAMERA MOVEMENT
-==================================================
-
-During:
-
-- dolly
-- tracking
-- crane
-- orbit
-- pan
-- tilt
-
-the focal length should remain constant unless an actual lens change or zoom is specified.
-
-Camera movement changes perspective and framing.
-
-It does not spontaneously change focal length.
-
-Maintain stable optical characteristics throughout the shot.
+from focal length alone.
 
 ==================================================
 ZOOM LENSES
 ==================================================
 
-If a zoom lens is selected:
+A zoom lens contains a variable focal-length range.
 
-focal length may change continuously.
+If a zoom is used:
 
-The change must be physically plausible and temporally smooth.
+represent focal length as a continuous or explicitly selected physical value within the lens's valid range.
 
-ZOOM IN:
-longer focal length
-→ narrower FOV
+Do not allow focal length to change between frames without a physical zoom or other defined camera-system change.
 
-ZOOM OUT:
-shorter focal length
-→ wider FOV
+A zoom changes:
 
-Do not simulate optical zoom using digital scaling.
+- FOV
+- framing
+- magnification
 
-If a zoom is not specified, do not introduce one.
+while the physical camera position may remain unchanged.
+
+==================================================
+PRIME LENSES
+==================================================
+
+A prime lens has a fixed focal length.
+
+If a prime lens is selected:
+
+the focal length must remain constant unless the physical lens is changed.
+
+Do not simulate a focal-length change digitally while treating the shot as a fixed prime lens.
+
+==================================================
+CAMERA MOVEMENT
+==================================================
+
+During:
+
+- pan
+- tilt
+- dolly
+- tracking
+- crane
+- orbit
+
+focal length remains constant unless a physical zoom or lens change occurs.
+
+Camera movement changes the camera's position and/or orientation.
+
+It does not inherently change focal length.
+
+Do not create focal-length drift during ordinary camera movement.
 
 ==================================================
 DOLLY VS ZOOM
 ==================================================
 
-Do not confuse:
-
 DOLLY:
-physical camera movement.
+
+changes camera position.
 
 ZOOM:
-focal-length change.
 
-A dolly changes perspective.
+changes focal length.
 
-A zoom changes framing and FOV without changing camera position.
+They are not interchangeable.
 
-If both occur simultaneously, preserve the separate optical consequences of each.
+A dolly may change perspective while preserving FOV.
+
+A zoom changes FOV while camera position may remain constant.
+
+A dolly zoom intentionally combines both.
+
+Do not simulate one using the other.
 
 ==================================================
 DOLLY ZOOM
 ==================================================
 
-Only perform a dolly zoom when explicitly motivated by the shot.
+If a dolly zoom is explicitly required:
 
-Use:
+- physically change camera position
+- physically change focal length
+- maintain the intended subject framing
+- allow perspective relationships to change
+- preserve physically coherent geometry
 
-- physical camera movement
-- simultaneous focal-length change
-- approximately maintained subject framing
-- changing background perspective
-
-Do not simulate a dolly zoom through digital scaling.
-
-==================================================
-FOCAL LENGTH DURING FOCUS PULLS
-==================================================
-
-If the lens is a fixed focal-length lens:
-
-do not allow the focal length to change during a focus pull.
-
-Any apparent image change should come from:
-
-- focus
-- focus breathing
-- depth-of-field transition
-- optical characteristics
-
-If the lens profile includes focus breathing, apply it subtly and consistently.
+Do not create a dolly zoom using digital scaling or background warping.
 
 ==================================================
-VIDEO TEMPORAL CONSISTENCY
+TEMPORAL CONSISTENCY
 ==================================================
 
-This is an AI-generated VIDEO system.
+This is a VIDEO generation system.
 
-Focal length must remain temporally consistent unless a deliberate zoom or lens change occurs.
+Focal length must remain temporally stable unless a physical configuration change occurs.
 
 Do NOT allow:
 
-- spontaneous FOV changes
-- random perspective shifts
-- background scale changes
-- facial proportions changing
-- architecture changing shape
-- focal-length flickering
+- focal-length flicker
+- random FOV changes
+- spontaneous perspective changes
+- background scale jumps
+- changing facial proportions
+- changing architectural proportions
 - unstable lens distortion
-- sudden depth-of-field changes
-- objects changing apparent distance without camera movement
+- unstable depth of field
+- unstable optical character
 
-During camera movement, perspective must evolve continuously.
+If focal length changes, the resulting:
 
-During a zoom, FOV must change continuously.
+- FOV
+- framing
+- optical behaviour
+- perspective consequences where camera position changes
+- depth-of-field behaviour
+- lens character
 
-During a lens change, the optical transition must occur only when physically and editorially specified.
+must remain physically coherent.
 
 ==================================================
-AI VIDEO REALISM
+AI ARTIFACT FIREWALL
 ==================================================
 
-Never simulate focal length through:
+Never implement focal length through:
 
 - digital zoom
-- digital stretching
-- artificial background enlargement
-- fake perspective
-- synthetic blur
-- artificial compression
-- computational lens effects
+- screen-space scaling
+- background resizing
+- artificial perspective warping
+- object-specific magnification
+- depth-map manipulation
+- semantic image transformation
+- frame-specific geometry correction
 
-Instead, construct the shot as if the specified physical lens were actually mounted on the specified camera.
+Correct causal direction:
 
-The viewer should never feel that focal length has been digitally imposed.
+STORY
+->
+SHOT PURPOSE
+->
+COMPOSITION
+->
+SENSOR
+->
+REQUIRED FOV
+->
+CAMERA POSITION
+->
+PHYSICAL FOCAL LENGTH
+->
+OPTICAL CONSEQUENCES
+->
+RECORDED IMAGE
+
+Never reverse this relationship.
+
+Do not decide the desired "look" first and fabricate focal-length behaviour afterward.
 
 ==================================================
-STORY-FIRST RULE
+LENS CONTINUITY
 ==================================================
 
-Focal length must serve:
+Within a continuous shot:
 
-- story
-- character relationship
-- emotional distance
-- spatial geography
-- composition
-- environment
-- movement
-- scale
-- visual attention
+the focal length must remain stable unless:
 
-Do not select focal length merely because it is considered "cinematic."
+- a physical zoom occurs
+- a physical lens change occurs
+- an explicitly defined camera-system change occurs
 
-Every focal-length choice should have a reason within the shot.
+Between shots:
+
+focal length may change according to the shot design.
+
+Lens changes must produce correspondingly consistent changes in:
+
+- FOV
+- optical character
+- distortion
+- bokeh
+- depth of field
+- perspective only where camera position changes
+
+==================================================
+PHYSICAL VALIDATION
+==================================================
+
+Before accepting the selected focal length, validate:
+
+- lens exists within the selected lens system
+- focal length is physically valid
+- sensor is compatible with the lens image circle
+- required FOV is achievable
+- required framing is achievable
+- camera position is physically plausible
+- subject distance is physically plausible
+- aperture is available
+- focus distance is available
+- resulting perspective is coherent
+- resulting depth of field is coherent
+- resulting optical character is consistent
+
+If validation fails:
+
+1. identify the earliest invalid physical parameter
+2. correct that parameter
+3. recalculate dependent parameters
+4. regenerate the optical result
+5. never digitally patch the image to conceal the invalid configuration
 
 ==================================================
 NATURALISM RULE
 ==================================================
 
-The audience should perceive a believable camera image, not a recognizable "lens effect."
+Focal length must produce only the optical consequences supported by the selected physical configuration.
 
-Do NOT exaggerate:
+NO PHYSICAL SUPPORT -> DO NOT INVENT THE EFFECT
 
-- wide-angle perspective
-- telephoto compression
-- background enlargement
-- subject isolation
-- facial distortion
-- depth
-- bokeh
+WEAK SUPPORT -> NATURAL / SUBTLE
 
-The focal length should feel appropriate to the physical camera placement and visual purpose.
+STRONG SUPPORT -> PHYSICALLY APPROPRIATE
+
+Never exaggerate focal-length characteristics because a scene is:
+
+- epic
+- dramatic
+- emotional
+- beautiful
+- cinematic
+- immersive
+- mythological
 
 ==================================================
 DEFAULT RAMAYANA PROFILE
@@ -680,37 +761,25 @@ shot-dependent
 SENSOR:
 full-frame reference
 
+FOV:
+derived from physical focal length + active sensor area
+
 PERSPECTIVE:
-physically accurate
-
-FIELD_OF_VIEW:
-physically calculated
-
-DISTORTION:
-lens-dependent
-
-COMPRESSION:
-camera-position dependent
-
-DEPTH_OF_FIELD:
-physically derived
-
-BOKEH:
-lens-dependent
-
-FACIAL_GEOMETRY:
-natural
-
-ARCHITECTURAL_GEOMETRY:
-stable
+derived primarily from camera position and scene geometry
 
 DIGITAL_ZOOM:
+none
+
+DIGITAL_REFRAMING:
 none
 
 ARTIFICIAL_PERSPECTIVE:
 none
 
-TEMPORAL_CONSISTENCY:
+ARTIFICIAL_COMPRESSION:
+none
+
+TEMPORAL_FOCAL_LENGTH_STABILITY:
 extremely high
 
 OPTICAL_REALISM:
@@ -747,14 +816,20 @@ Never begin with:
 Instead determine:
 
 WHAT THE SHOT NEEDS
-→ HOW MUCH OF THE SCENE MUST BE VISIBLE
-→ WHERE THE CAMERA SHOULD BE
-→ WHICH SENSOR IS USED
-→ WHICH PHYSICAL FOCAL LENGTH PROVIDES THE REQUIRED FRAMING
-→ WHAT NATURAL PERSPECTIVE RESULTS
+->
+HOW MUCH OF THE SCENE MUST BE VISIBLE
+->
+WHERE THE CAMERA SHOULD BE
+->
+WHICH SENSOR IS USED
+->
+WHICH PHYSICAL FOCAL LENGTH PROVIDES THE REQUIRED FRAMING
+->
+WHAT NATURAL PERSPECTIVE RESULTS
 
 The final video must look like real professionally photographed live-action footage captured through a real physical lens.
 
 Focal length must behave as a physical property of the camera system, never as an AI visual effect.
 
 It must never look AI-generated.
+

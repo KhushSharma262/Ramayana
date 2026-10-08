@@ -1,4 +1,4 @@
-# MINIMUM FOCUS DISTANCE
+﻿# MINIMUM FOCUS DISTANCE
 
 ## PURPOSE
 
@@ -47,6 +47,365 @@ RECONFIGURE THE CAMERA/LENS SYSTEM.
 Do not violate the physical constraint.
 
 ==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+MFD must be treated as a physical lens constraint.
+
+UNKNOWN does not mean:
+
+- close focus
+- macro capability
+- increased magnification
+- shallow DOF
+- artificial sharpness
+- digital enlargement
+
+If the lens MFD is unknown:
+
+do not invent an exact focusing limit.
+
+Use only explicitly known lens data or a physically conservative
+configuration until the lens specification is established.
+
+Never infer MFD solely from:
+
+- focal length
+- sensor format
+- crop factor
+- aperture
+- lens category
+- cinematic intent
+
+==================================================
+MFD VALIDATION PRECEDENCE
+==================================================
+
+Minimum-focus validation must occur before finalizing:
+
+- camera position
+- framing
+- magnification
+- focus distance
+- macro behaviour
+- focus transitions
+- camera movement
+
+Required order:
+
+LENS SELECTION
+→ MFD
+→ SUBJECT DISTANCE
+→ WORKING DISTANCE
+→ FOCUS VALIDITY
+→ CAMERA POSITION
+→ FOCAL LENGTH / FRAMING
+→ MAGNIFICATION
+→ FOCUS BEHAVIOUR
+→ FINAL OPTICAL RESULT
+
+A configuration that violates MFD is invalid before any visual rendering
+decision is made.
+
+==================================================
+MFD REFERENCE-POINT RULE
+==================================================
+
+The system must preserve the distinction between:
+
+- manufacturer-defined MFD
+- sensor-plane focus distance
+- lens-to-subject distance
+- working distance
+
+Never silently convert between these measurements.
+
+If the lens specification defines MFD from the sensor plane:
+
+use that convention.
+
+If the specification defines a different optical reference:
+
+preserve that convention.
+
+Do not invent a conversion when the required reference information
+is unavailable.
+
+==================================================
+MFD HARD-CONSTRAINT FIREWALL
+==================================================
+
+If:
+
+SUBJECT_DISTANCE < VALID_MFD_REFERENCE_DISTANCE
+
+then:
+
+FOCUS_VALID = FALSE
+
+The system must not compensate through:
+
+- digital zoom
+- digital cropping
+- synthetic sharpening
+- artificial depth maps
+- computational focus
+- subject deformation
+- synthetic blur
+- AI reconstruction
+- hidden lens substitution
+
+The physical configuration must change.
+
+==================================================
+MFD / CAMERA-POSITION FIREWALL
+==================================================
+
+Moving the camera to satisfy MFD changes physical scene geometry.
+
+Recalculate:
+
+- perspective
+- subject scale
+- foreground/background relationship
+- parallax
+- framing
+- background scale
+- DOF
+- bokeh
+- spatial compression
+
+Do not preserve the original perspective digitally after changing
+camera position.
+
+==================================================
+MFD / MAGNIFICATION FIREWALL
+==================================================
+
+MFD does not independently determine magnification.
+
+Magnification depends on the complete optical configuration.
+
+Do not infer:
+
+SHORTER MFD = AUTOMATICALLY HIGHER MAGNIFICATION.
+
+Do not infer:
+
+LONGER MFD = AUTOMATICALLY LOWER MAGNIFICATION.
+
+Use explicit magnification data when available.
+
+If magnification is unknown:
+
+do not invent a precise magnification value.
+
+==================================================
+MFD / FOCUS-RANGE FIREWALL
+==================================================
+
+The focus mechanism must remain inside its physical focusing range.
+
+When the lens reaches its closest focusing limit:
+
+the focus mechanism must stop at the physical boundary.
+
+Never allow:
+
+- focus continuation beyond the physical limit
+- perfect sharpness below MFD
+- artificial focus recovery
+- focus snapping through the limit
+- infinite focus-ring travel
+- digital refocusing
+
+If the subject continues moving closer:
+
+natural defocus may occur unless the physical camera/lens configuration
+changes.
+
+==================================================
+MFD / MOVEMENT VALIDATION
+==================================================
+
+For moving cameras or subjects, MFD must be evaluated continuously.
+
+Valid state:
+
+SUBJECT_DISTANCE >= MFD
+
+Approaching limit:
+
+FOCUS_MARGIN decreases.
+
+At limit:
+
+FOCUS reaches physical boundary.
+
+Beyond limit:
+
+FOCUS cannot remain valid without changing the physical configuration.
+
+The system must never maintain perfect focus below MFD simply because
+the subject is narratively important.
+
+==================================================
+MFD / MACRO AUTHORIZATION
+==================================================
+
+MFD alone does not authorize macro behaviour.
+
+Macro requires an appropriate combination of:
+
+- focusing capability
+- magnification
+- working distance
+- lens design
+- camera position
+- subject scale
+
+A lens with short MFD is not automatically a macro lens.
+
+A close-up is not automatically macro.
+
+==================================================
+MFD / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+MFD must not be used as a reason to invent:
+
+- stronger bokeh
+- stronger distortion
+- flare
+- ghosting
+- chromatic aberration
+- breathing
+- anamorphic character
+
+Each optical characteristic requires its own physical cause.
+
+==================================================
+MFD / AI ARTIFACT FIREWALL
+==================================================
+
+The causal direction must remain:
+
+LENS
+→ MFD
+→ CAMERA POSITION
+→ SUBJECT DISTANCE
+→ FOCUS RANGE
+→ FOCUS VALIDITY
+→ OPTICAL IMAGE
+
+Never:
+
+DESIRED CLOSE-UP
+→ DIGITAL ENLARGEMENT
+→ ARTIFICIAL FOCUS
+→ IMAGE
+
+Prohibited:
+
+- digital macro disguised as optical magnification
+- focus masks
+- depth-map focus correction
+- impossible sharpness below MFD
+- artificial camera proximity
+- unchanged reflections after virtual camera movement
+- unstable magnification
+- changing lens identity
+- subject geometry changes to satisfy focus
+- focus recovery without physical cause
+
+==================================================
+TEMPORAL MFD VALIDATION
+==================================================
+
+Within a continuous shot:
+
+MFD must remain stable unless the physical lens configuration changes.
+
+The following may change naturally:
+
+- subject distance
+- focus margin
+- focus validity
+- magnification
+- perspective
+- parallax
+
+but only as consequences of actual camera, subject, lens, or focus
+movement.
+
+Never allow:
+
+- MFD flicker
+- random focus-limit changes
+- spontaneous lens substitution
+- impossible focus recovery
+- magnification jumps
+- geometry morphing
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If MFD validation fails:
+
+1. identify the physical constraint violation
+2. identify the earliest incorrect camera/lens parameter
+3. correct that parameter
+4. recalculate dependent geometry
+5. recalculate focus
+6. recalculate framing
+7. recalculate DOF and optical behaviour
+8. validate the complete shot again
+
+Never repair an MFD violation after image formation.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physical configurations can satisfy the shot:
+
+prefer the configuration that introduces the fewest unnecessary optical
+changes while still meeting the story and framing requirements.
+
+Do not move the camera closer merely because a more dramatic close-up
+is desired.
+
+Do not select an extreme macro configuration when a conventional
+close-focus setup is sufficient.
+
+==================================================
+FINAL MFD REALISM RULE
+==================================================
+
+Every MFD decision must be explainable as a real cinematographer's
+physical camera and lens decision.
+
+The system must be able to establish:
+
+- what lens is being used
+- what MFD convention applies
+- where the camera is
+- how far the subject is
+- whether focus is physically valid
+- whether the required framing is achievable
+- whether the required magnification is achievable
+- whether working distance is plausible
+- whether camera movement remains within the focus limit
+
+If the configuration cannot satisfy these constraints:
+
+RECONFIGURE THE CAMERA/LENS SYSTEM.
+
+Never fake the solution digitally.
+
+==================================================
+==================================================
 DEFINITION
 ==================================================
 
@@ -90,7 +449,7 @@ Working distance is generally shorter than the lens-to-subject focus distance.
 
 Therefore:
 
-MFD ≠ working distance.
+MFD â‰  working distance.
 
 For close-up and macro photography, working distance is especially important.
 
@@ -156,17 +515,17 @@ MFD must be considered during lens selection.
 Lens selection sequence:
 
 STORY
-→ SHOT PURPOSE
-→ SUBJECT
-→ REQUIRED FRAMING
-→ REQUIRED CAMERA POSITION
-→ REQUIRED FOCUS DISTANCE
-→ LENS MFD
-→ LENS SELECTION
-→ FOCAL LENGTH
-→ APERTURE
-→ DOF
-→ FINAL OPTICAL RESULT
+â†’ SHOT PURPOSE
+â†’ SUBJECT
+â†’ REQUIRED FRAMING
+â†’ REQUIRED CAMERA POSITION
+â†’ REQUIRED FOCUS DISTANCE
+â†’ LENS MFD
+â†’ LENS SELECTION
+â†’ FOCAL LENGTH
+â†’ APERTURE
+â†’ DOF
+â†’ FINAL OPTICAL RESULT
 
 Do not select a lens based only on focal length.
 
@@ -421,11 +780,11 @@ The system must continuously validate MFD.
 Example:
 
 camera begins at a valid focus distance
-→ camera moves toward subject
-→ subject distance decreases
-→ camera approaches MFD
-→ focus reaches physical limit
-→ further movement requires lens/camera adjustment or controlled defocus.
+â†’ camera moves toward subject
+â†’ subject distance decreases
+â†’ camera approaches MFD
+â†’ focus reaches physical limit
+â†’ further movement requires lens/camera adjustment or controlled defocus.
 
 Do not allow the camera to pass through the optical focusing limit while maintaining perfect focus.
 
@@ -784,11 +1143,11 @@ SUBJECT TOO CLOSE
 
 the system must not respond:
 
-DIGITAL_ZOOM ↑
+DIGITAL_ZOOM â†‘
 
 Instead:
 
-LENS_CONFIGURATION → CHANGE
+LENS_CONFIGURATION â†’ CHANGE
 
 ==================================================
 MFD AND FOCUS HUNTING
@@ -1046,3 +1405,4 @@ No hidden MFD violations.
 No AI-generated optical behaviour.
 
 It must never look AI-generated.
+

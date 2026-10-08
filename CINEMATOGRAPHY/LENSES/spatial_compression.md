@@ -1,4 +1,4 @@
-# SPATIAL COMPRESSION
+﻿# SPATIAL COMPRESSION
 
 ## PURPOSE
 
@@ -33,6 +33,368 @@ The system must therefore distinguish:
 
 These are related but not interchangeable.
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Spatial compression must never be treated as an independently adjustable visual effect.
+
+The system must determine the physical cause before describing or applying compression.
+
+Required causal order:
+
+CAMERA POSITION
+→ SUBJECT DISTANCE
+→ BACKGROUND DISTANCE
+→ RELATIVE DEPTH
+→ PERSPECTIVE RELATIONSHIP
+→ APPARENT SPATIAL COMPRESSION.
+
+FOCAL LENGTH primarily determines:
+
+- field of view
+- framing
+- magnification
+
+It does not independently compress physical space.
+
+If required physical parameters are unknown, do not invent compression strength, perspective flattening, background enlargement, or depth reduction.
+
+When uncertain:
+
+choose the physically plausible result with the least artificial intervention.
+
+==================================================
+SPATIAL COMPRESSION VALIDATION PRECEDENCE
+==================================================
+
+Evaluate spatial compression in this order:
+
+1. CAMERA POSITION
+2. SUBJECT DISTANCE
+3. BACKGROUND DISTANCE
+4. RELATIVE DEPTH
+5. PERSPECTIVE RELATIONSHIP
+6. FRAMING REQUIREMENT
+7. FOCAL LENGTH
+8. FIELD OF VIEW
+9. MAGNIFICATION
+10. LENS DISTORTION
+11. DEPTH OF FIELD
+12. ANAMORPHIC CHARACTER
+13. TEMPORAL CONSISTENCY.
+
+No downstream parameter may contradict the established camera geometry.
+
+==================================================
+SPATIAL-COMPRESSION / CAMERA-POSITION FIREWALL
+==================================================
+
+Camera position is the primary physical cause of spatial compression.
+
+If the camera moves farther from the subject:
+
+- relative scale differences across depth decrease
+- perspective differences decrease
+- distant objects occupy a larger relative proportion of the frame when framing is maintained
+- the scene may appear spatially denser or more compressed.
+
+If the camera moves closer:
+
+- relative scale differences increase
+- foreground/background scale differences become stronger
+- spatial depth appears more expansive.
+
+Never simulate either result by digitally resizing scene elements.
+
+==================================================
+SPATIAL-COMPRESSION / FOCAL-LENGTH FIREWALL
+==================================================
+
+Changing focal length while keeping camera position fixed changes:
+
+- field of view
+- framing
+- magnification
+
+It does not independently change perspective geometry.
+
+Therefore:
+
+SAME CAMERA POSITION
++
+DIFFERENT FOCAL LENGTH
+=
+DIFFERENT FRAMING
+
+not:
+
+DIFFERENT PHYSICAL PERSPECTIVE.
+
+Compression must not be increased merely because focal length increases.
+
+==================================================
+SPATIAL-COMPRESSION / SAME-FRAMING FIREWALL
+==================================================
+
+When maintaining approximately the same framing while increasing focal length, the camera will generally move farther from the subject.
+
+That camera movement may change:
+
+- perspective
+- relative scale
+- parallax
+- foreground/background relationships
+- apparent spatial density.
+
+The resulting compression must therefore be attributed to the changed camera position, not to an independent telephoto-compression property.
+
+==================================================
+SPATIAL-COMPRESSION / PERSPECTIVE FIREWALL
+==================================================
+
+Perspective is the underlying spatial geometry.
+
+Spatial compression is a descriptive consequence of reduced relative perspective differences.
+
+Do not create a separate synthetic "compression" transformation.
+
+Never:
+
+- flatten depth digitally
+- reduce perspective independently
+- enlarge backgrounds independently
+- shrink foreground objects independently
+- manipulate depth maps to force compression
+- alter object scale independently of camera geometry.
+
+==================================================
+SPATIAL-COMPRESSION / BACKGROUND FIREWALL
+==================================================
+
+A distant background object may appear larger relative to the subject when the camera is farther away and framing is maintained.
+
+The background must remain physically located at its actual scene distance.
+
+Never enlarge, reposition, or scale the background independently to create compression.
+
+Occlusion and overlap must remain consistent with the real 3D scene.
+
+==================================================
+SPATIAL-COMPRESSION / PARALLAX FIREWALL
+==================================================
+
+Relative camera movement must produce physically consistent parallax.
+
+Foreground, subject, and background layers must not move as independently composited 2D planes.
+
+If camera movement is present:
+
+- near objects respond more strongly
+- distant objects respond less strongly
+- relative motion follows scene depth
+- spatial relationships remain continuous.
+
+==================================================
+SPATIAL-COMPRESSION / LENS-DISTORTION FIREWALL
+==================================================
+
+Spatial compression is not lens distortion.
+
+Do not use:
+
+- barrel distortion
+- pincushion distortion
+- moustache distortion
+- digital warping
+
+to create or strengthen compression.
+
+Lens distortion must remain an independent optical property determined by the selected lens/system and image position.
+
+==================================================
+SPATIAL-COMPRESSION / WIDE-ANGLE FIREWALL
+==================================================
+
+Wide-angle lenses may exaggerate apparent foreground/background scale differences when the camera is close to the subject.
+
+This does not mean the lens independently creates "anti-compression."
+
+The observed spatial expansion must remain a consequence of camera position and scene geometry.
+
+==================================================
+SPATIAL-COMPRESSION / TELEPHOTO FIREWALL
+==================================================
+
+Telephoto lenses are commonly associated with compressed-looking images because they permit equivalent framing from farther camera positions.
+
+Therefore:
+
+TELEPHOTO ≠ INDEPENDENT COMPRESSION EFFECT.
+
+Do not automatically apply stronger compression whenever a long focal length is selected.
+
+The actual camera position must justify the appearance.
+
+==================================================
+SPATIAL-COMPRESSION / DOF FIREWALL
+==================================================
+
+Depth of field is independent from spatial compression.
+
+A shallow DOF does not create compression.
+
+A deep DOF does not remove compression.
+
+DOF must be calculated from:
+
+- focal length
+- aperture
+- focus distance
+- sensor/format
+- subject distance
+- acceptable circle of confusion.
+
+Do not use blur to imitate spatial flattening.
+
+==================================================
+SPATIAL-COMPRESSION / ANAMORPHIC FIREWALL
+==================================================
+
+Anamorphic capture may alter:
+
+- field of view behavior
+- distortion
+- bokeh geometry
+- flare behavior
+- breathing
+- optical character.
+
+It does not authorize artificial spatial compression.
+
+Any compressed spatial appearance must still be physically supported by camera position and scene geometry.
+
+==================================================
+SPATIAL-COMPRESSION / MOVEMENT VALIDATION
+==================================================
+
+During camera movement, spatial compression must evolve continuously from changing camera position.
+
+No frame may independently introduce:
+
+- sudden perspective flattening
+- sudden background enlargement
+- sudden depth reduction
+- artificial scale changes.
+
+Push-ins, pull-outs, tracking shots, pans, tilts, cranes, and handheld movement must preserve continuous 3D spatial relationships.
+
+==================================================
+SPATIAL-COMPRESSION / OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Optical character may include:
+
+- distortion
+- vignetting
+- chromatic aberration
+- flare
+- ghosting
+- bokeh
+- breathing.
+
+These effects must be authorized independently by the selected lens/system.
+
+They must never be used as substitutes for spatial compression.
+
+==================================================
+SPATIAL-COMPRESSION / AI ARTIFACT FIREWALL
+==================================================
+
+Compression processing must never produce:
+
+- warped faces
+- changing body proportions
+- unstable background geometry
+- texture crawling
+- object duplication
+- floating objects
+- inconsistent depth
+- unstable perspective
+- temporal scale changes
+- background morphing
+- artificial depth-map edges
+- synthetic layer separation
+- inconsistent reflections or shadows.
+
+The scene must remain a coherent physical 3D environment across every frame.
+
+==================================================
+TEMPORAL SPATIAL-COMPRESSION VALIDATION
+==================================================
+
+Across consecutive frames:
+
+- camera position must evolve continuously
+- subject distance must remain coherent
+- background distance must remain coherent
+- relative scale must remain stable unless physically changing
+- parallax must remain physically consistent
+- perspective must not jump
+- compression must not pulse or fluctuate artificially.
+
+Any unexplained temporal change is a validation failure.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the requested spatial compression conflicts with physical camera geometry:
+
+1. Preserve physical camera geometry.
+2. Recalculate framing.
+3. Recalculate focal length if required.
+4. Recalculate perspective relationship.
+5. Recalculate subject/background scale relationships.
+6. Revalidate parallax and depth.
+7. Reject any remaining artificial compression.
+
+Never repair a physically impossible result with digital spatial manipulation.
+
+==================================================
+MINIMUM SPATIAL INTERVENTION
+==================================================
+
+Apply the smallest physically justified change necessary to satisfy the shot.
+
+Do not exaggerate compression merely because:
+
+- the shot is cinematic
+- a telephoto lens is selected
+- the background should feel "closer"
+- the composition looks more dramatic that way.
+
+Physical plausibility takes priority over visual emphasis.
+
+==================================================
+FINAL SPATIAL-COMPRESSION REALISM RULE
+==================================================
+
+SPATIAL COMPRESSION MUST EMERGE FROM REAL CAMERA POSITION, REAL SUBJECT DISTANCE, REAL BACKGROUND DISTANCE, REAL RELATIVE DEPTH, AND REAL PERSPECTIVE GEOMETRY.
+
+FOCAL LENGTH CONTROLS FOV AND FRAMING; IT DOES NOT INDEPENDENTLY SQUASH SPACE.
+
+NO DIGITAL DEPTH FLATTENING.
+NO ARTIFICIAL BACKGROUND SCALING.
+NO SYNTHETIC PERSPECTIVE REDUCTION.
+NO FAKE TELEPHOTO COMPRESSION.
+NO 2D LAYER COMPOSITING.
+
+THE FINAL RESULT MUST LOOK LIKE A REAL CAMERA CAPTURED THE SCENE FROM A REAL POSITION IN REAL THREE-DIMENSIONAL SPACE.
+
+IT MUST NEVER LOOK AI-GENERATED.
+
+==================================================
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
 ==================================================
@@ -102,15 +464,15 @@ relative size differences increase.
 Therefore:
 
 CAMERA FARTHER
-→
+â†’
 REDUCED RELATIVE PERSPECTIVE DIFFERENCE
-→
+â†’
 MORE COMPRESSED APPEARANCE
 
 CAMERA CLOSER
-→
+â†’
 GREATER RELATIVE PERSPECTIVE DIFFERENCE
-→
+â†’
 MORE EXPANSIVE APPEARANCE
 
 This must emerge naturally from projection geometry.
@@ -137,16 +499,16 @@ The longer focal length allows the camera to maintain the desired framing from t
 
 Therefore:
 
-TELEPHOTO ≠ COMPRESSION EFFECT
+TELEPHOTO â‰  COMPRESSION EFFECT
 
 Instead:
 
 CAMERA DISTANCE
-→
+â†’
 PERSPECTIVE RELATIONSHIP
 
 FOCAL LENGTH
-→
+â†’
 FOV / FRAMING.
 
 ==================================================
@@ -264,7 +626,7 @@ the apparent size ratio depends on their distances from the camera.
 
 A simplified relationship is:
 
-APPARENT_SIZE ∝ 1 / DISTANCE
+APPARENT_SIZE âˆ 1 / DISTANCE
 
 Therefore, when the camera is far away:
 
@@ -457,15 +819,15 @@ However, longer focal lengths often enable the camera to be positioned farther a
 Therefore:
 
 FOCAL_LENGTH
-→
+â†’
 FRAMING POSSIBILITY
 
 CAMERA_POSITION
-→
+â†’
 PERSPECTIVE
 
 PERSPECTIVE
-→
+â†’
 COMPRESSED SPATIAL APPEARANCE.
 
 ==================================================
@@ -476,7 +838,7 @@ A narrow FOV is often associated with compression because it is commonly produce
 
 But:
 
-NARROW FOV ≠ COMPRESSION.
+NARROW FOV â‰  COMPRESSION.
 
 A narrow FOV from a fixed camera position does not fundamentally alter perspective geometry.
 
@@ -535,13 +897,13 @@ Compression is strongest when the background contains significant depth but the 
 
 For example:
 
-camera → 50 m → subject
-camera → 100 m → background
+camera â†’ 50 m â†’ subject
+camera â†’ 100 m â†’ background
 
 has a smaller relative distance difference than:
 
-camera → 2 m → subject
-camera → 52 m → background.
+camera â†’ 2 m â†’ subject
+camera â†’ 52 m â†’ background.
 
 The second configuration produces much stronger relative depth scaling.
 
@@ -693,7 +1055,7 @@ A non-compressed shot may have strong bokeh.
 Do not connect:
 
 MORE COMPRESSION
-→
+â†’
 MORE BOKEH.
 
 ==================================================
@@ -754,7 +1116,7 @@ However, a wide lens from a distant camera position may still show relatively re
 
 Therefore:
 
-WIDE ≠ EXPANSION ALWAYS.
+WIDE â‰  EXPANSION ALWAYS.
 
 The result depends on camera position.
 
@@ -1110,9 +1472,9 @@ compression should form a coherent spatial language.
 A sequence may intentionally transition:
 
 WIDE / EXPANSIVE
-→
+â†’
 NORMAL
-→
+â†’
 COMPRESSED TELEPHOTO
 
 to change the audience's perception of space.
@@ -1190,53 +1552,53 @@ PARAMETER DEPENDENCIES
 CAMERA_POSITION
 +
 SUBJECT_POSITION
-→
+â†’
 SUBJECT_DISTANCE
 
 CAMERA_POSITION
 +
 BACKGROUND_POSITION
-→
+â†’
 BACKGROUND_DISTANCE
 
 SUBJECT_DISTANCE
 +
 BACKGROUND_DISTANCE
-→
+â†’
 RELATIVE_DEPTH_RELATIONSHIP
 
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING
 
 CAMERA_POSITION
 +
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 PERSPECTIVE
 
 PERSPECTIVE
 +
 RELATIVE_DEPTH
-→
+â†’
 SPATIAL_COMPRESSION_APPEARANCE
 
 CAMERA_TRANSLATION
-→
+â†’
 PERSPECTIVE_CHANGE
 +
 PARALLAX
 
 LENS_DESIGN
-→
+â†’
 DISTORTION / BOKEH / FLARE / OTHER_OPTICAL_CHARACTER
 
 Do not merge:
@@ -1472,21 +1834,21 @@ The correct question is:
 Then derive:
 
 CAMERA POSITION
-→
+â†’
 SUBJECT/BACKGROUND DISTANCES
-→
+â†’
 PERSPECTIVE
-→
+â†’
 FOCAL LENGTH
-→
+â†’
 FOV
-→
+â†’
 FRAMING
-→
+â†’
 SPATIAL COMPRESSION
-→
+â†’
 PARALLAX
-→
+â†’
 OPTICAL CHARACTER.
 
 Never tell the system:
@@ -1511,3 +1873,4 @@ No AI-generated depth.
 The final result must look like genuine live-action cinematography captured from a real camera at a real distance.
 
 It must never look AI-generated.
+

@@ -1,8 +1,10 @@
-### CROP FACTOR / SENSOR FORMAT BEHAVIOUR
+﻿### CROP FACTOR / SENSOR FORMAT BEHAVIOUR
 
-Treat crop factor as a physical camera-sensor property that affects field of view, framing, and the relationship between focal length and sensor size.
+Treat crop factor as a physical camera-sensor property that describes the relationship between a given sensor format and a defined reference format.
 
-Do NOT treat crop factor as a visual effect.
+Crop factor affects field of view, framing, image-circle coverage, and focal-length equivalence.
+
+It is NOT a visual effect.
 
 The final video must look like real professionally captured live-action footage through a real camera and lens.
 
@@ -13,12 +15,11 @@ PHOTOREALISM — NON-NEGOTIABLE
 ==================================================
 
 Maintain:
-
 - physically correct perspective
-- realistic field of view
+- physically correct field of view
 - realistic subject proportions
 - realistic spatial relationships
-- realistic depth
+- realistic depth relationships
 - realistic lens rendering
 - realistic focus behaviour
 - realistic exposure
@@ -31,7 +32,6 @@ Maintain:
 - consistent optical behaviour across frames
 
 Never introduce:
-
 - artificial perspective
 - impossible field of view
 - fake sensor characteristics
@@ -49,23 +49,524 @@ Never introduce:
 When uncertain, choose the physically plausible result.
 
 ==================================================
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Crop factor must never be treated as a visual effect.
+
+It is a derived relationship between sensor dimensions and a defined reference format.
+
+If the actual sensor dimensions are unknown:
+
+- do not invent a crop factor
+- do not invent FOV
+- do not invent focal-length equivalence
+- do not infer perspective
+- do not infer compression
+
+Use the actual sensor dimensions whenever precise optical behaviour is required.
+
+UNKNOWN SENSOR PARAMETERS MUST NOT AUTHORIZE VISUAL EFFECTS.
+
+
+==================================================
+CROP-FACTOR VALIDATION PRECEDENCE
+==================================================
+
+Resolve crop-factor behaviour in this order:
+
+1. ACTUAL SENSOR DIMENSIONS
+2. ACTIVE SENSOR AREA
+3. SENSOR ASPECT RATIO
+4. RECORDING / CROP MODE
+5. LENS IMAGE CIRCLE
+6. PHYSICAL FOCAL LENGTH
+7. FIELD OF VIEW
+8. CAMERA POSITION
+9. FRAMING
+10. DEPTH OF FIELD
+11. FOCAL-LENGTH EQUIVALENCE
+12. OPTICAL CONTINUITY
+13. TEMPORAL CONSISTENCY
+14. STORY / SHOT PURPOSE
+
+Crop factor must never override actual sensor geometry.
+
+
+==================================================
+CROP FACTOR / FOCAL-LENGTH FIREWALL
+==================================================
+
+Crop factor does not change the physical focal length.
+
+A:
+
+50 mm
+
+lens remains:
+
+50 mm
+
+regardless of sensor format.
+
+Do not instruct the system to physically transform a 50 mm lens into a 75 mm or 100 mm lens merely because of crop factor.
+
+Equivalent focal length is a comparison for field of view.
+
+
+==================================================
+CROP FACTOR / PERSPECTIVE FIREWALL
+==================================================
+
+Crop factor does not independently create perspective.
+
+Perspective is determined by:
+
+- camera position
+- subject distance
+- scene geometry
+- relative spatial relationships.
+
+If equivalent framing requires the camera to move:
+
+that camera movement may change perspective.
+
+The crop factor itself does not.
+
+
+==================================================
+CROP FACTOR / SPATIAL COMPRESSION FIREWALL
+==================================================
+
+Crop factor does not independently create spatial compression.
+
+Do not use crop factor to justify:
+
+- flattened depth
+- enlarged distant objects
+- compressed backgrounds
+- telephoto-like spatial relationships.
+
+Any such appearance must arise from actual camera position, subject distance, focal length, and scene geometry.
+
+
+==================================================
+CROP FACTOR / FIELD-OF-VIEW FIREWALL
+==================================================
+
+FOV must be derived from:
+
+ACTUAL_FOCAL_LENGTH
++
+ACTIVE_SENSOR_DIMENSIONS
++
+SENSOR_ASPECT_RATIO
++
+RECORDING_MODE
+
+Do not use crop factor as a substitute when precise FOV is required.
+
+If the active sensor area changes:
+
+recalculate FOV.
+
+
+==================================================
+CROP FACTOR / IMAGE-CIRCLE FIREWALL
+==================================================
+
+The selected lens must cover the active sensor area.
+
+A smaller sensor may record only part of the available image circle.
+
+This does not mean the lens has physically changed.
+
+Do not digitally enlarge the image circle to simulate incompatible sensor coverage.
+
+If:
+
+ACTIVE_SENSOR_AREA > VALID_LENS_COVERAGE
+
+the configuration is invalid.
+
+
+==================================================
+CROP FACTOR / FRAMING FIREWALL
+==================================================
+
+Changing sensor format while keeping:
+
+- lens
+- focal length
+- camera position
+
+constant
+
+changes the recorded FOV and framing.
+
+If identical framing is required:
+
+the physical camera configuration must be solved again.
+
+Do not silently compensate with:
+
+- digital cropping
+- digital zoom
+- image stretching
+- background scaling
+- synthetic perspective.
+
+
+==================================================
+CROP FACTOR / CAMERA-POSITION FIREWALL
+==================================================
+
+If the camera is physically repositioned to maintain equivalent framing after a sensor change:
+
+the resulting perspective may change.
+
+Therefore the system must track separately:
+
+- sensor format
+- focal length
+- camera position
+- subject distance
+- framing
+- perspective.
+
+Never collapse these into a single "equivalent focal length" parameter.
+
+
+==================================================
+CROP FACTOR / DEPTH-OF-FIELD FIREWALL
+==================================================
+
+Crop factor does not directly generate blur.
+
+DOF must be solved from the complete camera configuration.
+
+Consider:
+
+- sensor format
+- focal length
+- aperture
+- focus distance
+- subject distance
+- camera position
+- framing
+- circle of confusion.
+
+Do not say:
+
+CROP FACTOR = MORE BLUR
+
+or:
+
+CROP FACTOR = LESS BLUR
+
+without solving the actual equivalent camera configuration.
+
+
+==================================================
+CROP FACTOR / APERTURE FIREWALL
+==================================================
+
+Crop factor does not change the physical aperture.
+
+A lens selected at:
+
+f/2.8
+
+remains physically:
+
+f/2.8
+
+regardless of sensor format.
+
+Any equivalent-DOF comparison must be explicitly identified as a comparison, not a physical transformation of the lens.
+
+
+==================================================
+CROP FACTOR / ANAMORPHIC FIREWALL
+==================================================
+
+Crop factor does not authorize anamorphic behaviour.
+
+Do not introduce:
+
+- anamorphic squeeze
+- oval bokeh
+- anamorphic flare
+- horizontal streaks
+- anamorphic distortion
+
+because a crop sensor is being used.
+
+Sensor format and optical format remain separate variables.
+
+
+==================================================
+CROP FACTOR / WIDE-TELEPHOTO CLASSIFICATION FIREWALL
+==================================================
+
+Do not classify a physical lens as wide, normal, or telephoto solely from crop-factor multiplication.
+
+Classification must consider:
+
+- actual focal length
+- actual FOV
+- sensor format
+- shot purpose
+- camera position.
+
+Equivalent focal length is a reference comparison, not a physical lens identity.
+
+
+==================================================
+CROP FACTOR / OPTICAL CHARACTER FIREWALL
+==================================================
+
+Crop factor does not automatically create:
+
+- distortion
+- CA
+- flare
+- ghosting
+- vignetting
+- compression
+- bokeh
+- softness
+- sharpness.
+
+These characteristics remain properties of the lens, sensor, aperture, exposure, and physical optical configuration.
+
+Do not invent optical character because a crop factor is present.
+
+
+==================================================
+CROP FACTOR / MOVEMENT FIREWALL
+==================================================
+
+Crop factor must not generate synthetic camera movement.
+
+During:
+
+- dolly
+- tracking
+- orbit
+- crane
+- handheld
+- pan
+- tilt
+
+all spatial changes must come from actual camera movement and scene geometry.
+
+Do not use crop factor to manufacture:
+
+- parallax
+- perspective change
+- background movement
+- subject scaling.
+
+
+==================================================
+CROP FACTOR / RECORDING-MODE FIREWALL
+==================================================
+
+A camera may change its active sensor/readout area through a recording mode.
+
+Such a change may alter:
+
+- active sensor dimensions
+- FOV
+- image-circle usage
+- framing
+- potentially DOF interpretation.
+
+If the recording mode changes during a shot:
+
+the transition must be physically and temporally justified.
+
+Do not silently change crop factor between frames.
+
+
+==================================================
+CROP FACTOR / AI ARTIFACT FIREWALL
+==================================================
+
+Crop factor must never be used to justify:
+
+- warped faces
+- unstable geometry
+- changing FOV
+- background scaling
+- artificial subject isolation
+- architecture distortion
+- texture crawling
+- lens-character flicker
+- synthetic perspective.
+
+If an apparent crop-factor effect looks digitally generated:
+
+remove it and recalculate the physical camera configuration.
+
+
+==================================================
+TEMPORAL CROP-FACTOR VALIDATION
+==================================================
+
+Across consecutive frames verify:
+
+- active sensor area continuity
+- crop factor continuity
+- FOV continuity
+- framing continuity
+- image-circle coverage continuity
+- lens continuity
+- perspective continuity
+- DOF continuity
+- optical-character continuity.
+
+Crop factor may change only when an actual physical or recording configuration changes.
+
+No silent sensor-format drift is permitted.
+
+
+==================================================
+CROP-FACTOR CONTINUITY LOCK
+==================================================
+
+For a continuous shot, preserve:
+
+- sensor format
+- active sensor area
+- recording mode
+- crop factor
+- focal length
+- lens identity
+- camera position
+- FOV
+- framing.
+
+If any parameter changes:
+
+recalculate all dependent optical parameters.
+
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the crop-factor configuration is physically inconsistent:
+
+DO NOT GENERATE THE SHOT AS SPECIFIED.
+
+Instead:
+
+1. identify the incorrect sensor parameter
+2. identify affected optical parameters
+3. recalculate FOV
+4. recalculate framing
+5. recalculate camera position if required
+6. recalculate dependent DOF
+7. revalidate lens coverage
+8. generate only after validation passes
+
+Never conceal a sensor-configuration error through digital processing.
+
+
+==================================================
+MINIMUM SENSOR INTERVENTION
+==================================================
+
+When multiple physically valid configurations can achieve the required shot:
+
+choose the configuration requiring the least artificial manipulation.
+
+Prefer:
+
+- actual sensor geometry
+- actual focal length
+- physical camera positioning
+- physically calculated FOV
+- real lens coverage.
+
+Do not create visible crop-factor effects that the physical camera would not produce.
+
+
+==================================================
+FINAL CROP-FACTOR REALISM RULE
+==================================================
+
+Crop factor is a camera-sensor relationship.
+
+It is not:
+
+- a lens effect
+- a perspective effect
+- a compression effect
+- a distortion effect
+- a blur effect
+- a cinematic style.
+
+The system must determine:
+
+ACTUAL_SENSOR_DIMENSIONS
++
+ACTIVE_SENSOR_AREA
++
+FOCAL_LENGTH
++
+LENS_COVERAGE
++
+CAMERA_POSITION
++
+SUBJECT_DISTANCE
++
+RECORDING_MODE
+
+before deriving the visible result.
+
+Equivalent focal length may be used for comparison, but must never replace the actual physical camera parameters.
+
+The final footage must look as though the selected sensor, lens, and camera position physically captured the scene.
+
+No fake crop-factor effect.
+No digital reframing.
+No synthetic perspective.
+No artificial compression.
+No invented DOF.
+No unstable sensor behaviour.
+
+It must never look AI-generated.
+
+
 WHAT CROP FACTOR MEANS
 ==================================================
 
-Crop factor describes the relationship between a camera's sensor dimensions and a reference sensor format, commonly full frame.
+Crop factor describes the ratio between a defined reference sensor dimension and the corresponding dimension of the actual sensor format.
 
-It primarily affects:
+When full-frame 35mm is used as the reference, crop factor is commonly expressed relative to the approximately 36 mm × 24 mm image area.
 
+Crop factor primarily affects:
 - field of view
+- image-circle coverage
 - framing
-- required camera distance for a particular composition
-- effective focal-length equivalence
+- focal-length equivalence
+- the camera position required to achieve a particular composition
 
-It does NOT mean that the lens itself becomes physically longer.
+Crop factor does NOT:
+- physically change the lens focal length
+- physically lengthen the lens
+- independently change perspective
+- independently create spatial compression
+- independently create additional depth
+- independently change the scene geometry
 
-A 50mm lens remains a physically 50mm lens regardless of sensor size.
+A 50 mm lens remains physically 50 mm regardless of sensor format.
 
-Do not describe a crop sensor as physically changing a lens's focal length.
+Perspective remains determined by camera position and scene geometry.
 
 ==================================================
 REFERENCE FORMAT
@@ -73,396 +574,125 @@ REFERENCE FORMAT
 
 Use full-frame 35mm as the reference only when an equivalent comparison is useful.
 
-Approximate relationship:
+For a compatible field-of-view comparison:
 
 FULL-FRAME EQUIVALENT FOCAL LENGTH
 =
 ACTUAL FOCAL LENGTH × CROP FACTOR
 
+This is a field-of-view equivalence, not a physical change to the lens.
+
 Examples:
 
 1.5× crop:
-50mm → approximately 75mm full-frame equivalent
+50 mm → approximately 75 mm full-frame equivalent
 
 1.6× crop:
-50mm → approximately 80mm equivalent
+50 mm → approximately 80 mm full-frame equivalent
 
 2.0× crop:
-50mm → approximately 100mm equivalent
+50 mm → approximately 100 mm full-frame equivalent
 
-These are field-of-view comparisons, not physical changes to the lens.
+The equivalence is only meaningful when the relevant sensor dimension and aspect ratio are being compared consistently.
+
+Do not use crop factor to claim that two cameras produce identical perspective.
+
+Two cameras using equivalent fields of view can still produce different perspective relationships if they occupy different physical camera positions.
 
 ==================================================
 FIELD OF VIEW
 ==================================================
 
-Sensor size directly affects how much of the lens's image circle is captured.
+Sensor dimensions determine how much of the lens image circle is recorded.
 
-A smaller sensor captures a smaller portion of the image circle.
+A smaller sensor generally captures a smaller portion of the image circle and therefore produces a narrower field of view with the same physical focal length and camera position.
 
-Therefore, with the same lens and the same camera position:
+A larger sensor generally captures a larger portion of the image circle and therefore produces a wider field of view with the same physical focal length and camera position.
 
-- smaller sensor → narrower field of view
-- larger sensor → wider field of view
+Field of view must be calculated from:
+- actual focal length
+- actual sensor dimensions
+- sensor aspect ratio
+- active sensor area
+- crop or recording mode
+- lens image circle compatibility
 
-Do not incorrectly describe this as the smaller sensor physically magnifying the scene.
-
-The correct concept is that the sensor crops the captured image circle.
+Do not use crop factor as a substitute for the actual active sensor dimensions when precise field of view is required.
 
 ==================================================
-FRAMING
+FRAMING AND CAMERA POSITION
 ==================================================
 
-For the same:
+Changing sensor format while keeping the lens and camera position fixed changes the recorded field of view and therefore the framing.
 
-- lens
-- camera position
-- subject
-- sensor
+If the operator changes camera position to restore the same framing, perspective relationships also change.
 
-a smaller sensor produces a tighter framing.
+Therefore:
 
-If matching the framing between two sensor formats, the camera position or focal length must change.
-
-The LLM must distinguish between:
-
+SAME LENS
++
 SAME CAMERA POSITION
++
+DIFFERENT SENSOR FORMAT
+=
+DIFFERENT RECORDED FIELD OF VIEW
 
-and
+SAME FRAMING
++
+DIFFERENT SENSOR FORMAT
++
+PHYSICAL CAMERA REPOSITIONING
+=
+POTENTIALLY DIFFERENT PERSPECTIVE
 
-SAME COMPOSITION.
-
-These produce different comparisons.
-
-==================================================
-PERSPECTIVE
-==================================================
-
-Crop factor itself does NOT change perspective.
-
-Perspective is primarily determined by:
-
-- camera position
-- subject distance
-- relative distances between objects
-
-If two cameras use different sensor sizes but remain at exactly the same physical camera position, perspective remains fundamentally the same; the smaller sensor simply captures a narrower portion of the scene.
-
-If the camera is moved to match framing, perspective changes because the camera position changed.
-
-Never attribute this perspective change directly to crop factor.
+Never digitally crop, warp, stretch, or rescale the image to simulate a physical sensor-format change when a physical camera configuration is being specified.
 
 ==================================================
 DEPTH OF FIELD
 ==================================================
 
-Do not incorrectly state that crop factor automatically creates shallower or deeper depth of field.
+Sensor format must not be treated as an independent blur generator.
 
-Depth of field depends on:
-
-- focal length
-- aperture
-- focus distance
+Depth of field depends on the complete camera configuration, including:
 - sensor format
-- circle of confusion
-- final viewing conditions
-- required framing
-
-When matching the same framing and perspective between sensor formats, different focal lengths and camera positions may be required, which can produce different depth-of-field characteristics.
-
-Therefore:
-
-CROP FACTOR
-≠
-AUTOMATIC DEPTH-OF-FIELD CHANGE
-
-Treat depth of field as a consequence of the complete camera configuration.
-
-==================================================
-LOW-LIGHT AND EXPOSURE
-==================================================
-
-Do not automatically assume that a crop sensor is simply "darker."
-
-Exposure depends on:
-
-- aperture
-- shutter speed
-- ISO
-- lighting
-- sensor characteristics
-
-Sensor format can influence total light captured across the sensor and practical noise performance, but do not fabricate specific noise or exposure characteristics unless the camera system has been explicitly defined.
-
-Do not introduce artificial noise simply because a smaller sensor is selected.
-
-==================================================
-LENS SELECTION
-==================================================
-
-Choose focal length based on the actual sensor format.
-
-For example:
-
-FULL FRAME:
-35mm → relatively wide perspective
-
-APS-C:
-24mm → approximately comparable field of view to 36mm full frame on a 1.5× crop
-
-MICRO FOUR THIRDS:
-25mm → approximately comparable field of view to 50mm full frame on a 2× crop
-
-These are field-of-view equivalences.
-
-Do not treat the equivalent focal length as the actual physical focal length.
-
-==================================================
-COMPOSITION
-==================================================
-
-When designing a shot:
-
-1. determine desired composition
-2. determine sensor format
-3. determine required field of view
-4. select physical focal length
-5. determine camera position
-6. determine focus distance
-7. determine aperture
-8. determine resulting depth of field
-9. render the image using the actual optical characteristics
-
-Do not choose a lens solely from its full-frame equivalent number.
-
-==================================================
-WIDE-ANGLE SHOTS
-==================================================
-
-When using a crop sensor, a wider physical focal length may be required to achieve the same field of view as a full-frame camera.
-
-Maintain:
-
-- realistic perspective
-- realistic edge behaviour
-- realistic facial proportions
-- realistic architectural geometry
-
-Do not compensate for crop factor using digital widening.
-
-==================================================
-TELEPHOTO SHOTS
-==================================================
-
-Crop sensors can provide a narrower field of view with a given focal length.
-
-This can be useful for:
-
-- distant characters
-- wildlife-like observation
-- landscapes
-- battlefield views
-- architectural details
-- isolated subjects
-
-However, do not describe this as the crop sensor creating additional optical magnification.
-
-The narrower field of view is the relevant effect.
-
-==================================================
-ANAMORPHIC INTERACTION
-==================================================
-
-If an anamorphic lens is used, account for both:
-
-1. sensor format / crop factor
-2. anamorphic squeeze factor
-
-Do not confuse the two.
-
-Crop factor determines how much of the image circle the sensor captures.
-
-Anamorphic squeeze determines horizontal optical compression.
-
-Both must be accounted for independently.
-
-The final image must preserve physically plausible:
-
-- field of view
-- horizontal rendering
-- aspect ratio
-- distortion
-- bokeh
-- flare
-- focus behaviour
-
-==================================================
-BOKEH INTERACTION
-==================================================
-
-Do not automatically increase or decrease bokeh because of crop factor.
-
-Bokeh depends on:
-
-- lens design
-- aperture
 - focal length
+- aperture
 - focus distance
 - subject distance
-- background distance
-- sensor format
-- composition requirements
-
-When matching framing across sensor formats, different focal lengths and distances may change the resulting depth-of-field appearance.
-
-Allow this to emerge naturally.
-
-Never add artificial blur to compensate for sensor size.
-
-==================================================
-LENS IMAGE CIRCLE
-==================================================
-
-The selected lens must adequately cover the selected sensor.
-
-If a lens does not adequately cover the sensor:
-
-- vignetting may occur
-- mechanical cutoff may occur
-- image quality may deteriorate toward the edges
-
-Do not automatically add vignetting simply because a lens is being used on a different sensor format.
-
-Only introduce it when the lens coverage and optical design justify it.
-
-==================================================
-VIDEO TEMPORAL CONSISTENCY
-==================================================
-
-Because this is an AI-generated VIDEO system, crop-factor behaviour must remain consistent throughout the shot.
-
-Do NOT allow:
-
-- field of view to randomly change
-- framing to drift without camera movement
-- perspective to fluctuate
-- focal-length appearance to change between frames
-- background scale to jump
-- depth of field to randomly change
-- lens coverage to fluctuate
-- vignetting to flicker
-- optical characteristics to change without a physical cause
-
-During camera movement, the perspective and field of view must change continuously and physically plausibly.
-
-==================================================
-AI VIDEO REALISM
-==================================================
-
-Never simulate crop factor using:
-
-- digital zoom
-- artificial magnification
-- artificial background scaling
-- fake perspective
-- post-processing crop effects
-- synthetic depth
-- exaggerated blur
-
-Instead, treat crop factor as part of the camera and sensor configuration.
-
-The generated footage should look as though the selected lens was physically mounted on the selected camera sensor.
-
-==================================================
-SHOT-LEVEL APPLICATION
-==================================================
-
-Crop factor should be considered when selecting:
-
-- camera body / sensor
-- lens
-- focal length
-- field of view
 - framing
-- camera distance
-- depth of field
-- lens coverage
+- circle of confusion assumptions
+- camera position
 
-It should NOT be visually noticeable as an "effect."
+Do not automatically assign shallower or deeper depth of field solely because a sensor is labeled full-frame, APS-C, Super 35, Micro Four Thirds, or another format.
 
-The audience should simply perceive a physically correct camera image.
-
-==================================================
-DEFAULT RAMAYANA PROFILE
-==================================================
-
-Unless a shot explicitly requires another camera format:
-
-SENSOR_FORMAT:
-full-frame reference
-
-CROP_FACTOR:
-1.0×
-
-FIELD_OF_VIEW:
-physically calculated
-
-PERSPECTIVE:
-physically accurate
-
-FOCAL_LENGTH:
-actual physical focal length
-
-EQUIVALENT_FOCAL_LENGTH:
-used only for comparison
-
-DEPTH_OF_FIELD:
-physically derived
-
-LENS_COVERAGE:
-complete
-
-DIGITAL_CROP:
-none unless explicitly specified
-
-ARTIFICIAL_MAGNIFICATION:
-none
-
-TEMPORAL_CONSISTENCY:
-extremely high
-
-OPTICAL_REALISM:
-extremely high
-
-AI_ARTIFACT_TOLERANCE:
-none
+When equivalent framing is required, camera position, focal length, aperture, and sensor format must be solved together.
 
 ==================================================
-DECISION ORDER
+OPTICAL CONSISTENCY
 ==================================================
 
-Determine the camera system in this order:
+The selected lens must remain physically compatible with the selected sensor format and active sensor area.
 
-1. STORY PURPOSE
-2. SHOT COMPOSITION
-3. REQUIRED FIELD OF VIEW
-4. SENSOR FORMAT
-5. CROP FACTOR
-6. PHYSICAL FOCAL LENGTH
-7. CAMERA POSITION
-8. SUBJECT DISTANCE
-9. APERTURE
-10. DEPTH OF FIELD
-11. FINAL OPTICAL RENDERING
+Do not allow:
+- impossible image-circle coverage
+- unexplained edge clipping
+- arbitrary vignetting
+- artificial field-of-view expansion
+- artificial background scaling
+- inconsistent perspective
+- changing crop factor between frames without an actual camera or recording-mode change
 
-Never begin with:
+Crop factor must remain temporally stable throughout a shot unless the physical sensor readout or recording configuration actually changes.
 
-"Add crop factor."
+==================================================
+NATURALISM RULE
+==================================================
 
-Instead, determine the physical camera and lens configuration required for the shot.
+Crop factor must remain an invisible physical property of the camera system rather than a visible cinematic effect.
 
-Crop factor should quietly influence the camera's field of view and lens selection without becoming a visible stylistic effect.
+If a crop-factor difference does not produce a visible consequence under the selected camera configuration:
+    do not invent one.
 
-The final video must look like real professionally photographed live-action footage captured with a real camera and real lens.
+Physical sensor geometry and camera position always have priority over cinematic terminology or stylistic intent.
 
-It must never look AI-generated.
+

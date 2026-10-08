@@ -1,10 +1,391 @@
-# LENS DISTORTION BEHAVIOUR
+﻿# LENS DISTORTION BEHAVIOUR
 
 ## PURPOSE
 
 Control geometric distortion produced by the physical optical design of the selected lens.
 
 Lens distortion must be treated as a property of the optical system.
+
+
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Lens distortion must only be evaluated from established physical parameters.
+
+UNKNOWN does NOT mean:
+
+- barrel distortion
+- pincushion distortion
+- moustache distortion
+- fisheye behaviour
+- edge stretching
+- facial warping
+- asymmetric distortion
+
+If the distortion profile of the selected lens is unknown:
+
+do not invent visible distortion.
+
+UNKNOWN != DISTORTION.
+
+The system must prefer the least noticeable physically plausible result until the relevant optical parameters are established.
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+Distortion must be evaluated only after the physical lens configuration is established.
+
+Determine in this order:
+
+STORY
+→ SHOT PURPOSE
+→ REQUIRED COMPOSITION
+→ CAMERA POSITION
+→ SENSOR FORMAT
+→ LENS TYPE
+→ LENS PROFILE
+→ FOCAL LENGTH
+→ FOCUS DISTANCE
+→ SENSOR COVERAGE
+→ DISTORTION PROFILE
+→ RESULTING IMAGE GEOMETRY
+
+Never select or exaggerate distortion first and then construct a lens configuration to justify it.
+
+==================================================
+DISTORTION AUTHORIZATION
+==================================================
+
+Distortion behaviour has four possible states:
+
+FORCED:
+explicitly established by the selected physical lens configuration.
+
+DERIVED:
+physically resulting from the established lens, sensor, geometry and image position.
+
+ALLOWED:
+physically possible but not necessarily visible.
+
+DISABLED:
+not supported by the selected configuration.
+
+No distortion may appear merely because:
+
+- the shot is wide
+- the shot is cinematic
+- the shot is dramatic
+- another shot contained distortion
+- the image needs to look more photographic.
+
+==================================================
+PERSPECTIVE / DISTORTION FIREWALL
+==================================================
+
+Never use lens distortion to simulate perspective.
+
+Perspective is determined primarily by:
+
+- camera position
+- subject distance
+- relative scene geometry
+
+Lens distortion is determined by:
+
+- optical projection
+- lens design
+- lens profile
+- image position.
+
+A wide lens close to a subject may create strong perspective without strong geometric distortion.
+
+Do not correct or exaggerate one phenomenon by manipulating the other.
+
+==================================================
+GEOMETRIC DISTORTION FIELD RULE
+==================================================
+
+Distortion belongs to the optical image field.
+
+It must not behave as though it is attached independently to individual objects.
+
+If an object moves through the frame:
+
+its geometric rendering may change according to its position within the lens distortion field.
+
+The change must be:
+
+- continuous
+- spatially coherent
+- lens-dependent
+- temporally stable.
+
+Never create a screen-coordinate threshold at which an object suddenly becomes distorted.
+
+==================================================
+FACE / CHARACTER PROTECTION
+==================================================
+
+Character identity has priority over visible distortion.
+
+Preserve:
+
+- facial proportions
+- eye spacing
+- nose structure
+- jawline
+- mouth geometry
+- body proportions
+- costume geometry.
+
+If a lens genuinely produces distortion:
+
+allow only the physically expected amount.
+
+Never compensate for an incorrect lens choice by digitally reshaping the face.
+
+==================================================
+ARCHITECTURAL GEOMETRY FIREWALL
+==================================================
+
+Architecture is a strong validation reference.
+
+Maintain coherent:
+
+- straight lines
+- columns
+- walls
+- roofs
+- windows
+- doorways
+- horizons
+- repeated structural patterns.
+
+If the selected lens genuinely bends these elements:
+
+the bending must remain stable and lens-specific.
+
+Do not allow:
+
+- frame-to-frame building deformation
+- independently bending columns
+- oscillating rooflines
+- changing horizon curvature
+- object-specific warping.
+
+==================================================
+ZOOM DISTORTION CONTINUITY
+==================================================
+
+If a zoom lens changes focal length:
+
+distortion may change only according to the established lens profile.
+
+The transition must be:
+
+- continuous
+- optically coherent
+- lens-specific
+- temporally stable.
+
+Do not interpolate arbitrary barrel-to-pincushion behaviour.
+
+Do not digitally warp the image to simulate zoom-dependent distortion.
+
+==================================================
+FOCUS-DEPENDENT DISTORTION RULE
+==================================================
+
+If the selected lens exhibits focus-dependent distortion:
+
+allow only the physically supported change.
+
+Focus breathing and distortion remain separate phenomena.
+
+A focus pull does NOT automatically imply changing geometric distortion.
+
+NO LENS-SUPPORTED CHANGE
+→ NO DISTORTION CHANGE.
+
+==================================================
+ANAMORPHIC DISTORTION FIREWALL
+==================================================
+
+Anamorphic squeeze is not conventional lens distortion.
+
+Keep separate:
+
+ANAMORPHIC SQUEEZE
+vs
+GEOMETRIC DISTORTION
+vs
+PERSPECTIVE.
+
+An anamorphic lens does not automatically justify:
+
+- heavy edge stretching
+- facial warping
+- close-focus "mumps"
+- exaggerated distortion.
+
+Apply these only when supported by the selected anamorphic design and physical conditions.
+
+==================================================
+TEMPORAL DISTORTION VALIDATION
+==================================================
+
+Within a continuous shot:
+
+NO PHYSICAL OPTICAL CHANGE
+→ NO DISTORTION CHANGE.
+
+Never allow:
+
+- distortion flicker
+- geometry pulsing
+- face stretching and contracting
+- straight lines oscillating
+- edge distortion appearing/disappearing
+- random asymmetric warping
+- changing lens character.
+
+Every temporal change must have a physical cause.
+
+==================================================
+OPTICAL CONTINUITY VALIDATION
+==================================================
+
+Across shots using the same lens configuration:
+
+preserve the underlying distortion profile.
+
+Allow the visible result to vary when physical conditions vary, including:
+
+- camera position
+- focal length
+- focus distance
+- subject position
+- sensor active area
+- framing
+- lens orientation.
+
+Continuity means preserving optical identity, not forcing identical distortion in every frame.
+
+==================================================
+DIGITAL CORRECTION FIREWALL
+==================================================
+
+If optical distortion correction is part of the camera workflow:
+
+treat it as an explicit imaging-pipeline parameter.
+
+Do not combine:
+
+native distortion
+→ full digital correction
+→ artificial distortion
+
+unless that complete pipeline is intentionally specified.
+
+Never use post-processing to hide an invalid physical lens configuration.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+Reject any distortion result containing:
+
+- screen-space warping
+- object-specific distortion
+- face morphing
+- geometry crawling
+- unstable straight lines
+- changing barrel/pincushion character
+- artificial fisheye appearance
+- temporal geometric morphing
+- random edge stretching
+- inconsistent horizon geometry
+- synthetic perspective changes
+- distortion appearing without optical cause.
+
+The rendering chain must remain:
+
+PHYSICAL SCENE
+→ CAMERA
+→ SENSOR
+→ LENS
+→ OPTICAL PROJECTION
+→ IMAGE GEOMETRY
+→ FINAL IMAGE.
+
+Never:
+
+DESIRED CINEMATIC LOOK
+→ ARTIFICIAL DISTORTION
+→ IMAGE.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically valid configurations are possible:
+
+choose the configuration requiring the least unsupported distortion.
+
+Prefer:
+
+PHYSICAL LENS CHARACTER
+→ NATURAL GEOMETRIC RESULT
+
+over:
+
+DESIRED LOOK
+→ ARTIFICIAL GEOMETRIC EFFECT.
+
+If visible distortion is not physically necessary:
+
+omit it.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If the resulting geometry is physically inconsistent:
+
+1. identify the failed optical dependency
+2. identify the earliest incorrect physical parameter
+3. correct that parameter
+4. recalculate dependent geometry
+5. re-run distortion validation.
+
+Never repair the resulting geometry through arbitrary digital warping.
+
+==================================================
+FINAL DISTORTION REALISM RULE
+==================================================
+
+Lens distortion is a consequence of optical design.
+
+It is not a cinematic decoration.
+
+When uncertain:
+
+choose the least visible physically plausible distortion.
+
+PHYSICAL OPTICS
+>
+GEOMETRIC VALIDITY
+>
+TEMPORAL CONSISTENCY
+>
+LENS CONTINUITY
+>
+CINEMATIC CHARACTER.
+
+The final image must appear to have been photographed through a real physical lens.
+
 
 It is NOT a generic cinematic effect.
 
@@ -512,7 +893,7 @@ its distortion should change naturally as its position within the lens's distort
 For example:
 
 centre
-→ moderate edge position
+â†’ moderate edge position
 
 may produce a gradual increase in geometric distortion.
 
@@ -854,11 +1235,11 @@ Never begin with:
 Instead determine:
 
 WHAT LENS IS BEING USED?
-→ WHAT IS ITS ACTUAL DISTORTION PROFILE?
-→ WHAT SENSOR IS CAPTURING IT?
-→ WHERE ARE THE SUBJECTS WITHIN THE IMAGE?
-→ WHAT DOES THE OPTICAL SYSTEM PHYSICALLY DO TO THOSE POSITIONS?
-→ DOES THE RESULT REMAIN STABLE THROUGHOUT THE SHOT?
+â†’ WHAT IS ITS ACTUAL DISTORTION PROFILE?
+â†’ WHAT SENSOR IS CAPTURING IT?
+â†’ WHERE ARE THE SUBJECTS WITHIN THE IMAGE?
+â†’ WHAT DOES THE OPTICAL SYSTEM PHYSICALLY DO TO THOSE POSITIONS?
+â†’ DOES THE RESULT REMAIN STABLE THROUGHOUT THE SHOT?
 
 Lens distortion must be a consequence of real optical design.
 
@@ -867,3 +1248,4 @@ It must never be an artificial visual effect.
 The final video must preserve stable geometry, realistic faces, physically plausible optical behaviour, and consistent lens character.
 
 It must never look AI-generated.
+

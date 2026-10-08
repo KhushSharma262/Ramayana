@@ -1,4 +1,4 @@
-# SENSOR SIZE
+﻿# SENSOR SIZE
 
 ## PURPOSE
 
@@ -102,13 +102,13 @@ Reference dimensions:
 
 approximately:
 
-36 mm × 24 mm
+36 mm Ã— 24 mm
 
 The exact active sensor area may differ between cameras.
 
 Therefore:
 
-FULL_FRAME_REFERENCE ≠ UNIVERSAL_SENSOR_DIMENSION.
+FULL_FRAME_REFERENCE â‰  UNIVERSAL_SENSOR_DIMENSION.
 
 When an actual camera profile is provided:
 
@@ -122,7 +122,7 @@ Crop factor is a comparison between a sensor format and a reference format.
 
 For this system:
 
-FULL_FRAME = 1.0× reference.
+FULL_FRAME = 1.0Ã— reference.
 
 Approximate crop factors may be used for comparison.
 
@@ -157,18 +157,18 @@ SENSOR SIZE VS FIELD OF VIEW
 For a fixed focal length:
 
 larger sensor
-→ captures a wider portion of the lens image circle.
+â†’ captures a wider portion of the lens image circle.
 
 smaller sensor
-→ captures a smaller portion of the image circle.
+â†’ captures a smaller portion of the image circle.
 
 Therefore:
 
 larger sensor
-→ wider FOV
+â†’ wider FOV
 
 smaller sensor
-→ narrower FOV
+â†’ narrower FOV
 
 when:
 
@@ -296,7 +296,7 @@ This can produce a different DOF result.
 
 Therefore:
 
-SENSOR SIZE → INDIRECT DOF CONSEQUENCES THROUGH COMPLETE OPTICAL CONFIGURATION.
+SENSOR SIZE â†’ INDIRECT DOF CONSEQUENCES THROUGH COMPLETE OPTICAL CONFIGURATION.
 
 ==================================================
 SENSOR SIZE VS BOKEH
@@ -328,19 +328,19 @@ horizontal FOV can be approximated by:
 
 FOV_horizontal
 =
-2 × arctan(sensor_width / (2 × focal_length))
+2 Ã— arctan(sensor_width / (2 Ã— focal_length))
 
 Vertical FOV:
 
 FOV_vertical
 =
-2 × arctan(sensor_height / (2 × focal_length))
+2 Ã— arctan(sensor_height / (2 Ã— focal_length))
 
 Diagonal FOV:
 
 FOV_diagonal
 =
-2 × arctan(sensor_diagonal / (2 × focal_length))
+2 Ã— arctan(sensor_diagonal / (2 Ã— focal_length))
 
 Use actual sensor dimensions when available.
 
@@ -431,6 +431,686 @@ If readout changes the active imaging area:
 recalculate the optical configuration.
 
 ==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Sensor behaviour must be derived from a physical camera and recording
+configuration.
+
+UNKNOWN does not mean:
+
+- full-frame by default
+- crop by default
+- shallow DOF
+- increased noise
+- reduced noise
+- increased dynamic range
+- reduced dynamic range
+- different focal length
+- different perspective
+- cinematic sensor character
+
+If sensor parameters are unknown:
+
+do not invent exact sensor dimensions, pixel pitch, crop factor,
+dynamic range, noise characteristics, or recording-area values.
+
+Use only explicitly established camera data.
+
+Never infer sensor behaviour solely from:
+
+- desired look
+- focal length
+- field of view
+- aperture
+- cinematic intent
+- lens category
+
+==================================================
+SENSOR VALIDATION PRECEDENCE
+==================================================
+
+Resolve sensor configuration in this order:
+
+CAMERA SYSTEM
+→ SENSOR FORMAT
+→ PHYSICAL SENSOR DIMENSIONS
+→ ACTIVE SENSOR AREA
+→ RECORDING MODE
+→ ASPECT RATIO
+→ CROP FACTOR
+→ LENS COVERAGE
+→ LENS SELECTION
+→ FOCAL LENGTH
+→ FIELD OF VIEW
+→ CAMERA POSITION
+→ PERSPECTIVE
+→ FOCUS / DOF
+→ OPTICAL CHARACTER
+→ EXPOSURE
+→ SENSOR-SPECIFIC IMAGE CHARACTER
+→ TEMPORAL VALIDATION
+→ FINAL IMAGE
+
+Do not begin with:
+
+"make it look like a full-frame camera."
+
+==================================================
+SENSOR IDENTITY FIREWALL
+==================================================
+
+A sensor format is a physical imaging configuration.
+
+It must not be treated as a stylistic preset.
+
+Changing sensor configuration may alter:
+
+- active image area
+- field of view
+- lens coverage
+- visible edge character
+- framing
+- required focal length
+- required camera position
+
+It does not automatically create:
+
+- perspective
+- compression
+- macro capability
+- bokeh
+- flare
+- anamorphic character
+- cinematic quality
+
+==================================================
+ACTIVE SENSOR AREA FIREWALL
+==================================================
+
+The active recording area is the area actually used to form the recorded
+image.
+
+If a camera mode crops or windows the physical sensor:
+
+use the actual active dimensions.
+
+Do not silently substitute the full physical sensor dimensions.
+
+ACTIVE_SENSOR_AREA must determine:
+
+- effective image coverage
+- FOV
+- crop factor
+- lens coverage
+- visible edge behaviour
+
+==================================================
+SENSOR / IMAGE-CIRCLE FIREWALL
+==================================================
+
+The lens must physically cover the active sensor area.
+
+Required condition:
+
+LENS_IMAGE_CIRCLE >= ACTIVE_SENSOR_AREA
+
+If coverage fails:
+
+LENS_COVERAGE = INVALID
+
+The system must reconfigure:
+
+- lens
+- active sensor area
+- recording mode
+
+Do not hide physical coverage failure with arbitrary post-cropping.
+
+==================================================
+SENSOR / CROP-FACTOR FIREWALL
+==================================================
+
+Crop factor is a comparison between sensor formats.
+
+It does not physically multiply focal length.
+
+A 50 mm lens remains:
+
+50 mm
+
+regardless of sensor format.
+
+The smaller sensor captures a narrower portion of the lens image.
+
+Never change the physical focal length because crop factor is applied.
+
+==================================================
+SENSOR / FIELD-OF-VIEW FIREWALL
+==================================================
+
+Field of view must be calculated from:
+
+- active sensor dimensions
+- focal length
+- projection geometry
+
+Do not assign FOV from crop-factor labels alone when exact sensor
+dimensions are available.
+
+If active dimensions change:
+
+recalculate FOV.
+
+==================================================
+SENSOR / PERSPECTIVE FIREWALL
+==================================================
+
+Sensor size does not independently create perspective.
+
+If:
+
+CAMERA_POSITION = CONSTANT
+
+and:
+
+SENSOR_FORMAT CHANGES
+
+then:
+
+PERSPECTIVE_GEOMETRY remains fundamentally unchanged.
+
+FOV and framing may change.
+
+If equivalent framing requires camera repositioning:
+
+recalculate perspective from the new camera position.
+
+Never encode:
+
+SMALL SENSOR = FLATTER PERSPECTIVE
+
+or:
+
+LARGE SENSOR = STRONGER PERSPECTIVE.
+
+==================================================
+SENSOR / DEPTH-OF-FIELD FIREWALL
+==================================================
+
+Depth of field must be derived from the complete physical configuration.
+
+Consider:
+
+- sensor format
+- focal length
+- aperture
+- focus distance
+- subject distance
+- acceptable circle of confusion
+- final image conditions
+
+Do not encode:
+
+FULL FRAME = SHALLOW DOF
+
+as an unconditional rule.
+
+Equivalent framing may require different focal lengths and/or camera
+positions, which then change the resulting DOF.
+
+==================================================
+SENSOR / APERTURE FIREWALL
+==================================================
+
+Sensor format does not change the physical f-number.
+
+If the lens is:
+
+f/2
+
+it remains:
+
+f/2
+
+regardless of sensor size.
+
+Equivalent-aperture concepts may be used for comparison only.
+
+Never replace the physical aperture with an equivalence value in the
+actual camera configuration.
+
+==================================================
+SENSOR / EXPOSURE FIREWALL
+==================================================
+
+Exposure must be derived from:
+
+- scene luminance
+- aperture
+- shutter speed
+- ISO/gain
+- sensor response
+
+Do not automatically brighten or darken an image because the sensor
+is larger or smaller.
+
+Sensor area affects total photon collection and system-level imaging
+characteristics, but does not independently redefine exposure per unit
+sensor area.
+
+==================================================
+SENSOR / NOISE FIREWALL
+==================================================
+
+Noise must be camera/sensor dependent.
+
+If a sensor profile is unavailable:
+
+do not invent:
+
+- noise floor
+- read noise
+- photon noise
+- ISO behaviour
+- thermal noise
+
+Never use:
+
+SMALL SENSOR = NOISY
+
+or:
+
+LARGE SENSOR = CLEAN
+
+as an unconditional rendering rule.
+
+==================================================
+SENSOR / DYNAMIC-RANGE FIREWALL
+==================================================
+
+Dynamic range must be derived from the selected camera/sensor profile
+when such data is available.
+
+Do not infer dynamic range solely from physical sensor size.
+
+If camera-specific highlight rolloff, native ISO, or dynamic-range
+information is unknown:
+
+do not invent it.
+
+==================================================
+SENSOR / LENS-CHARACTER FIREWALL
+==================================================
+
+Changing sensor format changes which region of the lens image circle
+is captured.
+
+Therefore visible:
+
+- edge distortion
+- edge softness
+- vignetting
+- lateral CA
+- field curvature
+- edge bokeh
+
+may change.
+
+However:
+
+the lens's physical optical character does not magically change.
+
+Only the captured portion of that character changes.
+
+==================================================
+SENSOR / OPTICAL-EFFECT AUTHORIZATION
+==================================================
+
+Sensor size does not independently authorize:
+
+- flare
+- ghosting
+- CA
+- distortion
+- vignetting
+- bokeh
+- halation
+- breathing
+
+Each characteristic requires its own physical cause.
+
+AUTHORIZATION STATES:
+
+FORCED:
+required by the selected camera/lens configuration.
+
+DERIVED:
+naturally produced by the configuration.
+
+ALLOWED:
+physically possible but not necessarily visible.
+
+DISABLED:
+physically unsupported or unjustified.
+
+Never add an optical effect merely because a sensor format is selected.
+
+==================================================
+SENSOR / ANAMORPHIC FIREWALL
+==================================================
+
+Sensor size and anamorphic squeeze are independent parameters.
+
+The system must separately determine:
+
+- sensor active dimensions
+- lens coverage
+- physical squeeze
+- desqueeze
+- FOV
+- final aspect ratio
+
+Never use crop factor as anamorphic squeeze.
+
+Never alter physical anamorphic squeeze merely to compensate for a
+sensor change.
+
+==================================================
+SENSOR / MFD FIREWALL
+==================================================
+
+Changing sensor format does not allow a lens to focus closer.
+
+If:
+
+SUBJECT_DISTANCE < MFD
+
+then:
+
+FOCUS_VALID = FALSE
+
+regardless of sensor size.
+
+Never use crop factor or sensor cropping to bypass MFD.
+
+==================================================
+SENSOR / MACRO FIREWALL
+==================================================
+
+Sensor crop can change framing and the amount of the subject captured,
+but does not create true optical macro capability.
+
+Macro capability must remain a property of the physical lens/system.
+
+Never use crop factor as a substitute for:
+
+- magnification
+- close focusing
+- working distance
+- macro optics
+
+==================================================
+SENSOR / RESOLUTION FIREWALL
+==================================================
+
+Physical sensor size and image resolution are separate parameters.
+
+Do not infer:
+
+LARGE SENSOR = HIGH RESOLUTION
+
+or:
+
+SMALL SENSOR = LOW RESOLUTION.
+
+Resolution depends on:
+
+- pixel count
+- pixel pitch
+- optical resolving power
+- focus
+- motion
+- recording format
+- processing
+
+Do not create artificial detail from sensor size.
+
+==================================================
+SENSOR / PIXEL-PITCH FIREWALL
+==================================================
+
+Pixel pitch must not be inferred from physical sensor dimensions alone.
+
+A sensor may combine:
+
+- large area + small pixels
+- large area + large pixels
+- small area + small pixels
+- small area + larger pixels
+
+If pixel pitch is unknown:
+
+do not invent it.
+
+==================================================
+SENSOR / CAMERA-MOVEMENT FIREWALL
+==================================================
+
+Sensor format does not change the physical motion of the camera.
+
+It does not independently alter:
+
+- dolly distance
+- tracking speed
+- crane height
+- orbit radius
+- camera velocity
+
+It may alter captured framing and FOV.
+
+If framing changes the camera position:
+
+perspective and parallax must be recalculated.
+
+==================================================
+SENSOR / PARALLAX FIREWALL
+==================================================
+
+Parallax is primarily controlled by:
+
+CAMERA MOVEMENT
++
+SCENE DEPTH.
+
+Sensor format does not independently create parallax.
+
+If sensor changes cause camera repositioning:
+
+the resulting parallax change comes from that physical repositioning.
+
+==================================================
+SENSOR / TEMPORAL CONTINUITY LOCK
+==================================================
+
+Within a continuous shot:
+
+sensor configuration must remain stable unless an actual recording-mode
+or camera-system change occurs.
+
+NEVER allow:
+
+- crop-factor flicker
+- FOV flicker
+- image-circle changes
+- random vignetting
+- changing edge character
+- sensor-format jumps
+- unexplained DOF changes
+- exposure changes caused only by frame generation
+- changing pixel structure
+- changing noise profile
+
+Every sensor-related change must have a physical cause.
+
+==================================================
+SENSOR / LENS CONTINUITY LOCK
+==================================================
+
+Lens continuity must always be evaluated together with sensor
+configuration.
+
+The same lens on different sensor formats does not produce an
+identical image.
+
+If sensor configuration changes:
+
+recalculate:
+
+- lens coverage
+- FOV
+- framing
+- visible edge character
+- DOF
+- lens selection if necessary
+
+Do not preserve the previous optical image artificially.
+
+==================================================
+SENSOR / 16:9 MASTER FIREWALL
+==================================================
+
+The final master is:
+
+16:9
+
+If the physical sensor is not natively 16:9:
+
+use the actual recording/windowing/crop configuration.
+
+The active recorded area must be known before calculating:
+
+- FOV
+- framing
+- lens coverage
+- composition
+
+Do not silently apply a post-image crop while claiming a different
+active sensor configuration.
+
+==================================================
+SENSOR / AI ARTIFACT FIREWALL
+==================================================
+
+The causal direction must remain:
+
+CAMERA SYSTEM
+→ SENSOR
+→ ACTIVE SENSOR AREA
+→ LENS COVERAGE
+→ FOCAL LENGTH
+→ FOV
+→ CAMERA POSITION
+→ PERSPECTIVE
+→ FOCUS / DOF
+→ OPTICAL CHARACTER
+→ IMAGE
+
+Never:
+
+DESIRED SENSOR LOOK
+→ DIGITAL CROP / EFFECT
+→ IMAGE
+
+Prohibited:
+
+- fake crop factor
+- digital sensor simulation
+- artificial perspective
+- synthetic DOF
+- synthetic bokeh
+- artificial noise
+- fake dynamic range
+- arbitrary lens coverage
+- sensor-format flicker
+- changing edge behaviour without cause
+- digital magnification disguised as sensor crop
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If sensor validation fails:
+
+1. identify the failed physical constraint
+2. identify the earliest incorrect sensor/camera parameter
+3. correct that parameter
+4. recalculate active sensor area
+5. recalculate lens coverage
+6. recalculate crop factor
+7. recalculate FOV
+8. recalculate framing
+9. recalculate perspective if camera position changes
+10. recalculate DOF
+11. recalculate visible optical character
+12. recalculate exposure/noise behaviour where required
+13. validate temporal continuity
+14. validate final physical realism
+
+Never repair a sensor configuration error after image formation.
+
+==================================================
+MINIMUM SENSOR INTERVENTION
+==================================================
+
+When multiple physically valid sensor configurations can produce the
+required shot:
+
+prefer the configuration requiring the fewest unnecessary changes to:
+
+- camera system
+- sensor format
+- recording mode
+- lens
+- camera position
+
+Do not change sensor format merely to create a desired cinematic look
+when the existing configuration can physically achieve the shot.
+
+==================================================
+FINAL SENSOR REALISM RULE
+==================================================
+
+Every sensor decision must be explainable as a real camera and
+recording-system decision.
+
+The system must establish:
+
+- camera system
+- physical sensor format
+- active sensor dimensions
+- recording mode
+- crop factor
+- aspect ratio
+- lens coverage
+- focal length
+- field of view
+- camera position
+- resulting perspective
+- focus / DOF configuration
+- optical edge behaviour
+- exposure
+- sensor-specific noise/dynamic-range behaviour
+- temporal continuity
+
+If the configuration cannot satisfy these constraints:
+
+RECONFIGURE THE CAMERA/SENSOR/LENS SYSTEM.
+
+Never fake sensor behaviour digitally.
+
+==================================================
+==================================================
 LENS IMAGE CIRCLE
 ==================================================
 
@@ -460,7 +1140,7 @@ Before generating a shot:
 
 verify:
 
-LENS_IMAGE_CIRCLE ≥ SENSOR_ACTIVE_AREA.
+LENS_IMAGE_CIRCLE â‰¥ SENSOR_ACTIVE_AREA.
 
 If not:
 
@@ -845,7 +1525,7 @@ Resolution depends on:
 Do not generate artificial detail based on sensor size.
 
 ==================================================
-SENSOR SIZE AND DEPTH OF FIELD — EQUIVALENCE
+SENSOR SIZE AND DEPTH OF FIELD â€” EQUIVALENCE
 ==================================================
 
 When comparing systems with equivalent framing:
@@ -932,11 +1612,11 @@ The sensor occupies part of the lens's image circle.
 
 Larger active sensor:
 
-→ captures more of the image circle.
+â†’ captures more of the image circle.
 
 Smaller active sensor:
 
-→ captures less.
+â†’ captures less.
 
 This affects visible:
 
@@ -1157,13 +1837,13 @@ PARAMETER DEPENDENCIES
 ==================================================
 
 SENSOR_PHYSICAL_SIZE
-→
+â†’
 IMAGE_CIRCLE_REQUIREMENT
 
 ACTIVE_SENSOR_AREA
 +
 FOCAL_LENGTH
-→
+â†’
 FIELD_OF_VIEW
 
 SENSOR_FORMAT
@@ -1171,11 +1851,11 @@ SENSOR_FORMAT
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING
 
 CAMERA_POSITION
-→
+â†’
 PERSPECTIVE
 
 SENSOR_FORMAT
@@ -1187,31 +1867,31 @@ APERTURE
 FOCUS_DISTANCE
 +
 SUBJECT_DISTANCE
-→
+â†’
 DEPTH_OF_FIELD
 
 ACTIVE_SENSOR_AREA
 +
 LENS_IMAGE_CIRCLE
-→
+â†’
 VIGNETTING / EDGE_COVERAGE
 
 ACTIVE_SENSOR_AREA
 +
 LENS_DISTORTION_PROFILE
-→
+â†’
 VISIBLE_EDGE_DISTORTION
 
 ACTIVE_SENSOR_AREA
 +
 LENS_CA_PROFILE
-→
+â†’
 VISIBLE_EDGE_CA
 
 ACTIVE_SENSOR_AREA
 +
 LENS_BOKEH_PROFILE
-→
+â†’
 VISIBLE_EDGE_BOKEH
 
 SENSOR_TECHNOLOGY
@@ -1219,7 +1899,7 @@ SENSOR_TECHNOLOGY
 EXPOSURE
 +
 ISO/GAIN
-→
+â†’
 NOISE / DYNAMIC_RANGE BEHAVIOUR
 
 Do not collapse these relationships into:
@@ -1310,7 +1990,7 @@ SENSOR_FORMAT:
 full-frame reference
 
 REFERENCE_DIMENSIONS:
-approximately 36 mm × 24 mm
+approximately 36 mm Ã— 24 mm
 
 ACTIVE_ASPECT_RATIO:
 16:9
@@ -1319,7 +1999,7 @@ ACTIVE_SENSOR_AREA:
 camera-mode dependent
 
 CROP_FACTOR:
-1.0× reference
+1.0Ã— reference
 
 FOCAL_LENGTH:
 physical lens value
@@ -1443,16 +2123,16 @@ The correct question is:
 Then calculate:
 
 SENSOR
-→ ACTIVE AREA
-→ LENS COVERAGE
-→ FOCAL LENGTH
-→ FOV
-→ CAMERA POSITION
-→ PERSPECTIVE
-→ FOCUS
-→ DOF
-→ OPTICAL CHARACTER
-→ FINAL IMAGE.
+â†’ ACTIVE AREA
+â†’ LENS COVERAGE
+â†’ FOCAL LENGTH
+â†’ FOV
+â†’ CAMERA POSITION
+â†’ PERSPECTIVE
+â†’ FOCUS
+â†’ DOF
+â†’ OPTICAL CHARACTER
+â†’ FINAL IMAGE.
 
 Never fake sensor behaviour through arbitrary cropping, scaling, perspective manipulation, or AI-generated optical effects.
 
@@ -1469,3 +2149,4 @@ No unstable image geometry.
 No AI-generated sensor behaviour.
 
 It must never look AI-generated.
+

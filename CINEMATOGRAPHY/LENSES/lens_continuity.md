@@ -1,4 +1,4 @@
-# LENS CONTINUITY BEHAVIOUR
+﻿# LENS CONTINUITY BEHAVIOUR
 
 ## PURPOSE
 
@@ -28,6 +28,297 @@ The system must preserve continuity of:
 Lens continuity must be derived from the actual camera and lens configuration.
 
 It must never be simulated through arbitrary post-processing.
+
+
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Lens continuity must describe the physical continuity of the established camera and lens system.
+
+UNKNOWN does NOT mean:
+
+- same lens character
+- same focal length
+- same FOV
+- same distortion
+- same bokeh
+- same flare
+- same ghosting
+- same chromatic aberration
+- same breathing
+- same DOF
+
+If a parameter is not established, do not invent an optical characteristic merely to maintain visual consistency.
+
+UNKNOWN != CINEMATIC EFFECT.
+
+Every optical characteristic must be:
+
+- explicitly established
+- physically derived
+- or disabled until its physical cause is known.
+
+==================================================
+LENS SELECTION PRECEDENCE
+==================================================
+
+Lens continuity begins only after the lens configuration has been selected.
+
+The system must determine:
+
+STORY
+→ SHOT PURPOSE
+→ COMPOSITION
+→ SUBJECT / ENVIRONMENT
+→ REQUIRED FOV
+→ CAMERA POSITION
+→ LENS TYPE
+→ LENS PROFILE
+→ FOCAL LENGTH
+→ APERTURE
+→ FOCUS DISTANCE
+→ RESULTING OPTICAL CHARACTER
+→ CONTINUITY VALIDATION
+
+Continuity must never force an inappropriate lens configuration merely because a previous shot used it.
+
+==================================================
+OPTICAL CHARACTER AUTHORIZATION
+==================================================
+
+Each optical characteristic must have an authorization state:
+
+FORCED:
+explicitly required by the physical lens configuration or shot condition.
+
+DERIVED:
+automatically resulting from established physical parameters.
+
+ALLOWED:
+physically possible but not necessarily visible.
+
+DISABLED:
+not physically supported by the current configuration.
+
+No optical effect may appear solely because it was present in an earlier shot.
+
+==================================================
+CONTINUITY VS PHYSICAL VARIATION
+==================================================
+
+Continuity does NOT mean identical pixels or identical optical output.
+
+The same physical lens may produce different optical results when:
+
+- camera position changes
+- subject distance changes
+- focus distance changes
+- aperture changes
+- light sources change
+- source angles change
+- exposure changes
+- filters change
+- camera orientation changes
+- subject/background geometry changes
+
+Preserve the underlying optical identity while allowing physically caused variation.
+
+==================================================
+CROSS-SHOT VALIDATION
+==================================================
+
+Before accepting a new shot, compare it against the established optical configuration.
+
+For every changed optical characteristic ask:
+
+1. Did the lens change?
+2. Did the focal length change?
+3. Did the camera position change?
+4. Did the sensor or active area change?
+5. Did the aperture change?
+6. Did the focus distance change?
+7. Did the subject or background geometry change?
+8. Did the lighting or source position change?
+9. Did the camera orientation change?
+10. Did a filter or optical accessory change?
+11. Did the shot intentionally establish a new lens language?
+
+If none of these provide a physical explanation:
+
+DO NOT ACCEPT THE CHANGE.
+
+==================================================
+OPTICAL CONTINUITY FIREWALL
+==================================================
+
+Never solve continuity problems through:
+
+- digital warping
+- screen-space lens distortion
+- artificial background scaling
+- artificial perspective correction
+- synthetic bokeh replacement
+- digital flare overlays
+- digital ghost overlays
+- RGB-channel separation
+- arbitrary blur
+- face-specific optical correction
+- image-space breathing
+- hidden digital zoom
+- temporal optical morphing
+- AI-generated lens-character interpolation
+
+Correct the physical camera or lens configuration instead.
+
+==================================================
+TEMPORAL OPTICAL VALIDATION
+==================================================
+
+Within a continuous shot, optical behaviour may change only when an underlying physical parameter changes.
+
+Every temporal change must have a traceable cause.
+
+NO PHYSICAL CHANGE
+→ NO OPTICAL CHARACTER CHANGE.
+
+Do not allow:
+
+- distortion flicker
+- bokeh-shape flicker
+- FOV oscillation
+- focal-length drift
+- flare popping
+- ghosting popping
+- CA flickering
+- breathing oscillation
+- changing lens softness
+- unstable perspective
+- changing edge rendering
+
+==================================================
+CHARACTER / GEOMETRY PROTECTION
+==================================================
+
+Lens continuity must never become a mechanism for AI character or environment deformation.
+
+Preserve stable:
+
+- facial geometry
+- body proportions
+- eye spacing
+- costume geometry
+- architecture
+- horizon geometry
+- object dimensions
+- environmental structure
+
+Allow only the geometric changes physically caused by:
+
+- camera position
+- focal length
+- lens distortion
+- perspective
+- framing
+- subject movement
+
+Never use lens continuity to justify morphing.
+
+==================================================
+MINIMUM OPTICAL INTERVENTION
+==================================================
+
+When multiple physically plausible configurations can satisfy the shot:
+
+choose the configuration requiring the least unsupported optical intervention.
+
+Prefer:
+
+PHYSICAL CAUSE
+→ PHYSICAL RESULT
+
+over:
+
+DESIRED LOOK
+→ ARTIFICIAL OPTICAL EFFECT.
+
+If an optical characteristic is not necessary and has no physical trigger:
+
+omit it.
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If a continuity configuration becomes physically inconsistent:
+
+1. identify the failed optical dependency
+2. identify the earliest incorrect parameter
+3. correct that physical parameter
+4. recalculate dependent optical characteristics
+5. re-run continuity validation
+
+Never patch the resulting image digitally.
+
+==================================================
+AI ARTIFACT FIREWALL
+==================================================
+
+The rendering chain must remain:
+
+PHYSICAL SCENE
+→ CAMERA POSITION
+→ SENSOR
+→ LENS
+→ FOCAL LENGTH
+→ APERTURE
+→ FOCUS
+→ OPTICAL RESPONSE
+→ IMAGE
+
+Never:
+
+DESIRED CINEMATIC LOOK
+→ SYNTHETIC OPTICAL EFFECT
+→ IMAGE.
+
+Reject any result containing:
+
+- optical character morphing
+- frame-to-frame lens-profile changes
+- impossible perspective transitions
+- unstable facial proportions
+- texture crawling caused by optical effects
+- artificial edge halos
+- screen-space flare
+- screen-space ghosting
+- synthetic bokeh replacement
+- unstable distortion
+- unexplained FOV changes
+- geometry deformation
+
+==================================================
+FINAL REALISM RULE
+==================================================
+
+Lens continuity exists to preserve the identity of a coherent physical camera and lens system.
+
+It must never manufacture consistency that the physical system would not produce.
+
+PHYSICAL REALISM
+>
+OPTICAL VALIDITY
+>
+TEMPORAL CONSISTENCY
+>
+CONTINUITY
+>
+CINEMATIC CHARACTER.
+
+When uncertain:
+
+choose the physically plausible result with the least visible optical intervention.
+
 
 ==================================================
 NON-NEGOTIABLE PHOTOREALISM
@@ -142,8 +433,8 @@ A lens may change between shots when cinematographically justified.
 Examples:
 
 24mm
-→ 50mm
-→ 85mm
+â†’ 50mm
+â†’ 85mm
 
 This is acceptable if the shot design requires it.
 
@@ -216,7 +507,7 @@ Two lenses with identical focal lengths may still render differently.
 For example:
 
 50mm Lens A
-≠
+â‰ 
 50mm Lens B
 
 They may differ in:
@@ -519,11 +810,11 @@ CA must remain consistent with the lens profile.
 
 Modern corrected lens:
 
-→ very subtle.
+â†’ very subtle.
 
 Vintage / character lens:
 
-→ potentially more visible.
+â†’ potentially more visible.
 
 Do not randomly add RGB fringing to different shots.
 
@@ -869,17 +1160,17 @@ Lens continuity must never override shot requirements.
 The correct order is:
 
 STORY
-→ SHOT PURPOSE
-→ COMPOSITION
-→ SUBJECT / ENVIRONMENT
-→ REQUIRED FOV
-→ CAMERA POSITION
-→ LENS SELECTION
-→ FOCAL LENGTH
-→ APERTURE
-→ FOCUS DISTANCE
-→ OPTICAL CHARACTER
-→ CONTINUITY CHECK
+â†’ SHOT PURPOSE
+â†’ COMPOSITION
+â†’ SUBJECT / ENVIRONMENT
+â†’ REQUIRED FOV
+â†’ CAMERA POSITION
+â†’ LENS SELECTION
+â†’ FOCAL LENGTH
+â†’ APERTURE
+â†’ FOCUS DISTANCE
+â†’ OPTICAL CHARACTER
+â†’ CONTINUITY CHECK
 
 Do not retain an inappropriate lens merely because it was used in the previous shot.
 
@@ -1018,11 +1309,11 @@ Never begin with:
 Instead determine:
 
 WHAT LENS SYSTEM IS ESTABLISHED?
-→ WHAT PHYSICAL CHARACTERISTICS DOES IT HAVE?
-→ WHAT HAS CHANGED BETWEEN SHOTS?
-→ WHICH CHANGES ARE INTENTIONAL?
-→ WHICH CHANGES SHOULD REMAIN CONSTANT?
-→ ARE ALL OPTICAL DIFFERENCES PHYSICALLY EXPLAINABLE?
+â†’ WHAT PHYSICAL CHARACTERISTICS DOES IT HAVE?
+â†’ WHAT HAS CHANGED BETWEEN SHOTS?
+â†’ WHICH CHANGES ARE INTENTIONAL?
+â†’ WHICH CHANGES SHOULD REMAIN CONSTANT?
+â†’ ARE ALL OPTICAL DIFFERENCES PHYSICALLY EXPLAINABLE?
 
 Lens continuity means maintaining a coherent physical camera system while allowing legitimate optical variation caused by:
 
@@ -1044,3 +1335,4 @@ No impossible perspective changes.
 No AI-generated optical behaviour.
 
 It must never look AI-generated.
+

@@ -1,4 +1,4 @@
-# PERSPECTIVE DISTORTION
+﻿# PERSPECTIVE DISTORTION
 
 ## PURPOSE
 
@@ -63,6 +63,481 @@ choose the physically plausible and less noticeable result.
 
 REAL CAMERA GEOMETRY ALWAYS TAKES PRIORITY OVER VISUAL EFFECT.
 
+==================================================
+OPTICAL CAUSALITY / UNKNOWN-PARAMETER RULE
+==================================================
+
+Perspective distortion must be treated as a consequence of real
+three-dimensional camera geometry.
+
+UNKNOWN does not mean:
+
+- wide-angle distortion
+- facial exaggeration
+- compression
+- lens distortion
+- increased depth
+- reduced depth
+- cinematic perspective
+
+If the required spatial parameters are unknown:
+
+do not invent an exact perspective-distortion value.
+
+Use only explicitly established:
+
+- camera position
+- subject distance
+- subject depth
+- relative distances
+- lens projection
+
+Never infer perspective distortion solely from:
+
+- focal length
+- sensor format
+- crop factor
+- field of view
+- lens category
+- cinematic intent
+
+==================================================
+PERSPECTIVE-DISTORTION VALIDATION PRECEDENCE
+==================================================
+
+Resolve perspective distortion in this order:
+
+CAMERA POSITION
+→ SUBJECT DISTANCE
+→ SUBJECT DEPTH
+→ RELATIVE DEPTH DIFFERENCES
+→ SENSOR / PROJECTION
+→ FOCAL LENGTH / FRAMING
+→ RESULTING PERSPECTIVE
+→ RELATIVE SCALE
+→ FINAL IMAGE
+
+Perspective distortion must be derived after physical camera geometry
+is established.
+
+Never select an "amount of distortion" first and construct the camera
+around that desired effect.
+
+==================================================
+PERSPECTIVE-DISTORTION FIREWALL
+==================================================
+
+Perspective distortion is not an independent image effect.
+
+It emerges from:
+
+CAMERA
+→ SUBJECT
+→ SUBJECT DEPTH
+→ RELATIVE DISTANCES
+→ PERSPECTIVE PROJECTION
+
+Therefore:
+
+do not implement:
+
+PERSPECTIVE_DISTORTION = EFFECT_INTENSITY
+
+Instead derive the apparent relative scale of different parts of the
+scene from their actual distances to the camera.
+
+==================================================
+CAMERA-POSITION FIREWALL
+==================================================
+
+When camera position changes:
+
+recalculate:
+
+- subject distance
+- foreground distance
+- background distance
+- relative depth
+- apparent scale
+- perspective
+- parallax
+- occlusion
+- framing
+
+Do not preserve the previous perspective digitally after moving the
+camera.
+
+==================================================
+SUBJECT-DEPTH FIREWALL
+==================================================
+
+Perspective distortion depends on depth variation within the subject.
+
+A shallow subject may show little relative perspective change.
+
+A deep subject may show stronger relative scale differences.
+
+Therefore:
+
+do not assign the same perspective-distortion behaviour to:
+
+- flat artwork
+- human faces
+- human bodies
+- architecture
+- deep objects
+
+without considering their actual three-dimensional depth.
+
+==================================================
+FOCAL-LENGTH FIREWALL
+==================================================
+
+Focal length does not independently create perspective distortion.
+
+From a fixed camera position:
+
+changing focal length primarily changes:
+
+- field of view
+- framing
+- image scale
+
+The underlying perspective geometry remains fundamentally determined
+by camera position.
+
+If focal-length changes require camera repositioning to maintain
+framing:
+
+the resulting perspective change must be attributed to the camera
+repositioning.
+
+Never encode:
+
+LONG FOCAL LENGTH = AUTOMATICALLY LESS PERSPECTIVE DISTORTION
+
+or:
+
+SHORT FOCAL LENGTH = AUTOMATICALLY MORE PERSPECTIVE DISTORTION
+
+without considering camera position.
+
+==================================================
+LENS-DISTORTION SEPARATION FIREWALL
+==================================================
+
+Perspective distortion and optical lens distortion must remain
+separate systems.
+
+PERSPECTIVE DISTORTION:
+
+changes relative apparent scale because of viewpoint geometry.
+
+LENS DISTORTION:
+
+changes image geometry because of the optical projection of the lens.
+
+Never use:
+
+- barrel distortion
+- pincushion distortion
+- moustache distortion
+- decentering distortion
+
+to simulate perspective.
+
+Never use camera repositioning to describe optical lens distortion.
+
+==================================================
+WIDE-ANGLE FIREWALL
+==================================================
+
+A wide field of view does not automatically create facial distortion.
+
+Strong facial perspective effects require sufficiently close camera
+placement relative to facial depth.
+
+Therefore:
+
+WIDE FOV
+does not equal
+PERSPECTIVE DISTORTION.
+
+The system must evaluate:
+
+CAMERA DISTANCE
++
+FACIAL DEPTH
++
+REQUIRED FRAMING
+
+before determining the resulting facial proportions.
+
+==================================================
+FACE-PERSPECTIVE FIREWALL
+==================================================
+
+For faces:
+
+the system must preserve physically plausible relationships between:
+
+- nose
+- eyes
+- ears
+- forehead
+- cheeks
+- chin
+- facial depth
+
+If the camera approaches closely:
+
+nearer facial structures may appear proportionally larger.
+
+This is physically valid.
+
+Do not correct this by:
+
+- facial reshaping
+- digital perspective correction
+- geometry warping
+- synthetic facial scaling
+
+unless the actual physical camera configuration has changed.
+
+==================================================
+FOREGROUND / BACKGROUND FIREWALL
+==================================================
+
+Objects at different distances must retain physically consistent
+relative scale.
+
+A nearby foreground object may become very large in frame.
+
+A distant background object may appear relatively small.
+
+This relationship must emerge from camera geometry.
+
+Never independently resize:
+
+- foreground
+- subject
+- background
+
+to create a desired perspective effect.
+
+==================================================
+COMPRESSION FIREWALL
+==================================================
+
+Perspective distortion must not be confused with spatial compression.
+
+Compression is strongly influenced by:
+
+- camera position
+- subject distance
+- background distance
+- framing
+
+A long focal length does not create compression independently.
+
+Do not add artificial flattening because a telephoto lens is selected.
+
+==================================================
+ANAMORPHIC FIREWALL
+==================================================
+
+Anamorphic optical characteristics are separate from perspective
+geometry.
+
+Anamorphic lenses may introduce:
+
+- squeeze
+- lens-specific distortion
+- edge behaviour
+- bokeh characteristics
+- flare
+- breathing
+
+These must not be used to manufacture perspective distortion.
+
+First establish:
+
+CAMERA POSITION
+→ PERSPECTIVE
+
+Then establish:
+
+LENS SYSTEM
+→ OPTICAL CHARACTER
+
+==================================================
+PERSPECTIVE-DISTORTION / DOF FIREWALL
+==================================================
+
+Depth of field does not create perspective distortion.
+
+Perspective distortion comes from:
+
+CAMERA GEOMETRY.
+
+Depth of field comes from:
+
+OPTICAL CONFIGURATION.
+
+Do not use:
+
+- blur
+- bokeh
+- focus
+- depth maps
+
+to simulate perspective.
+
+==================================================
+PERSPECTIVE-DISTORTION / MOVEMENT VALIDATION
+==================================================
+
+During camera movement, perspective distortion must evolve continuously.
+
+If the camera approaches the subject:
+
+recalculate relative depth and apparent scale.
+
+If the camera moves laterally:
+
+recalculate parallax and occlusion.
+
+If the camera moves away:
+
+recalculate the reduction in relative depth differences.
+
+Never resize or warp objects frame-by-frame to maintain a desired
+perspective appearance.
+
+==================================================
+TEMPORAL PERSPECTIVE-DISTORTION VALIDATION
+==================================================
+
+Within a continuous shot:
+
+perspective distortion must remain stable unless physical camera or
+subject geometry changes.
+
+NEVER allow:
+
+- facial proportion flicker
+- changing nose/ear relationships without camera movement
+- background scale jumps
+- foreground scale jumps
+- spatial compression flicker
+- perspective warping
+- geometry morphing
+- unstable vanishing points
+- frame-to-frame depth changes without physical cause
+
+Every change must have a physical cause.
+
+==================================================
+PERSPECTIVE-DISTORTION / AI ARTIFACT FIREWALL
+==================================================
+
+The causal direction must remain:
+
+REAL CAMERA POSITION
+→ REAL SUBJECT DISTANCE
+→ REAL SUBJECT DEPTH
+→ PERSPECTIVE PROJECTION
+→ APPARENT RELATIVE SCALE
+
+Never:
+
+DESIRED DISTORTION
+→ DIGITAL WARP
+→ IMAGE
+
+Prohibited:
+
+- digital facial stretching
+- synthetic wide-angle faces
+- background warping
+- artificial foreground enlargement
+- independent background scaling
+- depth-map deformation
+- perspective filters
+- frame-to-frame geometry correction
+- subject reshaping
+- artificial compression
+- synthetic spatial expansion
+
+==================================================
+VALIDATION FAILURE HANDLING
+==================================================
+
+If perspective-distortion validation fails:
+
+1. identify the failed spatial relationship
+2. identify the earliest incorrect camera/scene parameter
+3. correct that physical parameter
+4. recalculate subject distances
+5. recalculate relative depth
+6. recalculate perspective
+7. recalculate framing
+8. recalculate parallax and occlusion
+9. validate temporal consistency
+10. validate final spatial realism
+
+Never repair perspective distortion after image formation.
+
+==================================================
+MINIMUM PERSPECTIVE INTERVENTION
+==================================================
+
+When multiple physical configurations can produce the required shot:
+
+prefer the configuration requiring the fewest unnecessary changes to:
+
+- camera position
+- subject distance
+- focal length
+- framing
+- lens system
+
+Do not move the camera closer solely to exaggerate perspective.
+
+Do not move it farther away solely to suppress perspective.
+
+The camera position must serve the actual spatial and story
+requirements.
+
+==================================================
+FINAL PERSPECTIVE-DISTORTION REALISM RULE
+==================================================
+
+Every perspective-distortion decision must be explainable through a
+real camera occupying a real position relative to a real
+three-dimensional subject.
+
+The system must establish:
+
+- camera position
+- subject distance
+- subject depth
+- relative distances
+- required framing
+- focal length
+- sensor/projection
+- resulting perspective
+- resulting relative scale
+- temporal behaviour
+
+If the desired appearance cannot be produced by the physical
+configuration:
+
+RECONFIGURE THE CAMERA/LENS/SCENE GEOMETRY.
+
+Never fake perspective distortion digitally.
+
+==================================================
 ==================================================
 DEFINITION
 ==================================================
@@ -130,11 +605,11 @@ Perspective distortion increases as the camera approaches a subject with meaning
 Therefore:
 
 CAMERA CLOSER
-→
+â†’
 GREATER RELATIVE DEPTH DIFFERENCE
 
 CAMERA FARTHER
-→
+â†’
 REDUCED RELATIVE DEPTH DIFFERENCE
 
 This relationship must be physically derived.
@@ -187,7 +662,7 @@ MATHEMATICAL BASIS
 
 For a simplified perspective projection:
 
-IMAGE_SIZE ∝ FOCAL_LENGTH / DISTANCE
+IMAGE_SIZE âˆ FOCAL_LENGTH / DISTANCE
 
 Therefore:
 
@@ -247,7 +722,7 @@ Therefore:
 DO NOT IMPLEMENT:
 
 wide lens
-→
+â†’
 face distortion.
 
 Instead:
@@ -255,7 +730,7 @@ Instead:
 camera distance
 +
 subject depth
-→
+â†’
 perspective relationship.
 
 ==================================================
@@ -274,7 +749,7 @@ The increased camera distance reduces relative size differences between near and
 
 Therefore:
 
-telephoto ≠ compression effect.
+telephoto â‰  compression effect.
 
 Camera position remains the primary variable.
 
@@ -311,11 +786,11 @@ camera position usually changes.
 Example:
 
 WIDER LENS
-→
+â†’
 CAMERA MOVES CLOSER
 
 LONGER LENS
-→
+â†’
 CAMERA MOVES FARTHER
 
 This changes perspective.
@@ -325,7 +800,7 @@ Therefore:
 SAME FRAMING
 +
 DIFFERENT FOCAL LENGTH
-→
+â†’
 POSSIBLE PERSPECTIVE CHANGE
 
 because:
@@ -627,11 +1102,11 @@ Example:
 
 A face photographed very close with a rectilinear wide lens:
 
-→ strong perspective differences may appear.
+â†’ strong perspective differences may appear.
 
 A distant building photographed with a poorly corrected lens:
 
-→ barrel distortion may bend straight lines.
+â†’ barrel distortion may bend straight lines.
 
 These can coexist.
 
@@ -832,17 +1307,17 @@ PERSPECTIVE DISTORTION AND LENS SELECTION
 Lens selection must follow:
 
 STORY
-→
+â†’
 SHOT
-→
+â†’
 SPATIAL RELATIONSHIP
-→
+â†’
 REQUIRED FRAMING
-→
+â†’
 CAMERA POSITION
-→
+â†’
 FOCAL LENGTH
-→
+â†’
 RESULTING PERSPECTIVE.
 
 Do not select a lens based on:
@@ -1011,51 +1486,51 @@ PARAMETER DEPENDENCIES
 CAMERA_POSITION
 +
 SUBJECT_POSITION
-→
+â†’
 SUBJECT_DISTANCE
 
 CAMERA_POSITION
 +
 SUBJECT_DEPTH
-→
+â†’
 PERSPECTIVE_RELATIONSHIPS
 
 SUBJECT_DISTANCE
 +
 SUBJECT_DEPTH
-→
+â†’
 RELATIVE_SIZE_DIFFERENCE
 
 FOCAL_LENGTH
 +
 SENSOR_FORMAT
-→
+â†’
 FIELD_OF_VIEW
 
 FOCAL_LENGTH
 +
 CAMERA_POSITION
-→
+â†’
 FRAMING
 
 CAMERA_POSITION
 +
 SUBJECT_DEPTH
-→
+â†’
 PERSPECTIVE_DISTORTION
 
 CAMERA_TRANSLATION
-→
+â†’
 PERSPECTIVE_CHANGE
 +
 PARALLAX
 
 LENS_DESIGN
-→
+â†’
 OPTICAL_LENS_DISTORTION
 
 ANAMORPHIC_DESIGN
-→
+â†’
 ANAMORPHIC_OPTICAL_CHARACTER
 
 DO NOT MERGE THESE VARIABLES.
@@ -1094,11 +1569,11 @@ RELATIVE_DEPTH_DIFFERENCES GENERALLY DECREASE
 
 IF:
 
-SUBJECT_DEPTH ≈ 0
+SUBJECT_DEPTH â‰ˆ 0
 
 THEN:
 
-PERSPECTIVE_DISTORTION ≈ MINIMAL
+PERSPECTIVE_DISTORTION â‰ˆ MINIMAL
 
 IF:
 
@@ -1293,3 +1768,4 @@ No spatial flicker.
 No AI-generated perspective.
 
 It must never look AI-generated.
+
