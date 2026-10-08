@@ -1,4 +1,0 @@
-﻿# README
-
-<!-- PURPOSE: Continuity system -->
-
