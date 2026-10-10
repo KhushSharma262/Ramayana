@@ -1,0 +1,17 @@
+﻿{
+    "run_directory":  "C:\\Users\\hpcnd\\OneDrive\\Desktop\\Ramayana\\RAMAYAN\\MATERIALS\\04_SURFACE_STRUCTURE\\ONE_PASS_AUDIT_20261009_104240",
+    "backup_directory":  "C:\\Users\\hpcnd\\OneDrive\\Desktop\\Ramayana\\RAMAYAN\\_BACKUPS\\ONE_PASS_SURFACE_COMPLETION_20261009_104240",
+    "project_files_scanned":  23800,
+    "material_database_files":  48,
+    "digital_asset_candidates":  0,
+    "research_queue_rows":  13,
+    "research_unassigned_rows":  0,
+    "renderer_tests":  6,
+    "renderer_tests_unassigned":  6,
+    "renderer_tests_not_run":  6,
+    "assignment_rows":  0,
+    "renderer_detection":  "NO_BLENDER_COMMAND_OR_BLEND_FILES_FOUND",
+    "source_art_files_changed":  0,
+    "invented_material_assignments":  0,
+    "tests_marked_pass_by_script":  0
+}

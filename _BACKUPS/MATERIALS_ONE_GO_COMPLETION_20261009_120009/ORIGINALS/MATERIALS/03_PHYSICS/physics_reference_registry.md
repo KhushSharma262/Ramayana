@@ -1,0 +1,26 @@
+﻿# PHYSICS REFERENCE REGISTRY
+
+Every external physical value/model should be traceable to:
+
+SOURCE
+→ MATERIAL
+→ PROPERTY
+→ CONDITION
+→ MODEL
+→ VERSION
+→ IMPLEMENTATION
+
+Reference classes:
+
+SCIENTIFIC_FACT
+ENGINEERING_REFERENCE
+MEASURED_DATA
+EMPIRICAL_MODEL
+CALCULATED
+DERIVED
+HISTORICAL_RECONSTRUCTION
+SIMULATION_PARAMETER
+ASSUMPTION
+UNKNOWN
+
+Do not silently upgrade a lower-confidence source into a higher-confidence fact.

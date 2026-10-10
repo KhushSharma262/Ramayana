@@ -1,0 +1,21 @@
+﻿event_id,kanda,event_name,source_reference,episode_id,scene_id,required_asset_ids,verification_status,notes
+EV-BAL-001,BAALAKAND,Opening invocations and framing dialogue,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Map the selected edition passage by passage
+EV-BAL-002,BAALAKAND,Sati encounters Rama,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Confirm exact event boundaries and required characters
+EV-BAL-003,BAALAKAND,Daksha sacrifice and aftermath,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Inventory ritual setup and resulting states
+EV-BAL-004,BAALAKAND,Parvati penance,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Research environment and ritual/ascetic elements
+EV-BAL-005,BAALAKAND,Kamadeva and Rati episode,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Verify transformations and effects from chosen text
+EV-BAL-006,BAALAKAND,Shiva-Parvati wedding,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Track procession and ceremony separately
+EV-BAL-007,BAALAKAND,Manu and Shatarupa narrative,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Confirm assets against selected passage
+EV-BAL-008,BAALAKAND,Pratapabhanu narrative,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Scope assets to selected adaptation
+EV-BAL-009,BAALAKAND,Dasharatha sacrifice and Rama birth,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Separate ritual objects from event record
+EV-BAL-010,BAALAKAND,Rama and brothers childhood,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Use age-specific character versions
+EV-BAL-011,BAALAKAND,Vishwamitra requests Rama and Lakshmana,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Map court and travel assets
+EV-BAL-012,BAALAKAND,Protection of Vishwamitra yajna,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Track ritual setup and battle states
+EV-BAL-013,BAALAKAND,Ahalya redemption,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Verify textual details and depiction
+EV-BAL-014,BAALAKAND,Arrival in Mithila and Janaka reception,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Separate city set from palace set
+EV-BAL-015,BAALAKAND,Rama and Sita garden encounter,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Create reusable garden set and plant families
+EV-BAL-016,BAALAKAND,Shiva bow ceremony,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Track bow identity and breakable components
+EV-BAL-017,BAALAKAND,Parashurama encounter,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Confirm character versions and weapons
+EV-BAL-018,BAALAKAND,Wedding messages and procession,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Map vehicles, crowds, gifts and set dressing
+EV-BAL-019,BAALAKAND,Rama-Sita wedding ceremonies,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Research exact rites and implements
+EV-BAL-020,BAALAKAND,Return procession to Ayodhya,TO_VERIFY,EPISODE_01,TO_ASSIGN,,RESEARCH_REQUIRED,Reuse approved assets and record changes

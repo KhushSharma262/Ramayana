@@ -1,0 +1,6 @@
+﻿research_id,material_id,feature_id,question,evidence_classification,source_reference,measurement_method,uncertainty,validity_range,status,owner,reviewer,closure_evidence
+SRQ-0001,UNASSIGNED,UNASSIGNED,Identify authoritative material-specific surface structure evidence,unknown,UNVERIFIED,UNVERIFIED,UNKNOWN,UNKNOWN,OPEN,UNASSIGNED,UNASSIGNED,NOT YET PROVIDED
+SRQ-0002,UNASSIGNED,UNASSIGNED,Determine physical feature dimensions and distributions,unknown,UNVERIFIED,UNVERIFIED,UNKNOWN,UNKNOWN,OPEN,UNASSIGNED,UNASSIGNED,NOT YET PROVIDED
+SRQ-0003,UNASSIGNED,UNASSIGNED,Determine relevant scale-dependent optical effects,unknown,UNVERIFIED,UNVERIFIED,UNKNOWN,UNKNOWN,OPEN,UNASSIGNED,UNASSIGNED,NOT YET PROVIDED
+SRQ-0004,UNASSIGNED,UNASSIGNED,Determine layer topology and surface-interface structure where applicable,unknown,UNVERIFIED,UNVERIFIED,UNKNOWN,UNKNOWN,OPEN,UNASSIGNED,UNASSIGNED,NOT YET PROVIDED
+SRQ-0005,UNASSIGNED,UNASSIGNED,Validate procedural distributions against evidence or label as reconstruction,unknown,UNVERIFIED,UNVERIFIED,UNKNOWN,UNKNOWN,OPEN,UNASSIGNED,UNASSIGNED,NOT YET PROVIDED

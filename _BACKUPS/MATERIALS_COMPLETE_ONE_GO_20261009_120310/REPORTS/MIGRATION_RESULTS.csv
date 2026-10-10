@@ -1,0 +1,5 @@
+﻿"LegacySource","CurrentTarget","LegacyExists","CurrentExists","MarkerPresent","MissingTerms","BasicCheckPassed"
+"CORE\material_lock_system.md","01_CORE\material_identity.md","True","True","True","","True"
+"CORE\material_state_system.md","06_STATES\material_state_model.md","True","True","True","","True"
+"CORE\material_selection_rules.md","02_MATERIAL_DATABASE\03_source_and_evidence_rules.md","True","True","True","","True"
+"CORE\material_system.md","01_CORE\material_master.md","True","True","True","","True"

@@ -1,0 +1,6 @@
+﻿"File","CreatedOrRepaired","Exists","SchemaColumns"
+"09_REGISTRY\material_master_registry.csv","True","True","16"
+"11_EVIDENCE\evidence_ledger.csv","True","True","15"
+"08_ASSET_ASSIGNMENTS\asset_assignments.csv","True","True","10"
+"10_CONTINUITY_QA\renderer_test_results.csv","True","True","14"
+"02_MATERIAL_DATABASE\research_register.csv","True","True","13"
